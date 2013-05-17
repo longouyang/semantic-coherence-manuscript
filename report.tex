@@ -348,7 +348,9 @@ We have found evidence that semantic coherence facilitates distributional (viz. 
 
 Our results suggest two concrete improvements to existing research methods. First, our experiments highlight a limitation of artificial languages: such languages may severely limit the power of distributional learning mechanisms, which our experiments show to be greatly enhanced by the presence of known words that adhere to some semantic organization. Experiments that use some proportion of words with semantic coherence could more accurately simulate the kinds of problems that real language learners.
 
-% Second, existing computational models of distributional learning do not make a strong distinction between the different languages we tested -- semantically coherent, phonologically coherent, and semantically incoherent. However, there are models (e.g., )
+Second, it is not immediately clear what state-of-the-art computational models have to say about the effect of semantic coherence on learning. These models (e.g., Andrews, Vigliocco, \& Vinson, 2009; Baroni, Murphy, Barbu, \& Poesio, 2010; Durda, Buchanan, \& Caron, 2009; Jones \& Recchia, 2010; Steyvers, 2010; Johns \& Jones, 2012) combine linguistic and perceptual information and obtain good fits in part because they can leverage these distinct sources to learn about concrete words, which can be cashed out in obvious perceptual features, and abstract words, which might take their meaning from patterns of co-occurrence with concrete words.
+
+However, these modeling simulations are typically done in ``one shot'', where all of the perceptual and linguistic data is fed into the model at once. We suggest an additional criterion for model fit: ``developmental'' simulation, where the model's behavior is measured for varying amounts and varieties of perceptual and linguistic data. This additional dimension might reveal differences in models with respect to the effect of semantic coherence.
 
 % Models that integrate linguistic and perceptual features:
 % \begin{tabular}{l l l l}
@@ -358,24 +360,12 @@ Our results suggest two concrete improvements to existing research methods. Firs
 % \hline
 % (AVV2010) & Andrews, Vigliocco, \& Vinson &  &  
 % (JJ2012) & Johns \& Jones & & \\
-% \\
-
-
-\end{tabular}
-
-\subsection{Known and unknown words}
-
-Informal proposals and formal models that do not make some distinction between unknown and known words.
+% \\ 
+% \end{tabular}
 
 \subsection{Mechanism: memory and what else?}
 
-Using mediation analysis, we found evidence that effect of semantic coherence is partially one of reducing memory demands. However, reduced memory load doesn't appear to drive the entire effect - what else is happening? One possibility is that learners use semantic coherence to infer the topic of discourse. Then, learners attach meaning to novel words on the basis of co-occurrences with these topics. It may be through such a process that we come to acquire inchoate meanings for words (e.g., people may know that \emph{brigade} is a military term but they tend not to know its precise meaning). If such a mechanism were at work, it might also predict that word learning would have a ``contiguous'' character, with faster learning for words that occur in more coherent contexts. Indeed, the original LSA work by Landauer \& Dumais (1997) anticipates this possibility -- learning was faster when the model already ``knew'' many words compared to when it knew very few (p229).
-
-
-\subsection{Syntax and semantics}
-RCF is nominally a syntax learner but it also learns apparently semantic categories (e.g., colors)
-
-
+Using mediation analysis, we found evidence that effect of semantic coherence is partially one of reducing memory demands. However, reduced memory load doesn't appear to drive the entire effect - what else is happening? One possibility is that learners use semantic coherence to infer the topic of discourse (cf. the topic learning models of Griffiths \& Steyvers, 2007). Then, learners attach meaning to novel words on the basis of co-occurrences with these topics. It may be through such a process that we come to acquire inchoate meanings for words (e.g., people may know that \emph{brigade} is a military term but they tend not to know its precise meaning). If such a mechanism were at work, it might also predict that word learning would have a ``contiguous'' character, with faster learning for words that occur in more coherent contexts. Indeed, the original LSA work by Landauer \& Dumais (1997) anticipates this possibility -- learning was faster when the model already ``knew'' many words compared to when it knew very few (p229).
 
 
 \nocite{*}
