@@ -210,43 +210,48 @@ We excluded the 55 subjects who did not correctly answer all of the catch trials
 \newcommand{\ww}{\color{white}{*}}
 \newcommand\T{\rule{0pt}{2.1ex}}
 
-
 \begin{table}[ht]
-  \caption{Regression models. TODO: update numbers}
   \label{expt1-regressions} 
+  \caption{Regression model for Experiment 1}
   \begin{center}
-  \small{\begin{tabular}{l r r r}
+  \footnotesize{\begin{tabular}{l r r r r}
     \hline
-    Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{$t$} & \multicolumn{1}{c}{$p$}  \\
+    Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
     \hline
-    \multicolumn{4}{c}{\T Memory \T}\\
-    
-    Exposures                          &  $<$ 0.001  &  2.67 & $<$ 0.01*\\
-    Condition: 1/3 -- (0/3)            & -0.003     & -0.03 & 0.97\ww\\
-    Condition: 2/3 -- (0/3,1/3)        &  0.101     &  1.78 & 0.074\ww\\
-    Condition: 3/3 -- (0/3,1/3,2/3)    &  0.154     &  3.62 & $<$ 0.01*\\
-    E $\times$ C: 1/3 -- (0/3)         &  $<$ 0.001 &  0.17 & 0.86\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3)     & $>$ -0.001 & -0.20 & 0.83\ww \\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  $<$ 0.001  &  2.76 & $<$ 0.01*\\
+    \multicolumn{5}{c}{\T Memory \T}\\
+    Intercept &  0.04005 &  0.01712 &  2.33 & <0.05*\\
+    Condition: 1/3 -- (0/3) & -0.01780 &  0.02499 & -0.71 & 0.47\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.02518 &  0.01439 &  1.74 & 0.08\ww\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.03224 &  0.00924 &  3.48 & <0.001*\\
+    Exposures &  0.00023 &  0.00007 &  2.93 & <0.005*\\
+    E $\times$ C: 1/3 -- (0/3) &  0.00005 &  0.00011 &  0.46 & 0.64\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00000 &  0.00006 & -0.07 & 0.93\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00016 &  0.00004 &  3.67 & <0.001* \\
     \hline
-    \multicolumn{4}{c}{\T Similarity \T}\\
-    Exposures                          &  $<$ 0.001 &   1.82 &     0.06\ww   \\
-    Condition: 1/3 -- (0/3)            &     -0.039 & -0.36  &     0.71\ww    \\
-    Condition: 2/3 -- (0/3,1/3)        &      0.075 & 1.33   &     0.18\ww    \\
-    Condition: 3/3 -- (0/3,1/3,2/3)    &      0.097  & 2.30  &     0.02*   \\
-    E $\times$ C: 1/3 -- (0/3)         &  $<$ 0.001 &   0.53 &     0.59\ww    \\
-    E $\times$ C: 2/3 -- (0/3,1/3)     &  $<$ 0.001 &   0.42 &     0.67\ww    \\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  $<$ 0.001 &   2.66 & $<$ 0.02*  \\
+
+
+    \multicolumn{5}{c}{\T Similarity \T}\\
+    Intercept &  0.00341 &  0.03192 &  0.10 & 0.91\ww\\
+    Condition: 1/3 -- (0/3) & -0.00649 &  0.05056 & -0.12 & 0.89\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.07183 &  0.04783 &  1.50 & 0.13\ww\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.09120 &  0.04465 &  2.04 & <0.05*\\
+    Exposures & -0.00003 &  0.00015 & -0.22 & 0.81\ww\\
+    E $\times$ C: 1/3 -- (0/3) &  0.00007 &  0.00023 &  0.33 & 0.73\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) &  0.00008 &  0.00022 &  0.39 & 0.69\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00070 &  0.00021 &  3.20 & <0.005* \\
     \hline
-    \multicolumn{4}{c}{\T Referent assignment \T}\\
-    Exposures                          &  0.001 &   3.16 &  $<$ 0.01*                \\
-    Condition: 1/3 -- (0/3)            &  0.153 &   1.01 & 0.31\ww                   \\
-    Condition: 2/3 -- (0/3,1/3)        &  0.183 &   2.26 & 0.02*                 \\
-    Condition: 3/3 -- (0/3,1/3,2/3)    &  0.121 &   2.00 & 0.04*                 \\
-    E $\times$ C: 1/3 -- (0/3)         & $>$ -0.001 &  -0.29 & 0.77\ww                   \\
-    E $\times$ C: 2/3 -- (0/3,1/3)     & $>$ -0.001 &  -0.89 & 0.37\ww                   \\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  $<$ 0.001 &   1.29 & 0.19\ww                   \\
+
+    \multicolumn{5}{c}{\T Referent assignment \T}\\
+    Intercept &  0.00446 &  0.06054 &  0.07 & 0.94\ww\\
+    Condition: 1/3 -- (0/3) &  0.07316 &  0.09603 &  0.76 & 0.44\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.19158 &  0.09064 &  2.11 & <0.05*\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.18231 &  0.08474 &  2.15 & <0.05*\\
+    Exposures &  0.00035 &  0.00029 &  1.20 & 0.22\ww\\
+    E $\times$ C: 1/3 -- (0/3) &  0.00000 &  0.00044 &  0.01 & 0.98\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00027 &  0.00042 & -0.65 & 0.50\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00069 &  0.00041 &  1.65 & 0.09\ww \\
     \hline
+
   \end{tabular}}
   \end{center}
 \end{table}
