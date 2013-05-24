@@ -213,10 +213,7 @@ We analyzed two aspects of the data. First, we were interested in main effects o
   \label{expt1-results}
   \caption{Experiment 1 results. Each plot shows data for one measure (memory, similarity, meaning) in Experiment 1. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear regression.}
   \begin{center}
-    TODO: experiment 1 results
-    % \includegraphics[height=5.1cm]{expt1b-memory.pdf}
-    % \includegraphics[height=5.1cm]{expt1b-similarity.pdf}
-    % \includegraphics[height=5.1cm]{expt1b-meaning.pdf}
+    \includegraphics[width=1.0\linewidth]{x1.pdf}
   \end{center}
 \end{figure}
 
@@ -313,69 +310,70 @@ The three types of phonological coherence\footnote{\label{change-of-stimuli} The
 \item \emph{Syllable count}. M's were disyllabic (coomo, fengle, kaisee) and P's were monosyllabic (gope, jic, skeege).
 \end{itemize} 
 
-
-
 \subsubsection{Design and Procedure} The method was identical to that of Experiment 1.
 
 \subsection{Results and Discussion}
 
-We discarded the 42 subjects who did not pass all the catch trials. Results are shown in Figure~\ref{expt2-results}. Using an interactive regression model (score $\sim$ exposures $\times$ condition), we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model with Helmert contrasts.
-
-\begin{figure}[t]
-  \label{expt2-results}
-  \caption{Experiment 2 results. Each plot shows data for one measure (memory, similarity, meaning) in Experiment 2. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear trend.}
+\begin{figure}[h]
+  \caption{Experiments 2 and 3 results. Each plot shows data for one measure (memory, similarity, meaning). Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear trend.}
+  \label{expt23-results}
   \begin{center}
-    TODO: experiment 2 results
-    % \includegraphics[height=5.1cm]{expt1b-memory.pdf}
-    % \includegraphics[height=5.1cm]{expt1b-similarity.pdf}
-    % \includegraphics[height=5.1cm]{expt1b-meaning.pdf}
+    \includegraphics[width=1.0\linewidth]{x23.pdf}
   \end{center}
 \end{figure}
 
-\begin{table}[ht]
-  \caption{Regression model for Experiment 2}
-  \label{expt2-regressions} 
+\begin{table}[t]
+  \caption{Regression model for Experiments 2 and 3}
+  \label{expt23-regression}
   \begin{center}
-    \footnotesize{\begin{tabular}{l r r r r}
+    \scriptsize{\begin{tabular}{l r r r r}
         \hline
         Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
         \hline
         \multicolumn{5}{c}{\T Memory \T}\\
-        Intercept & -0.03411 &  0.02791 & -1.22 & 0.222\ww\\
-        Condition: Onset -- 0/3 &  0.06266 &  0.03864 &  1.62 & 0.105\ww\\
-        Condition: Rime -- 0/3 &  0.06528 &  0.03628 &  1.79 & 0.072\ww\\
-        Condition: Syllable count -- 0/3 &  0.04102 &  0.03915 &  1.04 & 0.295\ww\\
-        Exposures &  0.00012 &  0.00012 &  0.98 & 0.323\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00017 & -0.54 & 0.582\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.00019 &  0.00016 & -1.18 & 0.235\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.00007 &  0.00016 & -0.43 & 0.665\ww \\
+        Intercept & -0.03411 &  0.02749 & -1.24 & 0.215\ww\\
+        Condition: Onset -- 0/3 &  0.06266 &  0.03806 &  1.64 & 0.100\ww\\
+        Condition: Rime -- 0/3 &  0.06528 &  0.03574 &  1.82 & 0.068\ww\\
+        Condition: Syllable count -- 0/3 &  0.04102 &  0.03856 &  1.06 & 0.287\ww\\
+        Condition: Semantic incoherent -- 0/3 &  0.00559 &  0.03817 &  0.14 & 0.883\ww\\
+        Exposures &  0.00012 &  0.00011 &  1.00 & 0.316\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00017 & -0.55 & 0.577\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.00019 &  0.00016 & -1.20 & 0.228\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.00007 &  0.00016 & -0.43 & 0.660\ww\\
+        E $\times$ C: Semantic incoherent -- 0/3 &  0.00003 &  0.00016 &  0.23 & 0.811\ww \\
         \hline
 
         \multicolumn{5}{c}{\T Similarity \T}\\
-        Intercept &  0.01107 &  0.02463 &  0.44 & 0.653\ww\\
-        Condition: Onset -- 0/3 & -0.00316 &  0.03411 & -0.09 & 0.926\ww\\
-        Condition: Rime -- 0/3 & -0.00640 &  0.03203 & -0.19 & 0.841\ww\\
-        Condition: Syllable count -- 0/3 & -0.04553 &  0.03456 & -1.31 & 0.188\ww\\
-        Exposures & -0.00006 &  0.00010 & -0.56 & 0.571\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00015 & -0.61 & 0.538\ww\\
-        E $\times$ C: Rime -- 0/3 &  0.00019 &  0.00014 &  1.34 & 0.178\ww\\
-        E $\times$ C: Syllable count -- 0/3 &  0.00030 &  0.00014 &  2.03 & <0.05* \\
+        Intercept &  0.01107 &  0.02539 &  0.43 & 0.662\ww\\
+        Condition: Onset -- 0/3 & -0.00316 &  0.03515 & -0.08 & 0.928\ww\\
+        Condition: Rime -- 0/3 & -0.00640 &  0.03301 & -0.19 & 0.846\ww\\
+        Condition: Syllable count -- 0/3 & -0.04553 &  0.03561 & -1.27 & 0.201\ww\\
+        Condition: Semantic incoherent -- 0/3 & -0.00078 &  0.03525 & -0.02 & 0.982\ww\\
+        Exposures & -0.00006 &  0.00011 & -0.54 & 0.582\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00015 & -0.59 & 0.550\ww\\
+        E $\times$ C: Rime -- 0/3 &  0.00019 &  0.00014 &  1.30 & 0.191\ww\\
+        E $\times$ C: Syllable count -- 0/3 &  0.00030 &  0.00015 &  1.97 & <0.05*\\
+        E $\times$ C: Semantic incoherent -- 0/3 &  0.00014 &  0.00015 &  0.93 & 0.350\ww \\
         \hline
 
         \multicolumn{5}{c}{\T Referent assignment \T}\\
-        Intercept & -0.05533 &  0.07028 & -0.78 & 0.431\ww\\
-        Condition: Onset -- 0/3 &  0.17766 &  0.09715 &  1.82 & 0.067\ww\\
-        Condition: Rime -- 0/3 &  0.09165 &  0.09125 &  1.00 & 0.315\ww\\
-        Condition: Syllable count -- 0/3 &  0.02348 &  0.09858 &  0.23 & 0.811\ww\\
-        Exposures &  0.00054 &  0.00030 &  1.78 & 0.074\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00061 &  0.00043 & -1.41 & 0.158\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.00032 &  0.00041 & -0.78 & 0.431\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.00006 &  0.00042 & -0.16 & 0.871\ww \\
+        Intercept & -0.05533 &  0.06831 & -0.81 & 0.418\ww\\
+        Condition: Onset -- 0/3 &  0.17766 &  0.09442 &  1.88 & 0.060\ww\\
+        Condition: Rime -- 0/3 &  0.09165 &  0.08868 &  1.03 & 0.301\ww\\
+        Condition: Syllable count -- 0/3 &  0.02348 &  0.09581 &  0.24 & 0.806\ww\\
+        Condition: Semantic incoherent -- 0/3 &  0.08683 &  0.09478 &  0.91 & 0.359\ww\\
+        Exposures &  0.00054 &  0.00029 &  1.84 & 0.066\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00061 &  0.00042 & -1.45 & 0.146\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.00032 &  0.00040 & -0.80 & 0.418\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.00006 &  0.00041 & -0.16 & 0.867\ww\\
+        E $\times$ C: Semantic incoherent -- 0/3 & -0.00074 &  0.00040 & -1.83 & 0.066\ww \\
         \hline
 
       \end{tabular}}
   \end{center}
 \end{table}
+
+We discarded the 42 subjects who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}. Using an interactive regression model (score $\sim$ exposures $\times$ condition), we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model (see Table \ref{expt23-regression}).
 
 
 \subsubsection{Memory}
@@ -387,11 +385,11 @@ There was no main effect of exposure. There was also no main effect of condition
 \subsubsection{Referent assignment}
 There was no main effect of exposure. There was also no main effect of condition -- none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
 
-Across the three models, there were no significant predictors, save one the interaction term for syllable count versus 0/3 on the similarity measure, which can be plausibly attributed to chance. This suggests that phonological coherence was virtually indistinguishable from the 0/3 condition in terms of facilitating MNPQ learning. This indicates that mere coherence is not what drives the facilitative effects of coherence. In Experiment 3, we consider whether the mere presence of known words (semantic incoherence) aids MNPQ learning.
+Across the three models, there were no significant predictors, save the one interaction term for syllable count versus 0/3 on the similarity measure, which can be plausibly attributed to chance. This suggests that phonological coherence was virtually indistinguishable from the 0/3 condition in terms of facilitating MNPQ learning. This indicates that mere coherence is not what drives the effects of semantic coherence. In Experiment 3, we consider whether the mere presence of known words (semantic incoherence) aids MNPQ learning.
 
 \section{Experiment 3: Semantic incoherence}
 
-In Experiment 1, M's and P's were all familiar words obeying a taxonomic organization. In Experiment 3, we explored whether coherence is necessary for facilitation of distributional learning, or whether the mere presence of known words is sufficient -- that is, whether a semantically \emph{incoherent} language facilitates distributional learning.
+In Experiment 1, M's and P's were all familiar words obeying a taxonomic organization. In Experiment 3, we explored whether mere coherence is sufficient for facilitation of distributional learning, or whether the mere presence of known words is sufficient -- that is, whether a semantically \emph{incoherent} language facilitates distributional learning.
 
 \subsection{Methods}
 \subsubsection{Subjects}
@@ -403,20 +401,28 @@ In the semantically incoherent language, the specific M and P words were drawn r
 \subsubsection{Design and procedure}  The method was identical to that of Experiment 1.
 
 \subsection{Results and Discussion}
-We discarded the 18 subjects who did not pass all the catch trials. Results are shown in Figure~\ref{expt3-results}.
+We discarded the 18 subjects who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}. See Table \ref{expt23-regression} for regression results.
 
 \subsubsection{Memory}
-Incoherent scores were not significantly different from 0/3 scores, t(460) = 0.056, $p > 0.05$ and both combined were significantly lower than 3/3 scores, $\beta = 0.23$, t(460) = 3.95, $p < 0.0001$. Incoherent efficiency was not significantly different from 0/3 efficiency, t(460) = 0.25, $p > 0.05$ and both combined were significantly lower than 3/3 efficiency, $\beta = 0.0006$, t(460) = 2.55, $p < 0.05$.
+Incoherent scores were not significantly different from 0/3 scores and incoherent efficiency was not significantly different from 0/3 efficiency.
 
 \subsubsection{Similarity}
-Incoherent scores were not significantly different from 0/3 scores, t(460) = -0.22, $p > 0.05$, and both combined were significantly lower than 3/3 scores, $\beta = 0.15$, t(460) = 2.47, $p < 0.05$. Incoherent efficiency was not significantly different from 0/3 efficiency, t(460) = 0.723, $p > 0.05$, and both combined were significantly lower than 3/3 efficiency, $\beta = 0.0006$, t(460) = 2.54, $p < 0.05$.
+Incoherent scores were not significantly different from 0/3 scores and incoherent efficiency was not significantly different from 0/3 efficiency.
 
 \subsubsection{Referent assignment}
-Incoherent scores were not significantly different from 0/3 scores, t(460) = 0.82, $p > 0.05$, and both combined were significantly less than 3/3 scores, $\beta = 0.23$, t(460) = 2.83, $p < 0.01$. There were no differences in efficiency (recall that this was also the case in Experiments 1 and 2). The familiar but semantically incoherent linguistic input appeared to have provided no benefit compared to the novel words of the 0/3 condition, suggesting that the presence of known words by itself does not aid distributional learning.
+Incoherent scores were not significantly different from 0/3 scores and incoherent efficiency was not significantly different from 0/3 efficiency.\\
+
+Apparently, the familiar but semantically incoherent linguistic input appeared to have provided no benefit compared to the novel words of the 0/3 condition, suggesting that the presence of known words by itself does not aid MNPQ learning.
 
 \section{General Discussion}
 
 We have found evidence that semantic coherence facilitates distributional (viz. MNPQ) learning. It appears that the interaction of both meaning and coherence drives the effect; when we separately removed meaning (as in the phonological conditions) and coherence (as in the semantic incoherence condition), learners failed to learn distributional regularities in the language.
+
+\subsection{Limitations of artificial languages}
+
+Our experiments highlight a limitation of artificial language learning paradigms. Researchers using entirely artificial languages may be severely limiting the power of distributional learning mechanisms, which our experiments show to be greatly enhanced by the presence of known words that adhere to some semantic organization.
+
+In our analyses, memory was a significant (albeit partial) mediator of the effect of semantic coherence on similarity and referent assignment scores. Artificial languages may place too high a memory burden on learners.
 
 \subsection{Implications for empirical and computational research}
 
@@ -424,7 +430,7 @@ Our results suggest two concrete improvements to existing research methods. Firs
 
 Second, it is not immediately clear what state-of-the-art computational models have to say about the effect of semantic coherence on learning. These models (e.g., Andrews, Vigliocco, \& Vinson, 2009; Baroni, Murphy, Barbu, \& Poesio, 2010; Durda, Buchanan, \& Caron, 2009; Jones \& Recchia, 2010; Steyvers, 2010; Johns \& Jones, 2012) combine linguistic and perceptual information and obtain good fits in part because they can leverage these distinct sources to learn about concrete words, which can be cashed out in obvious perceptual features, and abstract words, which might take their meaning from patterns of co-occurrence with concrete words.
 
-However, these modeling simulations are typically done in ``one shot'', where all of the perceptual and linguistic data is fed into the model at once. We suggest an additional criterion for model fit: ``developmental'' simulation, where the model's behavior is measured for varying amounts and varieties of perceptual and linguistic data. This additional dimension might reveal differences in models with respect to the effect of semantic coherence. One potential difficulty is defining whether a certain word is known in these models. We believe that existing models may already have partial solutions: a rough approximation for word familiarity can be defined as the certainty with which that word maps onto perceptual features.
+However, these modeling simulations are typically done in ``one shot'', where all of the perceptual and linguistic data is fed into the model at once. We suggest an additional criterion for model fit: ``developmental'' simulation, where the model's behavior is measured for varying amounts and varieties of perceptual and linguistic data. This additional dimension might reveal differences in models with respect to the effect of semantic coherence. One potential difficulty is defining whether a certain word is known in these models. We believe that existing models may already have a partial solution: a rough approximation for word familiarity can be defined as the certainty with which that word maps onto perceptual features.
 
 % Models that integrate linguistic and perceptual features:
 % \begin{tabular}{l l l l}
