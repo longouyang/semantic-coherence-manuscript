@@ -29,11 +29,11 @@ How do people learn the meanings of words? Quine (1960) has famously observed th
 
 One way that the hard problem of learning is softened is by a multiplicity of sources of information about word meaning. The external world, other people, and language itself provide various sources that the aspirant learner can use. Examples of informative sources include vision (Kay \& McDaniel, 1978; Rescorla, 1980; Booth \& Waxman, 2002; Regier \& Zheng, 2007), social experience (Baldwin, 1991; Bloom, 2002; Tomasello, 2003), phonology (Bloomfield, 1895; Kohler, 1929; Ramachandran and Hubbard, 2001; Maurer, Pathman, \& Mondloch, 2006; Graf-Estes et al., 2007; Parault \& Parkinson, 2008; Shukla, White, \& Aslin, 2011), syntax (Gleitman, 1990; Fisher et al., 1994), morphology (Carr \& Johnston, 2001), and linguistic context. Our chief interest in this paper is this last source -- linguistic context.
 
- It has long been believed that the linguistic contexts a word occurs in may be a useful clue toward its meaning. Learning from information about linguistic contexts \emph{distributional learning}. While researchers believe that distributional learning is a powerful learning mechanism, empirical results using artificial language learning suggest that human capacity for distributional learning may be quite limited.
+ It has long been believed that the linguistic contexts a word occurs in may be a useful clue toward its meaning. Learning from information about linguistic contexts is called \emph{distributional learning}. While researchers believe that distributional learning is a powerful learning mechanism, empirical results using artificial language learning suggest that people may have limitations on their ability to do distributional learning.
  
 In this paper, we help characterize some of the conditions under which distributional learning may succeed. Experimental work on distributional learning typically exposes learners to artificial languages where all the words are \emph{novel}. Our experiments suggest that distributional learning of meaning is facilitated by semantic coherence, the presence of \emph{known} words adhering to some semantic organization.
 
-To preview our paper: first, we review some of the general evidence for distributional learning (readers already familiar with this literature may want to skip this section). We then introduce the specific language structure we expolore in this paper, the MNPQ language, and discuss some of successes and the failures in finding evidence of distributional learning in experiments using this language. In Experiment 1, we present evidence that semantic coherence can facilitate MNPQ learning. In Experiments 2 and 3, we further explore this effect by isolating each component of semantic coherence -- meaning and coherence -- and find that neither meaning alone nor coherence alone is sufficient to facilitate MNPQ learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future computational work, and potential mechanisms for the semantic coherence effect.
+To preview our paper: first, we review some of the general evidence for distributional learning (readers already familiar with this literature may want to skip this section). We then introduce the specific language structure we expolore in this paper, the MNPQ language, and discuss some of successes and the failures in finding evidence of distributional learning in experiments that use this language. In Experiment 1, we present evidence that semantic coherence can facilitate MNPQ learning. In Experiments 2 and 3, we further explore this effect by isolating each component of semantic coherence -- meaning and coherence -- and find that neither meaning alone nor coherence alone is sufficient to facilitate MNPQ learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the semantic coherence effect.
 
 \subsection{Evidence for distributional learning}
 
@@ -205,80 +205,97 @@ For each pair of words in the union of N and Q, we asked subjects to rate on a 5
 Subjects made 2AFC referent assignments for the N and Q words (see Figure~\ref{meaning-task}). At the top of the screen, we displayed the M and P words in random order. Under each word, we showed an image of an associated referent. The referents corresponded to the familiar pools for M and P words: \textsc{cat}, \textsc{dog}, \textsc{hamster}, \textsc{car}, \textsc{bus}, and \textsc{truck}. Familiar words were always associated with the obvious referents (e.g., ``dog'' was always paired with an image of a dog). Below the ``seeded'' word meanings, we displayed a row containing the N and Q words. Under each word, we displayed a 2AFC referent choice between an animal (the ``correct'' choice for N words) and vehicle words (the ``correct'' choice for Q words); subjects made a choice by clicking on one of the two pictures. If subjects learned the MN and PQ co-occurrence relationships \emph{and} used them to form nascent lexical categories \emph{and} used these lexical categories as a basis for inferences about word meaning, then we expected that referent assignment scores would reflect a tendency to choose on the basis of the taxonomic categories of the co-occurring words (e.g., N's should be animals because they co-occur with M's, which are known to be animals).
 
 \subsection{Results and Discussion}
-We excluded the 55 subjects who did not correctly answer all of the catch trials. Results are shown in Figure~\ref{expt1-results}. Next, for each dependent measure -- memory, similarity, and meaning -- we defined a within-subject score representing the sensitivity to the co-occurrence regularities in the language. Memory score was the difference in mean ratings between novel withheld sentences (e.g., $m_1$--$n_1$) and novel category violation sentences (e.g., $m_1$--$q_1$). Similarity score was the difference between mean ratings of within-category (e.g., $N$--$N$) and cross-category (e.g $N$--$Q$) ratings. Referent assignment score was the total number of correct choices in the referent assignment task. We analyzed two aspects of the data. First, we were interested in main effects of coherence on score. Second, we were interested in the relationship between amount of exposure and score. Accordingly, we looked for exposure $\times$ coherence interactions. A significant interaction would indicate a difference in how \emph{efficiently} the statistical learning process makes use of evidence at different coherence levels. For all scores, we coded coherence as a categorical variable and analyzed the data using an interactive regression model: score $\sim$ exposures $\times$ condition. To examine the differences between the different coherence levels, we used Helmert contrasts analyzing (i) the difference between the 1/3 and 0/3 conditions, (ii) the difference between the 2/3 condition and the 0/3 and 1/3 conditions combined, and (iii) the difference between the 3/3 condition and the 0/3, 1/3, and 2/3 conditions combined. Results of these analyses are shown in Table~\ref{expt1-regressions}.
+We excluded the 55 subjects who did not correctly answer all of the catch trials. Results are shown in Figure~\ref{expt1-results}. Next, for each dependent measure -- memory, similarity, and meaning -- we defined a within-subject score representing the sensitivity to the co-occurrence regularities in the language. Memory score was the difference in mean ratings between novel withheld sentences (e.g., $m_1$--$n_1$) and novel category violation sentences (e.g., $m_1$--$q_1$). Similarity score was the difference between mean ratings of within-category (e.g., $N$--$N$) and cross-category (e.g $N$--$Q$) ratings. Referent assignment score was the total number of correct choices in the referent assignment task. All scores were normalized to the interval [-1, 1].
+
+We analyzed two aspects of the data. First, we were interested in main effects of coherence on score. Second, we were interested in the relationship between amount of exposure and score. Accordingly, we looked for exposure $\times$ coherence interactions. A significant interaction would indicate a difference in how \emph{efficiently} the statistical learning process makes use of evidence at different coherence levels. For all scores, we coded coherence as a categorical variable and analyzed the data using an interactive regression model: score $\sim$ exposures $\times$ condition. To examine the differences between the different coherence levels, we used Helmert contrasts analyzing (i) the difference between the 1/3 and 0/3 conditions, (ii) the difference between the 2/3 condition and the 0/3 and 1/3 conditions combined, and (iii) the difference between the 3/3 condition and the 0/3, 1/3, and 2/3 conditions combined. Results of these analyses are shown in Table \ref{expt1-regressions}.
+
+\begin{figure}[h]
+  \label{expt1-results}
+  \caption{Experiment 1 results. Each plot shows data for one measure (memory, similarity, meaning) in Experiment 1. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear regression.}
+  \begin{center}
+    TODO: experiment 1 results
+    % \includegraphics[height=5.1cm]{expt1b-memory.pdf}
+    % \includegraphics[height=5.1cm]{expt1b-similarity.pdf}
+    % \includegraphics[height=5.1cm]{expt1b-meaning.pdf}
+  \end{center}
+\end{figure}
 
 \newcommand{\ww}{\color{white}{*}}
 \newcommand\T{\rule{0pt}{2.1ex}}
 
 \begin{table}[ht]
-  \label{expt1-regressions} 
   \caption{Regression model for Experiment 1}
+  \label{expt1-regressions} 
   \begin{center}
   \footnotesize{\begin{tabular}{l r r r r}
     \hline
     Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
     \hline
     \multicolumn{5}{c}{\T Memory \T}\\
-    Intercept &  0.04005 &  0.01712 &  2.33 & <0.05*\\
-    Condition: 1/3 -- (0/3) & -0.01780 &  0.02499 & -0.71 & 0.47\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.02518 &  0.01439 &  1.74 & 0.08\ww\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.03224 &  0.00924 &  3.48 & <0.001*\\
-    Exposures &  0.00023 &  0.00007 &  2.93 & <0.005*\\
-    E $\times$ C: 1/3 -- (0/3) &  0.00005 &  0.00011 &  0.46 & 0.64\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00000 &  0.00006 & -0.07 & 0.93\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00016 &  0.00004 &  3.67 & <0.001* \\
+    Intercept &  0.03593 &  0.01876 &  1.91 & 0.056\ww\\
+    Condition: 1/3 -- (0/3) & -0.00053 &  0.02742 & -0.01 & 0.984\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.03094 &  0.01478 &  2.09 & <0.05*\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.03963 &  0.01084 &  3.65 & <0.001*\\
+    Exposures &  0.00023 &  0.00008 &  2.81 & <0.005*\\
+    E $\times$ C: 1/3 -- (0/3) &  0.00000 &  0.00012 &  0.02 & 0.977\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00002 &  0.00006 & -0.32 & 0.743\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00013 &  0.00004 &  2.73 & <0.01* \\
     \hline
 
-
     \multicolumn{5}{c}{\T Similarity \T}\\
-    Intercept &  0.00341 &  0.03192 &  0.10 & 0.91\ww\\
-    Condition: 1/3 -- (0/3) & -0.00649 &  0.05056 & -0.12 & 0.89\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.07183 &  0.04783 &  1.50 & 0.13\ww\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.09120 &  0.04465 &  2.04 & <0.05*\\
-    Exposures & -0.00003 &  0.00015 & -0.22 & 0.81\ww\\
-    E $\times$ C: 1/3 -- (0/3) &  0.00007 &  0.00023 &  0.33 & 0.73\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) &  0.00008 &  0.00022 &  0.39 & 0.69\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00070 &  0.00021 &  3.20 & <0.005* \\
+    Intercept &  0.05018 &  0.01895 &  2.64 & <0.01*\\
+    Condition: 1/3 -- (0/3) & -0.00707 &  0.02768 & -0.25 & 0.798\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.02374 &  0.01493 &  1.59 & 0.112\ww\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.02244 &  0.01095 &  2.04 & <0.05*\\
+    Exposures &  0.00014 &  0.00008 &  1.77 & 0.077\ww\\
+    E $\times$ C: 1/3 -- (0/3) &  0.00005 &  0.00012 &  0.42 & 0.671\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) &  0.00002 &  0.00006 &  0.31 & 0.754\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00013 &  0.00004 &  2.80 & <0.01* \\
     \hline
 
     \multicolumn{5}{c}{\T Referent assignment \T}\\
-    Intercept &  0.00446 &  0.06054 &  0.07 & 0.94\ww\\
-    Condition: 1/3 -- (0/3) &  0.07316 &  0.09603 &  0.76 & 0.44\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.19158 &  0.09064 &  2.11 & <0.05*\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.18231 &  0.08474 &  2.15 & <0.05*\\
-    Exposures &  0.00035 &  0.00029 &  1.20 & 0.22\ww\\
-    E $\times$ C: 1/3 -- (0/3) &  0.00000 &  0.00044 &  0.01 & 0.98\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00027 &  0.00042 & -0.65 & 0.50\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00069 &  0.00041 &  1.65 & 0.09\ww \\
+    Intercept &  0.10876 &  0.03606 &  3.01 & <0.005*\\
+    Condition: 1/3 -- (0/3) &  0.06647 &  0.05275 &  1.26 & 0.208\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.06163 &  0.02838 &  2.17 & <0.05*\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.03598 &  0.02084 &  1.72 & 0.084\ww\\
+    Exposures &  0.00045 &  0.00015 &  2.86 & <0.005*\\
+    E $\times$ C: 1/3 -- (0/3) & -0.00009 &  0.00023 & -0.39 & 0.690\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.00012 &  0.00012 & -0.99 & 0.319\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00012 &  0.00009 &  1.38 & 0.167\ww \\
     \hline
 
   \end{tabular}}
   \end{center}
 \end{table}
 
-\subsubsection{Memory} There were significant main effects of exposure and condition, with scores in the 3/3 condition being significantly higher than in the other conditions combined. Additionally, there was a significant exposure $\times$ condition interaction; the effect of exposures on score was significantly higher in 3/3 than in the other conditions combined, suggesting greater efficiency of statistical learning in 3/3. Thus, more coherent linguistic input (1) bolstered memory for the $MN$ and $PQ$ co-occurrence regularities and (2) increased the efficiency of the statistical learning process responsible for learning those regularities, at least in the 3/3 condition.
 
-\subsubsection{Similarity} There was a significant main effect of condition, with scores in 3/3 being significantly higher than in the other conditions combined. Additionally, there was a significant exposure $\times$ condition interaction; the effect of exposures on score was significantly higher in 3/3 than in the other conditions combined. Thus, more coherent linguistic input (1) increased the distinction between within-category and cross-category pairs of words and (2) increased the efficiency of the statistical learning process involved in making such distinctions, at least in the 3/3 condition.
 
-%Thus, in the 3/3 condition, increasing exposure resulted in increased distinction between within-category and cross-category pairs of words, suggesting that subjects started to form lexical categories.
+\subsubsection{Memory}
+There was a significant main effect of exposure, with greater exposure resulted in better memory scores. There was also a significant main effect of condition; 2/3 scores were significantly higher than scores from the 0/3 and 1/3 conditions combined and 3/3 scores were significantly higher than scores from the rest of the conditions combined. Because 2/3 and 3/3 scores both outperformed all the respective lower levels of coherence, we also computed this model using coherence as a continuous variable; the continuous coherence regressor significantly predicted increases in score, $\beta = 0.06$, $t(619) = 3.86$, $p < 0.0005$, suggesting that \emph{parametrically} increasing coherence results in \emph{parametric} increases in memory score.
 
-\begin{figure}[t]
-\label{expt1-results}
-\caption{Experiment 1 results. Each plot shows data for one measure (memory, similarity, meaning) in Experiment 1. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear trend.}
-\begin{center}
-TODO: experiment 1 results
-% \includegraphics[height=5.1cm]{expt1b-memory.pdf}
-% \includegraphics[height=5.1cm]{expt1b-similarity.pdf}
-% \includegraphics[height=5.1cm]{expt1b-meaning.pdf}
-\end{center}
-\end{figure}
+% condition.num            6.730e-02  1.743e-02   3.862 0.000124 ***
 
-\subsubsection{Referent assignment} There were significant main effects of exposure and condition. 2/3 scores were significantly higher than 0/3 and 1/3 scores combined and 3/3 scores were significantly higher than the rest of the scores combined. None of the interaction terms reached significance, indicating that the amount of exposure to the language and greater coherence independently increased the ability to assign $N$ and $Q$ words to the correct referents. We also computed this model using coherence as a continuous variable; this continuous regressor significantly predicted increases in score, $\beta = 0.29$, $t(650) = 3.06$, $p < 0.005$, indicating that \emph{parametrically} increasing coherence resulted in \emph{parametric} increases in referent assignment score.
+Additionally, there was a significant exposure $\times$ condition interaction; the effect of exposures on score was significantly higher in 3/3 than in the other conditions combined, suggesting greater efficiency of statistical learning in 3/3. Thus, more semantically coherent linguistic input (1) bolstered memory for the $MN$ and $PQ$ co-occurrence regularities and (2) increased the efficiency of the statistical learning process responsible for learning those regularities, at least in the 3/3 condition.
 
-To summarize, in Experiment 1, we found that higher coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities, (2) sharpened sensitivity to lexical category boundaries related to the co-occurrence regularities, and (3) increased inductive bias in associating words with referents.
-How does coherence bring about these effects? Frank \& Gibson (2011) have shown that MNPQ learning can be bolstered by easing working memory demands. Additionally, there is evidence that novel words tax the memory system more, as they are encoded in terms of smaller phonological units (Treiman \& Danis, 1988). So it is possible that the improved MNPQ learning by reducing memory demands. 
+\subsubsection{Similarity}
+There was a significant main effect of condition: 3/3 scores were significantly higher than in the other conditions combined. Additionally, there was a significant exposure $\times$ condition interaction; the effect of exposures on score was significantly higher in 3/3 than in the other conditions combined. Thus, more coherent linguistic input (1) increased the distinction between within-category and cross-category pairs of words and (2) increased the efficiency of the statistical learning process involved in making such distinctions, at least in the 3/3 condition.
 
-We tested for this possibility in our data using mediation analyses. In particular, we tested whether memory scores mediated the effect of coherence on either (1) similarity scores or (2) referent assignment scores. In both cases, we found partial mediation. After controlling for memory, the regression coefficient relating coherence and similarity decreased significantly from $0.28$ to $0.12$, Sobel $z$ = 7.74, $p < 0.05$; this reduced value was significantly greater than zero, $t(657) = 3.60, p < 0.0005$, indicating partial mediation. After controlling for memory, the regression coefficient relating coherence and referent assignment score decreased significantly from $0.31$ to $0.19$, Sobel $z$ = 5.19, $p < 0.05$; this reduced  value was significantly greater than zero, $t(651) = 3.67, p < 0.0005$, again indicating partial mediation. Thus, improved memory can explain some, but not all, of the increase in similarity and referent assignment scores due to semantic coherence.
+\subsubsection{Referent assignment}
+
+There were significant main effects of exposure and condition. 2/3 scores were significantly higher than 0/3 and 1/3 scores combined. 3/3 scores were marginally higher than the rest of the scores combined, $\beta = 0.03, t(615) = 1.72, p = 0.08$, possibly because 3/3 coherence and 2/3 coherence may confer comparable advantages on this task.
+
+We also computed this model using coherence as a continuous variable; the continuous coherence regressor significantly predicted increases in score, $\beta = 0.09$, $t(619) = 2.87$, $p < 0.005$, suggesting that \emph{parametrically} increasing coherence results in \emph{parametric} increases in referent assignment score.
+
+None of the interaction terms reached significance, indicating that the amount of exposure to the language and greater coherence independently increased the ability to assign $N$ and $Q$ words to the correct referents. 
+
+% parametric increase stuff:
+% condition.num            9.434e-02  3.285e-02   2.872  0.00422 **
+
+To summarize, in Experiment 1, we found that semantic coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities, (2) sharpened sensitivity to lexical category boundaries based on the co-occurrence regularities, and (3) increased inductive bias in associating words with referents.
+
+How does semantic coherence bring about these effects? Frank \& Gibson (2011) have shown that MNPQ learning can be bolstered by easing working memory demands. Additionally, there is evidence that novel words tax the memory system more, as they are encoded in terms of smaller phonological units (Treiman \& Danis, 1988). So it is possible that semantic coherence improved MNPQ learning by reducing memory demands.
+
+We tested for this possibility in our data using mediation analyses. In particular, we tested whether memory scores mediated the effect of coherence on either (1) similarity scores or (2) referent assignment scores. In both cases, we found partial mediation. After controlling for memory, the regression coefficient relating coherence and similarity decreased significantly from $0.07$ to $0.03$, Sobel $z$ = 7.80, $p < 0.005$; this reduced value was significantly greater than zero, $t(615) = TODO, p < 0.001$, indicating partial mediation. After controlling for memory, the regression coefficient relating coherence and referent assignment score decreased significantly from $0.10$ to $0.05$, Sobel $z$ = 5.33, $p < 0.005$; this reduced  value was significantly greater than zero, $t(615) = TODO, p < 0.005$, again indicating partial mediation. Thus, improved memory can explain some, but not all, of the increase in similarity and referent assignment scores due to semantic coherence.
 
 Semantic coherence has two components -- meaning and coherence. How does the effect of semantic coherence depend on each? In Experiments 2 and 3, we test for the effect of meaning and coherence respectively. In Experiment 2, we remove meaning by exposing learners to languages with phonological -- rather than semantic -- coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
 
@@ -302,7 +319,7 @@ The three types of phonological coherence\footnote{\label{change-of-stimuli} The
 
 \subsection{Results and Discussion}
 
-We discarded the 42 subjects who did not pass all the catch trials. Results are shown in Figure~\ref{expt2-results}. We compared the phonological condition results with the 0/3 and 3/3 conditions of Experiment 1 using a regression model with Helmert contrasts.% analyzing (i) the difference between the 0/3 and onset  (ii) the difference between the 3/3 condition and the 0/3 and phonological conditions combined.
+We discarded the 42 subjects who did not pass all the catch trials. Results are shown in Figure~\ref{expt2-results}. Using an interactive regression model (score $\sim$ exposures $\times$ condition), we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model with Helmert contrasts.
 
 \begin{figure}[t]
   \label{expt2-results}
@@ -315,16 +332,62 @@ We discarded the 42 subjects who did not pass all the catch trials. Results are 
   \end{center}
 \end{figure}
 
-\subsubsection{Memory (TODO)}
-Phonological scores were not significantly different from 0/3 scores, t(466) = 0.96, $p > 0.05$ and both combined were significantly lower than 3/3 scores, $\beta = 0.2$, t(466) = 3.44, $p < 0.001$. Phonological efficiency was not significantly different from 0/3 efficiency, t(466) = -0.17, $p > 0.05$ and both combined were significantly lower than 3/3 efficiency, $\beta = 0.0007$, t(466) = 2.76, $p < 0.01$.
+\begin{table}[ht]
+  \caption{Regression model for Experiment 2}
+  \label{expt2-regressions} 
+  \begin{center}
+    \footnotesize{\begin{tabular}{l r r r r}
+        \hline
+        Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
+        \hline
+        \multicolumn{5}{c}{\T Memory \T}\\
+        Intercept & -0.03411 &  0.02791 & -1.22 & 0.222\ww\\
+        Condition: Onset -- 0/3 &  0.06266 &  0.03864 &  1.62 & 0.105\ww\\
+        Condition: Rime -- 0/3 &  0.06528 &  0.03628 &  1.79 & 0.072\ww\\
+        Condition: Syllable count -- 0/3 &  0.04102 &  0.03915 &  1.04 & 0.295\ww\\
+        Exposures &  0.00012 &  0.00012 &  0.98 & 0.323\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00017 & -0.54 & 0.582\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.00019 &  0.00016 & -1.18 & 0.235\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.00007 &  0.00016 & -0.43 & 0.665\ww \\
+        \hline
 
-\subsubsection{Similarity (TODO)}
-Phonological scores were not significantly different from 0/3 scores, t(466) = -0.16, $p > 0.05$, and both combined were significantly lower than 3/3 scores, $\beta = 0.14$, t(466) = 2.54, $p < 0.05$. Phonological efficiency was not significantly different from 0/3 efficiency, t(466) = -0.29, $p > 0.05$, and both combined were significantly lower than 3/3 efficiency, $\beta = 0.0008$, t(466) = 3.2, $p < 0.005$.
+        \multicolumn{5}{c}{\T Similarity \T}\\
+        Intercept &  0.01107 &  0.02463 &  0.44 & 0.653\ww\\
+        Condition: Onset -- 0/3 & -0.00316 &  0.03411 & -0.09 & 0.926\ww\\
+        Condition: Rime -- 0/3 & -0.00640 &  0.03203 & -0.19 & 0.841\ww\\
+        Condition: Syllable count -- 0/3 & -0.04553 &  0.03456 & -1.31 & 0.188\ww\\
+        Exposures & -0.00006 &  0.00010 & -0.56 & 0.571\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00015 & -0.61 & 0.538\ww\\
+        E $\times$ C: Rime -- 0/3 &  0.00019 &  0.00014 &  1.34 & 0.178\ww\\
+        E $\times$ C: Syllable count -- 0/3 &  0.00030 &  0.00014 &  2.03 & <0.05* \\
+        \hline
+
+        \multicolumn{5}{c}{\T Referent assignment \T}\\
+        Intercept & -0.05533 &  0.07028 & -0.78 & 0.431\ww\\
+        Condition: Onset -- 0/3 &  0.17766 &  0.09715 &  1.82 & 0.067\ww\\
+        Condition: Rime -- 0/3 &  0.09165 &  0.09125 &  1.00 & 0.315\ww\\
+        Condition: Syllable count -- 0/3 &  0.02348 &  0.09858 &  0.23 & 0.811\ww\\
+        Exposures &  0.00054 &  0.00030 &  1.78 & 0.074\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.00061 &  0.00043 & -1.41 & 0.158\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.00032 &  0.00041 & -0.78 & 0.431\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.00006 &  0.00042 & -0.16 & 0.871\ww \\
+        \hline
+
+      \end{tabular}}
+  \end{center}
+\end{table}
+
+
+\subsubsection{Memory}
+There was no main effect of exposure. There was also no main effect of condition -- none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
+
+\subsubsection{Similarity}
+There was no main effect of exposure. There was also no main effect of condition -- none of the phonological condition scores were significantly different from 0/3 scores. One interaction term was significant: there appeared to be greater efficiency of statistical learning in the syllable count condition than in the 0/3 condition.
 
 \subsubsection{Referent assignment}
-Phonological scores were not significantly different from 0/3 scores, t(466) = 1.47, $p > 0.05$, and both combined were significantly less than 3/3 scores, $\beta = 0.2$, t(466) = 2.35, $p < 0.05$. There were no differences in efficiency (recall that this was also the case in Experiment 1).
+There was no main effect of exposure. There was also no main effect of condition -- none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
 
-To overview, phonological coherence was indistinguishable from the 0/3 condition in terms of facilitating MNPQ learning and markedly less effective than semantic coherence at the 3/3 level. This suggests that mere coherence is not what drives the facilitative effects of coherence. In Experiment 3, we consider whether the mere presence of known words (semantic incoherence) aids MNPQ learning.
+Across the three models, there were no significant predictors, save one the interaction term for syllable count versus 0/3 on the similarity measure, which can be plausibly attributed to chance. This suggests that phonological coherence was virtually indistinguishable from the 0/3 condition in terms of facilitating MNPQ learning. This indicates that mere coherence is not what drives the facilitative effects of coherence. In Experiment 3, we consider whether the mere presence of known words (semantic incoherence) aids MNPQ learning.
 
 \section{Experiment 3: Semantic incoherence}
 
