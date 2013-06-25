@@ -76,35 +76,33 @@ potential mechanisms for the semantic coherence effect.
 
 \subsection{Evidence for distributional learning}
 
-Scholars from four separate traditions -- philosophy, linguistics,
-computer science, and psychology -- have suggested that people can in
-principle use knowledge of the linguistics contexts that a word
-participates as an aid to its meaning. In what follows, we briefly
-trace the history of this notion in each tradition.
+The intellectual roots of distributional learning do not, in fact,
+directly deal with \emph{learning}. The scientific investigation of
+learning drew inspiration from distributional theories of
+\emph{meaning} from philosophy and linguistics. In philosophy, Wittgenstein
+(1953/1997) objected to the idea that words have precise, formal
+definitions and argued that meaning derives from usage, i.e., patterns
+of usage in language. To illustrate, he considered the word ``game'',
+a term used to describe activies as varied as board games, card games,
+ball games, Olympic games, and so forth, and observed that these
+activities lack a shared essence that we could distill to a
+definition. To use a spatial metaphor, the set of things called games
+does not appear to be a tidy circle around which we could circumscribe
+a boundary, but rather a ``complicated network of similarities
+overlapping and crisscrossing'' (\S 66). Wittgenstein argued that
+mapping this network by describing usage is critical to understanding
+meaning.
 
-In philosophy, Wittgenstein (1953/1997) proposed that meaning derives
-from usage. He objected to the idea that words are objects that can be
-given precise, formal characterizations. To illustrate, he considered
-the word ``game'', a term used to describe activies as varied as board
-games, card games, ball games, Olympic games, and so forth, and
-observed that these activities lack a shared essence that we could
-distill to a definition. To use a spatial metaphor, the set of things
-called games does not appear to be a tidy circle around which we could
-circumscribe a boundary, but rather a ``complicated network of
-similarities overlapping and crisscrossing'' (\S 66). Wittgenstein
-emphasized that mapping this network by describing usage was critical
-to understanding meaning.
-
-In linguistics, Firth proposed a similar idea, suggesting that the
-project of linguistics was to infer meanings based on patterns of
-``habitual collocation'' (1957). For example (p12), he asserts that
-part of the meaning of the ``cow'' is its co-occurrence with (e.g.,)
-``milk'', as in ``They are milking the cows'' or ``Cows give
-milk''. ``Tigress'' and ``lioness'' do not co-occur with ``milk'' as
-often and thus must differ somewhat in meaning. Firth stressed the
-utility of \emph{pure} co-occurrence independent of extralinguistic or
-even grammatical aspects. He even outlined a prescient kind of cluster
-analysis quite similar to modern-day statistical approaches:
+In linguistics, Firth (1957) similarly argued for a theory of meaning
+meanings based on patterns of ``habitual collocation'' (Firth,
+1957). For example (p12), he asserts that part of the meaning of the
+``cow'' is its co-occurrence with (e.g.,) ``milk'', as in ``They are
+milking the cows'' or ``Cows give milk''. ``Tigress'' and ``lioness''
+do not co-occur with ``milk'' as often and thus must differ somewhat
+in meaning. Firth stressed the utility of \emph{pure} co-occurrence
+independent of extralinguistic or even grammatical aspects. He even
+outlined a prescient kind of cluster analysis quite similar to
+modern-day statistical approaches:
 
 \begin{quote}
   ``In the study of selected words, compounds and phrases in a
@@ -114,47 +112,73 @@ analysis quite similar to modern-day statistical approaches:
   choice of definitions for meanings suggested by the groups'' (p13)
 \end{quote}
 
-Harris, a contemporary of Firth's, advanced a quantitative version of
+Firth's contemporary Harris advanced a quantitative version of
 this notion called the \emph{distributional hypothesis}, which
 proposes that words are semantically similar to the degree that they
-participate in the same contexts (1951). Harris defined the context of
-a word to be the other words immediately surrounding it. Further, he
-proposed that word meanings should be compared via their
-distributions, or the \emph{sum} of all contexts that they occurred
-in. Even in cases where word meaning was largely given by
-extralinguistic influences, such influences would have distributional
+participate in the same contexts (1951). Harris argued that, even in cases where word meaning was determined by extralinguistic influences, such influences would have distributional
 correlates\footnote{``... it frequently happens that when we do not
   rest with the explanation that something is due to meaning, we
   discover that it has a formal regularity or `explanation.' It may
   still be `due to meaning' in one sense, but it accords with a
-  distributional regularity.'' (1970, p.785)} so that meaning could be
+  distributional regularity.'' (1970, p.785)}. Thus, meaning could be
 divined by quantitatively analyzing purely linguistic
-information. Thus, he strongly advocated for statistical methods, but
-this vision did not come to light for some time, in part due to the
-rise of Chomsky's generative linguistics, which downplayed statistical
-approaches.
+information.
+
+These early proposals about the distributional theory of meaning
+stimulated empirical work in psychology. Theme: small-scale
+investigations.
+
+% Rubenstein + Goodenough: elicit synonym judgments for pairs of
+% concrete nouns. they generated a corpus by having
+% subjects write sentences for each word.  found positive relationship
+% between synonymy and degree of linguistic context match.
+
+% Clark: shows that ``prepositions with overlapping substitutes
+% generally had overlapping contexts in sentences''. elicited human
+% judgments. 
+
+% Szalay + Bryson: shows that word substitution judgments
+% (cf. syntagmatic relations) have respectable correlations (0.4-0.6)
+% with judgments of similarity and grouping and some other
+% measures. studied concrete and abstract nouns (food, hunger, rice;
+% money, poverty, beggar; school, knowledge, education; greeting,
+% politeness, manners)
+
+% need to get from library and scan:
+
+% - Geffroy, A., Lafon, P., Seidel, G., \& Tournier,
+%   M. (1973). Lexicometric Analysis of Cooccurrences. In A. J. Aitken,
+%   R. W. Bailey, \& N. Hamilton-Smith (Eds.), The Computer and Literary
+%   Studies. Edinburgh: Edinburgh University Press.al., 1973
+% - Stefflre, V., \& Reich, P. (1971). Some eliciting and
+%   computational procedures for descriptive semantics. In P Kay (Ed.),
+%   Explorations in mathematical anthropology. Cambridge, Mass. MIT Press.
+% - Berry-Rogghe, G. (1973). The computation of collocations and
+%   their relevance in lexical studies. In A. J. Aitken, R. W. Bailey, \&
+%   N. Hamilton-Smith (Eds.), The Computer and Literary Studies
+%   (pp. 103-112). Edinburgh: Edinburgh University Press.
+% - Jones, S., \& Sinclair, J. (1974). English lexical collocations:
+%   a study in computational linguistics. Cahiers de Lexicologie, 24(1),
+%   15-61.
+
 
 % - (transition: ideas from structural linguistics revived by computer
 % scientists) computational models. HAL, LSA (diagrams), word
 % classification: RCF98, Cartwright + brent, 1996, mintz et al., 2002,
 % topic models. (bottom line: computational proof of concept)
-In the 1980's, computer scientists revived the distributional
-hypothesis. Motivated by practical issues in the field of information
-retrieval, they considered the relationships between words themselves
-and between words and documents. A typical problem was that retrieving
-relevant documents from a database in response to a query with certain
-search terms. One solution to this problem is to representing
-documents as points in a high dimensional space whose dimensions are
-frequencies for different words (Salton \& McGill, 1983). This
-approach lends itself quite naturally to a matrix representation with
-words as rows, columns as documents, and particular cells encoding the
-frequency with which a particular word occurs in a particular document
-(see Figure \ref{matrix-word-doc}).
 
-% for the next 30 years (but see Rubenstein \& Goodenough, 1965;
-% Clark, 1968; Geffroy et al., 1973; Stefflre, Reich, \& Stefflre,
-% 1971; Berry-Rogghe, 1973; Jones \& Sinclair, 1974; Szalay \& Bryson,
-% 1974).
+In the 1980's, computer scientists devised techniques that paved the
+way for computational models of distributional learning. Motivated by
+practical issues in the field of information retrieval, they
+considered the relationships between words and documents. A typical
+problem was that of retrieving relevant documents from a database in
+response to a query with certain search terms. One solution to this
+problem is to represent documents as points in a high dimensional
+space whose dimensions are frequencies for different words (Salton \&
+McGill, 1983). This approach lends itself quite naturally to a matrix
+representation with words as rows, columns as documents, and
+particular cells encoding the frequency with which a particular word
+occurs in a particular document (see Figure \ref{matrix-word-doc}).
 
 %% HT http://tex.stackexchange.com/a/2442 for the \newline method to
 %% get multi-line cells. note the use of p{4cm} in the tabular options
@@ -183,16 +207,18 @@ terms of their constituent words, they can also be interpreted as
 representing words in terms of their patterns of use across documents,
 or, a proxy for the linguistic contexts that a word participates
 in. Put another way, such a matrix can be thought of either as a model
-of document meaning or -- more importantly, for our purposes -- a
-model of word meaning.
+of document meaning (i.e., a document's meaning is its column in this
+matrix) or, more importantly, for our purposes, a model of word
+meaning (i.e., a word's meaning is its row in this matrix).
 
-Another approach was to represent words in terms of their surrounding
-words, which immediately affords a model of word meaning (Church \&
-Hanks, 1990; Schutze, 1992). In this approach, the corresponding
-matrix has words as both rows and columns, with frequency of
-co-occurrence between words occupying the cells (see Figure
-\ref{matrix-word-word}). An additional parameter is the window size --
-the number of surrounding words that be constitute a word's context.
+Note that this word-document approach represents documents as ``bags'' of words --
+information about the relative position of words is discarded. The word-word
+approach retains this information (Church \&
+Hanks, 1990; Schutze, 1992). The word-word 
+matrix has words as both rows and columns; a row might represent the
+meaning of word A and the count in a particular column might indicate
+frequency that word A occurred 2 words before word X (see Figure
+\ref{matrix-word-word}). 
 
 \begin{figure}
   \begin{center}
@@ -223,37 +249,23 @@ the number of surrounding words that be constitute a word's context.
   \end{center}
 \end{figure}
 
-Though these formalisms arose in response to applied computational
-problems, their psycholinguistic significance was not lost on the
-early information retrieval pioneers. Researchers began explore how
-these representations might support language learning, a direction
-that proved to be widely influential.
+In what proved to be a widely influential research program,
+researchers found that both word-document and word-word models were
+capable of robustly learning semantic and syntactic properties of words.
 
 As one example, Landauer and Dumais (1997) developed a model called
-Latent Semantic Analysis (LSA), which operates on a word-document
-matrix. LSA applies a dimensionality reduction technique -- singular
-value decomposition -- to this matrix, yielding a reduced space that
-represents the semantic structure of the input. Each word is then
-associated with a vector in this reduced space and the similarity
-between two words can be computed as the cosine of the angle between
-their two vectors. The authors trained LSA on a corpus of 4.6 million
-words of text from encyclopedia articles and subsequently tested the
-model on 80 items from a Test of English as a Foreign Language (TOEFL)
-synonym test. They found that LSA closely matched performance of
-non-native English speakers applying to U.S. colleges.
+Latent Semantic Analysis (LSA), which builds a word-document
+matrix from a corpus, applies a dimensionality reduction technique
+(singular value decomposition), and computes the similarity between
+words using a cosine measure. After training an a corpus of
+encyclopedia articles, LSA closely matched the performance of
+non-native English speakers on a synonym test.
 
-As another example, Lund and Burgess (1996) developed a model called
-Hyperspace Analogue to Language (HAL), which operates on a word-word
-matrix where co-occurrence frequencies are weighted according to the
-separation distance between words. Like LSA, HAL applies
-dimensionality reduction to this matrix, in this case removing all but
-the 200 highest variance columns. On a large corpus of Usenet data,
-HAL successfully extracted semantic categories like animals, body
-parts, and geographical regions. Lund and Burgess also found that
-distances between words in HAL space correlated positively (up to
-$r$=0.35) with semantic-priming reaction times.
+TODO: talk about RCF98 syntactic category learning. not just semantics
+(though RCF model appears to learn some categories with decidedly
+semantic texture)
 
-The success of early models like HAL and LSA led to a proliferation of
+The success of such early models LSA led to a proliferation of
 models that use co-occurrence information to learn word meaning (see
 Riordan \& Jones, 2010 for an overview and comparison of
 state-of-the-art models) as well as other linguistic properties like
