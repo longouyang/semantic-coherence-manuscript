@@ -261,22 +261,25 @@ words using a cosine measure. After training an a corpus of
 encyclopedia articles, LSA closely matched the performance of
 non-native English speakers on a synonym test.
 
-TODO: talk about RCF98 syntactic category learning. not just semantics
-(though RCF model appears to learn some categories with decidedly
-semantic texture)
+As another example, Redington, Chater, and Finch (1998) developed a
+model that performs hierarchical clustering on a word-word
+matrix. This model was able to learn syntactic (as opposed to
+semantic) categories. An interesting feature of the learned clusters
+is that they often had semantic organization -- in the cluster of
+adjectives, the color words and number words formed separate clusters
+(p448).
 
-The success of such early models LSA led to a proliferation of
-models that use co-occurrence information to learn word meaning (see
+The success of such early models led to a proliferation of
+models that learn from distributional information (see
 Riordan \& Jones, 2010 for an overview and comparison of
-state-of-the-art models) as well as other linguistic properties like
-syntactic category. The computational evidence is quite strong:
+state-of-the-art models). The computational evidence is quite strong:
 statistical patterns of co-occurrence can, in principle, be used to
-learn some aspects of word meaning.
+learn \emph{inter alia} some aspects of word meaning.
 
 We have computational proofs of concept, but do humans actually use
 distributional information to learn meaning? Empirical research on
 knowledge of visual and color terms in the congenitally blind offers
-some indirect evidence. Shepard and Cooper (1992), had blind,
+some indirect evidence. Shepard and Cooper (1992), blind,
 color-blind, and normally sighted participants rate the similarity of
 pairs of colors words. As might be predicted, the ratings of blind
 participants did not correlate highly with normally sighted
@@ -287,8 +290,8 @@ have learned anything about color relationships? One possibility,
 raised by Shepard and Cooper, is that the blind may have extracted
 these relationships from their linguistic input. Similarly, more
 recent work by Bedny et al. (2011) suggests that visual verb meanings
-are unaffected by congenital blindness. %
-http://mindmodeling.org/cogsci2012/papers/0471/index.html
+are unaffected by congenital blindness.
+% http://mindmodeling.org/cogsci2012/papers/0471/index.html
 
 These demonstrations in the blind, while suggestive, are only indirect
 evidence of distributional learning. Researchers studying
