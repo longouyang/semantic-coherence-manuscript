@@ -22,7 +22,6 @@ An earlier version of this paper appeared in the Proceedings of the 34th Annual 
 }
 \abstract{Abstract here.}
 
-
 \begin{document}
 \maketitle
 
@@ -40,17 +39,16 @@ Aslin, 2011), syntax (Gleitman, 1990; Fisher et al., 1994), morphology
 (Carr \& Johnston, 2001), and linguistic context. Our chief interest
 in this paper is this last source -- linguistic context.
 
-Researchers believe that people may use knowledge of the linguistic
-contexts a word occurs in as a clue toward its meaning. For example,
-one might infer that ``postman'' and ``mailman'' have similar meanings
-based solely on the fact that they occur in similar linguistic
-contexts (e.g., they both occur in sentences about delivering packages
-and driving mail trucks). Learning from linguistic context in this
-fashion is called \emph{distributional learning}. While researchers
-believe that distributional learning is a powerful learning mechanism,
-human experiments using artificial language learning suggest that
-people may have limitations on their ability to do distributional
-learning.
+Researchers believe that people may use knowledge of linguistic
+contexts as a clue toward meaning. For example, one might infer that
+``postman'' and ``mailman'' have similar meanings based solely on the
+fact that they occur in similar linguistic contexts (e.g., they both
+occur in sentences about delivering packages and driving mail
+trucks). Learning from linguistic context in this fashion is called
+\emph{distributional learning}. While researchers believe that
+distributional learning is a powerful learning mechanism, human
+experiments using artificial language learning suggest that people may
+have limitations on their ability to do distributional learning.
  
 In this paper, we help characterize some of the conditions under which
 people may successfully perform distributional learning. Human
@@ -79,13 +77,13 @@ potential mechanisms for the semantic coherence effect.
 The intellectual roots of distributional learning do not, in fact,
 directly deal with \emph{learning}. The scientific investigation of
 learning drew inspiration from distributional theories of
-\emph{meaning} from philosophy and linguistics. In philosophy, Wittgenstein
-(1953/1997) objected to the idea that words have precise, formal
-definitions and argued that meaning derives from usage, i.e., patterns
-of usage in language. To illustrate, he considered the word ``game'',
-a term used to describe activies as varied as board games, card games,
-ball games, Olympic games, and so forth, and observed that these
-activities lack a shared essence that we could distill to a
+\emph{meaning} from philosophy and linguistics. In philosophy,
+Wittgenstein (1953/1997) objected to the idea that words have precise,
+formal definitions and argued that meaning derives from usage, i.e.,
+patterns of usage in language. To illustrate, he considered the word
+``game'', a term used to describe activies as varied as board games,
+card games, ball games, Olympic games, and so forth, and observed that
+these activities lack a shared essence that we could distill to a
 definition. To use a spatial metaphor, the set of things called games
 does not appear to be a tidy circle around which we could circumscribe
 a boundary, but rather a ``complicated network of similarities
@@ -104,99 +102,98 @@ independent of extralinguistic or even grammatical aspects. He even
 outlined a prescient kind of cluster analysis quite similar to
 modern-day statistical approaches:
 
-\begin{quote}
-  ``In the study of selected words, compounds and phrases in a
-  restricted language for which there are restricted texts, an
-  exhaustive collection of collocation will suggest a small number of
-  groups of collocations for each word studied. The next step is the
-  choice of definitions for meanings suggested by the groups'' (p13)
+\begin{quote} ``In the study of selected words, compounds and phrases
+in a restricted language for which there are restricted texts, an
+exhaustive collection of collocation will suggest a small number of
+groups of collocations for each word studied. The next step is the
+choice of definitions for meanings suggested by the groups'' (p13)
 \end{quote}
 
-Firth's contemporary Harris advanced a quantitative version of
-this notion called the \emph{distributional hypothesis}, which
-proposes that words are semantically similar to the degree that they
-participate in the same contexts (1951). Harris argued that, even in cases where word meaning was determined by extralinguistic influences, such influences would have distributional
-correlates\footnote{``... it frequently happens that when we do not
-  rest with the explanation that something is due to meaning, we
-  discover that it has a formal regularity or `explanation.' It may
-  still be `due to meaning' in one sense, but it accords with a
-  distributional regularity.'' (1970, p.785)}. Thus, meaning could be
-divined by quantitatively analyzing purely linguistic
-information.
+Firth's contemporary Harris advanced a quantitative version of this
+notion called the \emph{distributional hypothesis}, which proposes
+that words are semantically similar to the degree that they
+participate in the same contexts (1951). Harris argued that, even in
+cases where word meaning was determined by extralinguistic influences,
+such influences would have distributional correlates\footnote{``... it
+frequently happens that when we do not rest with the explanation that
+something is due to meaning, we discover that it has a formal
+regularity or `explanation.' It may still be `due to meaning' in one
+sense, but it accords with a distributional regularity.'' (1970,
+p.785)}. Thus, meaning could be divined by quantitatively analyzing
+purely linguistic information.
 
-These early proposals about the distributional theory of meaning
-stimulated empirical work in psychology. Theme: small-scale
-investigations.
+These proposals about the distributional theory of meaning stimulated
+early empirical work with humans. This early work typically
+demonstrated the validity of the distributional hypothesis using small
+samples of human judgments and corpora. Rubenstein \& Goodenough
+(1965) elicited synonym judgments for pairs of concrete nouns and
+compared these judgments against co-occurrence statistics in a corpus
+generated by an independent group of subjects. They found a positive
+relationship between synonymy and degree of linguistic context
+match. Clark (1968) found a correlation between the degree of
+substitubility and the degree of context overlap for
+prepositions. Szalay \& Bryson (1974) found correlations between word
+substitution ratings and judgments of similarity and grouping for both
+concrete and abstract nouns.
 
-% Rubenstein + Goodenough: elicit synonym judgments for pairs of
-% concrete nouns. they generated a corpus by having
-% subjects write sentences for each word.  found positive relationship
-% between synonymy and degree of linguistic context match.
+TODO: Geffroy et al.; Berry-Rogghe; Jones \& Sinclair
 
-% Clark: shows that ``prepositions with overlapping substitutes
-% generally had overlapping contexts in sentences''. elicited human
-% judgments. 
-
-% Szalay + Bryson: shows that word substitution judgments
-% (cf. syntagmatic relations) have respectable correlations (0.4-0.6)
-% with judgments of similarity and grouping and some other
-% measures. studied concrete and abstract nouns (food, hunger, rice;
-% money, poverty, beggar; school, knowledge, education; greeting,
-% politeness, manners)
+% Szalay \& Bryson (1974) shows that word substitution judgments %
+(cf. syntagmatic relations) have respectable correlations (0.4-0.6) %
+with judgments of similarity and grouping and some other %
+measures. studied concrete and abstract nouns (food, hunger, rice; %
+money, poverty, beggar; school, knowledge, education; greeting, %
+politeness, manners)
 
 % need to get from library and scan:
 
-% - Geffroy, A., Lafon, P., Seidel, G., \& Tournier,
-%   M. (1973). Lexicometric Analysis of Cooccurrences. In A. J. Aitken,
-%   R. W. Bailey, \& N. Hamilton-Smith (Eds.), The Computer and Literary
-%   Studies. Edinburgh: Edinburgh University Press.al., 1973
-% - Stefflre, V., \& Reich, P. (1971). Some eliciting and
-%   computational procedures for descriptive semantics. In P Kay (Ed.),
-%   Explorations in mathematical anthropology. Cambridge, Mass. MIT Press.
-% - Berry-Rogghe, G. (1973). The computation of collocations and
-%   their relevance in lexical studies. In A. J. Aitken, R. W. Bailey, \&
-%   N. Hamilton-Smith (Eds.), The Computer and Literary Studies
-%   (pp. 103-112). Edinburgh: Edinburgh University Press.
-% - Jones, S., \& Sinclair, J. (1974). English lexical collocations:
-%   a study in computational linguistics. Cahiers de Lexicologie, 24(1),
-%   15-61.
+% - Geffroy, A., Lafon, P., Seidel, G., \& Tournier, %
+M. (1973). Lexicometric Analysis of Cooccurrences. In A. J. Aitken, %
+R. W. Bailey, \& N. Hamilton-Smith (Eds.), The Computer and Literary %
+Studies. Edinburgh: Edinburgh University Press.al., 1973 % - Stefflre,
+V., \& Reich, P. (1971). Some eliciting and % computational procedures
+for descriptive semantics. In P Kay (Ed.), % Explorations in
+mathematical anthropology. Cambridge, Mass. MIT Press.  % -
+Berry-Rogghe, G. (1973). The computation of collocations and % their
+relevance in lexical studies. In A. J. Aitken, R. W. Bailey, \& %
+N. Hamilton-Smith (Eds.), The Computer and Literary Studies %
+(pp. 103-112). Edinburgh: Edinburgh University Press.  % - Jones, S.,
+\& Sinclair, J. (1974). English lexical collocations: % a study in
+computational linguistics. Cahiers de Lexicologie, 24(1), % 15-61.
 
 
 % - (transition: ideas from structural linguistics revived by computer
-% scientists) computational models. HAL, LSA (diagrams), word
-% classification: RCF98, Cartwright + brent, 1996, mintz et al., 2002,
-% topic models. (bottom line: computational proof of concept)
+% scientists) computational models. HAL, LSA (diagrams), word %
+classification: RCF98, Cartwright + brent, 1996, mintz et al., 2002, %
+topic models. (bottom line: computational proof of concept)
 
-In the 1980's, computer scientists devised techniques that paved the
-way for computational models of distributional learning. Motivated by
-practical issues in the field of information retrieval, they
-considered the relationships between words and documents. A typical
-problem was that of retrieving relevant documents from a database in
-response to a query with certain search terms. One solution to this
-problem is to represent documents as points in a high dimensional
-space whose dimensions are frequencies for different words (Salton \&
-McGill, 1983). This approach lends itself quite naturally to a matrix
-representation with words as rows, columns as documents, and
-particular cells encoding the frequency with which a particular word
-occurs in a particular document (see Figure \ref{matrix-word-doc}).
+This early empirical work was at a limited scale -- human subjects
+gave judgments for a small set of words and computational analyses
+considered small corpora. In the 1980's, computer scientists devised
+techniques that paved the way for larger scale investigations of
+distributional learning. Motivated by practical issues in the field of
+information retrieval, they considered the relationships between words
+and documents. A typical problem was that of retrieving relevant
+documents from a database in response to a query with certain search
+terms. One solution to this problem is to represent documents as
+points in a high dimensional space whose dimensions are frequencies
+for different words (Salton \& McGill, 1983). This approach lends
+itself quite naturally to a matrix representation with words as rows,
+columns as documents, and particular cells encoding the frequency with
+which a particular word occurs in a particular document (see Figure
+\ref{matrix-word-doc}).
 
 %% HT http://tex.stackexchange.com/a/2442 for the \newline method to
 %% get multi-line cells. note the use of p{4cm} in the tabular options
 \begin{figure}
-  \begin{center}
-    \footnotesize{\sffamily{\begin{tabular}{| l | p{4cm} | p{4cm} | l
-            |} \hline
-          & Document X & Document Y & ... \\
-          \hline
-          Word A & Frequency of word A \newline in document X & Frequency of word A \newline in document Y & ... \\
-          \hline
-          Word B & Frequency of word B \newline in document X & Frequency of word B \newline in document Y & ... \\
-          \hline
-          ... & ... & ... & ... \\
-          \hline
+  \begin{center} \footnotesize{\sffamily{\begin{tabular}{| l | p{4cm}
+| p{4cm} | l |} \hline & Document X & Document Y & ... \\ \hline Word
+A & Frequency of word A \newline in document X & Frequency of word A
+\newline in document Y & ... \\ \hline Word B & Frequency of word B
+\newline in document X & Frequency of word B \newline in document Y &
+... \\ \hline ... & ... & ... & ... \\ \hline
 
-        \end{tabular}
-      }}
+        \end{tabular} }}
   \end{center}
   \caption{Word-document matrix}
   \label{matrix-word-doc}
@@ -211,39 +208,26 @@ of document meaning (i.e., a document's meaning is its column in this
 matrix) or, more importantly, for our purposes, a model of word
 meaning (i.e., a word's meaning is its row in this matrix).
 
-Note that this word-document approach represents documents as ``bags'' of words --
-information about the relative position of words is discarded. The word-word
-approach retains this information (Church \&
-Hanks, 1990; Schutze, 1992). The word-word 
-matrix has words as both rows and columns; a row might represent the
-meaning of word A and the count in a particular column might indicate
-frequency that word A occurred 2 words before word X (see Figure
-\ref{matrix-word-word}). 
+Note that this word-document approach represents documents as ``bags''
+of words -- information about the relative position of words is
+discarded. The word-word approach retains this information (Church \&
+Hanks, 1990; Schutze, 1992). The word-word matrix has words as both
+rows and columns; a row might represent the meaning of word A and the
+count in a particular column might indicate frequency that word A
+occurred 2 words before word X (see Figure \ref{matrix-word-word}).
 
 \begin{figure}
-  \begin{center}
-    \footnotesize{\sffamily{
+  \begin{center} \footnotesize{\sffamily{
         \begin{tabular}{| l | p{3.5cm} | p{3.5cm} | p{3.5cm} | l |}
-          \hline
-          & Word X (-1) & Word X (+1) & Word X (+2) & ... \\
-          \hline
-          Word A &
-          Frequency of X \newline 1 word before \newline  A &
-          Frequency of X \newline 1 word after \newline  A & 
-          Frequency of X \newline 2 words after \newline  A & 
-          ... \\
-          \hline
-          Word B &
-          Frequency of X \newline 1 word before\newline  B &
-          Frequency of X \newline 1 word after \newline  B & 
-          Frequency of X \newline 2 words after \newline  B & 
-          ... \\
-          \hline
-          ... & ... & ... & ... & ... \\
-          \hline
+\hline & Word X (-1) & Word X (+1) & Word X (+2) & ... \\ \hline Word
+A & Frequency of X \newline 1 word before \newline A & Frequency of X
+\newline 1 word after \newline A & Frequency of X \newline 2 words
+after \newline A & ... \\ \hline Word B & Frequency of X \newline 1
+word before\newline B & Frequency of X \newline 1 word after \newline
+B & Frequency of X \newline 2 words after \newline B & ... \\ \hline
+... & ... & ... & ... & ... \\ \hline
 
-        \end{tabular}
-      }}
+        \end{tabular} }}
     \caption{Word-word matrix}
     \label{matrix-word-word}
   \end{center}
@@ -251,15 +235,14 @@ frequency that word A occurred 2 words before word X (see Figure
 
 In what proved to be a widely influential research program,
 researchers found that both word-document and word-word models were
-capable of robustly learning semantic and syntactic properties of words.
-
-As one example, Landauer and Dumais (1997) developed a model called
-Latent Semantic Analysis (LSA), which builds a word-document
-matrix from a corpus, applies a dimensionality reduction technique
-(singular value decomposition), and computes the similarity between
-words using a cosine measure. After training an a corpus of
-encyclopedia articles, LSA closely matched the performance of
-non-native English speakers on a synonym test.
+capable of robustly learning semantic properties of words. As one
+example, Landauer and Dumais (1997) developed a model called Latent
+Semantic Analysis (LSA), which builds a word-document matrix from a
+corpus, applies a dimensionality reduction technique (singular value
+decomposition), and computes the similarity between words using a
+cosine measure. After training an a corpus of encyclopedia articles,
+LSA closely matched the performance of non-native English speakers on
+a synonym test.
 
 As another example, Redington, Chater, and Finch (1998) developed a
 model that performs hierarchical clustering on a word-word
@@ -267,31 +250,40 @@ matrix. This model was able to learn syntactic (as opposed to
 semantic) categories. An interesting feature of the learned clusters
 is that they often had semantic organization -- in the cluster of
 adjectives, the color words and number words formed separate clusters
-(p448).
+(p448). We bring up this syntactic example to demonstrate that
+distributional learning has been posited as a learning mechanism in a
+variety of domains, from word segmentation (e.g., Meylan et al., 2012)
+to visual feature learning (e.g., Austerweil \& Griffiths, 2011), to
+visuomotor category formation (e.g., Hunt \& Aslin, 2010).
 
-The success of such early models led to a proliferation of
-models that learn from distributional information (see
-Riordan \& Jones, 2010 for an overview and comparison of
-state-of-the-art models). The computational evidence is quite strong:
-statistical patterns of co-occurrence can, in principle, be used to
-learn \emph{inter alia} some aspects of word meaning.
+The success of early computational models led to a proliferation of
+models that learn from distributional information (see Riordan \&
+Jones, 2010 for an overview and comparison of state-of-the-art
+models). The computational evidence is quite strong: statistical
+patterns of co-occurrence can, in principle, be used to learn
+\emph{inter alia} some aspects of word meaning.
 
 We have computational proofs of concept, but do humans actually use
 distributional information to learn meaning? Empirical research on
 knowledge of visual and color terms in the congenitally blind offers
-some indirect evidence. Shepard and Cooper (1992), blind,
-color-blind, and normally sighted participants rate the similarity of
-pairs of colors words. As might be predicted, the ratings of blind
-participants did not correlate highly with normally sighted
-individuals. However, their ratings did appear to preserve the local
-similarity relationships -- violet was rated most similar to purple,
-teal to green, and so forth. How might congenitally blind individuals
-have learned anything about color relationships? One possibility,
-raised by Shepard and Cooper, is that the blind may have extracted
-these relationships from their linguistic input. Similarly, more
-recent work by Bedny et al. (2011) suggests that visual verb meanings
-are unaffected by congenital blindness.
-% http://mindmodeling.org/cogsci2012/papers/0471/index.html
+some indirect evidence. Shepard and Cooper (1992) presented
+congenitally blind, color-blind, and normally sighted participants
+with pairs of color words and asked them to make similarity
+ratings. As might be predicted, the ratings of blind participants did
+not correlate highly with normally sighted individuals. However, their
+ratings did appear to preserve the local similarity relationships --
+violet was rated most similar to purple, teal to green, and so
+forth. How might congenitally blind individuals have learned anything
+about color relationships? One possibility, raised by Shepard and
+Cooper, is that the blind may have extracted these relationships from
+their linguistic input. Similarly, Bedny et al. (2011) presented
+sighted and congenitally blind subjects with pairs of visual verbs and
+asked them to make similarity judgments. Judgments between the two
+groups were quite similar, raising the possibility that blind subjects
+learned verb meanings from linguistic information (however, Bedny et
+al. argue that judgments are not based on word co-occurrence, as blind
+and sighted ratings were more correlated with each other than with
+ratings derived from LSA).
 
 These demonstrations in the blind, while suggestive, are only indirect
 evidence of distributional learning. Researchers studying
@@ -370,17 +362,22 @@ language where sentences took the form ``M and N'' or ``P and Q''. We
 hypothesized that distributional learning for N and Q words would be
 afforded, given a certain level of semantic coherence (specifically, a
 taxonomic coherence where M's are animals and P's were vehicles). For
-instance, hearing the four sentences ``cat and dax", ``cat and ziv'',
-``car and wug'', and ``car and pif'' might allow learners to infer
-that daxes and zivs belong to the same category, as both words
-co-occur with ``cat'', and that wugs and pifs belong to the same
-category, as both words co-occur with ``car''.
+instance, hearing the four sentences:
+\begin{enumerate}
+\item dog and dax
+\item dog and ziv
+\item car and wug
+\item car and pif
+\end{enumerate} might allow learners to infer that daxes and zivs
+belong to the same category, as both words co-occur with ``dog'', and
+that wugs and pifs belong to the same category, as both words co-occur
+with ``car''.
 
 In Experiment 1, we tested whether semantic coherence facilitated
-distributional learning. In Experiments 2 and 3, we compared semantic
-coherence to phonological coherence and semantic incoherence, the
-presence of known words that do not adhere to some semantic
-organization.
+distributional learning. In Experiment 2, we compared semantic
+coherence to phonological coherence. In Experiment 3, we compared
+semantic coherence to semantic incoherence, the presence of known
+words that do not adhere to some semantic organization.
 
 \section{Experiment 1: Semantic coherence}
 
@@ -404,40 +401,38 @@ referent assignment task.
 
 \subsection{Method}
 
-\subsubsection{Subjects}
-678 Amazon Mechanical Turk (MTurk) workers. Using MTurk's worker
-qualifications, we limited participaton to workers located in the
-United States and with a previous HIT approval rate greater than or
-equal to 90\%. We chose MTurk workers because the number of
-experimental conditions required a large number of subjects. Work by
-Burhmester, Kwang, and Gosling (2011) and Crump, McDonald, and
-Gureckis (2013) suggests that MTurk is a valid platform for web-based
-learning experiments.
+\subsubsection{Subjects} 678 Amazon Mechanical Turk (MTurk)
+workers. Using MTurk's worker qualifications, we limited participaton
+to workers located in the United States and with a previous HIT
+approval rate greater than or equal to 90\%. We chose MTurk workers
+because the number of experimental conditions required a large number
+of subjects. Work by Burhmester, Kwang, and Gosling (2011) and Crump,
+McDonald, and Gureckis (2013) suggests that MTurk is a valid platform
+for web-based learning experiments.
 
-\subsubsection{Materials}
-Sentences took the form ``M and N'' or ``P and Q'' (see Figure
-\ref{mnpq-table}). Note that sentences literally included the word
-``and'' in the middle. We generated the actual lexical items randomly
-for each subject. N's and Q's were always novel nonsense words and
-were drawn without replacement from the set \{moke, thite, jiv, pif,
-dex, wug\}. M's and P's could be either novel or familiar. Novel M's
-were drawn from \{feeb, bim, lup\} and novel P's were drawn from
-\{zabe, vap, chuv\}. Familiar M's and P's obeyed a taxonomic
-organization -- familiar M's were drawn from \{hamster, cat, dog\} and
-familiar P's were drawn from \{car, bus, truck\}. To create the audio
-files, we input the sentences as ``X. and. Y.'' (e.g.,
+\subsubsection{Materials} Sentences took the form ``M and N'' or ``P
+and Q'' (see Figure \ref{mnpq-table}). Note that sentences literally
+included the word ``and'' in the middle. We generated the actual
+lexical items randomly for each subject. N's and Q's were always novel
+nonsense words and were drawn without replacement from the set \{moke,
+thite, jiv, pif, dex, wug\}. M's and P's could be either novel or
+familiar. Novel M's were drawn from \{feeb, bim, lup\} and novel P's
+were drawn from \{zabe, vap, chuv\}. Familiar M's and P's obeyed a
+taxonomic organization -- familiar M's were drawn from \{hamster, cat,
+dog\} and familiar P's were drawn from \{car, bus, truck\}. To create
+the audio files, we input the sentences as ``X. and. Y.'' (e.g.,
 ``car. and. chuv.'', including periods) into an American English
 text-to-speech engine using a female voice\footnote{\label{tts}In
-  particular, we programatically submitted all of the text sentences
-  to the text-to-speech web service that powers Google Translate; when
-  we initially performed the synthesis, this web service used one set
-  of voices. The available voices have changed since we created our
-  initial stimuli. See also Footnote \ref{change-of-stimuli}.}. The
-periods between words introduced substantial pauses ranging in length
-from 150 to 300 ms; piloting revealed that without pauses, it was
-difficult for participants to distinguish the words. Sentences using
-only monosyllabic words were around 2 seconds long. Sentences using
-the sole disyllabic word, hamster, were around 3 seconds long.  The
+particular, we programatically submitted all of the text sentences to
+the text-to-speech web service that powers Google Translate; when we
+initially performed the synthesis, this web service used one set of
+voices. The available voices have changed since we created our initial
+stimuli. See also Footnote \ref{change-of-stimuli}.}. The periods
+between words introduced substantial pauses ranging in length from 150
+to 300 ms; piloting revealed that without pauses, it was difficult for
+participants to distinguish the words. Sentences using only
+monosyllabic words were around 2 seconds long. Sentences using the
+sole disyllabic word, hamster, were around 3 seconds long.  The
 referent assignment task involved visual referents. For the context
 words, we used 128x128 pixel images of a cat, dog, hamster, car, bus,
 and truck. For the target words, we used 100x100 pixel images of a
@@ -445,15 +440,16 @@ horse, rabbit, sheep, bear, goldfish, mouse, boat, van, train,
 motorcycle, plane, and bicycle.
 
 \begin{figure}[t]
-  \begin{center}
-    \vskip 0.12in \fbox{
-      \begin{tabular}{ l l l | l l l }
-        \underline{$m_1$  $n_1$} & $m_1$  $n_2$ & $m_1$  $n_3$ &  \underline{$p_1$  $q_1$} & $p_1$  $q_2$ & $p_1$  $q_3$ \\
-        $m_2$  $n_1$ & \underline{$m_2$  $n_2$} & $m_2$  $n_3$ &  $p_2$  $q_1$ & \underline{$p_2$  $q_2$} & $p_2$  $q_3$ \\
-        $m_3$  $n_1$ & $m_3$  $n_2$ & \underline{$m_3$  $n_3$} &  $p_3$  $q_1$ & $p_3$  $q_2$ & \underline{$p_3$  $q_3$}\\
+  \begin{center} \vskip 0.12in \fbox{
+      \begin{tabular}{ l l l | l l l } \underline{$m_1$ $n_1$} & $m_1$
+$n_2$ & $m_1$ $n_3$ & \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$
+$q_3$ \\ $m_2$ $n_1$ & \underline{$m_2$ $n_2$} & $m_2$ $n_3$ & $p_2$
+$q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\ $m_3$ $n_1$ & $m_3$
+$n_2$ & \underline{$m_3$ $n_3$} & $p_3$ $q_1$ & $p_3$ $q_2$ &
+\underline{$p_3$ $q_3$}\\
       \end{tabular}}
     \caption{The MNPQ language. Underlined sentences were withheld
-      from exposure.}
+from exposure.}
     \label{mnpq-table}
   \end{center}
 \end{figure}
@@ -471,56 +467,52 @@ exposure, similarity, memory, and referent assignment. Below, we
 detail these phases (for exposition, we have switched the order of
 memory and similarity).
 
-\paragraph{Exposure}
-Subjects listened to sentences from the language. We withheld six
-sentences from exposure (see Figure~\ref{mnpq-table}), yielding 14
-unique sentences in the exposure set. Each sentence was heard either
-4, 9, 14, or 28 times, giving 56, 126, 196, or 392 total trials. We
-presented the sentences in random order subject to the constraint that
-there were no repeated words between consecutive trials (pilot testing
-suggested that repeated words between trials substantially afforded
-learning). To encourage compliance, subjects had to click a button to
-hear each sentence.
+\paragraph{Exposure} Subjects listened to sentences from the
+language. We withheld six sentences from exposure (see
+Figure~\ref{mnpq-table}), yielding 14 unique sentences in the exposure
+set. Each sentence was heard either 4, 9, 14, or 28 times, giving 56,
+126, 196, or 392 total trials. We presented the sentences in random
+order subject to the constraint that there were no repeated words
+between consecutive trials (pilot testing suggested that repeated
+words between trials substantially afforded learning). To encourage
+compliance, subjects had to click a button to hear each sentence.
 
-\paragraph{Memory}
-Subjects listened to sentences and judged on a 5 point scale how
-confident they were that they had previously heard the sentence during
-exposure. We tested four types of sentences:
+\paragraph{Memory} Subjects listened to sentences and judged on a 5
+point scale how confident they were that they had previously heard the
+sentence during exposure. We tested four types of sentences:
 
 \begin{itemize}
 \item \emph{Familiar} sentences heard during exposure.
 \item \emph{Withheld} sentences not heard during exposure but
-  conforming to the MNPQ structure.
+conforming to the MNPQ structure.
 \item \emph{Cross-category} sentences of the form MQ and PN.
 \item \emph{Position-violation} sentences of the form MM, NN, PP, and
-  QQ.
+QQ.
 \end{itemize}
 
 Sentences were presented in random order such that there were no
 repeated words between consecutive trials. In two catch
 trials\footnote{In early runs of the experiment, we did not include
-  catch trials.  Let [A/3;B] denote the experimental condition with
-  A/3 coherence and B exposures (e.g., [2/3;196] refers to the 2/3
-  coherence level with 196 exposures). In [0/3;196], 18 out of 40
-  subjects did not receive catch trials. In [3/3;56], 30 out of 43
-  subjects did not receive catch trials. In [3/3;126], 30 out of 40
-  subjects did not receive catch trials. In [3/3;196], 30 out of 40
-  subjects did not receive catch trials.}, instead of a sentence from
-the MNPQ language, we played a non-repeatable audio instruction to
-press a specific response button.  If subjects learned the MN and PQ
-co-occurrence relationships, then we expected that they would rate
-novel grammatical sentences as more familiar than the cross-category
-sentences.
+catch trials.  Let [A/3;B] denote the experimental condition with A/3
+coherence and B exposures (e.g., [2/3;196] refers to the 2/3 coherence
+level with 196 exposures). In [0/3;196], 18 out of 40 subjects did not
+receive catch trials. In [3/3;56], 30 out of 43 subjects did not
+receive catch trials. In [3/3;126], 30 out of 40 subjects did not
+receive catch trials. In [3/3;196], 30 out of 40 subjects did not
+receive catch trials.}, instead of a sentence from the MNPQ language,
+we played a non-repeatable audio instruction to press a specific
+response button.  If subjects learned the MN and PQ co-occurrence
+relationships, then we expected that they would rate novel grammatical
+sentences as more familiar than the cross-category sentences.
 
-\paragraph{Similarity}
-For each pair of words in the union of N and Q, we asked subjects to
-rate on a 5 point scale how similar they believed the two words to be
-in meaning. This resulted in within-category judgments (e.g., $n_1$
-vs. $n_2$) and cross-category judgments (e.g., $n_1$ vs. $q_1$). We
-presented the pairs in a fixed pseudorandom order containing no
-repeated words between consecutive trials. Though exposure was
-entirely auditory, for convenience, we presented these similarity
-questions as text (e.g., ``How similar are
+\paragraph{Similarity} For each pair of words in the union of N and Q,
+we asked subjects to rate on a 5 point scale how similar they believed
+the two words to be in meaning. This resulted in within-category
+judgments (e.g., $n_1$ vs. $n_2$) and cross-category judgments (e.g.,
+$n_1$ vs. $q_1$). We presented the pairs in a fixed pseudorandom order
+containing no repeated words between consecutive trials. Though
+exposure was entirely auditory, for convenience, we presented these
+similarity questions as text (e.g., ``How similar are
 \textbf{pif} \includegraphics[width=0.3cm]{play.png} and
 \textbf{thite} \includegraphics[width=0.3cm]{play.png} ?''); to
 facilitate mapping between visual and spoken word forms, the speaker
@@ -540,15 +532,15 @@ more similar than cross-category pairs.
   \end{center}
 \end{figure}
 
-\paragraph{Referent assignment}
-Subjects made 2AFC referent assignments for the N and Q words (see
-Figure \ref{meaning-task}). At the top of the screen, we displayed the
-M and P words in random order. Under each word, we showed an image of
-an associated referent. The referents corresponded to the familiar
-pools for M and P words: \textsc{cat}, \textsc{dog}, \textsc{hamster},
-\textsc{car}, \textsc{bus}, and \textsc{truck}. Familiar words were
-always associated with the obvious referents (e.g., ``dog'' was always
-paired with an image of a dog). Below the ``seeded'' word meanings, we
+\paragraph{Referent assignment} Subjects made 2AFC referent
+assignments for the N and Q words (see Figure \ref{meaning-task}). At
+the top of the screen, we displayed the M and P words in random
+order. Under each word, we showed an image of an associated
+referent. The referents corresponded to the familiar pools for M and P
+words: \textsc{cat}, \textsc{dog}, \textsc{hamster}, \textsc{car},
+\textsc{bus}, and \textsc{truck}. Familiar words were always
+associated with the obvious referents (e.g., ``dog'' was always paired
+with an image of a dog). Below the ``seeded'' word meanings, we
 displayed a row containing the N and Q words. Under each word, we
 displayed a 2AFC referent choice between an animal (the ``correct''
 choice for N words) and vehicle words (the ``correct'' choice for Q
@@ -565,24 +557,23 @@ To summarize, we devised three measures of learning: (1) memory for
 sentences, (2) similarity between target words, and (3) inductive bias
 in referent assignment.
 
-\subsection{Results and Discussion}
-We excluded the 55 subjects who did not correctly answer all of the
-catch trials. Results are shown in Figure \ref{expt1-results}. For
-each dependent measure -- memory, similarity, and meaning -- we
-defined a within-subject score representing the sensitivity to the
-co-occurrence regularities in the language. Memory score was the
-difference in mean ratings between novel withheld sentences (e.g.,
-$m_1$--$n_1$) and novel category violation sentences (e.g.,
-$m_1$--$q_1$). Similarity score was the difference between mean
-ratings of within-category (e.g., $N$--$N$) and cross-category (e.g
-$N$--$Q$) ratings. Referent assignment score was the total number of
-correct choices in the referent assignment task. All scores were
-normalized to the interval [-1, 1].
+\subsection{Results and Discussion} We excluded the 55 subjects who
+did not correctly answer all of the catch trials. Results are shown in
+Figure \ref{expt1-results}. For each dependent measure -- memory,
+similarity, and meaning -- we defined a within-subject score
+representing the sensitivity to the co-occurrence regularities in the
+language. Memory score was the difference in mean ratings between
+novel withheld sentences (e.g., $m_1$--$n_1$) and novel category
+violation sentences (e.g., $m_1$--$q_1$). Similarity score was the
+difference between mean ratings of within-category (e.g., $N$--$N$)
+and cross-category (e.g $N$--$Q$) ratings. Referent assignment score
+was the total number of correct choices in the referent assignment
+task. All scores were normalized to the interval [-1, 1].
 
-\subsubsection{Analysis approach}
-We analyzed two aspects of the data. First, we were interested in main
-effects of coherence on score (i.e., the Condition coefficients in
-Table \ref{expt1-regressions}). Second, we were interested in the
+\subsubsection{Analysis approach} We analyzed two aspects of the
+data. First, we were interested in main effects of coherence on score
+(i.e., the Condition coefficients in Table
+\ref{expt1-regressions}). Second, we were interested in the
 relationship between amount of exposure and score. Accordingly, we
 looked for exposure $\times$ coherence interactions. A significant
 interaction (i.e., the E $\times$ C coefficients in Table
@@ -614,9 +605,9 @@ condition.
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x1.pdf}
     \caption{Experiment 1 results. Each plot shows data for one
-      measure (memory, similarity, meaning) in Experiment 1. Points
-      show condition means, error bars show 95\% CIs, and dashed lines
-      show the best-fitting linear regression.}
+measure (memory, similarity, meaning) in Experiment 1. Points show
+condition means, error bars show 95\% CIs, and dashed lines show the
+best-fitting linear regression.}
     \label{expt1-results}
   \end{center}
 \end{figure}
@@ -625,43 +616,39 @@ condition.
 
 \begin{table}[ht]
   \caption{Regression model for Experiment 1}
-  \label{expt1-regressions} 
-  \begin{center}
-    \footnotesize{\begin{tabular}{l r r r r} \hline
-        Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
-        \hline
-        \multicolumn{5}{c}{\T Memory \T}\\
-        Intercept &  0.03593 &  0.01876 &  1.91 & 0.056\ww\\
-        Condition: 1/3 -- (0/3) & -0.00053 &  0.02742 & -0.01 & 0.984\ww\\
-        Condition: 2/3 -- (0/3,1/3) &  0.03094 &  0.01478 &  2.09 & <0.05*\\
-        Condition: 3/3 -- (0/3,1/3,2/3) &  0.03963 &  0.01084 &  3.65 & <0.001*\\
-        Exposures &  0.00023 &  0.00008 &  2.81 & <0.005*\\
-        E $\times$ C: 1/3 -- (0/3) &  0.00000 &  0.00012 &  0.02 & 0.977\ww\\
-        E $\times$ C: 2/3 -- (0/3,1/3) & -0.00002 &  0.00006 & -0.32 & 0.743\ww\\
-        E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00013 &  0.00004 &  2.73 & <0.01* \\
-        \hline
+  \label{expt1-regressions}
+  \begin{center} \footnotesize{\begin{tabular}{l r r r r} \hline
+Regressor & \multicolumn{1}{c}{$\beta$} &
+\multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &
+\multicolumn{1}{c}{$p$} \\ \hline \multicolumn{5}{c}{\T Memory \T}\\
+Intercept & 0.03593 & 0.01876 & 1.91 & 0.056\ww\\ Condition: 1/3 --
+(0/3) & -0.00053 & 0.02742 & -0.01 & 0.984\ww\\ Condition: 2/3 --
+(0/3,1/3) & 0.03094 & 0.01478 & 2.09 & <0.05*\\ Condition: 3/3 --
+(0/3,1/3,2/3) & 0.03963 & 0.01084 & 3.65 & <0.001*\\ Exposures &
+0.00023 & 0.00008 & 2.81 & <0.005*\\ E $\times$ C: 1/3 -- (0/3) &
+0.00000 & 0.00012 & 0.02 & 0.977\ww\\ E $\times$ C: 2/3 -- (0/3,1/3) &
+-0.00002 & 0.00006 & -0.32 & 0.743\ww\\ E $\times$ C: 3/3 --
+(0/3,1/3,2/3) & 0.00013 & 0.00004 & 2.73 & <0.01* \\ \hline
 
-        \multicolumn{5}{c}{\T Similarity \T}\\
-        Intercept &  0.05018 &  0.01895 &  2.64 & <0.01*\\
-        Condition: 1/3 -- (0/3) & -0.00707 &  0.02768 & -0.25 & 0.798\ww\\
-        Condition: 2/3 -- (0/3,1/3) &  0.02374 &  0.01493 &  1.59 & 0.112\ww\\
-        Condition: 3/3 -- (0/3,1/3,2/3) &  0.02244 &  0.01095 &  2.04 & <0.05*\\
-        Exposures &  0.00014 &  0.00008 &  1.77 & 0.077\ww\\
-        E $\times$ C: 1/3 -- (0/3) &  0.00005 &  0.00012 &  0.42 & 0.671\ww\\
-        E $\times$ C: 2/3 -- (0/3,1/3) &  0.00002 &  0.00006 &  0.31 & 0.754\ww\\
-        E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00013 &  0.00004 &  2.80 & <0.01* \\
-        \hline
+        \multicolumn{5}{c}{\T Similarity \T}\\ Intercept & 0.05018 &
+0.01895 & 2.64 & <0.01*\\ Condition: 1/3 -- (0/3) & -0.00707 & 0.02768
+& -0.25 & 0.798\ww\\ Condition: 2/3 -- (0/3,1/3) & 0.02374 & 0.01493 &
+1.59 & 0.112\ww\\ Condition: 3/3 -- (0/3,1/3,2/3) & 0.02244 & 0.01095
+& 2.04 & <0.05*\\ Exposures & 0.00014 & 0.00008 & 1.77 & 0.077\ww\\ E
+$\times$ C: 1/3 -- (0/3) & 0.00005 & 0.00012 & 0.42 & 0.671\ww\\ E
+$\times$ C: 2/3 -- (0/3,1/3) & 0.00002 & 0.00006 & 0.31 & 0.754\ww\\ E
+$\times$ C: 3/3 -- (0/3,1/3,2/3) & 0.00013 & 0.00004 & 2.80 & <0.01*
+\\ \hline
 
-        \multicolumn{5}{c}{\T Referent assignment \T}\\
-        Intercept &  0.10876 &  0.03606 &  3.01 & <0.005*\\
-        Condition: 1/3 -- (0/3) &  0.06647 &  0.05275 &  1.26 & 0.208\ww\\
-        Condition: 2/3 -- (0/3,1/3) &  0.06163 &  0.02838 &  2.17 & <0.05*\\
-        Condition: 3/3 -- (0/3,1/3,2/3) &  0.03598 &  0.02084 &  1.72 & 0.084\ww\\
-        Exposures &  0.00045 &  0.00015 &  2.86 & <0.005*\\
-        E $\times$ C: 1/3 -- (0/3) & -0.00009 &  0.00023 & -0.39 & 0.690\ww\\
-        E $\times$ C: 2/3 -- (0/3,1/3) & -0.00012 &  0.00012 & -0.99 & 0.319\ww\\
-        E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.00012 &  0.00009 &  1.38 & 0.167\ww \\
-        \hline
+        \multicolumn{5}{c}{\T Referent assignment \T}\\ Intercept &
+0.10876 & 0.03606 & 3.01 & <0.005*\\ Condition: 1/3 -- (0/3) & 0.06647
+& 0.05275 & 1.26 & 0.208\ww\\ Condition: 2/3 -- (0/3,1/3) & 0.06163 &
+0.02838 & 2.17 & <0.05*\\ Condition: 3/3 -- (0/3,1/3,2/3) & 0.03598 &
+0.02084 & 1.72 & 0.084\ww\\ Exposures & 0.00045 & 0.00015 & 2.86 &
+<0.005*\\ E $\times$ C: 1/3 -- (0/3) & -0.00009 & 0.00023 & -0.39 &
+0.690\ww\\ E $\times$ C: 2/3 -- (0/3,1/3) & -0.00012 & 0.00012 & -0.99
+& 0.319\ww\\ E $\times$ C: 3/3 -- (0/3,1/3,2/3) & 0.00012 & 0.00009 &
+1.38 & 0.167\ww \\ \hline
 
       \end{tabular}}
   \end{center}
@@ -671,14 +658,13 @@ condition.
 
 Here, we separately report performance on each of the three tasks.
 
-\paragraph{Memory}
-There was a significant main effect of exposure, with greater exposure
-resulted in better memory scores. There was also a significant main
-effect of condition; 2/3 scores were significantly higher than scores
-from the 0/3 and 1/3 conditions combined and 3/3 scores were
-significantly higher than scores from the rest of the conditions
-combined. Because 2/3 and 3/3 scores both outperformed all the
-respective lower levels of coherence, we also computed this model
+\paragraph{Memory} There was a significant main effect of exposure,
+with greater exposure resulted in better memory scores. There was also
+a significant main effect of condition; 2/3 scores were significantly
+higher than scores from the 0/3 and 1/3 conditions combined and 3/3
+scores were significantly higher than scores from the rest of the
+conditions combined. Because 2/3 and 3/3 scores both outperformed all
+the respective lower levels of coherence, we also computed this model
 using coherence as a continuous variable; the continuous coherence
 regressor significantly predicted increases in score, $\beta = 0.06$,
 $t(619) = 3.86$, $p < 0.0005$, suggesting that \emph{parametrically}
@@ -696,11 +682,10 @@ co-occurrence regularities and (2) increased the efficiency of the
 statistical learning process responsible for learning those
 regularities, at least in the 3/3 condition.
 
-\paragraph{Similarity}
-There was a significant main effect of condition: 3/3 scores were
-significantly higher than in the other conditions
-combined. Additionally, there was a significant exposure $\times$
-condition interaction; the effect of exposures on score was
+\paragraph{Similarity} There was a significant main effect of
+condition: 3/3 scores were significantly higher than in the other
+conditions combined. Additionally, there was a significant exposure
+$\times$ condition interaction; the effect of exposures on score was
 significantly higher in 3/3 than in the other conditions
 combined. Thus, more coherent linguistic input (1) increased the
 distinction between within-category and cross-category pairs of words
@@ -725,17 +710,16 @@ the amount of exposure to the language and greater coherence
 independently increased the ability to assign $N$ and $Q$ words to the
 correct referents.
 
-% parametric increase stuff: condition.num 9.434e-02 3.285e-02 2.872
-% 0.00422 **
+% parametric increase stuff: condition.num 9.434e-02 3.285e-02 2.872 %
+0.00422 **
 
-\subsubsection{Integrative results}
-Why does semantic coherence facilitate MNPQ learning? Frank \& Gibson
-(2011) have shown that MNPQ learning can be bolstered by easing
-working memory demands. Additionally, there is evidence that novel
-words tax the memory system more, as they are encoded in terms of
-smaller phonological units (Treiman \& Danis, 1988). So it is possible
-that semantic coherence improved MNPQ learning by reducing memory
-demands.
+\subsubsection{Integrative results} Why does semantic coherence
+facilitate MNPQ learning? Frank \& Gibson (2011) have shown that MNPQ
+learning can be bolstered by easing working memory
+demands. Additionally, there is evidence that novel words tax the
+memory system more, as they are encoded in terms of smaller
+phonological units (Treiman \& Danis, 1988). So it is possible that
+semantic coherence improved MNPQ learning by reducing memory demands.
 
 We tested for this possibility in our data using mediation
 analyses. In particular, we tested whether memory scores mediated the
@@ -782,28 +766,27 @@ of coherence: onset, rime, and syllable count.
 
 \subsection{Method}
 \subsubsection{Subjects} 530 MTurk workers participated in the study.
-\subsubsection{Materials}
-The three types of phonological
+\subsubsection{Materials} The three types of phonological
 coherence\footnote{\label{change-of-stimuli} The stimuli for the rime
-  and syllable count conditions differ from those in the rest of our
-  conditions. For the rest of the conditions, we used a text-to-speech
-  web service provided by Google to generate the audio stimuli (see
-  Footnote \ref{tts}) for the bulk of the conditions. However, the
-  available voices on this service changed during our
-  experiment. Thus, we generated new stimuli for the rime and syllable
-  count conditions using commercially available software,
-  NaturalReader 10. To ensure that the old and new stimuli were
-  comparable, we performed a partial replication of Experiment 1 using
-  the new synthesis engine; the difference old and new stimuli did not
-  appear to make a substantial difference.} were:
+and syllable count conditions differ from those in the rest of our
+conditions. For the rest of the conditions, we used a text-to-speech
+web service provided by Google to generate the audio stimuli (see
+Footnote \ref{tts}) for the bulk of the conditions. However, the
+available voices on this service changed during our experiment. Thus,
+we generated new stimuli for the rime and syllable count conditions
+using commercially available software, NaturalReader 10. To ensure
+that the old and new stimuli were comparable, we performed a partial
+replication of Experiment 1 using the new synthesis engine; the
+difference old and new stimuli did not appear to make a substantial
+difference.} were:
 \begin{itemize}
 \item \emph{Onset}. M's all started with one consonant cluster
-  (pladge, plaaf, plab) and P's all started with another (zof, zawd,
-  zawsh).
+(pladge, plaaf, plab) and P's all started with another (zof, zawd,
+zawsh).
 \item \emph{Rime}. M's all ended with one vowel (calo, pawmo, marfo)
-  and P's all ended with another (zaygee, kaisee, tetchee).
+and P's all ended with another (zaygee, kaisee, tetchee).
 \item \emph{Syllable count}. M's were disyllabic (coomo, fengle,
-  kaisee) and P's were monosyllabic (gope, jic, skeege).
+kaisee) and P's were monosyllabic (gope, jic, skeege).
 \end{itemize}
 
 \subsubsection{Design and Procedure} The method was identical to that
@@ -815,10 +798,10 @@ of Experiment 1.
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x23.pdf}
     \caption{Experiments 2 and 3 results. Each plot shows data for one
-      measure (memory, similarity, meaning). Points show condition
-      means, error bars show 95\% CIs, and dashed lines show the
-      best-fitting linear trend. For comparison, we also included the
-      3/3 coherence condition from Experiment 1.}
+measure (memory, similarity, meaning). Points show condition means,
+error bars show 95\% CIs, and dashed lines show the best-fitting
+linear trend. For comparison, we also included the 3/3 coherence
+condition from Experiment 1.}
     \label{expt23-results}
   \end{center}
 \end{figure}
@@ -826,48 +809,45 @@ of Experiment 1.
 \begin{table}[t]
   \caption{Regression model for Experiments 2 and 3}
   \label{expt23-regression}
-  \begin{center}
-    \scriptsize{\begin{tabular}{l r r r r} \hline
-        Regressor & \multicolumn{1}{c}{$\beta$} & \multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &  \multicolumn{1}{c}{$p$}  \\
-        \hline
-        \multicolumn{5}{c}{\T Memory \T}\\
-        Intercept & -0.03411 &  0.02749 & -1.24 & 0.215\ww\\
-        Condition: Onset -- 0/3 &  0.06266 &  0.03806 &  1.64 & 0.100\ww\\
-        Condition: Rime -- 0/3 &  0.06528 &  0.03574 &  1.82 & 0.068\ww\\
-        Condition: Syllable count -- 0/3 &  0.04102 &  0.03856 &  1.06 & 0.287\ww\\
-        Condition: Semantic incoherent -- 0/3 &  0.00559 &  0.03817 &  0.14 & 0.883\ww\\
-        Exposures &  0.00012 &  0.00011 &  1.00 & 0.316\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00017 & -0.55 & 0.577\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.00019 &  0.00016 & -1.20 & 0.228\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.00007 &  0.00016 & -0.43 & 0.660\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.00003 &  0.00016 &  0.23 & 0.811\ww \\
-        \hline
+  \begin{center} \scriptsize{\begin{tabular}{l r r r r} \hline
+Regressor & \multicolumn{1}{c}{$\beta$} &
+\multicolumn{1}{c}{Std. Error} & \multicolumn{1}{c}{$t$} &
+\multicolumn{1}{c}{$p$} \\ \hline \multicolumn{5}{c}{\T Memory \T}\\
+Intercept & -0.03411 & 0.02749 & -1.24 & 0.215\ww\\ Condition: Onset
+-- 0/3 & 0.06266 & 0.03806 & 1.64 & 0.100\ww\\ Condition: Rime -- 0/3
+& 0.06528 & 0.03574 & 1.82 & 0.068\ww\\ Condition: Syllable count --
+0/3 & 0.04102 & 0.03856 & 1.06 & 0.287\ww\\ Condition: Semantic
+incoherent -- 0/3 & 0.00559 & 0.03817 & 0.14 & 0.883\ww\\ Exposures &
+0.00012 & 0.00011 & 1.00 & 0.316\ww\\ E $\times$ C: Onset -- 0/3 &
+-0.00009 & 0.00017 & -0.55 & 0.577\ww\\ E $\times$ C: Rime -- 0/3 &
+-0.00019 & 0.00016 & -1.20 & 0.228\ww\\ E $\times$ C: Syllable count
+-- 0/3 & -0.00007 & 0.00016 & -0.43 & 0.660\ww\\ E $\times$ C:
+Semantic incoherent -- 0/3 & 0.00003 & 0.00016 & 0.23 & 0.811\ww \\
+\hline
 
-        \multicolumn{5}{c}{\T Similarity \T}\\
-        Intercept &  0.01107 &  0.02539 &  0.43 & 0.662\ww\\
-        Condition: Onset -- 0/3 & -0.00316 &  0.03515 & -0.08 & 0.928\ww\\
-        Condition: Rime -- 0/3 & -0.00640 &  0.03301 & -0.19 & 0.846\ww\\
-        Condition: Syllable count -- 0/3 & -0.04553 &  0.03561 & -1.27 & 0.201\ww\\
-        Condition: Semantic incoherent -- 0/3 & -0.00078 &  0.03525 & -0.02 & 0.982\ww\\
-        Exposures & -0.00006 &  0.00011 & -0.54 & 0.582\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00009 &  0.00015 & -0.59 & 0.550\ww\\
-        E $\times$ C: Rime -- 0/3 &  0.00019 &  0.00014 &  1.30 & 0.191\ww\\
-        E $\times$ C: Syllable count -- 0/3 &  0.00030 &  0.00015 &  1.97 & <0.05*\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.00014 &  0.00015 &  0.93 & 0.350\ww \\
-        \hline
+        \multicolumn{5}{c}{\T Similarity \T}\\ Intercept & 0.01107 &
+0.02539 & 0.43 & 0.662\ww\\ Condition: Onset -- 0/3 & -0.00316 &
+0.03515 & -0.08 & 0.928\ww\\ Condition: Rime -- 0/3 & -0.00640 &
+0.03301 & -0.19 & 0.846\ww\\ Condition: Syllable count -- 0/3 &
+-0.04553 & 0.03561 & -1.27 & 0.201\ww\\ Condition: Semantic incoherent
+-- 0/3 & -0.00078 & 0.03525 & -0.02 & 0.982\ww\\ Exposures & -0.00006
+& 0.00011 & -0.54 & 0.582\ww\\ E $\times$ C: Onset -- 0/3 & -0.00009 &
+0.00015 & -0.59 & 0.550\ww\\ E $\times$ C: Rime -- 0/3 & 0.00019 &
+0.00014 & 1.30 & 0.191\ww\\ E $\times$ C: Syllable count -- 0/3 &
+0.00030 & 0.00015 & 1.97 & <0.05*\\ E $\times$ C: Semantic incoherent
+-- 0/3 & 0.00014 & 0.00015 & 0.93 & 0.350\ww \\ \hline
 
-        \multicolumn{5}{c}{\T Referent assignment \T}\\
-        Intercept & -0.05533 &  0.06831 & -0.81 & 0.418\ww\\
-        Condition: Onset -- 0/3 &  0.17766 &  0.09442 &  1.88 & 0.060\ww\\
-        Condition: Rime -- 0/3 &  0.09165 &  0.08868 &  1.03 & 0.301\ww\\
-        Condition: Syllable count -- 0/3 &  0.02348 &  0.09581 &  0.24 & 0.806\ww\\
-        Condition: Semantic incoherent -- 0/3 &  0.08683 &  0.09478 &  0.91 & 0.359\ww\\
-        Exposures &  0.00054 &  0.00029 &  1.84 & 0.066\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.00061 &  0.00042 & -1.45 & 0.146\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.00032 &  0.00040 & -0.80 & 0.418\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.00006 &  0.00041 & -0.16 & 0.867\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 & -0.00074 &  0.00040 & -1.83 & 0.066\ww \\
-        \hline
+        \multicolumn{5}{c}{\T Referent assignment \T}\\ Intercept &
+-0.05533 & 0.06831 & -0.81 & 0.418\ww\\ Condition: Onset -- 0/3 &
+0.17766 & 0.09442 & 1.88 & 0.060\ww\\ Condition: Rime -- 0/3 & 0.09165
+& 0.08868 & 1.03 & 0.301\ww\\ Condition: Syllable count -- 0/3 &
+0.02348 & 0.09581 & 0.24 & 0.806\ww\\ Condition: Semantic incoherent
+-- 0/3 & 0.08683 & 0.09478 & 0.91 & 0.359\ww\\ Exposures & 0.00054 &
+0.00029 & 1.84 & 0.066\ww\\ E $\times$ C: Onset -- 0/3 & -0.00061 &
+0.00042 & -1.45 & 0.146\ww\\ E $\times$ C: Rime -- 0/3 & -0.00032 &
+0.00040 & -0.80 & 0.418\ww\\ E $\times$ C: Syllable count -- 0/3 &
+-0.00006 & 0.00041 & -0.16 & 0.867\ww\\ E $\times$ C: Semantic
+incoherent -- 0/3 & -0.00074 & 0.00040 & -1.83 & 0.066\ww \\ \hline
 
       \end{tabular}}
   \end{center}
@@ -881,24 +861,23 @@ condition of Experiment 1 using a regression model (see Table
 \ref{expt23-regression}).
 
 
-\subsubsection{Memory}
-There was no main effect of exposure. There was also no main effect of
-condition -- none of the phonological condition scores were
-significantly different from 0/3 scores. None of the exposure by
-condition interaction terms were significant.
+\subsubsection{Memory} There was no main effect of exposure. There was
+also no main effect of condition -- none of the phonological condition
+scores were significantly different from 0/3 scores. None of the
+exposure by condition interaction terms were significant.
 
-\subsubsection{Similarity}
-There was no main effect of exposure. There was also no main effect of
-condition -- none of the phonological condition scores were
-significantly different from 0/3 scores. One interaction term was
-significant: there appeared to be greater efficiency of statistical
-learning in the syllable count condition than in the 0/3 condition.
+\subsubsection{Similarity} There was no main effect of exposure. There
+was also no main effect of condition -- none of the phonological
+condition scores were significantly different from 0/3 scores. One
+interaction term was significant: there appeared to be greater
+efficiency of statistical learning in the syllable count condition
+than in the 0/3 condition.
 
-\subsubsection{Referent assignment}
-There was no main effect of exposure. There was also no main effect of
-condition -- none of the phonological condition scores were
-significantly different from 0/3 scores. None of the exposure by
-condition interaction terms were significant.
+\subsubsection{Referent assignment} There was no main effect of
+exposure. There was also no main effect of condition -- none of the
+phonological condition scores were significantly different from 0/3
+scores. None of the exposure by condition interaction terms were
+significant.
 
 Across the three models, there were no significant predictors, save
 the one interaction term for syllable count versus 0/3 on the
@@ -919,37 +898,34 @@ whether a semantically \emph{incoherent} language facilitates
 distributional learning.
 
 \subsection{Methods}
-\subsubsection{Subjects}
-162 MTurk workers.
+\subsubsection{Subjects} 162 MTurk workers.
 
-\subsubsection{Materials}
-In the semantically incoherent language, the specific M and P words
-were drawn randomly for each subject from the pool \{\emph{shelf},
-\emph{glove}, \emph{rain}, \emph{leash}, \emph{card},
-\emph{ball}\}. In the referent assignment task, these known words were
-paired with images of the obvious referents (e.g., \emph{card} with a
-picture of a card).
+\subsubsection{Materials} In the semantically incoherent language, the
+specific M and P words were drawn randomly for each subject from the
+pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash},
+\emph{card}, \emph{ball}\}. In the referent assignment task, these
+known words were paired with images of the obvious referents (e.g.,
+\emph{card} with a picture of a card).
 
 \subsubsection{Design and procedure} The method was identical to that
 of Experiment 1.
 
-\subsection{Results and Discussion}
-We discarded the 18 subjects who did not pass all the catch
-trials. Results are graphed in Figure \ref{expt23-results}. See Table
-\ref{expt23-regression} for regression results.
+\subsection{Results and Discussion} We discarded the 18 subjects who
+did not pass all the catch trials. Results are graphed in Figure
+\ref{expt23-results}. See Table \ref{expt23-regression} for regression
+results.
 
-\subsubsection{Memory}
-Incoherent scores were not significantly different from 0/3 scores and
-incoherent efficiency was not significantly different from 0/3
-efficiency.
+\subsubsection{Memory} Incoherent scores were not significantly
+different from 0/3 scores and incoherent efficiency was not
+significantly different from 0/3 efficiency.
 
-\subsubsection{Similarity}
-Incoherent scores were not significantly different from 0/3 scores and
-incoherent efficiency was not significantly different from 0/3
-efficiency.
+\subsubsection{Similarity} Incoherent scores were not significantly
+different from 0/3 scores and incoherent efficiency was not
+significantly different from 0/3 efficiency.
 
-\subsubsection{Referent assignment}
-Incoherent scores were not significantly different from 0/3 scores and incoherent efficiency was not significantly different from 0/3 efficiency.\\
+\subsubsection{Referent assignment} Incoherent scores were not
+significantly different from 0/3 scores and incoherent efficiency was
+not significantly different from 0/3 efficiency.\\
 
 Apparently, the familiar but semantically incoherent linguistic input
 appeared to have provided no benefit compared to the novel words of
@@ -958,79 +934,87 @@ itself does not aid MNPQ learning.
 
 \section{General Discussion}
 
-We have found evidence that semantic coherence facilitates
-distributional (viz. MNPQ) learning. It appears that the interaction
-of both meaning and coherence drives the effect; when we separately
-removed meaning (as in the phonological conditions) and coherence (as
-in the semantic incoherence condition), learners failed to learn
-distributional regularities in the language.
+In this paper, we contributed to the literature on human experiments
+that seeks to understand the conditions under which people can
+successfully perform distributional learning. For the MNPQ language,
+previous work has found successful learning in cases where
+distributional cues are correlated with natural gender (Braine, 1987)
+or phonological cues (e.g., Lany \& Saffran, 2010). Learning
+experiments in this literature have typically presented subjects with
+linguistic input that is entirely novel. This is not representative of
+the conditions that most real language learners confront. Instead,
+real learners typically know the meanings of some of the words, which
+may have some amount of semantic organization, a factor we call
+semantic coherence. In our experiments, we have found evidence that
+semantic coherence facilitates MNPQ learning.
 
-\subsection{Limitations of artificial languages}
-
-Our experiments highlight a limitation of artificial language learning
-paradigms. Researchers using entirely artificial languages may be
-severely limiting the power of distributional learning mechanisms,
-which our experiments show to be greatly enhanced by the presence of
-known words that adhere to some semantic organization.
-
-In our analyses, memory was a significant (albeit partial) mediator of
-the effect of semantic coherence on similarity and referent assignment
-scores. Artificial languages may place too high a memory burden on
-learners.
-
-TODO: talk about how discourse topic could be implemented in AGL
-method. just tell subjects (this sentence is about ``chylu'')
+In Experiment 1, we showed that semantic coherence facilitates MNPQ
+learning; 3/3 semantic coherence resulted in better memory for the
+co-occurrence structure of the language, sharper inductive bias in
+similarity and meaning judgments. Additionally, for the memory and
+similarity measures, we found evidence of greater statistical
+efficiency -- adding sentences for 3/3 subjects resulted in a larger
+performance gain. In Experiments 2 and 3, we investigated whether the
+effect of semantic coherence was driven by either meaning or coherence
+alone. In Experiment 2, we kept coherence but removed meaning by
+testing languages with phonological coherence. These languages did not
+confer any learning benefits, indicating that coherence alone does not
+drive the effect of semantic coherence. In Experiment 3, we kept
+meaning but removed coherence by testing a incoherent language with
+known words but no obvious semantic organization. This language did
+not confer any learning benefits, indicating that meaning alone does
+not drive the effect of semantic coherence. It appears that the
+interaction of both meaning and coherence drives the effect; when we
+separately removed meaning (as in the phonological conditions) and
+coherence (as in the semantic incoherence condition), learners failed
+to learn distributional regularities in the language.
 
 \subsection{Implications for empirical and computational research}
 
-Our results suggest two concrete improvements to existing research
-methods. First, our experiments highlight a limitation of artificial
-languages: such languages may severely limit the power of
-distributional learning mechanisms, which our experiments show to be
-greatly enhanced by the presence of known words that adhere to some
-semantic organization. Experiments that use some proportion of words
-with semantic coherence could more accurately simulate the kinds of
-problems that real language learners face.
+Our experiments highlight a limitation of artificial language
+learning. Researchers using entirely artificial languages may be
+severely limiting the power of distributional learning mechanisms,
+which our experiments show to be greatly enhanced by the presence of
+known words that adhere to some semantic organization. In our
+analyses, memory was a significant (albeit partial) mediator of the
+effect of semantic coherence on similarity and referent assignment
+scores. Thus, artificial languages may place too high a memory burden
+on learners. Also, to the extent that semantic coherence works through
+factors other than memory, entirely artificial languages may deprive
+these pathways as well. To better match experimental settings with
+conditions that real language learners find themselves in, we argue
+for more research using ``semi-artificial'' languages. Alternately, it
+may be possible to mimic semantic organization in entirely artificial
+languages by seeding sentences with nonce topics (e.g., ``the sentence
+you are about to hear is about \emph{chylu}'').
 
-Second, it is not immediately clear what state-of-the-art
-computational models have to say about the effect of semantic
-coherence on learning. These models (e.g., Andrews, Vigliocco, \&
-Vinson, 2009; Baroni, Murphy, Barbu, \& Poesio, 2010; Durda, Buchanan,
-\& Caron, 2009; Jones \& Recchia, 2010; Steyvers, 2010; Johns \&
-Jones, 2012) combine linguistic and perceptual information and obtain
-good fits in part because they can leverage these distinct sources to
-learn about concrete words, which can be cashed out in obvious
-perceptual features, and abstract words, which might take their
-meaning from patterns of co-occurrence with concrete words.
-
-However, these modeling simulations are typically done in ``one
-shot'', where all of the perceptual and linguistic data is fed into
-the model at once. We suggest an additional criterion for model fit:
-``developmental'' simulation, where the model's behavior is measured
-for varying amounts and varieties of perceptual and linguistic
-data. This additional dimension might reveal differences in models
-with respect to the effect of semantic coherence. One potential
-difficulty is defining whether a certain word is known in these
-models. We believe that existing models may already have a partial
-solution: a rough approximation for word familiarity can be defined as
-the certainty with which that word maps onto perceptual features.
+Furthermore, our results add to a body of experimental work that can
+serve as a useful testbed for computational models. Surprisingly, work
+on distributional learning of semantics (and syntax) is generally
+either empirical or computational -- the two are rarely combined (but
+see Tian et al., 2012 for a recent and welcome exception).  In
+computational work, researchers typically train models on large
+corpora, rather than the artificial languages for which there is more
+detailed human learning data. In other domains (e.g., the word
+segmentation work of Meylan et al., 2012), analyzing model behavior on
+the experimental stimuli that people receive has proven useful,
+raising constraints on the kinds of representations and processes that
+could account for behavioral patterns; we believe that the domain of
+semantics could benefit from this approach as well.
 
 % Models that integrate linguistic and perceptual features:
-% \begin{tabular}{l l l l}
-% Name & Authors & source & cited in \\
-% \hline
-% Strudel & Baroni et al. & \href{http://clic.cimec.unitn.it/brian/publications/baroniEA10strudel.pdf}{link} & Johns \& Jones\\
-% \hline
-% (AVV2010) & Andrews, Vigliocco, \& Vinson &  &  
-% (JJ2012) & Johns \& Jones & & \\
-% \\ 
+% \begin{tabular}{l l l l} % Name & Authors & source & cited in \\ %
+\hline % Strudel & Baroni et al. &
+\href{http://clic.cimec.unitn.it/brian/publications/baroniEA10strudel.pdf}{link}
+& Johns \& Jones\\ % \hline % (AVV2010) & Andrews, Vigliocco, \&
+Vinson & & % (JJ2012) & Johns \& Jones & & \\ % \\
 % \end{tabular}
 
 \subsection{Mechanism: memory and what else?}
 
 Using mediation analysis, we found evidence that effect of semantic
 coherence is partially one of reducing memory demands. However,
-reduced memory load doesn't appear to drive the entire effect - what
+reduced memory load doesn't appear to drive the entire effect -- what
 else is happening? One possibility is that learners use semantic
 coherence to infer the topic of discourse (cf. the topic learning
 models of Griffiths \& Steyvers, 2007). Then, learners attach meaning
