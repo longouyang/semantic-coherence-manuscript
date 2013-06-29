@@ -13,8 +13,8 @@
 
 \graphicspath{{images/}}
 
-\shorttitle{Semantic coherence and distributional learning}
-\title{Semantic coherence facilitates distributional learning}
+\shorttitle{Semantic coherence and contextual co-occurrence}
+\title{Semantic Coherence Facilitates Contextual Co-occurrence Learning of Word Meaning}
 \author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
 \affiliation{Stanford University}
 \authornote{Corresponding author: Long Ouyang (longouyang@post.harvard.edu)\\
@@ -25,13 +25,17 @@ An earlier version of this paper appeared in the Proceedings of the 34th Annual 
 \begin{document}
 \maketitle
 
-Learning the meanings of words is a hard problem. Fortunately, for learners, this hard problem is softened by a multiplicity of sources of information about word meaning. The external world, other people, and language itself provide useful information to the learner. Specific examples of informative sources include vision (Kay \& McDaniel, 1978; Rescorla, 1980; Booth \& Waxman, 2002; Regier \& Zheng, 2007), social experience (Baldwin, 1991; Bloom, 2002; Tomasello, 2003), phonology (Bloomfield, 1895; Kohler, 1929; Ramachandran and Hubbard, 2001; Maurer, Pathman, \& Mondloch, 2006; Graf-Estes et al., 2007; Parault \& Parkinson, 2008; Shukla, White, \& Aslin, 2011), syntax (Gleitman, 1990; Fisher et al., 1994), morphology (Carr \& Johnston, 2001), and linguistic context. Our chief interest in this paper is this last source -- linguistic context.
+\begin{quote}
+  ``\emph{You shall know a word by the company it keeps.}'' Firth (1957, p.11)
+\end{quote}
 
-Researchers believe that people may use knowledge of linguistic contexts as a clue toward meaning. For example, one might infer that ``postman'' and ``mailman'' have similar meanings based solely on the fact that they occur in similar linguistic contexts (e.g., they both occur in sentences about delivering packages and driving mail trucks). Learning from linguistic context in this fashion is called \emph{distributional learning}. While researchers believe that distributional learning is a powerful learning mechanism, human experiments using artificial language learning suggest that people may have limitations on their ability to do distributional learning.
+Learning the meanings of words is a hard problem. Fortunately, for learners, this hard problem is eased by a multiplicity of sources of information about word meaning. The external world, other people, and language itself all provide useful information. For instance, visual experience can provide information about the physical features of referents denoted by words, and social cues can help disambiguate referents. Our chief interest in this paper is a different source of information -- language itself.
+
+We explore the notion that learners use patterns of co-occurrence between words as a clue towards word meaning. In particular, learners might exploit the fact that words that occur in similar linguistic contexts tend to have similar meanings. For example, one might infer that ``postman'' and ``mailman'' have similar meanings based solely on the fact that they tend to occur with words like ``deliver'', ``package'', and ``truck''. Note that this inference does not derive from \emph{direct} co-occurrence between ``postman'' and ``mailman'' (indeed, we might expect these terms to only rarely co-occur), but rather from the similar \emph{patterns} of co-occurrence with \emph{other} words. We call learning from linguistic context in this fashion contextual co-occurrence learning. This learning mechanism is not limited to learning word meanings -- indeed, most research has focused on contextual co-occurrence learning of syntactic properties like grammatical category. Throughout this work, unless otherwise specified, we take contextual co-occurrence learning to be concerned with meaning.
+
+While contextual co-ocurrence learning is often thought to be important for language learning (TODO: cites), a number of experiments, conducted mainly on learning \emph{syntactic category} from contextual co-occurrence, suggest that human learners' distributional abilities are limited (TODO: cites). Our current study addresses this mismatch.
  
-In this paper, we help characterize some of the conditions under which people may successfully perform distributional learning. Human experiments typically expose learners to artificial languages where all words are \emph{novel}. Our experiments suggest that distributional learning of meaning is facilitated by semantic coherence, the presence of \emph{known} words adhering to some semantic organization.
-
-To preview our paper: first, we briefly review some of the general evidence for distributional learning. We then introduce the specific language structure we explore in this paper, the MNPQ language, and discuss some of successes and the failures in finding evidence of distributional learning in experiments that use this language. In Experiment 1, we present evidence that semantic coherence can facilitate MNPQ learning. In Experiments 2 and 3, we further explore this effect by isolating each component of semantic coherence -- meaning and coherence -- and find that neither meaning alone nor coherence alone is sufficient to facilitate MNPQ learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the semantic coherence effect.
+In this paper, we help characterize some of the conditions under which people may successfully perform contextual co-occurrence learning of meaning. Human experiments typically expose learners to artificial languages where all words are \emph{novel}. Our experiments suggest that distributional learning of meaning is facilitated by semantic coherence, the presence of \emph{known} words adhering to some semantic organization. To preview our paper: first, we briefly review some of the general evidence for distributional learning. We then introduce the specific language structure we explore in this paper and discuss some of successes and the failures in finding evidence of distributional learning in experiments that use this language. In Experiment 1, we present evidence that semantic coherence can facilitate distributional learning. In Experiments 2 and 3, we further explore this effect by isolating each component of semantic coherence -- meaning and coherence -- and find that neither meaning alone nor coherence alone is sufficient to facilitate MNPQ learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the semantic coherence effect.
  
 \subsection{Evidence for distributional learning}
 
@@ -47,7 +51,7 @@ Firth's contemporary Harris advanced a quantitative version of this notion calle
 
 These proposals about the distributional theory of meaning stimulated early empirical work with humans. This early work typically demonstrated the validity of the distributional hypothesis using small samples of human judgments and corpora. Rubenstein \& Goodenough (1965) elicited synonym judgments for pairs of concrete nouns and compared these judgments against co-occurrence statistics in a corpus generated by an independent group of participants. They found a positive relationship between synonymy and degree of linguistic context match. Clark (1968) found a correlation between the degree of substitubility and the degree of context overlap for prepositions. Szalay \& Bryson (1974) found correlations between word substitution ratings and judgments of similarity and grouping for both concrete and abstract nouns.
 
-(TODO: Geffroy et al.; Berry-Rogghe; Jones \& Sinclair)
+(TODO: Geffroy et al.; Berry-Rogghe; Jones \& Sinclair; Maratsos \& Chalkley)
 
 % Szalay \& Bryson (1974) shows that word substitution judgments %
 % (cf. syntagmatic relations) have respectable correlations (0.4-0.6) %
