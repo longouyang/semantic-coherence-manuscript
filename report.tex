@@ -144,17 +144,53 @@ Sentences took the form ``M and N'' or ``P and Q'' (see Figure \ref{mnpq-table})
 To create the audio files, we input the sentences as ``X. and. Y.'' (e.g., ``car. and. chuv.'', including periods) into an American English text-to-speech engine using a female voice\footnote{\label{tts}In particular, we programatically submitted all of the text sentences to the text-to-speech web service that powers Google Translate; when we initially performed the synthesis, this web service used one set of voices. The available voices have changed since we created our initial stimuli. See also Footnote \ref{change-of-stimuli}.}. The periods between words introduced substantial pauses ranging in length from 150 to 300 ms; piloting revealed that without pauses, it was difficult for participants to distinguish the words. Sentences using only monosyllabic words were around 2 seconds long. Sentences using the sole disyllabic word, hamster, were around 3 seconds long.  The referent assignment task involved visual referents. For the context words, we used 128x128 pixel images of a cat, dog, hamster, car, bus, and truck. For the target words, we used 100x100 pixel images of a horse, rabbit, sheep, bear, goldfish, mouse, boat, van, train, motorcycle, plane, and bicycle.
 
 \begin{figure}[t]
-  \begin{center} \vskip 0.12in \fbox{
-      \begin{tabular}{ l l l | l l l }
-        \underline{$m_1$ $n_1$} & $m_1$ $n_2$ & $m_1$ $n_3$ & \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$ $q_3$ \\
-        $m_2$ $n_1$ & \underline{$m_2$ $n_2$} & $m_2$ $n_3$ & $p_2$ $q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\
-        $m_3$ $n_1$ & $m_3$ $n_2$ & \underline{$m_3$ $n_3$} & $p_3$ $q_1$ & $p_3$ $q_2$ & \underline{$p_3$ $q_3$}\\
-      \end{tabular}}
-    \caption{The MNPQ language. Underlined sentences were withheld
-from exposure.}
+  \begin{center}
+    \begin{tabular}{ p{0.3\linewidth} p{0.35\linewidth} p{0.35\linewidth} }
+      %% HT the comment from Herbert on http://tex.stackexchange.com/a/58314
+      \vspace{0pt}
+      \begin{tabular}{ l l l }
+        \multicolumn{3}{c}{Exposure sentences}\\
+        \underline{$m_1$ $n_1$} & $m_1$ $n_2$ & $m_1$ $n_3$  \\
+        $m_2$ $n_1$ & \underline{$m_2$ $n_2$} & $m_2$ $n_3$  \\
+        $m_3$ $n_1$ & $m_3$ $n_2$ & \underline{$m_3$ $n_3$}  \\
+        \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$ $q_3$ \\
+        $p_2$ $q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\
+        $p_3$ $q_1$ & $p_3$ $q_2$ & \underline{$p_3$ $q_3$} \\
+      \end{tabular} 
+
+      & 
+
+      \vspace{0pt}
+      \begin{tabular}{l l}
+        \multicolumn{2}{c}{Memory items}\\
+        Sentence type & Example\\
+        \hline
+        Familiar & $m_1$ $n_2$\\
+        Withheld & $m_1$ $n_1$\\
+        Category violation & $m_1$ $q_2$\\
+        Position violation & $m_1$ $m_1$\\
+        \hline
+      \end{tabular}
+
+      &
+
+      \vspace{0pt}
+      \begin{tabular}{l l}
+        \multicolumn{2}{c}{Similarity items}\\
+        Pair type & Example\\
+        \hline
+        Within-category & $n_1$, $n_2$\\
+        Cross-category & $n_1$, $q_1$\\
+        \hline
+      \end{tabular}
+    \end{tabular}
+    \caption{The MNPQ language and test items for memory and similarity. Underlined sentences were withheld from exposure.}
     \label{mnpq-table}
   \end{center}
 \end{figure}
+
+
+
 
 \subsubsection{Design and Procedure}
 
