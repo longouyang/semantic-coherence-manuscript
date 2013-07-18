@@ -1,12 +1,12 @@
 % editing notes: don't use auto-fill-mode
 
-\documentclass[man,floatsintext]{apa6}
+\documentclass[man,noapacite]{apa2}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{hyperref}
-\usepackage{apacite}
+\usepackage[nodoi]{apacite2}
 \usepackage{times}
 \usepackage{multirow}
 \usepackage{color}
@@ -15,13 +15,15 @@
 \graphicspath{{images/}}
 
 \shorttitle{Semantic coherence and contextual co-occurrence}
-\title{Semantic Coherence Facilitates Contextual Co-occurrence Learning of Word Meaning}
+\title{Semantic coherence facilitates learning word meanings through contextual co-occurrence}
 \author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
-\affiliation{Stanford University}
-\authornote{Corresponding author: Long Ouyang (longouyang@post.harvard.edu)\\
-An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society.
-}
-\abstract{How do people learn word meanings? One proposal, which we call \emph{contextual co-occurrence learning}, is that people constrain a word's meaning by taking into account its patterns of co-occurrence with other words. For example, one might conclude that \emph{postman} and \emph{mailman} are related words because they occur with similar sets of other words. Computational models suggest that, in principle, contextual co-occurrence learning is possible. However, a number of artificial language learning investigations (focused mainly on acquisition of syntactic category, rather than meaning) on a language called MNPQ have suggested that human capacity for contextual co-occurrence learning is quite limited, unless there are correlated cues in the input. Experiments in this paradigm typically present learners with words that are all unknown to start. By contrast, real language learners typically encounter input that contains some known words that adhere to a semantic organization, a property we call \emph{semantic coherence}. In three experiments, we show that semantic coherence facilitates contextual co-occurrence learning and that this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.}
+\affiliation{Department of Psychology, Stanford University}
+
+\acknowledgements{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. 
+~\\
+Please address correspondence to Long Ouyang, Department of Psychology, Stanford University, 450 Serra Mall (Jordan Hall), Stanford, CA, 94305, tel: (650) XYZ-XYZZ, email: \texttt{louyang@stanford.edu}}
+
+\abstract{Words' contextual co-occurrence with each other may be an important source of information about their meanings. For example, a learner might notice that \emph{postman} and \emph{mailman} occur in contexts with very similar sets of other words and infer that they have similar meanings. Computational models demonstrate that contextual co-occurrence learning is a possible information source for language learning, but artificial language learning investigations have suggested that human capacity for this sort of learning is quite limited (unless co-occurrence regularities are signaled by another redundant cue). Experiments in this paradigm typically present learners with words that are all unknown to start, however. By contrast, real language learners typically encounter input that contains some known words that adhere to a semantic organization. In three experiments, we show that the use of known semantic reference points facilitates contextual co-occurrence learning and that this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.}
 
 \begin{document}
 \maketitle
@@ -31,9 +33,10 @@ An earlier version of this paper appeared in the Proceedings of the 34th Annual 
 \end{quote}
 
 
-Learning the meanings of words is a hard problem. Fortunately, for learners, this hard problem is eased by a multiplicity of sources of information about word meaning. The external world, other people, and language itself all provide useful information. For instance, visual experience can provide information about the physical features of referents denoted by words and social cues like pointing can help disambiguate referents. Our chief interest in this paper is a different source of information -- language itself.
+Learning the meanings of words is, in principle, an arbitrarily hard problem \cite{quine1960,carey1978}. Fortunately for learners, this hard problem is eased by a multiplicity of sources of information about word meaning: physical, social, conceptual, and linguistic cues all can provide useful information for learning different kinds of words \cite{clark1988,markman1991,gleitman1990,baldwin1993,hollich2000}. Much recent research has focused on information that learners can glean from distributional properties of language input. Learners can group sounds together into word forms based on their statistical co-occurrence \cite{saffran1996a,saffran1996b} and pair word forms with their referents based on consistent associations \cite{yu2007,smith2008}. In the current paper, we explore a more sophisticated type of distributional learning: learning from co-occurrences between words and their contexts \cite{smith1966,maratsos1980,braine1987,redington1998}.
 
-We explore the notion that learners use patterns of co-occurrence between words as a clue towards word meaning. In particular, learners might exploit the fact that words that occur in similar linguistic contexts tend to have similar meanings. For example, one might infer that ``postman'' and ``mailman'' have similar meanings based solely on the fact that they tend to occur with words like ``deliver'', ``package'', and ``truck''. Note that this inference does not derive from \emph{direct} co-occurrence between ``postman'' and ``mailman'' (indeed, we might expect these terms to only rarely co-occur), but rather from the similar \emph{patterns} of co-occurrence with \emph{other} words. We refer to such learning as contextual co-occurrence learning. This mechanism is not limited to learning word meanings -- indeed, most research has focused on contextual co-occurrence learning of syntactic properties like grammatical category. Throughout this work, however, we take contextual co-occurrence learning to be concerned with meaningunless otherwise specified.
+
+We explore the notion that learners use patterns of co-occurrence between words as a clue towards word meaning. In particular, learners might exploit the fact that words that occur in similar linguistic contexts tend to have similar meanings (as suggested by \citeNP{firth1957}, above). For example, one might infer that ``postman'' and ``mailman'' have similar meanings based solely on the fact that they tend to occur with words like ``deliver'', ``package'', and ``truck''. Note that this inference does not derive from \emph{direct} co-occurrence between ``postman'' and ``mailman'' (indeed, we might expect these terms to only rarely co-occur), but rather from the similar \emph{patterns} of co-occurrence with \emph{other} words. We refer to such learning as contextual co-occurrence learning. This mechanism is not limited to learning word meanings -- indeed, most research has focused on contextual co-occurrence learning of syntactic properties like grammatical category. Throughout this work, however, we take contextual co-occurrence learning to be concerned with meaningunless otherwise specified.
 
 While contextual co-ocurrence learning is often thought to be important for language learning (TODO: cites), a number of experiments, conducted mainly on learning \emph{syntactic category} from contextual co-occurrence, suggest that human learners' capacities are limited (TODO: cites). Our current study addresses this mismatch.
  
@@ -509,7 +512,7 @@ So what role does contextual co-occurrence learning play in word learning? The e
 
 \end{itemize}
 
-\nocite{*}
+% \nocite{*}
 \newpage
 \bibliographystyle{apacite}
 \bibliography{references}
