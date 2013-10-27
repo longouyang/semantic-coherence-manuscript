@@ -9,3 +9,5 @@ report.synctex.gz
 report.tmp
 report.toc
 report.tui
+report.bbl
+report.blg
