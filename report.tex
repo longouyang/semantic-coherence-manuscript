@@ -1,6 +1,6 @@
 % editing notes: don't use auto-fill-mode
 
-\documentclass[man,noapacite]{apa2}
+\documentclass[man,floatsintext]{apa6}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -19,9 +19,12 @@
 \author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
 \affiliation{Department of Psychology, Stanford University}
 
-\acknowledgements{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. 
-~\\
-Please address correspondence to Long Ouyang, Department of Psychology, Stanford University, 450 Serra Mall (Jordan Hall), Stanford, CA, 94305, tel: (650) XYZ-XYZZ, email: \texttt{louyang@stanford.edu}}
+\authornote{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. Address correspondence to:\\
+Long Ouyang~\\
+Jordan Hall, Building 01-420\\
+450 Serra Mall\\
+Stanford, CA, 94305\\
+Email: \texttt{louyang@post.harvard.edu}}
 
 \abstract{Words' contextual co-occurrence with each other may be an important source of information about their meanings. For example, a learner might notice that \emph{postman} and \emph{mailman} occur in contexts with very similar sets of other words and infer that they have similar meanings. While computational models have demonstrated that contextual co-occurrence is a possible information source for word meaning, artificial language learning experiments have suggested that human capacity to acquire meaning from contextual co-occurrence is quite limited (unless co-occurrence regularities are signaled by another redundant cue). Experiments in this paradigm typically present learners with words that are all unknown to start, however. By contrast, real language learners typically encounter input that contains some known words that are semantically organized. In three experiments, we show that the use of known semantic reference points facilitates contextual co-occurrence learning and that this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.}
 
@@ -473,4 +476,21 @@ So what role does contextual co-occurrence learning play in word learning? The e
 \newpage
 \bibliographystyle{apacite}
 \bibliography{references}
+
+\appendix
+\section{Old versus new stimuli comparison}
+\label{old-vs-new}
+
+We performed a partial replication of Experiment 1 with the new stimuli. We collected data in four out of the sixteen experimental conditions and the results mirror those found with the old stimuli:
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{stim-comparison-mem} \\
+
+\includegraphics[width=0.7\linewidth]{stim-comparison-mng} \\
+
+\includegraphics[width=0.7\linewidth]{stim-comparison-sim}
+\end{center}
+
+
 \end{document}
+
