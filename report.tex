@@ -434,19 +434,21 @@ Apparently, the baseline input appeared to have provided no benefit compared to 
 
 \section{General Discussion}
 
-In this paper, we have explored whether people might learn word meanings from language itself, using a word's patterns of co-occurrence with other words as a clue towards word meaning. Previous work on distributional learning presented a paradox: while computational models suggest that distributional statistics are a powerful source of information, experiments with humans show consistent failures without correlated sources, such as natural gender \citep{braine1987} or phonology \citep{frigo1998, monaghan2005, lany2010}. In our experiments, we found that semantic coherence also facilitates distributional learning of meaning. To couch our example in terms of the Alice--Bob example, knowing that Alice associates with X and Y tells us something about Alice only if X and Y are already meaningful to us. Additionally, the effect of semantic coherence appears to be driven by the conjunction of familiar words and semantic organization -- removing either component removed the facilitation.
+In this paper, we have explored whether people might learn word meanings from language itself, using a word's patterns of co-occurrence with other words as a clue towards word meaning. Previous work on distributional learning presented a paradox: while computational models suggest that distributional statistics are a powerful source of information, experiments with humans show consistent failures without correlated sources, such as natural gender \citep{braine1987} or phonology \citep{frigo1998, monaghan2005, lany2010}. In our experiments, we found that semantic coherence also facilitates distributional learning of meaning \textbf{INTERPRET MORE CAREFULLY AS DL OF CATEGORIES}. To couch our example in terms of the Alice--Bob example, knowing that Alice associates with X and Y tells us something about Alice only if X and Y are already meaningful to us. Additionally, the effect of semantic coherence appears to be driven by the conjunction of familiar words and semantic organization -- removing either component removed the facilitation.
 
 Our experiments highlight a shortcoming of artificial language learning paradigms. Researchers using entirely artificial languages may be severely limiting the power of distributional learning. To better match experimental settings with conditions that real language learners find themselves in, we argue for more research using ``semi-artificial'' languages. Alternatively, it may be possible to mimic semantic organization in entirely artificial languages by seeding sentences with nonce topics (e.g., ``the sentence you are about to hear is about \emph{chylu}'').
 
 \subsection{Limitations}
 
-It is worth pointing out some limitations of our approach that may serve as targets of future work. First, we explored a single artificial language, MNPQ. Past research has focused on this language and shown that it is largely resistant to distributional learning. While less is known about other languages, \citet{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. Thus, findings on one language may not generalize to another---it would be useful to investigate semantic coherence for different languages. Second, we investigated a single type of semantic coherence: context words fell into two different taxonomic categories. Future work should investigate other kinds of coherence, such as thematic coherence.
+It is worth pointing out some limitations of our approach that may serve as targets of future work. First, we explored a single artificial language, MNPQ. Past research has focused on this language and shown that it is largely resistant to distributional learning. While less is known about other languages, \citet{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. Thus, findings on one language may not generalize to another---it would be useful to investigate semantic coherence for different languages. Second, we investigated a single type of semantic coherence: context words fell into two different taxonomic categories. Future work should investigate other kinds of coherence, such as thematic coherence. Third, we investigated learning for concrete nouns occurring in a single syntactico-semantic construction (``M and N''). Future work should investigate other kinds of words and more varied linguistic structures. For example, distributional learning in the presence of semantic coherence might be particularly effective for verb learning, where experiential information is less predictive of meaning (cf. \tcite{gleitman94}).
 
 % In Experiment 1, we showed that semantic coherence facilitates MNPQ learning; 3/3 semantic coherence resulted in better memory for the co-occurrence structure of the language and sharper inductive bias in similarity and meaning ratings. Additionally, for the memory and similarity measures, we found evidence of greater statistical efficiency---using regression, we found that the 3/3 rate of learning was higher than the other conditions. In Experiments 2 and 3, we investigated whether the effect of semantic coherence was driven by either meaning or coherence alone. In Experiment 2, we kept coherence but removed meaning by testing languages with phonological coherence. These languages did not confer any learning benefits, indicating that coherence alone does not drive the effect of semantic coherence. In Experiment 3, we kept meaning but removed coherence by testing a baseline language with known words but no obvious semantic organization. This language did not confer any learning benefits, indicating that meaning alone does not drive the effect of semantic coherence. The interaction of both meaning and coherence drives the effect; when we separately removed meaning (as in the phonological conditions) and coherence (as in the semantic baseline condition), learners failed to learn co-occurrence regularities in the language.
 
-\subsection{Relation to previous work}
+\subsection{Coherence}
 
-Our finding that phonological coherence does not facilitate learning is somewhat at odds with findings that phonological coherence \emph{does} facilitate distributional learning \citep{frigo1998, monaghan2005, lany2010}. However, whereas previous work has applied phonological regularities to the \emph{target} words (i.e., the words that experimenters measure learning for), we applied the regularities to the \emph{context} words (i.e., the words that co-occurred with the target words) in order to permit comparison with our semantic coherence conditions. Our operationalization of phonological coherence therefore differs from previous experiments. In our experiments, target words had \emph{second-order} phonological coherence; the target categories themselves did not have phonological regularity but they reliably co-occured with context categories that did. By contrast, in previous experiments \citet{lany2010}, target categories had \emph{first-order} coherence: the target categories themselves had phonological regularities (and context categories did not). Both types of coherence have theoretical motivations. \citet{braine1987} observed that first-order coherence occurs in languages like Spanish and Italian, where gender is marked on the noun (e.g., words that end in \emph{-o} tend to be masculine). We note that second-order coherence occurs in languages like Russian, which mark a noun's gender on the verb. Thus, distributional learning of word meaning may be sensitive to differences in the kind of phonological coherence.
+\paragraph{Phonological coherence}
+
+Our finding that phonological coherence does not facilitate learning is may appear at odds with experiments that have reached the opposite conclusion \citep{frigo1998, monaghan2005, lany2010}. However, whereas previous work has applied phonological regularities to the \emph{target} words (i.e., the words that experimenters measure learning for), we applied the regularities to the \emph{context} words (i.e., the words that co-occurred with the target words) in order to permit comparison with our semantic coherence conditions. Our operationalization of phonological coherence therefore differs from previous experiments. In our experiments, target words had \emph{second-order} phonological coherence; the target categories themselves did not have phonological regularity but they reliably co-occured with context categories that did. By contrast, in previous experiments \citep{lany2010}, target categories had \emph{first-order} coherence: the target categories themselves had phonological regularities (and context categories did not). Both types of coherence have theoretical motivations. \citet{braine1987} observed that first-order coherence occurs in languages like Spanish and Italian, where gender is marked on the noun (e.g., words that end in \emph{-o} tend to be masculine). We note that second-order coherence occurs in languages like Russian, which mark a noun's gender on the verb. Thus, distributional learning of word meaning may be sensitive to differences in the kind of phonological coherence.
 
 % As we mentioned in the introduction, most empirical work on MNPQ and contextual co-occurrence learning has focused on acquisition of \emph{syntactic categories}. However, the earliest inspiration for this research posited a link between co-occurrence and \emph{meaning}. Researchers (e.g., Lany \& Saffran, 2010) are starting to direct attention back towards meaning. Our work is in this vein. Because we found an effect of semantic coherence on the referent selection task, our results indicate that semantic coherence facilitates acquisition of meaning. Of course, we also find effects of semantic coherence in our memory and similarity tasks, which are arguably less semantic in nature. Based on this pattern of results, we believe that contextual co-occurrence learning, at its heart, acquires unlabeled categories. These unlabeled categories, in turn, can be used in the formation of explicitly syntactic or semantic categories. This suggests a degree of commonality between syntactic and semantic categories, which we believe is consistent with computational results on syntax. For example, Redington, Chater, and Finch (1998) developed a contextual co-occurrence learning model for syntactic category; many of the model's acquired clusters exhibited semantic organization (e.g., separate clusters of color and number words).
 
@@ -455,7 +457,24 @@ Our finding that phonological coherence does not facilitate learning is somewhat
 
 %% -- limitations
 
-In our analyses, memory was a significant (albeit partial) mediator of the effect of semantic coherence on similarity and referent assignment scores. Thus, artificial languages may place too high a memory burden on learners \citep{frank2011}. Our finding is broadly consistent with work showing that memory for new information is enhanced by consistency with prior knowledge \tcite{bartlett32, anderson1981, zwaan1998, chase1973, dewitt2012}.
+\paragraph{Semantic coherence}
+
+In our analyses, memory was a significant (partial) mediator of the effect of semantic coherence on similarity and referent assignment scores, indicating that semantic coherence may reduce memory demands. This is consistent with previous work showing that artificial languages impose high memory burdens on learners and that facilitating memory improves learning \citep{frank2011}. 
+
+interesting that memory for semantic baseline language is no different from 
+
+We suspect that benefits of semantic coherence are fairly general, not limited to distributional learning. Indeed, shows that memory for new information is enhanced by consistency with prior knowledge, including results on phonology \citep{treiman1988}, narratives \tcite{bartlett32}, declarative facts \tcite{anderson1981}, complex skills like chess \tcite{chase1973}, and \textbf{something} \tcite{dewitt2012}.
+
+
+ Distributional learning is not the only way in which language itself can provide evidence about meaning. Syntactic knowledge can strongly constraint meaning. For example, we might hear ``the rabbit glorped the duck'' and use morphology to infer that ``glorp'' is a verb. Because verbs typically denote actions, we can infer that ``glorp'' doesn't refer to a class of objects or substances in the world, eliminating a large set of possible meanings. Nevertheless, semantic coherence
+
+ direct definitions.
+
+ Warren, george in CHILDES: ``what's a plover''? ``it's a kind of bird''
+
+ (contrast: ``what's a monoid''? ``it's a kind of semigroup'')
+
+\textbf{might imagine screwing people (worse than chance) up by de-correlating coherence and co-occurrence}
 
 % \textbf{todo: better relate to categories of functions}
 
@@ -467,25 +486,27 @@ In our analyses, memory was a significant (albeit partial) mediator of the effec
 % Vinson & & % (JJ2012) & Johns \& Jones & & \\ % \\
 % \end{tabular}
 
-\subsection{Mechanism}
+\subsection{Distributional learning}
 
-Using mediation analysis, we found evidence that reduced memory load appears to drive some, but not all, of the effect of semantic coherence. What other factors are in play? We speculate that learners might use semantic coherence to infer the topic of discourse and then attach meaning to novel words on the basis of co-occurrences with these topics. For example, in the 3/3 condition of our experiments, participants may have learned that the topic of discourse is either animals or vehicles and then tracked co-occurrence between these topics and novel words.
+\paragraph{Mechanism}
+Why does semantic coherence facilitate distributional learning---what is the mechanism? We speculate that learners might use semantic coherence to infer the topic of discourse and then attach meaning to novel words on the basis of co-occurrences with these topics. For example, in the 3/3 condition of our experiments, participants may have learned that the topic of discourse is either nature or travel and then tracked co-occurrence between these topics and novel words. If such a mechanism were at work, it might also predict that word learning would have a ``contiguous'' character, with faster learning for words that occur in more coherent contexts. \textbf{talk about hills network paper(s)}.
 
-Through this kind of process, people might acquire meanings for abstract words (e.g., \emph{brigade}) or inchoate meanings for concrete words (e.g., people may know that \emph{taro} refers to some kind of plant). If such a mechanism were at work, it might also predict that word learning would have a ``contiguous'' character, with faster learning for words that occur in more coherent contexts. 
+might be particularly helpful when you know nearly all of the words in a sentence/document.
 
-% Future work should test these conjectures
-% - computational modeling of MNPQ, something we intend to look at in future work
-% - 
-% What do our results 
+\paragraph{Joint syntax, semantics}
+\textbf{look into gillette, gleitman, gleitman, \& lederer, 1998}
+\textbf{discuss syntax/semantics joint}
 
-% Q: What is the role of contextual co-occurrence learning in language learning?
-% - maybe abstract words are learned this way.
-% - syntactic category likely learned this way.
+\paragraph{In the wild}
+What do our experiments tell us about real language learners? First, we believe that distributional learning may not play a crucial role in the earliest stages of learning (e.g., the naming explosion), where visual referent information and social cues are available and predictive of meaning (\textbf{andrews, vigliocco, vinson}). However, distributional learning may be useful later on, for abstract words are defined in terms of relations (e.g., \emph{employee}), or concrete words whose referents are not available (e.g., \emph{taro}).
 
-% \textbf{look into gillette, gleitman, gleitman, \& lederer, 1998}
-% \textbf{discuss syntax/semantics joint}
+\textbf{try and connect back to blind studies}
 
-So what role does distributional information play in word learning? The earliest empirical work on the MNPQ language suggested a quite limited role. Later research on correlated cues suggested that learning might be more effective when combined with other cues. Our research highlights the effectiveness of a new cue: semantic coherence.
+\subsection{Conclusion}
+
+blah
+
+% So what role does distributional information play in word learning? The earliest empirical work on the MNPQ language suggested a quite limited role. Later research on correlated cues suggested that learning might be more effective when combined with other cues. Our research highlights the effectiveness of a new cue: semantic coherence.
 
 % \nocite{*}
 \newpage
