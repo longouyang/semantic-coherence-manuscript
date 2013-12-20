@@ -431,82 +431,25 @@ Baseline scores were not significantly different from 0/3 scores and baseline ef
 Apparently, the baseline input appeared to have provided no benefit compared to the novel words of the 0/3 condition, suggesting that the presence of known words by itself does not aid MNPQ learning.
 
 \section{General Discussion}
+Can you learn about the meaning of a word from its co-occurrence with other words? Previous work on distributional learning based on co-occurrence presented a paradox: While computational models suggest that distributional statistics are a powerful source of information, experiments with humans show consistent failures. Our experiments suggest a partial resolution. For human learners, distributional learning is facilitated by semantic coherence: Knowing that Alice associated with X and Y tells us something about Alice only if X and Y are already meaningful and meaningfully related to one another. Removing either the meanings of the individuals or the coherence of the relationship between them removes the facilitation. 
 
-In this paper, we have explored whether people might learn word meanings from language itself, using a word's patterns of co-occurrence with other words as a clue towards word meaning. Previous work on distributional learning presented a paradox: while computational models suggest that distributional statistics are a powerful source of information, experiments with humans show consistent failures without correlated sources, such as natural gender \citep{braine1987} or phonology \citep{frigo1998, monaghan2005, lany2010}. In our experiments, we found that semantic coherence also facilitates distributional learning of meaning; knowing that Alice associates with X and Y tells us something about Alice only if X and Y are already meaningful to us. Additionally, the effect of semantic coherence appears to be driven by the conjunction of familiar words and coherent organization -- removing either component removed the facilitation.
+In our analyses, memory was a partial mediator of semantic coherence effects, suggesting that semantic coherence may reduce memory demands. This is consistent with previous work showing that artificial languages impose high memory burdens on learners and that facilitating memory improves learning \citep{frank2011}. It is interesting, however, that our semantic baseline language with known words but no semantic organization did not facilitate memory. ``Word salad'' may not be sufficient for distributional learning; instead, words must obey a coherent organization.
 
-Our experiments highlight a shortcoming of artificial language learning paradigms. Researchers using entirely artificial languages may be severely limiting the power of distributional learning. To better match experimental settings with conditions that real language learners find themselves in, we argue for more research using ``semi-artificial'' languages. Alternatively, it may be possible to mimic semantic organization in entirely artificial languages by seeding sentences with nonce topics (e.g., ``the sentence you are about to hear is about \emph{chylu}'').
+What is the mechanism by which semantic coherence facilitates learning? Perhaps learners use semantic coherence to infer the topic of discourse and then attach meaning to novel words on the basis of co-occurrences with these topics. For example, in the highest semantic coherence condition of our experiments, participants may have learned that the topic of discourse is either animal-related or vehicle-related and then tracked co-occurrence between these topics and novel words \citep{frank2013}. Such a proposal is congruent with the ``preferential acquisition'' idea of Hills and colleagues \citeyearpar{hills2009, hills2010}, in which the easiest words to learn are those that connect well with others in the learning environment. 
 
-\subsection{Limitations}
+Our finding that phonological coherence does not facilitate learning may at first appear at odds with experiments that have reached the opposite conclusion \citep{frigo1998, lany2010, monaghan2005}. But previous work has applied phonological regularities to the target words (the words that experimenters measure learning for).  In contrast, in order to permit comparison with the semantic coherence conditions, we applied the regularities to the context words (the words that co-occurred with the target words). In previous experiments, target categories had first-order coherence; in our experiments, target words had second-order phonological coherence. The target categories themselves did not have phonological regularity but they reliably co-occurred with context categories that did. We speculate that this subtle but substantial difference explains the different patterns we observed.
 
-It is worth pointing out some limitations of our approach that may serve as targets of future work. First, we explored a single artificial language, MNPQ. Past research has focused on this language and shown that it is largely resistant to distributional learning. While less is known about other languages, \citet{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. Thus, findings on one language may not generalize to another---it would be useful to investigate semantic coherence for different languages. Second, we investigated a single type of semantic coherence: context words fell into two different taxonomic categories. Future work should investigate other kinds of coherence, such as thematic coherence. Third, we investigated learning for a single syntactico-semantic construction that biases interpretation towards concrete nouns (e.g., ``cat and wug''). Future work should investigate other kinds of words and more varied linguistic structures (e.g., ``wug cat''). Distributional learning in the presence of semantic coherence might be particularly effective for learning verbs, adjectives, and prepositions \citep{redington1998}, where visual referent information may be less predictive of meaning.
+\subsection{Limitations and Future Directions}
 
-% In Experiment 1, we showed that semantic coherence facilitates MNPQ learning; 3/3 semantic coherence resulted in better memory for the co-occurrence structure of the language and sharper inductive bias in similarity and meaning ratings. Additionally, for the memory and similarity measures, we found evidence of greater statistical efficiency---using regression, we found that the 3/3 rate of learning was higher than the other conditions. In Experiments 2 and 3, we investigated whether the effect of semantic coherence was driven by either meaning or coherence alone. In Experiment 2, we kept coherence but removed meaning by testing languages with phonological coherence. These languages did not confer any learning benefits, indicating that coherence alone does not drive the effect of semantic coherence. In Experiment 3, we kept meaning but removed coherence by testing a baseline language with known words but no obvious semantic organization. This language did not confer any learning benefits, indicating that meaning alone does not drive the effect of semantic coherence. The interaction of both meaning and coherence drives the effect; when we separately removed meaning (as in the phonological conditions) and coherence (as in the semantic baseline condition), learners failed to learn co-occurrence regularities in the language.
+The limitations of our approach may serve as inspiration for future work. First, we explored a single artificial language, MNPQ, because past research has shown that it is largely resistant to distributional learning. While less is known about other languages, \cite{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. How do variations across language structure interact with factors like semantic and phonological coherence? 
 
-\subsection{Coherence}
+Second, we investigated a single type of semantic coherence, where context words fell into two different taxonomic categories, and a single syntactico-semantic construction that biases interpretation towards concrete nouns (e.g., ``cat and wug''). These choices likely affected the magnitude of the effects we observed. While the simplicity and transparency of our semantic categories likely facilitated learning, our use of concrete noun targets might even have understated the effects of coherence. Distributional learning through semantic coherence might be especially useful for predicates like verbs and adjectives \citep{redington1998}, where referential grounding provides less information about meaning \citep{gleitman1990}.
 
-\paragraph{Phonological coherence}
-
-Our finding that phonological coherence does not facilitate learning is may appear at odds with experiments that have reached the opposite conclusion \citep{frigo1998, monaghan2005, lany2010}. However, whereas previous work has applied phonological regularities to the \emph{target} words (i.e., the words that experimenters measure learning for), we applied the regularities to the \emph{context} words (i.e., the words that co-occurred with the target words) in order to permit comparison with our semantic coherence conditions. Our operationalization of phonological coherence therefore differs from previous experiments. In our experiments, target words had \emph{second-order} phonological coherence; the target categories themselves did not have phonological regularity but they reliably co-occured with context categories that did. By contrast, in previous experiments \citep{lany2010}, target categories had \emph{first-order} coherence: the target categories themselves had phonological regularities (and context categories did not). Both types of coherence have theoretical motivations. \citet{braine1987} observed that first-order coherence occurs in languages like Spanish and Italian, where gender is marked on the noun (e.g., words that end in \emph{-o} tend to be masculine). We note that second-order coherence occurs in languages like Russian, which mark a noun's gender on the verb. Thus, distributional learning of word meaning may be sensitive to differences in the kind of phonological coherence.
-
-% As we mentioned in the introduction, most empirical work on MNPQ and contextual co-occurrence learning has focused on acquisition of \emph{syntactic categories}. However, the earliest inspiration for this research posited a link between co-occurrence and \emph{meaning}. Researchers (e.g., Lany \& Saffran, 2010) are starting to direct attention back towards meaning. Our work is in this vein. Because we found an effect of semantic coherence on the referent selection task, our results indicate that semantic coherence facilitates acquisition of meaning. Of course, we also find effects of semantic coherence in our memory and similarity tasks, which are arguably less semantic in nature. Based on this pattern of results, we believe that contextual co-occurrence learning, at its heart, acquires unlabeled categories. These unlabeled categories, in turn, can be used in the formation of explicitly syntactic or semantic categories. This suggests a degree of commonality between syntactic and semantic categories, which we believe is consistent with computational results on syntax. For example, Redington, Chater, and Finch (1998) developed a contextual co-occurrence learning model for syntactic category; many of the model's acquired clusters exhibited semantic organization (e.g., separate clusters of color and number words).
-
-%%% commented out because this might contradict the proposed discourse-topic-inference method. 
-%%% also, people can't actually do unsupervised MNPQ learning, so maybe it's NOT about unlabeled categories 
-
-%% -- limitations
-
-\paragraph{Semantic coherence}
-
-In our analyses, memory was a significant (partial) mediator of the effect of semantic coherence on similarity and referent assignment scores, suggesting that semantic coherence may reduce memory demands. This is consistent with previous work showing that artificial languages impose high memory burdens on learners and that facilitating memory improves learning \citep{frank2011}. It is interesting that our semantic baseline language with known words but no semantic organization did not facilitate memory. ``Word salad'' may not be sufficient for distributional learning---rather, words must obey a coherent organization.
-
-As we mentioned in the introduction, distributional information is useful for acquisition of both syntax and semantics. For example, \citet{redington1998} developed a distributional learning model for syntactic category which nevertheless extracted many semantic relationships; statistical information may serve as a common foundation for learning some aspects of syntax and semantics. Thus, it may be that semantic coherence also facilitates learning of syntactic category, a possibility we leave for future work.
-
- We suspect that benefits of semantic coherence are fairly general, not limited to distributional learning. As one example, semantic coherence may aid learning based on syntax. Compare ``the brusod glorped the chylu'' with ``the rabbit glorped the duck''. In both cases, we use knowledge of morphology to infer that ``glorp'' is a verb; verbs typically denote actions, so we can guess that ``glorp'' does not refer to an object category, eliminating a large space of possible meanings. For the ``brusod'' case, that seems to be the end of the inference about meaning, whereas in the ``rabbit'' case, the fact that \emph{animals} participate in the action further constrains meaning (e.g., ``glorped'' is likely not a synonym for ``reimbursed'', ``built'', or ``proved'').
-
-As another example, semantic coherence may aid purely linguistic explanations. Consider this dialog from the CHILDES corpus \tcite{macwhinney00}:
-
-\vskip 1em
-Child: What's a plover?\\
-Father: It's a kind of bird.\\
-\vskip 1em
-
-\noindent The success of the father's answer depends on the child knowing (among other things) what a bird is. Contrast that with this hypothetical dialog:
-
-\vskip 1em
-Child: What's a monoid?\\
-Father: It's a kind of semigroup.\\
-\vskip 1em
-
-\noindent Not knowing what a semigroup is, the child has learned little about what monoids are. The linguistic context must be familiar and coherent to serve as leverage for the meaning of unknown words. In this respect, our work on semantic coherence is consistent with a large body of literature which has shown that memory for new information is enhanced by consistency with prior knowledge, including results on phonology \citep{treiman1988}, narratives \tcite{bartlett32}, declarative facts \tcite{anderson1981}, source memory \tcite{dewitt2012}, and complex skills like chess \tcite{chase1973}.
-
-% \textbf{might imagine screwing people (worse than chance) up by de-correlating coherence and co-occurrence}
-
-% \textbf{todo: better relate to categories of functions}
-
-% Models that integrate linguistic and perceptual features:
-% \begin{tabular}{l l l l} % Name & Authors & source & cited in \\ %
-% \hline % Strudel & Baroni et al. &
-% \href{http://clic.cimec.unitn.it/brian/publications/baroniEA10strudel.pdf}{link}
-% & Johns \& Jones\\ % \hline % (AVV2010) & Andrews, Vigliocco, \&
-% Vinson & & % (JJ2012) & Johns \& Jones & & \\ % \\
-% \end{tabular}
-
-\subsection{Distributional learning}
-
-\paragraph{Mechanism}
-Why does semantic coherence facilitate distributional learning---what is the mechanism? We speculate that learners might use semantic coherence to infer the topic of discourse and then attach meaning to novel words on the basis of co-occurrences with these topics. For example, in the highest semantic coherence condition of our experiments, participants may have learned that the topic of discourse is either animal-related or vehicle-related and then tracked co-occurrence between these topics and novel words. If such a mechanism were at work, it might also predict that word learning would have a ``contiguous'' character, with faster learning for words that occur in more coherent contexts. Future work should reconcile our results with research on word learning as a function of semantic network properties \tcite{e.g., hills2009, hills2010}.
-
-\paragraph{In the wild}
-What do our experiments tell us about real language learners? First, we believe that distributional learning may not play a crucial role in the earliest stages of learning meaning (e.g., the naming explosion). In the earliest stages, infants  have heard less language, know fewer words (and thus, the language they do hear may be less semantically coherent), and visual referent information may be available that is predictive of meaning \citep{riordan2010}. However, infants grow older, their database of co-occurrence statistics grows and caregivers may increasingly use abstract words \tcite{bergelson+swingley2013}, which may require distributional learning \citep[cf. ][]{andrews2009}. Thus,  distributional learning (for nouns) may be useful for relational terms (e.g., \emph{employee}) or concrete terms whose referents are not available (e.g., \emph{taro}).
-
-Additional research with blind participants \cite[cf.][]{shepard1992,bedny2012} could help better characterize the role of distributional learning throughout development; it would be informative to know how (e.g.,) knowledge of color terms depends on age in blind learners.
-
+Finally, while our study addressed one shortcoming of much artificial language research---the lack of semantic grounding---it is still congruent with other artificial language research in scale (6 words in a single exposure session). Small-scale experiments do not allow strong inferences about the importance of different factors in lexical learning \citep{romberg2010, frank2013}. A mixture of computational analyses and larger-scale experiments are necessary to understand the role semantic coherence---and distributional learning more generally---plays in language learning.
 
 \subsection{Conclusion}
+Since Firth's edict that we shall know a word ``by the company it keeps,'' two lines of research have yielded apparently conflicting results. Although computational models suggest that distributional information is a powerful cue towards meaning, artificial language learning experiments have suggested a more dubious outlook. Our results here may help to close this gap between the experimental and the computational. On the basis of our findings, we suggest a small modification to Firth's maxim: You shall know a word \emph{if you know} the company it keeps.
 
-Since Firth's edict that we shall know a word ``by the company it keeps'', two lines of research have yielded apparently conflicting results. Although computational models suggest that distributional information is a powerful cue towards meaning, artificial learning experiments have suggested a more dubious outlook. Semantic coherence may close this gap between the experimental and the computational: you shall know a word \emph{if you know the company it keeps}.
-
-% \nocite{*}
 \newpage
 \bibliographystyle{apacite}
 \bibliography{references}
@@ -526,108 +469,108 @@ We performed a partial replication of Experiment 1 with the new stimuli. We coll
 
 \end{center}
 
-\appendix
-\section{Regression results including participants who received catch trials but did not pass all of them}
+% \appendix
+% \section{Regression results including participants who received catch trials but did not pass all of them}
 
-Experiment 1
+% Experiment 1
 
-\begin{center}
-\footnotesize{
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept &  0.0384 &  0.017 &  2.15 & <0.05*\\
-    Condition: 1/3 -- (0/3) &  0.0016 &  0.025 &  0.06 & 0.948\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.0211 &  0.013 &  1.51 & 0.130\ww\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0384 &  0.010 &  3.67 & <0.001*\\
-    Exposures &  0.2038 &  0.079 &  2.56 & <0.05*\\
-    E $\times$ C: 1/3 -- (0/3) &  0.0042 &  0.113 &  0.03 & 0.970\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) & -0.0014 &  0.062 & -0.02 & 0.981\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1232 &  0.046 &  2.64 & <0.01* \\
-    \hline
-  \end{tabular}
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept &  0.0469 &  0.017 &  2.65 & <0.01*\\
-    Condition: 1/3 -- (0/3) & -0.0078 &  0.025 & -0.30 & 0.758\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.0174 &  0.013 &  1.26 & 0.206\ww\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0233 &  0.010 &  2.25 & <0.05*\\
-    Exposures &  0.1481 &  0.078 &  1.88 & 0.059\ww\\
-    E $\times$ C: 1/3 -- (0/3) &  0.0560 &  0.112 &  0.49 & 0.619\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) &  0.0344 &  0.061 &  0.55 & 0.577\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1288 &  0.046 &  2.78 & <0.01* \\
-    \hline
-  \end{tabular}
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept &  0.0984 &  0.033 &  2.91 & <0.005*\\
-    Condition: 1/3 -- (0/3) &  0.0439 &  0.049 &  0.89 & 0.370\ww\\
-    Condition: 2/3 -- (0/3,1/3) &  0.0604 &  0.026 &  2.28 & <0.05*\\
-    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0412 &  0.019 &  2.08 & <0.05*\\
-    Exposures &  0.4768 &  0.150 &  3.16 & <0.005*\\
-    E $\times$ C: 1/3 -- (0/3) & -0.0674 &  0.215 & -0.31 & 0.754\ww\\
-    E $\times$ C: 2/3 -- (0/3,1/3) & -0.1032 &  0.118 & -0.87 & 0.381\ww\\
-    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1168 &  0.088 &  1.31 & 0.189\ww \\
-    \hline
-  \end{tabular}
-}
-\end{center}
+% \begin{center}
+% \footnotesize{
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept &  0.0384 &  0.017 &  2.15 & <0.05*\\
+%     Condition: 1/3 -- (0/3) &  0.0016 &  0.025 &  0.06 & 0.948\ww\\
+%     Condition: 2/3 -- (0/3,1/3) &  0.0211 &  0.013 &  1.51 & 0.130\ww\\
+%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0384 &  0.010 &  3.67 & <0.001*\\
+%     Exposures &  0.2038 &  0.079 &  2.56 & <0.05*\\
+%     E $\times$ C: 1/3 -- (0/3) &  0.0042 &  0.113 &  0.03 & 0.970\ww\\
+%     E $\times$ C: 2/3 -- (0/3,1/3) & -0.0014 &  0.062 & -0.02 & 0.981\ww\\
+%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1232 &  0.046 &  2.64 & <0.01* \\
+%     \hline
+%   \end{tabular}
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept &  0.0469 &  0.017 &  2.65 & <0.01*\\
+%     Condition: 1/3 -- (0/3) & -0.0078 &  0.025 & -0.30 & 0.758\ww\\
+%     Condition: 2/3 -- (0/3,1/3) &  0.0174 &  0.013 &  1.26 & 0.206\ww\\
+%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0233 &  0.010 &  2.25 & <0.05*\\
+%     Exposures &  0.1481 &  0.078 &  1.88 & 0.059\ww\\
+%     E $\times$ C: 1/3 -- (0/3) &  0.0560 &  0.112 &  0.49 & 0.619\ww\\
+%     E $\times$ C: 2/3 -- (0/3,1/3) &  0.0344 &  0.061 &  0.55 & 0.577\ww\\
+%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1288 &  0.046 &  2.78 & <0.01* \\
+%     \hline
+%   \end{tabular}
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept &  0.0984 &  0.033 &  2.91 & <0.005*\\
+%     Condition: 1/3 -- (0/3) &  0.0439 &  0.049 &  0.89 & 0.370\ww\\
+%     Condition: 2/3 -- (0/3,1/3) &  0.0604 &  0.026 &  2.28 & <0.05*\\
+%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0412 &  0.019 &  2.08 & <0.05*\\
+%     Exposures &  0.4768 &  0.150 &  3.16 & <0.005*\\
+%     E $\times$ C: 1/3 -- (0/3) & -0.0674 &  0.215 & -0.31 & 0.754\ww\\
+%     E $\times$ C: 2/3 -- (0/3,1/3) & -0.1032 &  0.118 & -0.87 & 0.381\ww\\
+%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1168 &  0.088 &  1.31 & 0.189\ww \\
+%     \hline
+%   \end{tabular}
+% }
+% \end{center}
 
 
-\pagebreak
+% \pagebreak
 
-Experiments 2 and 3
+% Experiments 2 and 3
 
-\begin{center}
-\scriptsize{
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept & -0.0227 &  0.026 & -0.85 & 0.390\ww\\
-    Condition: Onset -- 0/3 &  0.0463 &  0.036 &  1.26 & 0.207\ww\\
-    Condition: Rime -- 0/3 &  0.0401 &  0.034 &  1.16 & 0.246\ww\\
-    Condition: Syllable count -- 0/3 &  0.0430 &  0.037 &  1.16 & 0.245\ww\\
-    Condition: Semantic incoherent -- 0/3 & -0.0020 &  0.036 & -0.05 & 0.954\ww\\
-    Exposures &  0.0777 &  0.115 &  0.67 & 0.501\ww\\
-    E $\times$ C: Onset -- 0/3 & -0.0409 &  0.163 & -0.25 & 0.802\ww\\
-    E $\times$ C: Rime -- 0/3 & -0.0993 &  0.157 & -0.63 & 0.527\ww\\
-    E $\times$ C: Syllable count -- 0/3 & -0.0641 &  0.161 & -0.39 & 0.690\ww\\
-    E $\times$ C: Semantic incoherent -- 0/3 &  0.0852 &  0.156 &  0.54 & 0.586\ww \\
-    \hline
-  \end{tabular}
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept &  0.0139 &  0.024 &  0.57 & 0.563\ww\\
-    Condition: Onset -- 0/3 & -0.0097 &  0.033 & -0.28 & 0.771\ww\\
-    Condition: Rime -- 0/3 & -0.0102 &  0.031 & -0.32 & 0.745\ww\\
-    Condition: Syllable count -- 0/3 & -0.0402 &  0.033 & -1.19 & 0.233\ww\\
-    Condition: Semantic incoherent -- 0/3 & -0.0092 &  0.033 & -0.27 & 0.782\ww\\
-    Exposures & -0.0711 &  0.105 & -0.67 & 0.499\ww\\
-    E $\times$ C: Onset -- 0/3 & -0.0501 &  0.148 & -0.33 & 0.736\ww\\
-    E $\times$ C: Rime -- 0/3 &  0.1874 &  0.143 &  1.31 & 0.190\ww\\
-    E $\times$ C: Syllable count -- 0/3 &  0.3049 &  0.146 &  2.07 & <0.05*\\
-    E $\times$ C: Semantic incoherent -- 0/3 &  0.1645 &  0.142 &  1.15 & 0.249\ww \\
-    \hline
-  \end{tabular}
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept & -0.0471 &  0.064 & -0.72 & 0.467\ww\\
-    Condition: Onset -- 0/3 &  0.1250 &  0.089 &  1.39 & 0.163\ww\\
-    Condition: Rime -- 0/3 &  0.0730 &  0.084 &  0.86 & 0.387\ww\\
-    Condition: Syllable count -- 0/3 & -0.0100 &  0.090 & -0.11 & 0.911\ww\\
-    Condition: Semantic incoherent -- 0/3 &  0.0680 &  0.090 &  0.75 & 0.449\ww\\
-    Exposures &  0.5307 &  0.282 &  1.88 & 0.060\ww\\
-    E $\times$ C: Onset -- 0/3 & -0.4641 &  0.398 & -1.16 & 0.244\ww\\
-    E $\times$ C: Rime -- 0/3 & -0.3311 &  0.382 & -0.86 & 0.387\ww\\
-    E $\times$ C: Syllable count -- 0/3 &  0.0376 &  0.393 &  0.09 & 0.923\ww\\
-    E $\times$ C: Semantic incoherent -- 0/3 & -0.6766 &  0.382 & -1.77 & 0.076\ww \\
-    \hline
-  \end{tabular}
-}
-\end{center}
+% \begin{center}
+% \scriptsize{
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept & -0.0227 &  0.026 & -0.85 & 0.390\ww\\
+%     Condition: Onset -- 0/3 &  0.0463 &  0.036 &  1.26 & 0.207\ww\\
+%     Condition: Rime -- 0/3 &  0.0401 &  0.034 &  1.16 & 0.246\ww\\
+%     Condition: Syllable count -- 0/3 &  0.0430 &  0.037 &  1.16 & 0.245\ww\\
+%     Condition: Semantic incoherent -- 0/3 & -0.0020 &  0.036 & -0.05 & 0.954\ww\\
+%     Exposures &  0.0777 &  0.115 &  0.67 & 0.501\ww\\
+%     E $\times$ C: Onset -- 0/3 & -0.0409 &  0.163 & -0.25 & 0.802\ww\\
+%     E $\times$ C: Rime -- 0/3 & -0.0993 &  0.157 & -0.63 & 0.527\ww\\
+%     E $\times$ C: Syllable count -- 0/3 & -0.0641 &  0.161 & -0.39 & 0.690\ww\\
+%     E $\times$ C: Semantic incoherent -- 0/3 &  0.0852 &  0.156 &  0.54 & 0.586\ww \\
+%     \hline
+%   \end{tabular}
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept &  0.0139 &  0.024 &  0.57 & 0.563\ww\\
+%     Condition: Onset -- 0/3 & -0.0097 &  0.033 & -0.28 & 0.771\ww\\
+%     Condition: Rime -- 0/3 & -0.0102 &  0.031 & -0.32 & 0.745\ww\\
+%     Condition: Syllable count -- 0/3 & -0.0402 &  0.033 & -1.19 & 0.233\ww\\
+%     Condition: Semantic incoherent -- 0/3 & -0.0092 &  0.033 & -0.27 & 0.782\ww\\
+%     Exposures & -0.0711 &  0.105 & -0.67 & 0.499\ww\\
+%     E $\times$ C: Onset -- 0/3 & -0.0501 &  0.148 & -0.33 & 0.736\ww\\
+%     E $\times$ C: Rime -- 0/3 &  0.1874 &  0.143 &  1.31 & 0.190\ww\\
+%     E $\times$ C: Syllable count -- 0/3 &  0.3049 &  0.146 &  2.07 & <0.05*\\
+%     E $\times$ C: Semantic incoherent -- 0/3 &  0.1645 &  0.142 &  1.15 & 0.249\ww \\
+%     \hline
+%   \end{tabular}
+%   \begin{tabular}{l r r r r}
+%     \hline
+%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+%     Intercept & -0.0471 &  0.064 & -0.72 & 0.467\ww\\
+%     Condition: Onset -- 0/3 &  0.1250 &  0.089 &  1.39 & 0.163\ww\\
+%     Condition: Rime -- 0/3 &  0.0730 &  0.084 &  0.86 & 0.387\ww\\
+%     Condition: Syllable count -- 0/3 & -0.0100 &  0.090 & -0.11 & 0.911\ww\\
+%     Condition: Semantic incoherent -- 0/3 &  0.0680 &  0.090 &  0.75 & 0.449\ww\\
+%     Exposures &  0.5307 &  0.282 &  1.88 & 0.060\ww\\
+%     E $\times$ C: Onset -- 0/3 & -0.4641 &  0.398 & -1.16 & 0.244\ww\\
+%     E $\times$ C: Rime -- 0/3 & -0.3311 &  0.382 & -0.86 & 0.387\ww\\
+%     E $\times$ C: Syllable count -- 0/3 &  0.0376 &  0.393 &  0.09 & 0.923\ww\\
+%     E $\times$ C: Semantic incoherent -- 0/3 & -0.6766 &  0.382 & -1.77 & 0.076\ww \\
+%     \hline
+%   \end{tabular}
+% }
+% \end{center}
 
 \end{document}
