@@ -1,6 +1,6 @@
 LaTeX files for the scientific report:
 
-**Semantic coherence facilitates learning word meanings through contextual co-occurrence**
+**Semantic coherence facilitates distributional learning of word meaning**
 
 by Long Ouyang, Lera Boroditsky, and Michael C. Frank
 
@@ -17,6 +17,10 @@ These are not so easy to type while editing, though, so I use the following Emac
 (HT [StackOverflow](http://stackoverflow.com/a/677033/351392) for the downcase syntax).
 
 This involves a little bit of manual work, as it makes the two Saffran references have the same citekey.
+
+# Word count
+
+I used the [TexCount online interface](http://app.uio.no/ifi/texcount/online.php)
 
 # Converting to Word
 
