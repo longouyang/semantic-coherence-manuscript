@@ -1,4 +1,5 @@
 \documentclass{letter}
+\usepackage{tabularx}
 
 \makeatletter
 \let\@texttop\relax
@@ -7,26 +8,39 @@
 \begin{document}
 
 \address{450 Serra Mall \\ Building 420 (Jordan Hall) \\ Stanford, CA~~94305}
-\signature{Long Ouyang, Lera Boroditsky,\\and Michael C. Frank}
+
 
 \pagestyle{empty}
 \begin{letter}{~~~}
 \opening{Dear Editorial Board,}
 
-Please accept our submission of a manuscript titled ``Semantic coherence facilitates distributional learning of word meaning'' to Journal of Experimental Psychology: General. This manuscript has not been previously published and is not under consideration elsewhere. All research reported in this manuscript was approved by the Stanford University Institutional Review Board. We plan to release raw data and code for our analyses on a publicly available Internet archive.
+Please accept our submission of a manuscript for a regular article titled ``Semantic coherence facilitates distributional learning of word meaning'' to Journal of Experimental Psychology: Learning, Memory, and Cognition. This manuscript has not been previously published and is not under consideration elsewhere. All research reported in this manuscript was approved by the Stanford University Institutional Review Board. We plan to release raw data and code for our analyses on a publicly available Internet archive.
 
 In our manuscript, we describe a series of empirical studies on distributional learning of word meaning, a phenomenon in which learners might learn aspects of a word's meaning from purely linguistic information---its patterns of co-occurrence with other words. Computational work suggests that distributional learning can in principle drive learning for some aspects of meaning, but empirical work using artificial language learning shows that people are often unable to learn from co-occurrence regularities. However, these experiments generally present learners with entirely novel linguistic input. Our experiments show that distributional learning is facilitated by semantic coherence, the presence of known words that adhere to some semantic organization.
 
-As well as being interesting to readers who study artificial grammars and language acquisition, we believe this work is broadly engaging as an important case study on the character of purely statistical learning.
+% As well as being interesting to readers who study artificial grammars and language acquisition, we believe this work is broadly engaging as an important case study on the character of purely statistical learning.
 
-List of appropriate reviewers: Richard Aslin, Jill Lany, Patricia Reeder, and Jennifer Saffran are all experts in the field of statistical learning.
+% A list of suggested reviewers includes: Richard Aslin, Jill Lany, Patricia Reeder, and Jennifer Saffran are all experts in the field of statistical learning.
 
 If you have any questions or concerns, please do not hesitate to contact us. Thank you very much for your consideration.
 
 
+\vspace{2\parskip}
+Sincerely,\\
 
-\vspace{3\parskip}
-\closing{Sincerely,}
+\begin{tabularx}{\textwidth}{X l}
+Long Ouyang & Lera Boroditsky\\
+Department of Psychology & Department of Cognitive Science\\
+Stanford University & University of California, San Diego\\
+\texttt{louyang@stanford.edu} & \texttt{lera@ucsd.edu}\\
+\end{tabularx}
+
+\begin{tabular}{l}
+Michael C. Frank\\
+Department of Psychology\\
+Stanford University\\
+\texttt{mcfrank@stanford.edu}
+\end{tabular}
 
 \end{letter}
 \end{document}
