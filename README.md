@@ -18,6 +18,10 @@ These are not so easy to type while editing, though, so I use the following Emac
 
 This involves a little bit of manual work, as it makes the two Saffran references have the same citekey.
 
+# Compiling watch script
+
+Run `./watch.sh`. This will rerun `latexmk` with synctex options whenever the latex source file is updated.
+
 # Word count
 
 I used the [TexCount online interface](http://app.uio.no/ifi/texcount/online.php)
@@ -77,3 +81,4 @@ Looked decent, but:
 - pandoc complained about missing images
 - tables didn't work
 - no abstract, front matter, or running head
+
