@@ -227,51 +227,119 @@ We excluded the 55 participants who did not correctly answer all of the catch tr
 
 \paragraph{Memory}
 
-Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a difficulty ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types (table TODO).
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and performed Bonferroni correction (Figure~\ref{x1-descriptive-stats-mem}).
+
+\begin{figure}[t]
+  \begin{center}
 
 {
-\tiny
-\begin{verbatim}
-condition comparison  df     t       p sig
-1      none        f-w 150  3.07 0.00253   *
-2      none        f-c 150  2.44 0.01569    
-3      none        f-p 150  4.18 0.00005   *
-4      none        w-c 150 -0.70 0.48454    
-5      none        w-p 150  1.61 0.10862    
-6      none        c-p 150  2.21 0.02843    
+  \small
+  \noindent \textbf{0/3 coherence}: df = 150, $\alpha = 0.05 / 6 = 0.0083$
+  \begin{tabular}{| l | l |  l | l |}
+    \hline
+    & F                          & W                       & C \\ 
+    \hline
+    W & $t$ = 3.07, $p$ = 0.002*   &                         &\\
+    \hline
+    C & $t$ = 2.44, $p$ = 0.01     & $t$ = -0.70, $p$ = 0.48 &\\
+    \hline
+    P & $t$ = 4.08, $p$ < 0.001* & $t$ = 1.61, $p$ = 0.10  & $t$ = 2.21, $p$ = 0.02\\
+    \hline
+  \end{tabular}
+}\vskip 1em
 
-condition comparison  df     t       p sig
-1      sem1        f-w 153  5.99 0.00000   *
-2      sem1        f-c 153  5.11 0.00000   *
-3      sem1        f-p 153  7.96 0.00000   *
-4      sem1        w-c 153 -0.64 0.52523    
-5      sem1        w-p 153  2.05 0.04232    
-6      sem1        c-p 153  2.78 0.00614   *
 
-condition comparison  df     t       p sig
-1      sem2        f-w 164  4.78 0.00000   *
-2      sem2        f-c 164  8.56 0.00000   *
-3      sem2        f-p 164 11.62 0.00000   *
-4      sem2        w-c 164  3.71 0.00028   *
-5      sem2        w-p 164  7.35 0.00000   *
-6      sem2        c-p 164  3.64 0.00037   *
+{
+  \small
+  \noindent \textbf{1/3 coherence}: df = 153, $\alpha = 0.05 / 6 = 0.0083$
+  \begin{tabular}{| l | l |  l | l |}
+    \hline
+    & F                          & W                       & C \\ 
+    \hline
+    W & $t$ = 5.99, $p$ < 0.001* &                         &\\
+    \hline
+    C & $t$ = 5.11, $p$ < 0.001* & $t$ = -0.64, $p$ = 0.52 &\\
+    \hline
+    P & $t$ = 7.96, $p$ < 0.001* & $t$ = 2.05, $p$ = 0.04  & $t$ = 2.78, $p$ = 0.006*\\
+    \hline
+  \end{tabular}
+}\vskip 1em
 
-condition comparison  df     t       p sig
-1      sem3        f-w 152 -3.87 0.00016   *
-2      sem3        f-c 152  9.30 0.00000   *
-3      sem3        f-p 152 18.29 0.00000   *
-4      sem3        w-c 152  9.34 0.00000   *
-5      sem3        w-p 152 17.08 0.00000   *
-6      sem3        c-p 152  9.26 0.00000   *
-\end{verbatim}
-}
+{
+  \small
+  \noindent \textbf{2/3 coherence}: df = 164, $\alpha = 0.05 / 6 = 0.0083$
+  \begin{tabular}{| l | l |  l | l |}
+    \hline
+    & F                           & W                         & C \\ 
+    \hline
+    W & $t$ = 4.78, $p$ < 0.001*  &                           &\\
+    \hline
+    C & $t$ = 8.56, $p$ < 0.001*  & $t$ = 3.71, $p$ < 0.001*  &\\
+    \hline
+    P & $t$ = 11.62, $p$ < 0.001* & $t$ = 7.35, $p$ < 0.001*  & $t$ = 3.64, $p$ < 0.001*\\
+    \hline
+  \end{tabular}
+}\vskip 1em
 
-difficulty ordering in 0/3 was hard to establish, e.g., $f > w$ but $w \approx c$ and $f \approx c$.
+{
+  \small
+  \noindent \textbf{2/3 coherence}: df = 164, $\alpha = 0.05 / 6 = 0.0083$
+  \begin{tabular}{| l | l |  l | l |}
+    \hline
+    & F                            & W                         & C \\ 
+    \hline
+    W & $t$ = -3.87, $p$ < 0.001*  &                           &\\
+    \hline
+    C & $t$ = 9.30, $p$ < 0.001*  & $t$ = 9.34, $p$ < 0.001*   &\\
+    \hline
+    P & $t$ = 18.29, $p$ < 0.001* & $t$ = 17.08, $p$ < 0.001*  & $t$ = 9.26, $p$ < 0.001*\\
+    \hline
+  \end{tabular}
+}\vskip 1em
+\caption{Paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiment 1.}
+\label{x1-descriptive-stats-mem}
+\end{center}
+\end{figure}
+
+
+% condition comparison  df     t       p sig
+% 1      none        f-w 150  3.07 0.00253   *
+% 2      none        f-c 150  2.44 0.01569    
+% 3      none        f-p 150  4.18 0.00005   *
+% 4      none        w-c 150 -0.70 0.48454    
+% 5      none        w-p 150  1.61 0.10862    
+% 6      none        c-p 150  2.21 0.02843    
+
+% condition comparison  df     t       p sig
+% 1      sem1        f-w 153  5.99 0.00000   *
+% 2      sem1        f-c 153  5.11 0.00000   *
+% 3      sem1        f-p 153  7.96 0.00000   *
+% 4      sem1        w-c 153 -0.64 0.52523    
+% 5      sem1        w-p 153  2.05 0.04232    
+% 6      sem1        c-p 153  2.78 0.00614   *
+
+% condition comparison  df     t       p sig
+% 1      sem2        f-w 164  4.78 0.00000   *
+% 2      sem2        f-c 164  8.56 0.00000   *
+% 3      sem2        f-p 164 11.62 0.00000   *
+% 4      sem2        w-c 164  3.71 0.00028   *
+% 5      sem2        w-p 164  7.35 0.00000   *
+% 6      sem2        c-p 164  3.64 0.00037   *
+
+% condition comparison  df     t       p sig
+% 1      sem3        f-w 152 -3.87 0.00016   *
+% 2      sem3        f-c 152  9.30 0.00000   *
+% 3      sem3        f-p 152 18.29 0.00000   *
+% 4      sem3        w-c 152  9.34 0.00000   *
+% 5      sem3        w-p 152 17.08 0.00000   *
+% 6      sem3        c-p 152  9.26 0.00000   * 
+
+In the 0/3 condition, participants rated familiar sentences as significantly more familiar than withheld and position violation sentences. In the 1/3 condition, participants rated familiar sentences as significantly more familiar than all other types. In addition, they rated co-occurrence violation sentences as significantly more familiar than position violation sentences. In the 2/3 condition, there was a total ordering on the sentence types: familiar sentences were significantly more familiar than withheld sentences, which were significantly more familiar than co-occurrence violation sentences, which in turn were significantly more familiar than position violation sentences. The 3/3 condition had a similar ordering, except that withheld sentences were actually more familiar than familiar sentences.\footnote{ Higher familiarity for withheld sentences is similar to the \emph{prototype enhancement} effect observed in category learning studies \tcite{zaki2004}.} These familiarity orderings indicate that some learning occurred at every level of coherence. For example, participants at all levels of coherence rated familiar sentences as more familiar than position violation sentences. However, only participants at the 2/3 and 3/3 levels distinguished between withheld and co-occurrence violation sentences. This lends some support to the idea that positional regularities in MNPQ may be more influential than co-occurence regularities.
 
 \paragraph{Similarity}
 
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and performed Bonferroni correction (Figure~\ref{x1-descriptive-stats-mem}).
 
-\paragraph{Meaning}
 
 \subsubsection{Effect of coherence and exposure}
 
