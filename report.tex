@@ -38,7 +38,7 @@ Jordan Hall, Building 01-420\\
 Stanford, CA, 94305\\
 Email: \texttt{longouyang@post.harvard.edu}}
 
-\abstract{Computational models have shown that purely statistical knowledge about words' linguistic contexts is sufficient to learn many properties of words, including grammatical category and meaning. For example, a learner might infer that ``postman'' and ``mailman'' have similar meanings because they have quantitatively similar patterns of association with \emph{other} words (e.g., both ``postman'' and ``mailman'' tend to occur with words like ``deliver'', ``truck'', ``package''). Are people able to leverage distributional statistics in this way in the service of learning about the meanings of words? Results from prior artificial language learning experiments suggest that the answer may be no. However, experiments in this paradigm expose participants to entirely novel words, whereas real language learners encounter input that contains some known words that are semantically organized. In three experiments, we show that (1) the presence of familiar semantic reference points facilitates distributional learning of meaning and (2) this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.}
+\abstract{Computational models have shown that purely statistical knowledge about words' linguistic contexts is sufficient to learn many properties of words, including grammatical category and meaning. For example, a learner might infer that ``postman'' and ``mailman'' belong to the same category because they have quantitatively similar patterns of association with \emph{other} words (e.g., both ``postman'' and ``mailman'' tend to occur with words like ``deliver'', ``truck'', ``package''). Are people able to leverage distributional statistics in this way in the service of learning lexical categories? Results from prior artificial language learning experiments suggest that the answer may be no. However, experiments in this paradigm expose participants to entirely novel words, whereas real language learners encounter input that contains some known words that are semantically organized. In three experiments, we show that (1) the presence of familiar semantic reference points facilitates distributional learning of categories and (2) this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.}
 
 \keywords{distributional learning; word learning; semantic coherence}
 
@@ -51,7 +51,7 @@ Email: \texttt{longouyang@post.harvard.edu}}
 
 How do people learn language? Research indicates that learners use many information sources, including physical, social, conceptual, and linguistic cues \citep{clark1988, markman1991, gleitman1990, baldwin1993, hollich2000}. One abundant source is distributional information about language itself---people use statistical knowledge about language input during learning. For example, learners can group sounds together into word forms based on their statistical co-occurrence \citep{saffran1996a, saffran1996b} and pair word forms with their referents based on consistent associations \citep{yu2007,smith2008}. In the current paper, we explore a more sophisticated type of distributional learning: using evidence about the linguistic contexts that a word occurs in as a cue toward categorization \citep{smith1966, maratsos1980, braine1987, redington1998}.
 
-As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck.'' To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with accountants and lawyers and that Bob associates with professors and college sophomores, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} put it, one learns a word ``by the company it keeps'' (p.11). We will refer to learning from such learning as \emph{distributional learning}.
+As an example of distributional learning, one might infer that ``postman'' and ``mailman'' belong to the same category based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck.'' To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with accountants and lawyers and that Bob associates with professors and college sophomores, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} put it, one learns a word ``by the company it keeps'' (p.11). We will refer to learning from such learning as \emph{distributional learning}.
 
 Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}.
 
@@ -218,114 +218,16 @@ We excluded the 55 participants who did not correctly answer all of the catch tr
 
 \subsubsection{Descriptive statistics for the memory task}
 
-Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and performed Bonferroni correction (Figure~\ref{x1-descriptive-stats-mem}).
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Figure~\ref{familiarity-ordering-t-tests}). This yielded the following familiarity orderings:
 
-\begin{figure}[t]
-  \begin{center}
+0/3: F > W, P\\
+1/3: F > W, C, P \, \, \, \textbf{\&} \, \, \, C > P\\
+2/3: F > W > C > P\\
+3/3: W > F > C > P\\
 
-{
-  \small
-  \noindent \textbf{0/3 coherence}: df = 150, $\alpha = 0.05 / 6 = 0.0083$
-  \begin{tabular}{| l | l |  l | l |}
-    \hline
-    & F                          & W                       & C \\ 
-    \hline
-    W & $t$ = 3.07, $p$ = 0.002*   &                         &\\
-    \hline
-    C & $t$ = 2.44, $p$ = 0.01     & $t$ = -0.70, $p$ = 0.48 &\\
-    \hline
-    P & $t$ = 4.08, $p$ < 0.001* & $t$ = 1.61, $p$ = 0.10  & $t$ = 2.21, $p$ = 0.02\\
-    \hline
-  \end{tabular}
-}\vskip 1em
+\noindent These familiarity orderings indicate that some learning occurred at every level of coherence. For example, participants at all levels of coherence rated familiar sentences as more familiar than position violation sentences. However, only participants at the 2/3 and 3/3 levels distinguished between withheld and co-occurrence violation sentences. This lends some support to the idea that positional regularities in MNPQ may be more influential than co-occurrence regularities.
 
 
-{
-  \small
-  \noindent \textbf{1/3 coherence}: df = 153, $\alpha = 0.05 / 6 = 0.0083$
-  \begin{tabular}{| l | l |  l | l |}
-    \hline
-    & F                          & W                       & C \\ 
-    \hline
-    W & $t$ = 5.99, $p$ < 0.001* &                         &\\
-    \hline
-    C & $t$ = 5.11, $p$ < 0.001* & $t$ = -0.64, $p$ = 0.52 &\\
-    \hline
-    P & $t$ = 7.96, $p$ < 0.001* & $t$ = 2.05, $p$ = 0.04  & $t$ = 2.78, $p$ = 0.006*\\
-    \hline
-  \end{tabular}
-}\vskip 1em
-
-{
-  \small
-  \noindent \textbf{2/3 coherence}: df = 164, $\alpha = 0.05 / 6 = 0.0083$
-  \begin{tabular}{| l | l |  l | l |}
-    \hline
-    & F                           & W                         & C \\ 
-    \hline
-    W & $t$ = 4.78, $p$ < 0.001*  &                           &\\
-    \hline
-    C & $t$ = 8.56, $p$ < 0.001*  & $t$ = 3.71, $p$ < 0.001*  &\\
-    \hline
-    P & $t$ = 11.62, $p$ < 0.001* & $t$ = 7.35, $p$ < 0.001*  & $t$ = 3.64, $p$ < 0.001*\\
-    \hline
-  \end{tabular}
-}\vskip 1em
-
-{
-  \small
-  \noindent \textbf{2/3 coherence}: df = 164, $\alpha = 0.05 / 6 = 0.0083$
-  \begin{tabular}{| l | l |  l | l |}
-    \hline
-    & F                            & W                         & C \\ 
-    \hline
-    W & $t$ = -3.87, $p$ < 0.001*  &                           &\\
-    \hline
-    C & $t$ = 9.30, $p$ < 0.001*  & $t$ = 9.34, $p$ < 0.001*   &\\
-    \hline
-    P & $t$ = 18.29, $p$ < 0.001* & $t$ = 17.08, $p$ < 0.001*  & $t$ = 9.26, $p$ < 0.001*\\
-    \hline
-  \end{tabular}
-}\vskip 1em
-\caption{Paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiment 1.}
-\label{x1-descriptive-stats-mem}
-\end{center}
-\end{figure}
-
-
-% condition comparison  df     t       p sig
-% 1      none        f-w 150  3.07 0.00253   *
-% 2      none        f-c 150  2.44 0.01569    
-% 3      none        f-p 150  4.18 0.00005   *
-% 4      none        w-c 150 -0.70 0.48454    
-% 5      none        w-p 150  1.61 0.10862    
-% 6      none        c-p 150  2.21 0.02843    
-
-% condition comparison  df     t       p sig
-% 1      sem1        f-w 153  5.99 0.00000   *
-% 2      sem1        f-c 153  5.11 0.00000   *
-% 3      sem1        f-p 153  7.96 0.00000   *
-% 4      sem1        w-c 153 -0.64 0.52523    
-% 5      sem1        w-p 153  2.05 0.04232    
-% 6      sem1        c-p 153  2.78 0.00614   *
-
-% condition comparison  df     t       p sig
-% 1      sem2        f-w 164  4.78 0.00000   *
-% 2      sem2        f-c 164  8.56 0.00000   *
-% 3      sem2        f-p 164 11.62 0.00000   *
-% 4      sem2        w-c 164  3.71 0.00028   *
-% 5      sem2        w-p 164  7.35 0.00000   *
-% 6      sem2        c-p 164  3.64 0.00037   *
-
-% condition comparison  df     t       p sig
-% 1      sem3        f-w 152 -3.87 0.00016   *
-% 2      sem3        f-c 152  9.30 0.00000   *
-% 3      sem3        f-p 152 18.29 0.00000   *
-% 4      sem3        w-c 152  9.34 0.00000   *
-% 5      sem3        w-p 152 17.08 0.00000   *
-% 6      sem3        c-p 152  9.26 0.00000   * 
-
-In the 0/3 condition, participants rated familiar sentences as significantly more familiar than withheld and position violation sentences. In the 1/3 condition, participants rated familiar sentences as significantly more familiar than all other types. In addition, they rated co-occurrence violation sentences as significantly more familiar than position violation sentences. In the 2/3 condition, there was a total ordering on the sentence types: familiar sentences were significantly more familiar than withheld sentences, which were significantly more familiar than co-occurrence violation sentences, which in turn were significantly more familiar than position violation sentences. The 3/3 condition had a similar ordering, except that withheld sentences were actually more familiar than familiar sentences.\footnote{ Higher familiarity for withheld sentences is similar to the \emph{prototype enhancement} effect observed in category learning studies \tcite{zaki2004}.} These familiarity orderings indicate that some learning occurred at every level of coherence. For example, participants at all levels of coherence rated familiar sentences as more familiar than position violation sentences. However, only participants at the 2/3 and 3/3 levels distinguished between withheld and co-occurrence violation sentences. This lends some support to the idea that positional regularities in MNPQ may be more influential than co-occurrence regularities.
 
 \subsubsection{Effect of coherence and exposure}
 
@@ -422,11 +324,9 @@ The context words that participants heard in Experiment 1 included words with fa
 
 \section{Experiment 2: Phonological coherence}
 
-In Experiment 2, we investigated whether learners could learn the language used in  Experiment 1 when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. We tested three types of coherence: onset, rime, and syllable count.
+In Experiment 2, we investigated whether learners could learn the language used in  Experiment 1 when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. Previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
 
-It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. Previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
-
-We selected onset, rime, and syllable count because work in other areas suggests that these kinds of coherence may reliably occur in natural language or facilitate distributional learning when applied to \emph{target} words. Onset coherence might facilitate learning due to sound symbolism (e.g., words that start with \emph{gl} have similar meanings: glimmer, glow, gleam). Rime coherence occurs in languages like Russian, which mark the gender of a noun by modifying the rime of the corresponding verb. Finally, syllable count coherence has been shown to facilitate learning when applied to target words. Thus, we investigated it to determine whether it also facilitates learning when applied to context words.
+We tested three types of coherence: onset, rime, and syllable count. We selected these kinds of coherence because work in other areas suggests that these kinds of coherence may reliably occur in natural language or facilitate distributional learning when applied to \emph{target} words. Onset coherence might facilitate learning due to sound symbolism (e.g., words that start with \emph{gl} have similar meanings: glimmer, glow, gleam). Rime coherence occurs in languages like Russian, which mark the gender of a noun by modifying the rime of the corresponding verb. Finally, syllable count coherence has been shown to facilitate learning when applied to target words. Thus, we investigated it to determine whether it also facilitates learning when applied to context words.
 
 \subsection{Method}
 \subsubsection{Participants} 
@@ -445,6 +345,60 @@ The three types of phonological coherence\footnote{\label{change-of-stimuli} The
 The method was identical to that of Experiment 1.
 
 \subsection{Results and Discussion}
+
+We discarded the 42 participants who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}.
+
+\subsubsection{Descriptive statistics for the memory task}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=1.0\linewidth]{x23-descriptive-memory} 
+    \caption{Mean familiarity ratings for (P)osition violation, (C)o-occurrence violation, (W)ithheld, and (F)amiliar sentences in Experiments 2 and 3.}
+    \label{x23-descriptive-mem}
+  \end{center}
+\end{figure}
+
+Figure~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in the analyses for Experiment 1, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Figure~\ref{familiarity-ordering-t-tests}):
+
+\begin{tabular}{l l}
+Onset: & F > W > C > P\\
+Rime: & F > W $\approx$ C > P\\
+Syllable count: & F > W $\approx$ C > P\\
+\end{tabular}\vskip 0.5em
+
+
+% condition       mean        sd
+% 1     phn3b 0.03311258 0.1786535
+% 2      sem2 0.06893939 0.2384553
+% 3      sem3 0.27246732 0.3607215
+
+% Two Sample t-test
+
+% data:  s(agg, condition == "phn3b")$mem.score and s(agg, condition == "sem2")$mem.score
+% t = -1.5006, df = 314, p-value = 0.1345
+% alternative hypothesis: true difference in means is not equal to 0
+% 95 percent confidence interval:
+% -0.08280317  0.01114955
+% sample estimates:
+% mean of x  mean of y 
+% 0.03311258 0.06893939 
+
+
+% Two Sample t-test
+
+% data:  s(agg, condition == "phn3b")$mem.score and s(agg, condition == "sem3")$mem.score
+% t = -7.3161, df = 302, p-value = 2.316e-12
+% alternative hypothesis: true difference in means is not equal to 0
+% 95 percent confidence interval:
+% -0.3037356 -0.1749739
+% sample estimates:
+% mean of x  mean of y 
+% 0.03311258 0.27246732
+
+
+\noindent Thus, participants in the rime and syllable count conditions distinguished between all types of sentences except for withheld and co-occurrence violation sentences, indicating some learning of the language but not of the co-occurrence regularities. By contrast, participants in the onset condition did appear to learn the co-occurrence regularities, rating withheld sentences as significantly more familiar than co-occurrence violation sentences. The ordering for onset phonological coherence is the same as the ordering for 2/3 semantic coherence. To understand the degree of co-occurrence structure learning for the onset condition, we compared onset memory scores with 2/3 and 3/3 memory scores. Onset scores (M = 0.03, SD = 0.17) were not significantly different from 2/3 scores (M = 0.06, SD = 0.23), $t$(314) = -1.5, $p$ = 0.13, but they were significantly lower than 3/3 scores (M = 0.27, SD = 0.36), $t$(302) = -7.31, $p$ < 0.001.
+
+\subsubsection{Effects of condition and exposure}
 
 \begin{figure}[t]
   \begin{center}
@@ -505,20 +459,18 @@ The method was identical to that of Experiment 1.
   \end{center}
 \end{table}
 
-We discarded the 42 participants who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}. Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model (Table \ref{expt23-regression}).
+Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model (Table \ref{expt23-regression}).
 
-\textbf{TODO}: talk about descriptive stats
+\paragraph{Memory} 
+There was no effect of exposure or condition---none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
 
-\subsubsection{Memory} 
-There was no effect of exposure or coherence---none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by coherence interaction terms were significant.
+\paragraph{Similarity}
+Again, we found no main effect of exposure or condition. One interaction term was significant: there appeared to be greater efficiency of statistical learning in the syllable count condition than in the 0/3 condition.
 
-\subsubsection{Similarity}
-Again, we found no main effect of exposure or coherence. One interaction term was significant: there appeared to be greater efficiency of statistical learning in the syllable count condition than in the 0/3 condition.
+\paragraph{Referent assignment}
+Again, we found no main effect of exposure or condition. None of the exposure by condition interaction terms were significant.
 
-\subsubsection{Referent assignment}
-Again, we found no main effect of exposure or coherence. None of the exposure by coherence interaction terms were significant.
-
-In sum, participants in all three phonological conditions did not learn anything about the N and Q categories; phonological coherence was virtually indistinguishable from the 0/3 condition in terms of facilitating MNPQ learning. This indicates that mere phonological coherence is not what drives the effects of semantic coherence. In Experiment 3, we consider whether the mere presence of familiar words (semantic baseline) aids MNPQ learning.
+In sum, with one exception, participants in all three phonological conditions appeared not to have acquired separate N and Q categories; phonological coherence was virtually indistinguishable from 0/3 coherence in terms of facilitating MNPQ learning. The one exception is that participants in the onset coherence condition were able to distinguish withheld from co-occurrence violation sentences, matching 2/3 participants' performance in this regard. However, unlike 2/3 coherence, onset coherence did not appear to confer benefits in the similarity or referent assignment tasks. Thus, this broad pattern of results suggests that the mere presence of \emph{some} kind of coherence in the context words is not what drives the effects of semantic coherence. In Experiment 3, we consider whether the mere presence of familiar words (semantic baseline) aids MNPQ learning.
 
 \section{Experiment 3: Semantic baseline}
 
@@ -560,15 +512,23 @@ In the semantic baseline language, the specific M and P words were drawn randoml
 The method was identical to that of Experiment 1.
 
 \subsection{Results and Discussion}
-We discarded the 18 participants who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}. See Table \ref{expt23-regression} for regression results.
+We discarded the 18 participants who did not pass all the catch trials. 
 
-\subsubsection{Memory}
+
+\subsubsection{Descriptive statistics of the memory task}
+As in Experiment 1, we computed an ordering on the sentence types in the memory task: F > W $\approx$ C > P. This indicates that participants were able to learn some regularities in the language, but not the co-occurrence regularities.
+
+\subsubsection{Effect of exposure}
+
+Results are graphed in Figure \ref{expt23-results}. See Table \ref{expt23-regression} for regression results.
+
+\paragraph{Memory}
 Baseline scores were not significantly different from 0/3 scores and baseline efficiency was not significantly different from 0/3 efficiency.
 
-\subsubsection{Similarity}
+\paragraph{Similarity}
 Baseline scores were not significantly different from 0/3 scores and baseline efficiency was not significantly different from 0/3 efficiency.
 
-\subsubsection{Referent assignment}
+\paragraph{Referent assignment}
 Baseline scores were not significantly different from 0/3 scores and baseline efficiency was not significantly different from 0/3 efficiency.\\
 
 Apparently, the baseline input appeared to have provided no benefit compared to the novel words of the 0/3 condition, suggesting that the presence of known words by itself does not aid MNPQ learning.
@@ -610,108 +570,250 @@ We performed a partial replication of Experiment 1 with the new stimuli. We coll
 
 \end{center}
 
-% \appendix
-% \section{Regression results including participants who received catch trials but did not pass all of them}
 
-% Experiment 1
+\appendix
+\section{$t$-tests for familiarity orderings in the memory task}
 
-% \begin{center}
-% \footnotesize{
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept &  0.0384 &  0.017 &  2.15 & <0.05*\\
-%     Condition: 1/3 -- (0/3) &  0.0016 &  0.025 &  0.06 & 0.948\ww\\
-%     Condition: 2/3 -- (0/3,1/3) &  0.0211 &  0.013 &  1.51 & 0.130\ww\\
-%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0384 &  0.010 &  3.67 & <0.001*\\
-%     Exposures &  0.2038 &  0.079 &  2.56 & <0.05*\\
-%     E $\times$ C: 1/3 -- (0/3) &  0.0042 &  0.113 &  0.03 & 0.970\ww\\
-%     E $\times$ C: 2/3 -- (0/3,1/3) & -0.0014 &  0.062 & -0.02 & 0.981\ww\\
-%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1232 &  0.046 &  2.64 & <0.01* \\
-%     \hline
-%   \end{tabular}
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept &  0.0469 &  0.017 &  2.65 & <0.01*\\
-%     Condition: 1/3 -- (0/3) & -0.0078 &  0.025 & -0.30 & 0.758\ww\\
-%     Condition: 2/3 -- (0/3,1/3) &  0.0174 &  0.013 &  1.26 & 0.206\ww\\
-%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0233 &  0.010 &  2.25 & <0.05*\\
-%     Exposures &  0.1481 &  0.078 &  1.88 & 0.059\ww\\
-%     E $\times$ C: 1/3 -- (0/3) &  0.0560 &  0.112 &  0.49 & 0.619\ww\\
-%     E $\times$ C: 2/3 -- (0/3,1/3) &  0.0344 &  0.061 &  0.55 & 0.577\ww\\
-%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1288 &  0.046 &  2.78 & <0.01* \\
-%     \hline
-%   \end{tabular}
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept &  0.0984 &  0.033 &  2.91 & <0.005*\\
-%     Condition: 1/3 -- (0/3) &  0.0439 &  0.049 &  0.89 & 0.370\ww\\
-%     Condition: 2/3 -- (0/3,1/3) &  0.0604 &  0.026 &  2.28 & <0.05*\\
-%     Condition: 3/3 -- (0/3,1/3,2/3) &  0.0412 &  0.019 &  2.08 & <0.05*\\
-%     Exposures &  0.4768 &  0.150 &  3.16 & <0.005*\\
-%     E $\times$ C: 1/3 -- (0/3) & -0.0674 &  0.215 & -0.31 & 0.754\ww\\
-%     E $\times$ C: 2/3 -- (0/3,1/3) & -0.1032 &  0.118 & -0.87 & 0.381\ww\\
-%     E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1168 &  0.088 &  1.31 & 0.189\ww \\
-%     \hline
-%   \end{tabular}
-% }
-% \end{center}
+\begin{figure}[h]
+  \begin{center}
+    \begin{tabular}{ c c}
+
+      \textbf{0/3 coherence}: df = 150 & \textbf{1/3 coherence}: df = 153\\
+      
+      {
+        % -------------- none --------------
+        % df = 150 
+
+        % Pairwise comparisons using paired t tests 
+
+        % data:  e$mem.score and e$type 
+
+        %          familiar withheld cross  
+        % withheld 0.01266  -        -      
+        % cross    0.06278  0.48454  -      
+        % position 0.00029  0.21723  0.08529
+
+        % P value adjustment method: holm 
+        \small
+
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F              & W           & C \\ 
+          \hline
+          W & $p$ = 0.01*  &             &\\
+          \hline
+          C & $p$ = 0.06 &  $p$ = 0.48 & \\
+          \hline
+          P & $p$ < 0.001* &  $p$ = 0.21 &  $p$ = 0.08 \\
+          \hline
+        \end{tabular}
+      } & 
+
+      {
+        % -------------- sem1 --------------
+        % df = 153 
+
+        % Pairwise comparisons using paired t tests 
+
+        % data:  e$mem.score and e$type 
+
+        %          familiar withheld cross
+        % withheld 7.4e-08  -        -    
+        % cross    3.8e-06  0.525    -    
+        % position 2.1e-12  0.085    0.018
+
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F               & W           & C \\ 
+          \hline
+          W &  $p$ < 0.001* &             &\\
+          \hline
+          C &  $p$ < 0.001* &  $p$ = 0.52 &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ = 0.08 &  $p$ = 0.01*\\
+          \hline
+        \end{tabular}
+      }\\
+
+      \textbf{2/3 coherence}: df = 164 & \textbf{3/3 coherence}: df = 152\\
+
+      {
+
+        % -------------- sem2 --------------
+        % df = 164 
+
+        % Pairwise comparisons using paired t tests 
+
+        % data:  e$mem.score and e$type 
+
+        %          familiar withheld cross  
+        % withheld 1.2e-05  -        -      
+        % cross    4.0e-14  0.00056  -      
+        % position < 2e-16  3.5e-11  0.00056
+
+        % P value adjustment method: holm 
 
 
-% \pagebreak
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F                           & W                         & C \\ 
+          \hline
+          W &  $p$ < 0.001*  &                           &\\
+          \hline
+          C &  $p$ < 0.001*  &  $p$ < 0.001*  &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+          \hline
+        \end{tabular}
+      } & 
 
-% Experiments 2 and 3
+      {
 
-% \begin{center}
-% \scriptsize{
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept & -0.0227 &  0.026 & -0.85 & 0.390\ww\\
-%     Condition: Onset -- 0/3 &  0.0463 &  0.036 &  1.26 & 0.207\ww\\
-%     Condition: Rime -- 0/3 &  0.0401 &  0.034 &  1.16 & 0.246\ww\\
-%     Condition: Syllable count -- 0/3 &  0.0430 &  0.037 &  1.16 & 0.245\ww\\
-%     Condition: Semantic incoherent -- 0/3 & -0.0020 &  0.036 & -0.05 & 0.954\ww\\
-%     Exposures &  0.0777 &  0.115 &  0.67 & 0.501\ww\\
-%     E $\times$ C: Onset -- 0/3 & -0.0409 &  0.163 & -0.25 & 0.802\ww\\
-%     E $\times$ C: Rime -- 0/3 & -0.0993 &  0.157 & -0.63 & 0.527\ww\\
-%     E $\times$ C: Syllable count -- 0/3 & -0.0641 &  0.161 & -0.39 & 0.690\ww\\
-%     E $\times$ C: Semantic incoherent -- 0/3 &  0.0852 &  0.156 &  0.54 & 0.586\ww \\
-%     \hline
-%   \end{tabular}
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept &  0.0139 &  0.024 &  0.57 & 0.563\ww\\
-%     Condition: Onset -- 0/3 & -0.0097 &  0.033 & -0.28 & 0.771\ww\\
-%     Condition: Rime -- 0/3 & -0.0102 &  0.031 & -0.32 & 0.745\ww\\
-%     Condition: Syllable count -- 0/3 & -0.0402 &  0.033 & -1.19 & 0.233\ww\\
-%     Condition: Semantic incoherent -- 0/3 & -0.0092 &  0.033 & -0.27 & 0.782\ww\\
-%     Exposures & -0.0711 &  0.105 & -0.67 & 0.499\ww\\
-%     E $\times$ C: Onset -- 0/3 & -0.0501 &  0.148 & -0.33 & 0.736\ww\\
-%     E $\times$ C: Rime -- 0/3 &  0.1874 &  0.143 &  1.31 & 0.190\ww\\
-%     E $\times$ C: Syllable count -- 0/3 &  0.3049 &  0.146 &  2.07 & <0.05*\\
-%     E $\times$ C: Semantic incoherent -- 0/3 &  0.1645 &  0.142 &  1.15 & 0.249\ww \\
-%     \hline
-%   \end{tabular}
-%   \begin{tabular}{l r r r r}
-%     \hline
-%     Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-%     Intercept & -0.0471 &  0.064 & -0.72 & 0.467\ww\\
-%     Condition: Onset -- 0/3 &  0.1250 &  0.089 &  1.39 & 0.163\ww\\
-%     Condition: Rime -- 0/3 &  0.0730 &  0.084 &  0.86 & 0.387\ww\\
-%     Condition: Syllable count -- 0/3 & -0.0100 &  0.090 & -0.11 & 0.911\ww\\
-%     Condition: Semantic incoherent -- 0/3 &  0.0680 &  0.090 &  0.75 & 0.449\ww\\
-%     Exposures &  0.5307 &  0.282 &  1.88 & 0.060\ww\\
-%     E $\times$ C: Onset -- 0/3 & -0.4641 &  0.398 & -1.16 & 0.244\ww\\
-%     E $\times$ C: Rime -- 0/3 & -0.3311 &  0.382 & -0.86 & 0.387\ww\\
-%     E $\times$ C: Syllable count -- 0/3 &  0.0376 &  0.393 &  0.09 & 0.923\ww\\
-%     E $\times$ C: Semantic incoherent -- 0/3 & -0.6766 &  0.382 & -1.77 & 0.076\ww \\
-%     \hline
-%   \end{tabular}
-% }
-% \end{center}
+        % -------------- sem3 --------------
+        % df = 152 
+
+        % Pairwise comparisons using paired t tests 
+
+        % data:  e$mem.score and e$type 
+
+        % familiar withheld cross  
+        % withheld 0.00016  -        -      
+        % cross    4.4e-16  4.4e-16  -      
+        % position < 2e-16  < 2e-16  4.4e-16
+
+        % P value adjustment method: holm 
+
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F                            & W                         & C \\ 
+          \hline
+          W &  $p$ < 0.001*  &                           &\\
+          \hline
+          C &  $p$ < 0.001*  &  $p$ < 0.001*   &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+          \hline
+        \end{tabular}
+      }\\
+
+      \textbf{Onset}: df = 150 & \textbf{Rime}: df = 187\\
+
+      % -------------- onset --------------
+      % Pairwise comparisons using paired t tests 
+
+      % data:  e$mem.score and e$type 
+
+      % familiar withheld cross
+      % withheld 0.04833  -        -    
+      % cross    0.00012  0.04833  -    
+      % position < 2e-16  < 2e-16  6e-15
+
+      % P value adjustment method: holm 
+      {
+        \small
+
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F              & W           & C \\ 
+          \hline
+          W & $p$ = 0.04*  &             &\\
+          \hline
+          C & $p$ < 0.001* &  $p$ = 0.04* & \\
+          \hline
+          P & $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001* \\
+          \hline
+        \end{tabular}
+      } & 
+
+      % -------------- rime --------------
+      % Pairwise comparisons using paired t tests 
+
+      % data:  e$mem.score and e$type 
+
+      % familiar withheld cross 
+      % withheld 0.0969   -        -     
+      % cross    0.0021   0.1526   -     
+      % position <2e-16   <2e-16   <2e-16
+
+      % P value adjustment method: holm 
+      {
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F               & W           & C \\ 
+          \hline
+          W &  $p$ = 0.09 &             &\\
+          \hline
+          C &  $p$ = 0.002* &  $p$ = 0.15 &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001*\\
+          \hline
+        \end{tabular}
+      }\\
+
+      \textbf{Syllable count}: df = 148 & \textbf{Semantic baseline}: df = 143 \\
+
+      % -------------- syll.count --------------
+      % Pairwise comparisons using paired t tests 
+
+      % data:  e$mem.score and e$type 
+
+      % familiar withheld cross  
+      % withheld 0.00623  -        -      
+      % cross    0.00011  0.30439  -      
+      % position 4.5e-08  0.00152  0.01645
+
+      % P value adjustment method: holm 
+      {
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F                           & W                         & C \\ 
+          \hline
+          W &  $p$ < 0.006*  &                           &\\
+          \hline
+          C &  $p$ < 0.001*  &  $p$ = 0.30  &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ = 0.001*  &  $p$ = 0.01*\\
+          \hline
+        \end{tabular}
+      } & 
+
+      % -------------- baseline --------------
+      % Pairwise comparisons using paired t tests 
+
+      % data:  e$mem.score and e$type 
+
+      % familiar withheld cross  
+      % withheld 6.8e-05  -        -      
+      % cross    6.8e-05  0.83     -      
+      % position < 2e-16  < 2e-16  < 2e-16
+
+      % P value adjustment method: holm 
+      {
+        \small
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F                            & W                         & C \\ 
+          \hline
+          W &  $p$ < 0.001*  &                           &\\
+          \hline
+          C &  $p$ < 0.001*  &  $p$ = 0.83   &\\
+          \hline
+          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+          \hline
+        \end{tabular}
+      } 
+
+    \end{tabular}
+    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 1, 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
+    \label{familiarity-ordering-t-tests}
+  \end{center}
+\end{figure}
+
+
 
 \end{document}
