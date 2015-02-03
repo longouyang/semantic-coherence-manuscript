@@ -57,7 +57,7 @@ Distributional learning is a general mechanism thought to be important throughou
 
 Our study addresses this mismatch by specifying conditions under which people succeed in distributional learning. In particular, we investigate the effect of existing linguistic knowledge. Prior experiments typically exposed learners to artificial languages composed of entirely novel words. Our experiments suggest that \emph{semantic coherence}, the presence of known words adhering to some semantic organization, facilitates distributional learning. Put another way, a small semantic hook allows people to better leverage distributional information for learning. Phrased in terms of the Alice--Bob example, we stand a better chance of learning about Alice from her associates if those associates play roles that are already meaningful to us. Knowing that Alice associates with professors and college sophomores gives us a clearer picture of her than, say, knowing that she associates with taphonomists and bryologists.\footnote{Though, we can infer much more about Alice if we know that taphonomy is the study of decay and fossilization and that bryology is the study of certain plants called bryophytes, which include mosses, hornworts, and liverworts.} Learning a word from its company is easier if this company is already familiar. 
 
-We begin by briefly reviewing some of the computational evidence for distributional learning. We then introduce the specific language structure, MNPQ, that we explore in this paper. Next, we discuss research that uses the MNPQ structure to study distributional learning of grammatical categories. In Experiment 1, we present evidence that semantic coherence can facilitate distributional learning and that learners make use of acquired distributional information when performing an online referent assignment task. In Experiments 2 and 3, we further explore this effect by isolating two components of semantic coherence---familiarity of words and presence of an overarching semantic organization ---and find that neither alone facilitates learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the effects we observe.
+We begin by briefly reviewing some of the computational evidence for distributional learning. We then introduce the specific language structure, MNPQ, that we explore in this paper. Next, we discuss research that uses the MNPQ structure to study distributional learning of grammatical categories. In Experiments 1a and 1b, we present evidence that semantic coherence can facilitate distributional learning and that learners make use of acquired distributional information when performing an online referent assignment task. In Experiments 2 and 3, we further explore this effect by isolating two components of semantic coherence---familiarity of words and presence of an overarching semantic organization ---and find that neither alone facilitates learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the effects we observe.
  
 \subsection{Computational evidence for distributional learning}
 
@@ -106,13 +106,13 @@ To explore this possibility, we presented participants with an MNPQ language whe
 \item car and pif
 \end{enumerate} might allow learners to infer that daxes and zivs are similar, as both words co-occur with ``dog'', and that wugs and pifs are similar, as both words co-occur with ``car.'' We emphasize that this small coherence manipulation does not elevate our stimuli to natural language, but it does render our stimuli more naturalistic than stimuli used in previous experiments. Artificial languages suitable for use in experiments simply cannot parallel the richness of natural language. Because of this, our work represents a first step towards measuring whether learners exposed to natural language form categories on the basis of co-occurrence structures.
 
-In Experiment 1, we tested whether semantic coherence facilitated distributional learning and whether learners might use distributional information to make inferences about word meaning. In Experiment 2, we compared semantic coherence to phonological coherence. In Experiment 3, we compared semantic coherence to a semantic baseline that used known words that did not adhere to any obvious semantic organization.
+In Experiments 1a and 1b, we tested whether semantic coherence facilitated distributional learning and whether learners might use distributional information to make inferences about word meaning. In Experiment 2, we compared semantic coherence to phonological coherence. In Experiment 3, we compared semantic coherence to a semantic baseline that used known words that did not adhere to any obvious semantic organization.
 
-\section{Experiment 1: Semantic Coherence}
+\section{Experiment 1a: Semantic Coherence}
 
 In all the experiments reported in this paper, we exposed participants to auditory sentences from an MNPQ language and then assessed learning using three different measures. We refer to the Ms and Ps as \emph{context words} and we refer to Ns and Qs as \emph{target words}. Context words are found at the beginnings of sentences in our language, while target words are found at the ends of the sentences in our language (Figure~\ref{mnpq-table}). We systematically varied properties of the context words and then measured learning of the target words.
 
-In Experiment 1, we parametrically varied two independent properties of the context words. First, we varied semantic coherence---the fraction of M/P words obeying a taxonomic organization (M = animal words, P = vehicle words). Second, as one hallmark of statistical learning is sensitivity to the amount of evidence observed, we varied the amount of exposure to the language to measure the efficiency of learning. After exposure to the language, we tested participants on three measures of MNPQ learning---similarity rating, sentence memory, and a referent assignment task. The sentence memory task measures whether participants learned the MNPQ co-occurrence structure. The similarity rating and referent assignment tasks measure whether participants use this information in judging similarity and assigning referents, respectively.
+In Experiment 1a, we parametrically varied two independent properties of the context words. First, we varied semantic coherence---the fraction of M/P words obeying a taxonomic organization (M = animal words, P = vehicle words). Second, as one hallmark of statistical learning is sensitivity to the amount of evidence observed, we varied the amount of exposure to the language to measure the efficiency of learning. After exposure to the language, we tested participants on three measures of MNPQ learning---similarity rating, sentence memory, and a referent assignment task. The sentence memory task measures whether participants learned the MNPQ co-occurrence structure. The similarity rating and referent assignment tasks measure whether participants use this information in judging similarity and assigning referents, respectively.
 
 In the sentence memory task, participants rated the familiarity of four kinds of sentences: familiar sentences, novel grammatical sentences, and two kinds of ungrammatical sentences. In the similarity rating task, participants rated the similarity of pairs of target words. In the referent assignment task, we provided visual referents for the context words (e.g., ``feeb'' refers to a cat) and asked participants to assign the target words to referents (e.g., choose whether ``chuv'' refers to a horse or a bicycle).
 
@@ -211,7 +211,7 @@ We excluded the 55 participants who did not correctly answer all of the catch tr
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x1-descriptive-memory} 
-    \caption{Mean familiarity ratings for differente sentence types in Experiment 1.}
+    \caption{Mean familiarity ratings for different sentence types in Experiment 1a and 1b.}
     \label{x1-descriptive-mem}
   \end{center}
 \end{figure}
@@ -244,7 +244,7 @@ To examine the differences between the different coherence levels, we used Helme
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x1}
-    \caption{Experiment 1 results. Each plot shows data for one measure (memory, similarity, referent assignment) in Experiment 1. Scores ranged from -1 to 1. Data points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear regression.}
+    \caption{Experiment 1a and 1b results. Each plot shows data for one measure (memory, similarity, referent assignment). Scores ranged from -1 to 1. Data points show condition means, error bars show bootstrapped 95\% CIs, and dashed lines show the best-fitting linear regression.}
     \label{expt1-results}
   \end{center}
 \end{figure}
@@ -252,7 +252,7 @@ To examine the differences between the different coherence levels, we used Helme
 \newcommand{\ww}{\color{white}{*}} \newcommand\T{\rule{0pt}{2.1ex}}
 
 \begin{table}[ht]
-  \caption{Regression model for Experiment 1. For readability, exposure values were divided by 1000.}
+  \caption{Regression model for Experiment 1a. For readability, exposure values were divided by 1000.}
   \label{expt1-regressions} 
   \begin{center}
   \footnotesize{
@@ -316,22 +316,22 @@ Additionally, the effect of exposures on memory score was significantly higher i
 
 \subsubsection{Summary}
 
-In Experiment 1, we found that semantic coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities in the memory task, (2) sharpened sensitivity to category boundaries based on the co-occurrence regularities in the similarity task, and (3) increased inductive bias in associating target words with referents.
+In Experiment 1a, we found that semantic coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities in the memory task, (2) sharpened sensitivity to category boundaries based on the co-occurrence regularities in the similarity task, and (3) increased inductive bias in associating target words with referents.
 
-The context words that participants heard in Experiment 1 included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence or the reverse? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
+The context words that participants heard in Experiment 1a included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence or the reverse? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
 
 \section{Experiment 2: Phonological coherence}
 
-In Experiment 2, we investigated whether learners could learn the language used in  Experiment 1 when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. Previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
+In Experiment 2, we investigated whether learners could learn the language used in Experiment 1a when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. Previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
 
 We tested three types of coherence: onset, rime, and syllable count. We selected these kinds of coherence because work in other areas suggests that these kinds of coherence may reliably occur in natural language or facilitate distributional learning when applied to \emph{target} words. Onset coherence might facilitate learning due to sound symbolism (e.g., words that start with \emph{gl} have similar meanings: glimmer, glow, gleam). Rime coherence can occur in languages that require gender-marking agreement between nouns and verbs. Finally, syllable count coherence has been shown to facilitate learning when applied to target words \citep{lany2010}. Thus, we investigated it to determine whether it also facilitates learning when applied to context words.
 
 \subsection{Method}
 \subsubsection{Participants} 
-530 MTurk workers, recruited as in Experiment 1, participated in the study.
+530 MTurk workers.
 
 \subsubsection{Materials}
-The three types of phonological coherence\footnote{\label{change-of-stimuli} The stimuli for the rime and syllable count conditions differ from those in the rest of our conditions. For the rest of the conditions, we used a text-to-speech web service provided by Google to generate the audio stimuli (see Footnote \ref{tts}) for the bulk of the conditions. However, the available voices on this service changed during our experiment. Thus, we generated new stimuli for the rime and syllable count conditions using commercially available software, NaturalReader 10. To ensure that the old and new stimuli were comparable, we performed a partial replication of Experiment 1 using the new synthesis engine; the difference old and new stimuli did not appear to make a substantial difference. See Appendix \ref{old-vs-new} for comparisons.} were:
+The three types of phonological coherence\footnote{\label{change-of-stimuli} The stimuli for the rime and syllable count conditions differ from those in the rest of our conditions. For the rest of the conditions, we used a text-to-speech web service provided by Google to generate the audio stimuli (see Footnote \ref{tts}) for the bulk of the conditions. However, the available voices on this service changed during our experiment. Thus, we generated new stimuli for the rime and syllable count conditions using commercially available software, NaturalReader 10. To ensure that the old and new stimuli were comparable, we performed a partial replication of Experiment 1a using the new synthesis engine; the difference old and new stimuli did not appear to make a substantial difference. See Appendix \ref{old-vs-new} for comparisons.} were:
 
 \begin{itemize}
 \item \emph{Onset}. Ms all started with one consonant cluster (pladge, plaaf, plab) and Ps all started with another (zof, zawd, zawsh).
@@ -340,7 +340,7 @@ The three types of phonological coherence\footnote{\label{change-of-stimuli} The
 \end{itemize}
 
 \subsubsection{Design and Procedure}
-The method was identical to that of Experiment 1.
+The method was identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
 
@@ -351,12 +351,12 @@ We discarded the 42 participants who did not pass all the catch trials. Results 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x23-descriptive-memory}
-    \caption{Mean familiarity ratings for different sentence types in Experiments 2 and 3. For comparison, we also include the 3/3 coherence condition from Experiment 1.}
+    \caption{Mean familiarity ratings for different sentence types in Experiments 2 and 3. For comparison, we also include the 3/3 coherence condition from Experiment 1a.}
     \label{x23-descriptive-mem}
   \end{center}
 \end{figure}
 
-Figure~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in the analyses for Experiment 1, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Figure~\ref{familiarity-ordering-t-tests}):
+Figure~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in previous analyses, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Figure~\ref{familiarity-ordering-t-tests}):
 
 \begin{tabular}{l l}
 Onset: & F > W > C > P\\
@@ -401,7 +401,7 @@ Syllable count: & F > W $\approx$ C > P\\
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x23}
-    \caption{Experiments 2 and 3 results. Each plot shows data for one measure (memory, similarity, referent assignment). Scores ranged from -1 to 1. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear trend. For comparison, we also include the 3/3 coherence condition from Experiment 1.}
+    \caption{Experiments 2 and 3 results. Each plot shows data for one measure (memory, similarity, referent assignment). Scores ranged from -1 to 1. Points show condition means, error bars show 95\% CIs, and dashed lines show the best-fitting linear trend. For comparison, we also include the 3/3 coherence condition from Experiment 1a.}
     \label{expt23-results}
   \end{center}
 \end{figure}
@@ -457,7 +457,7 @@ Syllable count: & F > W $\approx$ C > P\\
   \end{center}
 \end{table}
 
-Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1 using a regression model (Table \ref{expt23-regression}).
+Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1a using a regression model (Table \ref{expt23-regression}).
 
 \paragraph{Memory} 
 There was no effect of exposure or condition---none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
@@ -472,14 +472,14 @@ In sum, with one exception, participants in all three phonological conditions ap
 
 \section{Experiment 3: Semantic baseline}
 
-In Experiment 1, Ms and Ps were all familiar words obeying a taxonomic organization. In Experiment 3, we explored a language with familiar words but no semantic organization---that is, whether a semantic baseline language facilitates distributional learning. We might expect this baseline condition to facilitate learning due to lower memory demands---known words tax the memory system less, which might free learners to identify co-occurrence regularities.
+In Experiment 1a, Ms and Ps were all familiar words obeying a taxonomic organization. In Experiment 3, we explored a language with familiar words but no semantic organization---that is, whether a semantic baseline language facilitates distributional learning. We might expect this baseline condition to facilitate learning due to lower memory demands---known words tax the memory system less, which might free learners to identify co-occurrence regularities.
 
 \subsection{Methods}
 \subsubsection{Participants}
-162 MTurk workers, recruited as in Experiment 1. Note that there were many fewer participants in Experiment 3 because there was only one condition, compared to four conditions in Experiment 1 and three conditions in Experiment 2.
+162 MTurk workers. Note that there were many fewer participants in Experiment 3 because there was only one condition, compared to four conditions in Experiment 1a and three conditions in Experiment 2.
 
 \subsubsection{Materials}
-In the semantic baseline language, the specific M and P words were drawn randomly for each participant from the pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash}, \emph{card}, \emph{ball}\}. In the referent assignment task, these known words were paired with images of the obvious referents (e.g., \emph{card} with a picture of a card). Compared to the context words in Experiment 1, these words are fairly well matched in frequency (see \ref{word-freqs}).
+In the semantic baseline language, the specific M and P words were drawn randomly for each participant from the pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash}, \emph{card}, \emph{ball}\}. In the referent assignment task, these known words were paired with images of the obvious referents (e.g., \emph{card} with a picture of a card). Compared to the context words in Experiment 1a, these words are fairly well matched in frequency (see \ref{word-freqs}).
 
 \begin{table}
   \begin{center}
@@ -507,14 +507,13 @@ In the semantic baseline language, the specific M and P words were drawn randoml
 \end{table}
 
 \subsubsection{Design and procedure}
-The method was identical to that of Experiment 1.
+The method was identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
 We discarded the 18 participants who did not pass all the catch trials. 
 
-
 \subsubsection{Descriptive statistics of the memory task}
-As in Experiment 1, we computed an ordering on the sentence types in the memory task: F > W $\approx$ C > P. This indicates that participants were able to learn some regularities in the language, but not the co-occurrence regularities.
+As in Experiment 1a, we computed an ordering on the sentence types in the memory task: F > W $\approx$ C > P. This indicates that participants were able to learn some regularities in the language, but not the co-occurrence regularities.
 
 \subsubsection{Effect of exposure}
 
@@ -557,7 +556,7 @@ Since Firth's edict that we shall know a word ``by the company it keeps,'' two l
 \section{Old versus new stimuli comparison}
 \label{old-vs-new}
 
-We performed a partial replication of Experiment 1 with the new stimuli. We collected data in four out of the sixteen experimental conditions and the results mirror those found with the old stimuli:
+We performed a partial replication of Experiment 1a with the new stimuli. We collected data in four out of the sixteen experimental conditions and the results mirror those found with the old stimuli:
 
 \begin{center}
 \includegraphics[width=0.9\linewidth]{stim-comparison} \\
@@ -803,7 +802,7 @@ We performed a partial replication of Experiment 1 with the new stimuli. We coll
       } 
 
     \end{tabular}
-    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 1, 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
+    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 1a, 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
     \label{familiarity-ordering-t-tests}
   \end{center}
 \end{figure} 
