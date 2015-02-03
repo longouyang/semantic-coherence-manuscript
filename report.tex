@@ -218,7 +218,7 @@ We excluded the 55 participants who did not correctly answer all of the catch tr
 
 \subsubsection{Descriptive statistics for the memory task}
 
-Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level, we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Figure~\ref{familiarity-ordering-t-tests}). This yielded the following familiarity orderings:
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level (collapsing across exposure levels), we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Figure~\ref{familiarity-ordering-t-tests}). This yielded the following familiarity orderings:
 
 0/3: F > W, P\\
 1/3: F > W, C, P \, \, \, \textbf{\&} \, \, \, C > P\\
@@ -227,13 +227,11 @@ Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by se
 
 \noindent These familiarity orderings indicate that some learning occurred at every level of coherence. For example, participants at all levels of coherence rated familiar sentences as more familiar than position violation sentences. However, only participants at the 2/3 and 3/3 levels distinguished between withheld and co-occurrence violation sentences. This lends some support to the idea that positional regularities in MNPQ may be more influential than co-occurrence regularities.
 
-
-
 \subsubsection{Effect of coherence and exposure}
 
 For each dependent measure---memory, similarity, and referent assignment---we defined a within-participant score representing the sensitivity to the co-occurrence regularities in the language. We scaled all scores to lie in the interval [-1, 1], which allows for the following interpretation: scores below 0 indicate learning in the incorrect direction (e.g., preferring co-occurrence violation sentences over withheld sentences), while scores above 0 indicate learning in the correct direction.
 
-The memory score measured the difference in familiarity ratings for withheld versus co-occurrence violation sentences. For each participant, we computed their memory score as the mean rating for withheld sentences (e.g., $m_1$--$n_1$) minus their mean rating for novel co-occurrence violation sentences (e.g., $m_1$--$q_1$). This difference had a minimum value of -4 and a maximum value of 4; we divided this difference by 4 to rescale it to lie in the interval [-1, 1]. Note that memory score did not include ratings for familiar or position-violation sentences.
+The memory score measured the difference in familiarity ratings for withheld versus co-occurrence violation sentences. For each participant, we computed their memory score as the mean rating for withheld sentences (e.g., $m_1$--$n_1$) minus their mean rating for novel co-occurrence violation sentences (e.g., $m_1$--$q_1$). Because ratings range from 1 to 5, this difference had a minimum value of -4 and a maximum value of 4; we divided this difference by 4 to rescale it to lie in the interval [-1, 1]. Note that memory score did not include ratings for familiar or position-violation sentences.
 
 The similarity score measured the difference between similarity ratings for within-category and cross-category pairs of words on the similarity task. For each participant, we computed their similarity score as their mean rating for within category pairs (e.g., $m_1$--$n_1$) minus their mean rating for cross category pairs (e.g., $m_1$--$q_1$). As with the memory scores, this yields a measure that lies in the interval [-4, 4], which we scaled to [-1, 1].
 
