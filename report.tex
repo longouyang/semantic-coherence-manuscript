@@ -13,8 +13,9 @@
 \usepackage{array}
 \usepackage{verbatim}
 
-
 \newcommand{\tcite}[1]{$\langle${\footnotesize \texttt{#1}}$\rangle$}
+
+\newcommand{\cas}[1]{ \textsf{\color{red} \small #1} }
 
 % add key-bindings for bold and italic
 % the (interactive) bit is crucial, HT http://stackoverflow.com/a/14635806/351392
@@ -318,11 +319,78 @@ Additionally, the effect of exposures on memory score was significantly higher i
 
 In Experiment 1a, we found that semantic coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities in the memory task, (2) sharpened sensitivity to category boundaries based on the co-occurrence regularities in the similarity task, and (3) increased inductive bias in associating target words with referents.
 
+However, one possible issue with our experiments is that the context words were not the only known words.
+In particular, we linked these words using the conjuctive predicate ``and''.
+Arguments to ``and'' often belong to the same syntactic and mostly semantic category.
+An English speaker could use knowledge of this regularity to infer probable semantic categories for target words.
+For instance, in the phrase ``dog and dax'', she could infer that daxes belong to a semantic category that is similar to dogs.
+Indeed, previous studies have shown that people use selectional restrictions of predicates to constrain inferences about semantic properties of novel arguments \citep{altmann1999, kohne2010}.\footnote{We thank an anonymous reviewer for this observation.}
+This raises the question: do our results hinge on the use of the familiar connective ``and''?
+Or would we also observe these results using a nonce connective?
+In Experiment 1b, we investigate this question.
+
+\section{Experiment 1b: Semantic coherence with a nonce connective}
+
+In Experiment 1b, we investigated whether the familiar ``and'' connective drove the effects of coherence that we found in Experiment 1a.
+We modified the materials from the 3/3 coherence condition, replacing ``and'' with a nonce connective, ``tezz''.
+
+\subsection{Method}
+
+\subsubsection{Participants}
+160 MTurk workers.
+
+\subsection{Materials}
+The materials were identical to the 3/3 condition of Experiment 1a, except we replaced the familiar ``and'' connective with a nonce connective ``tezz''.
+
+\subsection{Design and Procedure}
+The design and procedure were identical to that of Experiment 1a.
+
+\subsection{Results and Discussion}
+We discarded results from 9 subjects that did not pass all trials.
+
 The context words that participants heard in Experiment 1a included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence or the reverse? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
+
+\begin{figure}[t]
+  \centering
+  \textbf{Memory}\\
+  \begin{tabular}{l r r r r}
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+    Intercept & 0.16099 & 0.0361 & 4.452 & <0.001*\\
+    Exposures & 0.42065 & 0.2025 & 2.077 & <0.05* \\
+    \hline
+    \multicolumn{5}{l}{\T $R^2$ = todo, $F$(1, df) = todo \T}\\
+  \end{tabular}
+
+  \vskip 1em
+
+  \textbf{Similarity}\\
+  \begin{tabular}{l r r r r}
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+    Intercept & 0.09899 & 0.0380 & 2.600 & <0.05*\\
+    Exposures & 0.49295 & 0.2131 & 2.312 & <0.05* \\
+    \hline
+    \multicolumn{5}{l}{\T $R^2$ = todo, $F$(1, df) = todo \T}\\
+  \end{tabular}
+  \vskip 1em
+
+  \textbf{Referent assignment}\\
+  \begin{tabular}{l r r r r}
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+    Intercept & 0.24805 & 0.0612 & 4.053 & <0.001*\\
+    Exposures & 0.89587 & 0.3487 & 2.568 & <0.05* \\
+    \hline
+    \multicolumn{5}{l}{\T $R^2$ = todo, $F$(1, df) = todo \T}\\
+  \end{tabular}  
+  \caption{Regression models from Experiment 1b.}
+  \label{fig:expt1b-regression}
+\end{figure}
 
 \section{Experiment 2: Phonological coherence}
 
-In Experiment 2, we investigated whether learners could learn the language used in Experiment 1a when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. Previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
+In Experiment 2, we investigated whether learners could learn the language used in Experiment 1a when the context words (Ms and Ps) exhibited phonological, rather than semantic, coherence. It is worth emphasizing that we manipulated phonological coherence in the \emph{context} words, whereas previous work has manipulated phonological coherence of the \emph{target} words. This previous work has shown that learning is facilitated when target words have both distributional and phonological regularities. By contrast, we are interested in how distributional learning for one category of words varies as a function of \emph{other} words in the linguistic environment.
 
 We tested three types of coherence: onset, rime, and syllable count. We selected these kinds of coherence because work in other areas suggests that these kinds of coherence may reliably occur in natural language or facilitate distributional learning when applied to \emph{target} words. Onset coherence might facilitate learning due to sound symbolism (e.g., words that start with \emph{gl} have similar meanings: glimmer, glow, gleam). Rime coherence can occur in languages that require gender-marking agreement between nouns and verbs. Finally, syllable count coherence has been shown to facilitate learning when applied to target words \citep{lany2010}. Thus, we investigated it to determine whether it also facilitates learning when applied to context words.
 
@@ -340,7 +408,7 @@ The three types of phonological coherence\footnote{\label{change-of-stimuli} The
 \end{itemize}
 
 \subsubsection{Design and Procedure}
-The method was identical to that of Experiment 1a.
+The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
 
@@ -507,7 +575,7 @@ In the semantic baseline language, the specific M and P words were drawn randoml
 \end{table}
 
 \subsubsection{Design and procedure}
-The method was identical to that of Experiment 1a.
+The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
 We discarded the 18 participants who did not pass all the catch trials. 
@@ -564,6 +632,7 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 \end{center}
 
 
+
 \appendix
 \section{$t$-tests for familiarity orderings in the memory task}
 
@@ -581,52 +650,52 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
         % data:  e$mem.score and e$type 
 
-        %          familiar withheld cross  
+        % familiar withheld cross  
         % withheld 0.01266  -        -      
         % cross    0.06278  0.48454  -      
         % position 0.00029  0.21723  0.08529
 
         % P value adjustment method: holm 
-        \small
+      \small
 
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F              & W           & C \\ 
-          \hline
-          W & $p$ = 0.01*  &             &\\
-          \hline
-          C & $p$ = 0.06 &  $p$ = 0.48 & \\
-          \hline
-          P & $p$ < 0.001* &  $p$ = 0.21 &  $p$ = 0.08 \\
-          \hline
-        \end{tabular}
+      \begin{tabular}{| l | l |  l | l |}
+        \hline
+        & F              & W           & C \\ 
+        \hline
+        W & $p$ = 0.01*  &             &\\
+        \hline
+        C & $p$ = 0.06 &  $p$ = 0.48 & \\
+        \hline
+        P & $p$ < 0.001* &  $p$ = 0.21 &  $p$ = 0.08 \\
+        \hline
+      \end{tabular}
       } & 
 
-      {
-        % -------------- sem1 --------------
-        % df = 153 
+          {
+            % -------------- sem1 --------------
+            % df = 153 
 
-        % Pairwise comparisons using paired t tests 
+            % Pairwise comparisons using paired t tests 
 
-        % data:  e$mem.score and e$type 
+            % data:  e$mem.score and e$type 
 
-        %          familiar withheld cross
-        % withheld 7.4e-08  -        -    
-        % cross    3.8e-06  0.525    -    
-        % position 2.1e-12  0.085    0.018
+            % familiar withheld cross
+            % withheld 7.4e-08  -        -    
+            % cross    3.8e-06  0.525    -    
+            % position 2.1e-12  0.085    0.018
 
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F               & W           & C \\ 
-          \hline
-          W &  $p$ < 0.001* &             &\\
-          \hline
-          C &  $p$ < 0.001* &  $p$ = 0.52 &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ = 0.08 &  $p$ = 0.01*\\
-          \hline
-        \end{tabular}
+          \small
+          \begin{tabular}{| l | l |  l | l |}
+            \hline
+            & F               & W           & C \\ 
+            \hline
+            W &  $p$ < 0.001* &             &\\
+            \hline
+            C &  $p$ < 0.001* &  $p$ = 0.52 &\\
+            \hline
+            P &  $p$ < 0.001* &  $p$ = 0.08 &  $p$ = 0.01*\\
+            \hline
+          \end{tabular}
       }\\
 
       \textbf{2/3 coherence}: df = 164 & \textbf{3/3 coherence}: df = 152\\
@@ -640,7 +709,7 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
         % data:  e$mem.score and e$type 
 
-        %          familiar withheld cross  
+        % familiar withheld cross  
         % withheld 1.2e-05  -        -      
         % cross    4.0e-14  0.00056  -      
         % position < 2e-16  3.5e-11  0.00056
@@ -648,49 +717,88 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
         % P value adjustment method: holm 
 
 
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F                           & W                         & C \\ 
-          \hline
-          W &  $p$ < 0.001*  &                           &\\
-          \hline
-          C &  $p$ < 0.001*  &  $p$ < 0.001*  &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
-          \hline
-        \end{tabular}
+      \small
+      \begin{tabular}{| l | l |  l | l |}
+        \hline
+        & F                           & W                         & C \\ 
+        \hline
+        W &  $p$ < 0.001*  &                           &\\
+        \hline
+        C &  $p$ < 0.001*  &  $p$ < 0.001*  &\\
+        \hline
+        P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+        \hline
+      \end{tabular}
       } & 
 
-      {
+          {
 
-        % -------------- sem3 --------------
-        % df = 152 
+            % -------------- sem3 --------------
+            % df = 152 
+
+            % Pairwise comparisons using paired t tests 
+
+            % data:  e$mem.score and e$type 
+
+            % familiar withheld cross  
+            % withheld 0.00016  -        -      
+            % cross    4.4e-16  4.4e-16  -      
+            % position < 2e-16  < 2e-16  4.4e-16
+
+            % P value adjustment method: holm 
+
+          \small
+          \begin{tabular}{| l | l |  l | l |}
+            \hline
+            & F                            & W                         & C \\ 
+            \hline
+            W &  $p$ < 0.001*  &                           &\\
+            \hline
+            C &  $p$ < 0.001*  &  $p$ < 0.001*   &\\
+            \hline
+            P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+            \hline
+          \end{tabular}
+      }\\
+      \textbf{Nonce 3/3 coherence}: df = 150 & \\
+      {
+        % -------------- nc-sem3 --------------
+        % df = 150 
 
         % Pairwise comparisons using paired t tests 
 
         % data:  e$mem.score and e$type 
 
         % familiar withheld cross  
-        % withheld 0.00016  -        -      
-        % cross    4.4e-16  4.4e-16  -      
-        % position < 2e-16  < 2e-16  4.4e-16
+        % withheld 0.53     -        -      
+        % cross    < 2e-16  5.4e-14  -      
+        % position < 2e-16  < 2e-16  < 2e-16
 
         % P value adjustment method: holm 
 
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F                            & W                         & C \\ 
-          \hline
-          W &  $p$ < 0.001*  &                           &\\
-          \hline
-          C &  $p$ < 0.001*  &  $p$ < 0.001*   &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
-          \hline
-        \end{tabular}
-      }\\
+      \small
+      \begin{tabular}{| l | l |  l | l |}
+        \hline
+        & F                            & W                         & C \\ 
+        \hline
+        W &  $p$ < 0.53  &                           &\\
+        \hline
+        C &  $p$ < 0.001*  &  $p$ < 0.001*   &\\
+        \hline
+        P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+        \hline
+      \end{tabular}
+      } & \\
+
+    \end{tabular}
+    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 1a and 1b. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
+    \label{familiarity-ordering-t-tests-1a1b}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \begin{tabular}{ c c}
 
       \textbf{Onset}: df = 150 & \textbf{Rime}: df = 187\\
 
@@ -706,19 +814,19 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
       % P value adjustment method: holm 
       {
-        \small
+      \small
 
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F              & W           & C \\ 
-          \hline
-          W & $p$ = 0.04*  &             &\\
-          \hline
-          C & $p$ < 0.001* &  $p$ = 0.04* & \\
-          \hline
-          P & $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001* \\
-          \hline
-        \end{tabular}
+      \begin{tabular}{| l | l |  l | l |}
+        \hline
+        & F              & W           & C \\ 
+        \hline
+        W & $p$ = 0.04*  &             &\\
+        \hline
+        C & $p$ < 0.001* &  $p$ = 0.04* & \\
+        \hline
+        P & $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001* \\
+        \hline
+      \end{tabular}
       } & 
 
       % -------------- rime --------------
@@ -732,19 +840,19 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       % position <2e-16   <2e-16   <2e-16
 
       % P value adjustment method: holm 
-      {
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F               & W           & C \\ 
-          \hline
-          W &  $p$ = 0.09 &             &\\
-          \hline
-          C &  $p$ = 0.002* &  $p$ = 0.15 &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001*\\
-          \hline
-        \end{tabular}
+          {
+          \small
+          \begin{tabular}{| l | l |  l | l |}
+            \hline
+            & F               & W           & C \\ 
+            \hline
+            W &  $p$ = 0.09 &             &\\
+            \hline
+            C &  $p$ = 0.002* &  $p$ = 0.15 &\\
+            \hline
+            P &  $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001*\\
+            \hline
+          \end{tabular}
       }\\
 
       \textbf{Syllable count}: df = 148 & \textbf{Semantic baseline}: df = 143 \\
@@ -761,18 +869,18 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
       % P value adjustment method: holm 
       {
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F                           & W                         & C \\ 
-          \hline
-          W &  $p$ < 0.006*  &                           &\\
-          \hline
-          C &  $p$ < 0.001*  &  $p$ = 0.30  &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ = 0.001*  &  $p$ = 0.01*\\
-          \hline
-        \end{tabular}
+      \small
+      \begin{tabular}{| l | l |  l | l |}
+        \hline
+        & F                           & W                         & C \\ 
+        \hline
+        W &  $p$ < 0.006*  &                           &\\
+        \hline
+        C &  $p$ < 0.001*  &  $p$ = 0.30  &\\
+        \hline
+        P &  $p$ < 0.001* &  $p$ = 0.001*  &  $p$ = 0.01*\\
+        \hline
+      \end{tabular}
       } & 
 
       % -------------- baseline --------------
@@ -786,25 +894,27 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       % position < 2e-16  < 2e-16  < 2e-16
 
       % P value adjustment method: holm 
-      {
-        \small
-        \begin{tabular}{| l | l |  l | l |}
-          \hline
-          & F                            & W                         & C \\ 
-          \hline
-          W &  $p$ < 0.001*  &                           &\\
-          \hline
-          C &  $p$ < 0.001*  &  $p$ = 0.83   &\\
-          \hline
-          P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
-          \hline
-        \end{tabular}
+          {
+          \small
+          \begin{tabular}{| l | l |  l | l |}
+            \hline
+            & F                            & W                         & C \\ 
+            \hline
+            W &  $p$ < 0.001*  &                           &\\
+            \hline
+            C &  $p$ < 0.001*  &  $p$ = 0.83   &\\
+            \hline
+            P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
+            \hline
+          \end{tabular}
       } 
 
     \end{tabular}
-    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 1a, 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
-    \label{familiarity-ordering-t-tests}
+    \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
+    \label{familiarity-ordering-t-tests-23}
   \end{center}
-\end{figure} 
+\end{figure}
+
+
 
 \end{document}
