@@ -52,7 +52,7 @@ Email: \texttt{longouyang@post.harvard.edu}}
 
 How do people learn language? Research indicates that learners use many information sources, including physical, social, conceptual, and linguistic cues \citep{clark1988, markman1991, gleitman1990, baldwin1993, hollich2000}. In addition to external sources of information, the distributional properties of language itself can be informative about both its structure and meaning. A wide variety of experiments show that learners are sensitive to these distributional properties. For example, learners can group sounds together into word forms based on their statistical co-occurrence \citep{saffran1996a, saffran1996b} and pair word forms with their referents based on consistent associations \citep{yu2007,smith2008}. In the current paper, we explore a more sophisticated type of distributional learning: learning about a word using evidence about the linguistic contexts that it occurs \citep{smith1966, maratsos1980, braine1987, redington1998}.
 
-As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings or are similar parts of speech based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck'' in comparable configurations and frequencies. To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with professors and college sophomores and that Bob associates with accountants and lawyers, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} put it, one learns a word ``by the company it keeps'' (p.11). We will refer to learning from such learning as \emph{distributional learning}.
+As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings or are similar parts of speech based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck'' in comparable configurations and frequencies. To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with professors and college sophomores and that Bob associates with accountants and lawyers, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} put it, one learns a word ``by the company it keeps'' (p.11). We will refer to learning from such evidence as \emph{distributional learning}.
 
 Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}.
 
@@ -219,13 +219,15 @@ We excluded the 55 participants who did not correctly answer all of the catch tr
 
 \subsubsection{Descriptive statistics for the memory task}
 
-Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level (collapsing across exposure levels), we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Figure~\ref{familiarity-ordering-t-tests}). This yielded the following familiarity orderings:
-
-0/3: F > W, P\\
-1/3: F > W, C, P \, \, \, \textbf{\&} \, \, \, C > P\\
-2/3: F > W > C > P\\
-3/3: W > F > C > P\\
-
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level (collapsing across exposure levels), we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Figure~\ref{familiarity-ordering-t-tests-1a1b}). This yielded the following familiarity orderings:
+\begin{center}
+  \begin{tabular}{l l }
+    0/3: F > W, P & \\
+    1/3: F > W, C, P & \, \, \, \textbf{\&} \, \, C > P\\
+    2/3: F > W > C > P & \\
+    3/3: W > F > C > P & \\
+  \end{tabular}
+\end{center}
 \noindent These familiarity orderings indicate that some learning occurred at every level of coherence. For example, participants at all levels of coherence rated familiar sentences as more familiar than position violation sentences. However, only participants at the 2/3 and 3/3 levels distinguished between withheld and co-occurrence violation sentences. This lends some support to the idea that positional regularities in MNPQ may be more influential than co-occurrence regularities.
 
 \subsubsection{Effect of coherence and exposure}
@@ -250,7 +252,7 @@ To examine the differences between the different coherence levels, we used Helme
   \end{center}
 \end{figure}
 
-\newcommand{\ww}{\color{white}{*}} \newcommand\T{\rule{0pt}{2.1ex}}
+\newcommand{\ww}{\color{white}{$\enspace$}} \newcommand\T{\rule{0pt}{2.1ex}}
 
 \begin{table}[ht]
   \caption{Regression model for Experiment 1a. For readability, exposure values were divided by 1000.}
@@ -428,7 +430,7 @@ We discarded the 42 participants who did not pass all the catch trials. Results 
   \end{center}
 \end{figure}
 
-Figure~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in previous analyses, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Figure~\ref{familiarity-ordering-t-tests}):
+Figure~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in previous analyses, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Figure~\ref{familiarity-ordering-t-tests-23}):
 
 \begin{tabular}{l l}
 Onset: & F > W > C > P\\
@@ -585,7 +587,11 @@ The design and procedure were identical to that of Experiment 1a.
 We discarded the 18 participants who did not pass all the catch trials. 
 
 \subsubsection{Descriptive statistics of the memory task}
-As in Experiment 1a, we computed an ordering on the sentence types in the memory task: F > W $\approx$ C > P. This indicates that participants were able to learn some regularities in the language, but not the co-occurrence regularities.
+As in Experiment 1a, we computed an ordering on the sentence types in the memory task:
+\begin{center}
+F > W $\approx$ C > P
+\end{center}
+\noindent (see Figure~\ref{familiarity-ordering-t-tests-23}). This indicates that participants were able to learn some regularities in the language, but not the co-occurrence regularities.
 
 \subsubsection{Effect of exposure}
 
