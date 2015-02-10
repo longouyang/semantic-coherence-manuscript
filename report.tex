@@ -348,51 +348,67 @@ The materials were identical to the 3/3 condition of Experiment 1a, except we re
 The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
-We discarded results from 9 subjects that did not pass all trials.
+We excluded 9 subjects who did not pass all trials.
 
-main result 1: memory order is F = W > C > P (``in between'' the patterns of 2/3 and 3/3 from expt1a)
-
-main result 2: intercept and slope are significant in regression (TODO: redo -56 transform for expt1a)
-
-\cas{(segue to expt2)} The context words that participants heard in Experiment 1a included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence or the reverse? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
-
-\begin{figure}[t]
-  \centering
-  \textbf{Memory}\\
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept & 0.16099 & 0.0361 & 4.452 & <0.001*\\
-    Exposures & 0.42065 & 0.2025 & 2.077 & <0.05* \\
-    \hline
-    \multicolumn{5}{l}{\T $R^2$ = 0.028, $F$(1, 149) = 4.31 \T}\\
-  \end{tabular}
-
-  \vskip 1em
-
-  \textbf{Similarity}\\
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept & 0.09899 & 0.0380 & 2.600 & <0.05*\\
-    Exposures & 0.49295 & 0.2131 & 2.312 & <0.05* \\
-    \hline
-    \multicolumn{5}{l}{\T $R^2$ = 0.03, $F$(1, 149) = 5.34 \T}\\
-  \end{tabular}
-  \vskip 1em
-
-  \textbf{Referent assignment}\\
-  \begin{tabular}{l r r r r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-    Intercept & 0.24805 & 0.0612 & 4.053 & <0.001*\\
-    Exposures & 0.89587 & 0.3487 & 2.568 & <0.05* \\
-    \hline
-    \multicolumn{5}{l}{\T $R^2$ = 0.04, $F$(1, 147) = 0.04 \T}\\
-  \end{tabular}  
-  \caption{Regression models from Experiment 1b.}
+\begin{table}[t]
+  \caption{Regression models from Experiment 1b. For readability, we divided exposure levels by 1000.}
   \label{fig:expt1b-regression}
-\end{figure}
+  \centering
+  \begin{tabular}{c c}
+    \textbf{Memory} & \textbf{Similarity}\\
+    {\small
+    \begin{tabular}{l c c c r}
+      \hline
+      Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+      Intercept & 0.16 & 0.03 & 4.45 & <0.001*\\
+      Exposures & 0.42 & 0.20 & 2.07 & <0.05* \\
+      \hline
+      \multicolumn{5}{l}{\T $R^2$ = 0.028, $F$(1, 149) = 4.31 \T}\\
+    \end{tabular}
+    } &
+        {\small
+        \begin{tabular}{l c c c r}
+          \hline
+          Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+          Intercept & 0.09 & 0.03 & 2.60 & <0.05*\\
+          Exposures & 0.49 & 0.21 & 2.31 & <0.05* \\
+          \hline
+          \multicolumn{5}{l}{\T $R^2$ = 0.03, $F$(1, 149) = 5.34 \T}\\
+        \end{tabular}
+    }\\
+    {\rule{0pt}{4ex}  \textbf{Referent assignment}} & \\
+  {\small
+    \begin{tabular}{l c c c r}
+      \hline
+      Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+      Intercept & 0.24 & 0.06 & 4.05 & <0.001*\\
+      Exposures & 0.89 & 0.34 & 2.56 & <0.05* \\
+      \hline
+      \multicolumn{5}{l}{\T $R^2$ = 0.04, $F$(1, 147) = 0.04 \T}\\
+    \end{tabular}  
+  }\\
+  \end{tabular}
+\end{table}
+
+\subsubsection{Descriptive statistics for the memory task}
+Figure~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in Experiment 1a, we used Holm-corrected pairwise t-tests to compute a familiarity ordering on sentence types (Figure~\ref{familiarity-ordering-t-tests-1a1b}). The ordering for the nonce connective 3/3 condition was:
+\begin{center}
+  (F $\approx$ W) > C > P
+\end{center}
+\noindent Thus, participants who saw a version of the 3/3 language with ``and'' replaced by ``tezz'' successfully distinguished between novel grammatical (i.e., withheld) sentences and ungrammatical (i.e., co-occurrence violation) sentences. If results of Experiment 1a hinged on the use of the ``and'' connective, participants should not have been able to distinguish between withheld and co-occurrence violation sentences. \cas{talk about comparison to 2/3 and 3/3}
+
+\subsubsection{Task results}
+
+Similar to Experiment 1a, we performed a regression analyzing score on each task as a function of exposures. Note that in Experiment 1a, we also included coherence as a predictor but we did not include it here as there was only a single coherence level -- 3/3.
+
+Regression results are shown in Table~\ref{fig:expt1b-regression}. For all three tasks, the intercept was significant, indicating that participants performed above chance at the lowest exposure level. Additionally, for all three tasks, there was evidence of statistical learning, as the effect of exposure level was significant -- more exposures were associated with higher task scores.
+
+\subsection{Conclusion}
+
+\cas{experiment 1a wasn't entirely driven by ``and''. get robust effects with nonce connective ``tezz'' as well. ``and'' may well be providing extra, though.}
+
+The context words that participants heard in Experiment 1a included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence or the reverse? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
+
 
 \section{Experiment 2: Phonological coherence}
 
