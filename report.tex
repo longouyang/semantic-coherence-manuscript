@@ -206,7 +206,7 @@ We presented sentences in random order such that there were no repeated words be
 We provided participants with referents for all of the Ms and Ps and asked them to choose referents for the Ns and Qs (Figure \ref{meaning-task}). At the top of the screen, we displayed the Ms and Ps in random order and we provided referents by displaying a single image underneath each word. The M and P referents were either animals (cat, dog, hamster) or vehicles (car, bus, truck); either Ms were animals and Ps were vehicles, or vice versa. Recall that some conditions contained \emph{familiar} M and P words; in these cases, we paired the known words with the obvious referents (e.g., ``dog'' was always paired with an image of a dog). Below the M and P words and their meanings, we displayed a row containing the N and Q words. Under each word, we displayed a two-alternative referent choice between an animal (the ``correct'' choice for N words) and vehicle words (the ``correct'' choice for Q words); participants made a choice by clicking on one of the two pictures. If participants learned the MN and PQ co-occurrence relationships \emph{and} and used them as a basis for inferences about word meaning, then we expected that referent assignment scores would reflect a tendency to choose similar referents for words in the same category. In addition, we hypothesized that, under these circumstances, participants would pick animals for Ns  and vehicles for Ps. This is because Ns consistently co-occurred with Ms, which we indicated referred to animals, and Qs consistently co-occurred with Ps, which we indicated referred to vehicles.
 
 \subsection{Results and Discussion}
-We excluded the 55 participants who did not correctly answer all of the catch trials.\footnote{ Recall that some participants -- mostly in the 3/3 conditions --  did not receive catch trials (see Footnote~\ref{catch-trials}). This does not bias the results in favor of our hypothesis; if anything, this weakens any effect of semantic coherence, as it introduces noise at the highest level of semantic coherence but not at any other level. Indeed, our results are not affected by including subjects who had catch trials and failed them.} We first present descriptive statistics of the memory task before analyzing the influence of coherence and exposure on distributional learning as measured by all three tasks. 
+We excluded the 72 participants who did not correctly answer all of the catch trials.\footnote{ Recall that some participants -- mostly in the 3/3 conditions --  did not receive catch trials (see Footnote~\ref{catch-trials}). This does not bias the results in favor of our hypothesis; if anything, this weakens any effect of semantic coherence, as it introduces noise at the highest level of semantic coherence but not at any other level. Indeed, our results are not affected by including subjects who had catch trials and failed them.} We first present descriptive statistics of the memory task before analyzing the influence of coherence and exposure on distributional learning as measured by all three tasks.
 
 \begin{figure}[t]
   \begin{center}
@@ -254,44 +254,43 @@ To examine the differences between the different coherence levels, we used Helme
 \newcommand{\ww}{\color{white}{$\enspace$}} \newcommand\T{\rule{0pt}{2.1ex}}
 
 \begin{table}[ht]
-  \caption{Regression model for Experiment 1a. For readability, exposure values were divided by 1000.}
+  \caption{Regression model for Experiment 1a. For readability, we divided the exposure values by 1,000.}
   \label{expt1-regressions} 
   \begin{center}
   \footnotesize{
     \begin{tabular}{l r r r r}
       \hline
-      Regressor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-      \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.18, $F$(7, 615) = 20.01 \T}\\ 
-      Intercept &  0.0359 &  0.018 &  1.91 & 0.056\ww\\
-      Condition: 1/3 -- (0/3) & -0.0005 &  0.027 & -0.01 & 0.984\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0309 &  0.014 &  2.09 & <0.05*\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0396 &  0.010 &  3.65 & <0.001*\\
-      Exposures &  0.2346 &  0.083 &  2.81 & <0.005*\\
-      E $\times$ C: 1/3 -- (0/3) &  0.0033 &  0.120 &  0.02 & 0.977\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) & -0.0215 &  0.065 & -0.32 & 0.743\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1326 &  0.048 &  2.73 & <0.01* \\
+      Predictor & $\beta$ & Std Error & $t$ & $p$ \\
       \hline
-
-      \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.12, $F$(7, 615) = 12.09 \T}\\
-      Intercept &  0.0501 &  0.018 &  2.64 & <0.01*\\
-      Condition: 1/3 -- (0/3) & -0.0070 &  0.027 & -0.25 & 0.798\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0237 &  0.014 &  1.59 & 0.112\ww\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0224 &  0.010 &  2.04 & <0.05*\\
-      Exposures &  0.1487 &  0.084 &  1.77 & 0.077\ww\\
-      E $\times$ C: 1/3 -- (0/3) &  0.0514 &  0.121 &  0.42 & 0.671\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) &  0.0208 &  0.066 &  0.31 & 0.754\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1373 &  0.048 &  2.80 & <0.01* \\
+      \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.18, $F$(7, 598) = 19.26 \T}\\
+      Intercept &  0.0432 &  0.019 &  2.26 & <0.05*\\
+      Condition: 1/3 -- (0/3) &  0.0043 &  0.027 &  0.15 & 0.874\ww\\
+      Condition: 2/3 -- (0/3,1/3) &  0.0269 &  0.015 &  1.78 & 0.074\ww\\
+      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0396 &  0.010 &  3.62 & <0.001*\\
+      Exposures &  0.2215 &  0.084 &  2.63 & <0.01*\\
+      E $\times$ C: 1/3 -- (0/3) & -0.0012 &  0.121 & -0.00 & 0.992\ww\\
+      E $\times$ C: 2/3 -- (0/3,1/3) & -0.0050 &  0.067 & -0.07 & 0.939\ww\\
+      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1294 &  0.048 &  2.65 & <0.01* \\
       \hline
-
-      \multicolumn{5}{l}{\T \textbf{Referent assignment}:  $R^2$ = 0.06, $F$(7, 611) = 6.45 \T}\\
-      Intercept &  0.1087 &  0.036 &  3.01 & <0.005*\\
-      Condition: 1/3 -- (0/3) &  0.0664 &  0.052 &  1.26 & 0.208\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0616 &  0.028 &  2.17 & <0.05*\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0359 &  0.020 &  1.72 & 0.084\ww\\
-      Exposures &  0.4577 &  0.159 &  2.86 & <0.005*\\
-      E $\times$ C: 1/3 -- (0/3) & -0.0919 &  0.230 & -0.39 & 0.690\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) & -0.1257 &  0.126 & -0.99 & 0.319\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1292 &  0.093 &  1.38 & 0.167\ww \\
+      \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.12, $F$(7, 598) = 11.85 \T}\\
+      Intercept &  0.0536 &  0.019 &  2.76 & <0.01*\\
+      Condition: 1/3 -- (0/3) & -0.0085 &  0.028 & -0.30 & 0.763\ww\\
+      Condition: 2/3 -- (0/3,1/3) &  0.0237 &  0.015 &  1.54 & 0.123\ww\\
+      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0239 &  0.011 &  2.13 & <0.05*\\
+      Exposures &  0.1407 &  0.085 &  1.63 & 0.101\ww\\
+      E $\times$ C: 1/3 -- (0/3) &  0.0517 &  0.124 &  0.41 & 0.676\ww\\
+      E $\times$ C: 2/3 -- (0/3,1/3) &  0.0258 &  0.068 &  0.37 & 0.705\ww\\
+      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1320 &  0.049 &  2.65 & <0.01* \\
+      \hline
+      \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.07, $F$(7, 594) = 6.70 \T}\\
+      Intercept &  0.1136 &  0.036 &  3.10 & <0.005*\\
+      Condition: 1/3 -- (0/3) &  0.0629 &  0.053 &  1.17 & 0.240\ww\\
+      Condition: 2/3 -- (0/3,1/3) &  0.0689 &  0.028 &  2.38 & <0.05*\\
+      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0397 &  0.021 &  1.88 & 0.059\ww\\
+      Exposures &  0.4434 &  0.161 &  2.74 & <0.01*\\
+      E $\times$ C: 1/3 -- (0/3) & -0.0784 &  0.233 & -0.33 & 0.736\ww\\
+      E $\times$ C: 2/3 -- (0/3,1/3) & -0.1421 &  0.128 & -1.10 & 0.268\ww\\
+      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1201 &  0.094 &  1.27 & 0.202\ww \\
       \hline
     \end{tabular}
   }
@@ -302,7 +301,7 @@ To examine the differences between the different coherence levels, we used Helme
 
 We report performance on each of the three tasks separately.
 
-\paragraph{Memory} More exposure led to higher memory scores, as there was a main effect of exposure. Higher coherence also led to higher memory scores; 2/3 scores were significantly higher than scores from the 0/3 and 1/3 conditions combined and 3/3 scores were significantly higher than scores from the rest of the conditions combined. Because 2/3 and 3/3 scores both outperformed all the respective lower levels of coherence, we also computed this model using coherence as a continuous variable; the continuous coherence regressor significantly predicted increases in score, $\beta = 0.06$, $t(619) = 3.86$, $p < 0.0005$, suggesting that parametrically increasing coherence results in parametric increases in memory score.
+\paragraph{Memory} More exposure led to higher memory scores, as there was a main effect of exposure. Higher coherence also led to higher memory scores; 3/3 scores were significantly higher than scores from the rest of the conditions combined.
 
 % condition.num 6.730e-02 1.743e-02 3.862 0.000124 ***
 
@@ -338,7 +337,7 @@ We modified the materials from the 3/3 coherence condition, replacing ``and'' wi
 \subsection{Method}
 
 \subsubsection{Participants}
-160 MTurk workers.
+163 MTurk workers.
 
 \subsection{Materials}
 The materials were identical to the 3/3 condition of Experiment 1a, except we replaced the familiar ``and'' connective with a nonce connective ``tezz''.
@@ -347,45 +346,28 @@ The materials were identical to the 3/3 condition of Experiment 1a, except we re
 The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
-We excluded 9 subjects who did not pass all trials.
+We excluded 15 subjects who did not pass all trials.
 
 \begin{table}[t]
-  \caption{Regression models from Experiment 1b. For readability, we divided exposure levels by 1000.}
+  \caption{Regression models from Experiment 1b. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
   \label{fig:expt1b-regression}
   \centering
-  \begin{tabular}{c c}
-    \textbf{Memory} & \textbf{Similarity}\\
-    {\small
-    \begin{tabular}{l c c c r}
-      \hline
-      Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-      Intercept & 0.16 & 0.03 & 4.45 & <0.001*\\
-      Exposures & 0.42 & 0.20 & 2.07 & <0.05* \\
-      \hline
-      \multicolumn{5}{l}{\T $R^2$ = 0.028, $F$(1, 149) = 4.31 \T}\\
-    \end{tabular}
-    } &
-        {\small
-        \begin{tabular}{l c c c r}
-          \hline
-          Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-          Intercept & 0.09 & 0.03 & 2.60 & <0.05*\\
-          Exposures & 0.49 & 0.21 & 2.31 & <0.05* \\
-          \hline
-          \multicolumn{5}{l}{\T $R^2$ = 0.03, $F$(1, 149) = 5.34 \T}\\
-        \end{tabular}
-    }\\
-    {\rule{0pt}{4ex}  \textbf{Referent assignment}} & \\
-  {\small
-    \begin{tabular}{l c c c r}
-      \hline
-      Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-      Intercept & 0.24 & 0.06 & 4.05 & <0.001*\\
-      Exposures & 0.89 & 0.34 & 2.56 & <0.05* \\
-      \hline
-      \multicolumn{5}{l}{\T $R^2$ = 0.04, $F$(1, 147) = 0.04 \T}\\
-    \end{tabular}  
-  }\\
+  \begin{tabular}{l c c c r}
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\
+    \hline
+    \multicolumn{5}{l}{\small{\textbf{Memory} $R^2$ = 0.03, $F$(1, 146) = 4.60}}\\
+    Intercept & 0.16 & 0.03 & 4.42 & <0.001*\\
+    Exposures & 0.44 & 0.20 & 2.14 & <0.05* \\
+    \hline
+    \multicolumn{5}{l}{\small{\textbf{Similarity} $R^2$ = 0.03, $F$(1, 146) = 5.61}}\\
+    Intercept & 0.10 & 0.03 & 2.60 & <0.05*\\
+    Exposures & 0.51 & 0.21 & 2.37 & <0.05* \\
+    \hline
+    \multicolumn{5}{l}{\small{\textbf{Referent assignment} $R^2$ = 0.04, $F$(1, 144) = 7.04}}\\
+    Intercept & 0.24 & 0.06 & 4.00 & <0.001*\\
+    Exposures & 0.94 & 0.35 & 2.65 & <0.01* \\
+    \hline
   \end{tabular}
 \end{table}
 
@@ -414,7 +396,7 @@ It is informative to compare this nonce connective ordering with the orderings f
 
 Similar to Experiment 1a, we performed a regression analyzing score on each task as a function of exposures. Note that in Experiment 1a, we also included coherence as a predictor but we did not include it here as there was only a single coherence level -- 3/3.
 
-Regression results are shown in Table~\ref{fig:expt1b-regression}. For all three tasks, the intercept was significant, indicating that participants performed above chance at the lowest exposure level. Additionally, for all three tasks, there was evidence of statistical learning, as the effect of exposure level was significant -- more exposures were associated with higher task scores.
+Regression results are shown in Table~\ref{fig:expt1b-regression}. Note that in  our model, subtracted 56 from all exposure levels so that the intercept could be interpreted as performance at the lowest exposure level. For all three tasks, the intercept was significant, indicating that participants performed above chance at the lowest exposure level. Additionally, for all three tasks, there was evidence of statistical learning, as the effect of exposure level was significant -- more exposures were associated with higher task scores.
 
 \subsection{Conclusion}
 
@@ -450,7 +432,7 @@ The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
 
-We discarded the 42 participants who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}.
+We discarded the 51 participants who did not pass all the catch trials. Results are graphed in Figure \ref{expt23-results}.
 
 \subsubsection{Descriptive statistics for the memory task}
 
@@ -513,50 +495,48 @@ Syllable count: & F > W $\approx$ C > P\\
 \end{figure}
 
 \begin{table}[t]
-  \caption{Regression model for Experiments 2 and 3. For readability, exposure values were divided by 1000.}
+  \caption{Regression model for Experiments 2 and 3. For readability, we divided exposure values by 1,000.}
   \label{expt23-regression}
   \begin{center} 
     \scriptsize{
       \begin{tabular}{l r r r r}
         \hline
         Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-        \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.009, $F$(7, 631) = 0.88 \T}\\
-        Intercept & -0.0341 &  0.027 & -1.24 & 0.215\ww\\
-        Condition: Onset -- 0/3 &  0.0626 &  0.038 &  1.64 & 0.100\ww\\
-        Condition: Rime -- 0/3 &  0.0652 &  0.035 &  1.82 & 0.068\ww\\
-        Condition: Syllable count -- 0/3 &  0.0410 &  0.038 &  1.06 & 0.287\ww\\
-        Condition: Semantic incoherent -- 0/3 &  0.0055 &  0.038 &  0.14 & 0.883\ww\\
-        Exposures &  0.1201 &  0.119 &  1.00 & 0.316\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.0948 &  0.170 & -0.55 & 0.577\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.1950 &  0.161 & -1.20 & 0.228\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.0735 &  0.167 & -0.43 & 0.660\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.0388 &  0.162 &  0.23 & 0.811\ww \\
+        \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.01, $F$(9, 756) = 0.89 \T}\\
+        Intercept & -0.0277 &  0.028 & -0.98 & 0.322\ww\\
+        Condition: Onset -- 0/3 &  0.0550 &  0.038 &  1.42 & 0.153\ww\\
+        Condition: Rime -- 0/3 &  0.0578 &  0.036 &  1.59 & 0.111\ww\\
+        Condition: Syllable count -- 0/3 &  0.0283 &  0.039 &  0.72 & 0.469\ww\\
+        Condition: Semantic incoherent -- 0/3 & -0.0016 &  0.038 & -0.04 & 0.966\ww\\
+        Exposures &  0.0984 &  0.121 &  0.80 & 0.419\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.0686 &  0.171 & -0.39 & 0.689\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.1713 &  0.164 & -1.04 & 0.297\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.0324 &  0.169 & -0.19 & 0.848\ww\\
+        E $\times$ C: Semantic incoherent -- 0/3 &  0.0667 &  0.165 &  0.40 & 0.687\ww \\
         \hline
-
-        \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.02, $F$(7, 631) = 2.51 \T}\\
-        Intercept &  0.0110 &  0.025 &  0.43 & 0.662\ww\\
-        Condition: Onset -- 0/3 & -0.0031 &  0.035 & -0.08 & 0.928\ww\\
-        Condition: Rime -- 0/3 & -0.0064 &  0.033 & -0.19 & 0.846\ww\\
-        Condition: Syllable count -- 0/3 & -0.0455 &  0.035 & -1.27 & 0.201\ww\\
-        Condition: Semantic incoherent -- 0/3 & -0.0007 &  0.035 & -0.02 & 0.982\ww\\
-        Exposures & -0.0607 &  0.110 & -0.54 & 0.582\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.0937 &  0.157 & -0.59 & 0.550\ww\\
-        E $\times$ C: Rime -- 0/3 &  0.1951 &  0.149 &  1.30 & 0.191\ww\\
-        E $\times$ C: Syllable count -- 0/3 &  0.3049 &  0.154 &  1.97 & <0.05*\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.1401 &  0.150 &  0.93 & 0.350\ww \\
+        \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.02, $F$(9, 756) = 2.10 \T}\\
+        Intercept &  0.0146 &  0.026 &  0.56 & 0.573\ww\\
+        Condition: Onset -- 0/3 & -0.0054 &  0.035 & -0.15 & 0.878\ww\\
+        Condition: Rime -- 0/3 & -0.0111 &  0.033 & -0.33 & 0.740\ww\\
+        Condition: Syllable count -- 0/3 & -0.0487 &  0.036 & -1.33 & 0.180\ww\\
+        Condition: Semantic incoherent -- 0/3 & -0.0060 &  0.035 & -0.16 & 0.866\ww\\
+        Exposures & -0.0688 &  0.113 & -0.60 & 0.542\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.0847 &  0.159 & -0.53 & 0.595\ww\\
+        E $\times$ C: Rime -- 0/3 &  0.2168 &  0.152 &  1.42 & 0.155\ww\\
+        E $\times$ C: Syllable count -- 0/3 &  0.3152 &  0.157 &  1.99 & <0.05*\\
+        E $\times$ C: Semantic incoherent -- 0/3 &  0.1662 &  0.153 &  1.08 & 0.279\ww \\
         \hline
-
-        \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.01, $F$(7, 629) = 1.12 \T}\\
-        Intercept & -0.0553 &  0.068 & -0.81 & 0.418\ww\\
-        Condition: Onset -- 0/3 &  0.1776 &  0.094 &  1.88 & 0.060\ww\\
-        Condition: Rime -- 0/3 &  0.0916 &  0.088 &  1.03 & 0.301\ww\\
-        Condition: Syllable count -- 0/3 &  0.0234 &  0.095 &  0.24 & 0.806\ww\\
-        Condition: Semantic incoherent -- 0/3 &  0.0868 &  0.094 &  0.91 & 0.359\ww\\
-        Exposures &  0.5462 &  0.296 &  1.84 & 0.066\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.6122 &  0.421 & -1.45 & 0.146\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.3243 &  0.400 & -0.80 & 0.418\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.0692 &  0.414 & -0.16 & 0.867\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 & -0.7403 &  0.402 & -1.83 & 0.066\ww \\
+        \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.01, $F$(9, 752) = 1.42 \T}\\
+        Intercept & -0.0580 &  0.069 & -0.83 & 0.404\ww\\
+        Condition: Onset -- 0/3 &  0.1804 &  0.095 &  1.88 & 0.059\ww\\
+        Condition: Rime -- 0/3 &  0.1010 &  0.089 &  1.12 & 0.261\ww\\
+        Condition: Syllable count -- 0/3 &  0.0218 &  0.097 &  0.22 & 0.821\ww\\
+        Condition: Semantic incoherent -- 0/3 &  0.0880 &  0.096 &  0.91 & 0.360\ww\\
+        Exposures &  0.5439 &  0.301 &  1.80 & 0.071\ww\\
+        E $\times$ C: Onset -- 0/3 & -0.6143 &  0.425 & -1.44 & 0.148\ww\\
+        E $\times$ C: Rime -- 0/3 & -0.3114 &  0.406 & -0.76 & 0.443\ww\\
+        E $\times$ C: Syllable count -- 0/3 & -0.0351 &  0.420 & -0.08 & 0.933\ww\\
+        E $\times$ C: Semantic incoherent -- 0/3 & -0.7207 &  0.409 & -1.76 & 0.078\ww \\
         \hline
       \end{tabular}
     }
@@ -616,7 +596,7 @@ In the semantic baseline language, the specific M and P words were drawn randoml
 The design and procedure were identical to that of Experiment 1a.
 
 \subsection{Results and Discussion}
-We discarded the 18 participants who did not pass all the catch trials. 
+We discarded the 21 participants who did not pass all the catch trials.
 
 \subsubsection{Descriptive statistics of the memory task}
 As in Experiment 1a, we computed an ordering on the sentence types in the memory task:
