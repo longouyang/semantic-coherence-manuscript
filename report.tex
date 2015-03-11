@@ -1,10 +1,11 @@
 % editing notes: don't use auto-fill-mode
 
 \documentclass[man,floatsintext]{apa6}
+\usepackage{longtable}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{geometry}
+% \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage[natbibapa]{apacite}
 \usepackage{times}
@@ -23,7 +24,7 @@
 % \shorttitle{}
 \title{Semantic coherence facilitates distributional learning}
 \author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
-\affiliation{Department of Psychology, Stanford University\vskip 5em Word count: 6,689}
+\affiliation{Department of Psychology, Stanford University\vskip 5em Word count: 7,980}
 
 \authornote{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. Address correspondence to:\\
 Long Ouyang~\\
@@ -49,25 +50,26 @@ In three experiments, we show that (1) the presence of familiar semantic referen
 ``\emph{You shall know a word by the company it keeps.}'' Firth (1957, p.11)
 \end{quote}
 
-How do people learn language? Research indicates that learners use many information sources, including physical, social, conceptual, and linguistic cues \citep{clark1988, markman1991, gleitman1990, baldwin1993, hollich2000}. In addition to external sources of information, the distributional properties of language itself can be informative about both its structure and meaning. A wide variety of experiments show that learners are sensitive to these distributional properties. For example, learners can group sounds together into word forms based on their statistical co-occurrence \citep{saffran1996a, saffran1996b} and pair word forms with their referents based on consistent associations \citep{yu2007,smith2008}. In the current paper, we explore a more sophisticated type of distributional learning: learning about a word using evidence about the linguistic contexts that it occurs \citep{smith1966, maratsos1980, braine1987, redington1998}.
+How do people learn language? Learners use many information sources, including physical, social, conceptual, and linguistic cues \citep{clark1988, markman1991, gleitman1990, baldwin1993, hollich2000}. But in addition to external sources of information, the distributional properties of language itself can be informative about both its structure and meaning. A wide variety of experiments show that learners are sensitive to these distributional properties. For example, learners can group sounds together into word forms based on their statistical co-occurrence \citep{saffran1996a, saffran1996b} and pair word forms with their referents based on consistent associations \citep{yu2007,smith2008}. In the current paper, we explore a more sophisticated type of distributional learning: learning about a word using evidence about the linguistic contexts that it occurs \citep{smith1966, maratsos1980, braine1987, redington1998}.
 
-As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings or are similar parts of speech based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck'' in comparable configurations and frequencies. To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with professors and college sophomores and that Bob associates with accountants and lawyers, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} put it, one learns a word ``by the company it keeps'' (p.11). We will refer to learning from such evidence as \emph{distributional learning}.
+As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings or are similar parts of speech based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck'' in comparable configurations and frequencies. To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with professors and college sophomores and that Bob associates with accountants and lawyers, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} noted, you can learn a lot about a word ``by the company it keeps'' (p.11). We will refer to learning from such evidence as \emph{distributional learning}.
 
-Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}.
+Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}. Our study addresses this mismatch by attempting to isolate conditions under which people succeed in distributional learning. 
 
-Our study addresses this mismatch by specifying conditions under which people succeed in distributional learning. In particular, we investigate the effect of existing linguistic knowledge. Prior experiments typically exposed learners to artificial languages composed of entirely novel words. Our experiments suggest that \emph{semantic coherence}, the presence of known words adhering to some semantic organization, facilitates distributional learning. Put another way, a small semantic hook allows people to better leverage distributional information for learning. Phrased in terms of the Alice--Bob example, we stand a better chance of learning about Alice from her associates if those associates play roles that are already meaningful to us. Knowing that Alice associates with professors and college sophomores gives us a clearer picture of her than, say, knowing that she associates with taphonomists and bryologists.\footnote{Though, we can infer much more about Alice if we know that taphonomy is the study of decay and fossilization and that bryology is the study of certain plants called bryophytes, which include mosses, hornworts, and liverworts.} Learning a word from its company is easier if this company is already familiar. 
+We focus here on the effects of existing linguistic knowledge on distributional learning. Prior experiments typically exposed learners to artificial languages composed of entirely novel words. Our experiments suggest that \emph{semantic coherence}, the presence of known words adhering to some semantic organization, facilitates distributional learning. Put another way, a small semantic hook allows people to better leverage distributional information for learning. Phrased in terms of the Alice--Bob example, we stand a better chance of learning about Alice from her associates if those associates play roles that are already meaningful to us. Knowing that Alice associates with professors and college sophomores gives us a clearer picture of her than, say, knowing that she associates with taphonomists and bryologists.\footnote{Though, we can infer much more about Alice if we know that taphonomy is the study of decay and fossilization and that bryology is the study of certain plants called bryophytes, which include mosses, hornworts, and liverworts.} Learning a word from its company is easier if this company is already familiar. 
 
-We begin by briefly reviewing some of the computational evidence for distributional learning. We then introduce the specific language structure, MNPQ, that we explore in this paper. Next, we discuss research that uses the MNPQ structure to study distributional learning of grammatical categories. In Experiments 1a and 1b, we present evidence that semantic coherence can facilitate distributional learning and that learners make use of acquired distributional information when performing an online referent assignment task. In Experiments 2 and 3, we further explore this effect by isolating two components of semantic coherence---familiarity of words and presence of an overarching semantic organization ---and find that neither alone facilitates learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the effects we observe.
+We begin by briefly reviewing some of the computational evidence for distributional learning. We then introduce the specific language structure, MNPQ, that we explore in this paper. Next, we discuss research that uses the MNPQ structure to study distributional learning of grammatical categories. In Experiments 1a and 1b, we present evidence that semantic coherence can facilitate distributional learning and that learners make use of acquired distributional information when performing an online referent assignment task. In Experiments 2 and 3, we further explore this effect by isolating two components of semantic coherence---familiarity of words and presence of an overarching semantic organization---and find that neither alone facilitates learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the effects we observe.
  
 \subsection{Computational evidence for distributional learning}
 
-Initial proposals about distributional learning came from philosophical and linguistic research on the nature of meaning. In the philosophical literature, \citet{wittgenstein1953} objected to the idea that words have precise, formal definitions and argued that meaning derives from patterns of usage. To illustrate, he considered the word ``game'' -- a term used to describe activies as varied as chess, poker, basketball, the Olympics and so forth -- and observed that these activities lack a shared essence that we could distill to a definition. To use a spatial metaphor, the set of things called games does not appear to be a contiguous region that we could draw a boundary for, but rather a ``complicated network of similarities overlapping and crisscrossing'' (\S 66). Wittgenstein argued that understanding meaning requires describing usage.
+Initial proposals about distributional learning came from philosophical and linguistic research on the nature of meaning. In the philosophical literature, \citet{wittgenstein1953} objected to the idea that words have precise, formal definitions and argued that meaning derives from patterns of usage. To illustrate, he considered the word ``game''---a term used to describe activies as varied as chess, poker, basketball, the Olympics and so forth---and observed that these activities lack a shared essence that we could distill to a definition. To use a spatial metaphor, the set of things called games does not appear to be a contiguous region that we could draw a boundary for, but rather a ``complicated network of similarities overlapping and crisscrossing'' (\S 66). Wittgenstein argued that understanding meaning requires describing usage.
 
-In linguistics, \citet{firth1957} similarly argued for a theory of meaning based on patterns of ``habitual collocation.'' For example (p.12), he asserts that part of the meaning of the ``cow'' is its co-occurrence with  ``milk'', as in ``They are milking the cows'' or ``Cows give milk.'' ``Tigress'' and ``lioness'' do not co-occur with ``milk'' as often and thus must differ somewhat in meaning. Firth stressed the utility of \emph{pure} co-occurrence independent of extralinguistic or even grammatical aspects. He even outlined a prescient kind of cluster analysis quite similar to modern-day statistical approaches:
+In linguistics, \citet{firth1957} similarly argued for a theory of meaning based on patterns of ``habitual collocation.'' For example (p.12), he asserts that part of the meaning of the ``cow'' is its co-occurrence with  ``milk,'' as in ``They are milking the cows'' or ``Cows give milk.'' ``Tigress'' and ``lioness'' do not co-occur with ``milk'' as often and thus must differ somewhat in meaning. Firth stressed the utility of \emph{pure} co-occurrence independent of extralinguistic or even grammatical aspects. He even outlined a prescient kind of cluster analysis quite similar to modern-day statistical approaches:
 
 \begin{quote}
 ``In the study of selected words, compounds and phrases in a restricted language for which there are restricted texts, an exhaustive collection of collocation will suggest a small number of groups of collocations for each word studied. The next step is the choice of definitions for meanings suggested by the groups'' (p. 13)
 \end{quote}
+
 Firth's contemporary Harris advanced a quantitative version of this notion called the \emph{distributional hypothesis}, which proposes that words are semantically similar to the degree that they participate in the same contexts \citep{harris1951}. Harris argued that, even in cases where word meaning was determined by extralinguistic influences, such influences would have distributional correlates. Thus, meaning could be divined by the quantitative analysis of purely linguistic information.
 
 These proposals about the distributional theory of meaning stimulated early empirical work with humans, which typically supported the distributional hypothesis using small samples of human judgments and corpora \citep{rubenstein1965, clark1968, stefflre1971, geffroy1973, berryrogghe1973, szalay1974}. For example, \citet{rubenstein1965} compared synonym judgments for pairs of concrete nouns generated by one group of subjects with co-occurrence statistics in a corpus generated by a separate group of subjects. They found a positive relationship between synonymy and degree of linguistic context match.
@@ -84,9 +86,9 @@ In the 1980s, computer scientists devised techniques that paved the way for larg
 
 Note, however, that this representation discards information about the relative position of words within documents. The \emph{word-word} approach retains this information \citep{church1990, schutze1992}, labeling both rows and columns with words; a row might represent the meaning of word A and the count in a particular column might indicate frequency that word A occurred 2 words before word X (Figure \ref{matrices}). This corresponds to the initial example of inferences about Alice and Bob based on \emph{who} they appear with.
 
-Computational models operating on such co-occurrence representations can acquire both semantic and syntactic properties of words. In the domain of semantics, \citet{landauer1997} built a word-document matrix from a corpus of encyclopedia articles, applied a dimensionality reduction technique (singular value decomposition), and computed the similarity between words using a cosine measure. This Latent Semantic Analysis model (LSA) was able to successfully pass a TOEFL synonym test. In the domain of syntax, \citet{redington1998} developed a model that performs hierarchical clustering on a word-word matrix to that successfully acquires grammatical categories like noun, verb, and adjective. In fact, these results suggest that co-occurrence statistics may be particularly powerful, offering leverage on many kinds of linguistic information. Although devised to learn grammatical categories, the model often learned clusters that had semantic organization. For example, in the cluster of adjectives, color words and number words formed separate clusters (p448).
+Computational models operating on such co-occurrence representations can acquire both semantic and syntactic properties of words. In the domain of semantics, \citet{landauer1997} built a word-document matrix from a corpus of encyclopedia articles, applied a dimensionality reduction technique (singular value decomposition), and computed the similarity between words using a cosine measure. This Latent Semantic Analysis model (LSA) was able to pass a TOEFL synonym test successfully. In the domain of syntax, \citet{redington1998} developed a model that performs hierarchical clustering on a word-word matrix to that successfully acquires grammatical categories like noun, verb, and adjective. In fact, these results suggest that co-occurrence statistics may be particularly powerful, offering leverage on many kinds of linguistic information. Although devised to learn grammatical categories, the model often learned clusters that had semantic organization. For example, in the cluster of adjectives, color words and number words formed separate clusters (p448).
 
-The success of this early computational work led to a proliferation of models that learn from co-occurrence statistics (see \citealp{riordan2010} for an overview and comparison of state-of-the-art models). The computational evidence is quite suggestive: in principle, statistical patterns of co-occurrence can facilitate learning. However, while suggestive, this work is only indirect evidence of distributional learning. Researchers studying acquisition of grammatical categories have employed methods that can in principle provide stronger evidence. These studies expose learners to artificial languages with certain co-occurrence regularities and measure whether learners form categories on the basis of these regularities. In the next section, we discuss results of studies that have examined one co-occurrence structure called the MNPQ language.
+The success of this early computational work led to a proliferation of models that learn from co-occurrence statistics (see \citealp{riordan2010} for an overview and comparison of state-of-the-art models). The computational evidence is quite suggestive: In principle, statistical patterns of co-occurrence can facilitate learning. This work is only indirect evidence of the utility of distributional learning for language learners, however. Researchers studying acquisition of grammatical categories have employed methods that can in principle provide stronger evidence. These studies expose learners to artificial languages with certain co-occurrence regularities and measure whether learners form categories on the basis of these regularities. In the next section, we discuss results of studies that have examined one co-occurrence structure called the MNPQ language.
 
 \subsection{A puzzle: the MNPQ language}
 
@@ -96,17 +98,26 @@ MNPQ learning is possible, however, when co-occurrence information is partially 
 
 Nearly all of this empirical work has interpreted the results of human experiments with reference to learning grammatical category. To our knowledge, only one study has examined word meaning. Recently, \citet{lany2010} investigated Braine's proposal of correlating co-occurrence and phonological cues in a study of meaning acquisition. They found that 22-month old infants successfully learned an MNPQ language when co-occurrence was aligned with the number of syllables in a word (in particular, when N words were disyllabic and Q words were monosyllabic) but \emph{not} when the number of syllables was not predictive of N/Q membership. This suggests that distributional information may play a common role in acquisition of grammatical category and word meaning, at least for the MNPQ language. 
 
+\subsection{The current study}
+
 In our current work, we add to the literature on distributional learning by exploring a new information source: semantic coherence. To date, all studies have used the artificial language learning paradigm, with a vocabulary consisting of all novel words. Thus, at the beginning of the experiments, learners did not know the meanings of any of the words. Real learners, by contrast, typically know the meanings of some (if not most) words they hear and such words tend to relate to a single topic of discourse. Put another way, the language that real learners encounter tends to have semantic coherence; some words are known and adhere to some semantic organization. We ask: does semantic coherence facilitate distributional learning?
 
-To explore this possibility, we presented participants with an MNPQ language where sentences took the form ``M and N'' or ``P and Q''. Note that we used the explicit English conjunction ``and'' between the two words, which imbued sentences with some semantic content (i.e., our stimuli were not merely a syntactic ordering). We hypothesized that a sufficient level of semantic coherence (specifically, a taxonomic coherence where Ms are animals and Ps were vehicles) would yield successful distributional learning for N and Q words. For instance, hearing the four sentences:
+To explore this possibility, we presented participants with an MNPQ language where sentences took the form ``M and N'' or ``P and Q.'' Note that we used the explicit English conjunction ``and'' between the two words, which imbued sentences with some semantic content (i.e., our stimuli were not merely a syntactic ordering). We hypothesized that a sufficient level of semantic coherence (specifically, a taxonomic coherence where Ms are animals and Ps were vehicles) would yield successful distributional learning for N and Q words. For instance, hearing the four sentences:
+
 \begin{enumerate}
 \item dog and dax
 \item dog and ziv
 \item car and wug
 \item car and pif
-\end{enumerate} might allow learners to infer that daxes and zivs are similar, as both words co-occur with ``dog'', and that wugs and pifs are similar, as both words co-occur with ``car.'' We emphasize that this small coherence manipulation does not elevate our stimuli to natural language, but it does render our stimuli more naturalistic than stimuli used in previous experiments. Artificial languages suitable for use in experiments simply cannot parallel the richness of natural language. Because of this, our work represents a first step towards measuring whether learners exposed to natural language form categories on the basis of co-occurrence structures.
+\end{enumerate} 
+
+\noindent might allow learners to infer that daxes and zivs are similar, as both words co-occur with ``dog,'' and that wugs and pifs are similar, as both words co-occur with ``car.''
 
 In Experiments 1a and 1b, we tested whether semantic coherence facilitated distributional learning and whether learners might use distributional information to make inferences about word meaning. In Experiment 2, we compared semantic coherence to phonological coherence. In Experiment 3, we compared semantic coherence to a semantic baseline that used known words that did not adhere to any obvious semantic organization.
+
+Our coherence manipulation takes our experiments out of the realm of purely artificial languages, but it also seems unlikely that participants view our stimuli as an extension of their natural language. Rather, we expect that they reason about our materials using the same mix of implicit and explicit processes that are typically described in complex, artificial language tasks that include explicit semantic content \citep{braine1987}. Artificial (or partially artificial) languages suitable for use in experiments simply cannot parallel the richness of natural language; the processes that participants employ likely differ from those involved in natural language learning. Nevertheless, we believe there is value to investigating the relative ease or difficulty of learning from different kinds of information sources in model systems of this type.  
+% We return to the issue of the generalizability in the General Discussion. 
+
 
 \section{Experiment 1a: Semantic Coherence}
 
@@ -203,6 +214,7 @@ Participants listened to sentences and rated on a 5 point scale how confident th
 We presented sentences in random order such that there were no repeated words between consecutive trials. In two catch trials,\footnote{\label{catch-trials} In initial data collection, we did not include catch trials.  Let [A/3;B] denote the experimental condition with A/3 coherence and B exposures (e.g., [2/3;196] refers to the 2/3 coherence level with 196 exposures). In [0/3;196], 18 out of 40 participants did not receive catch trials. In [3/3;56], 30 out of 43 participants did not receive catch trials. In [3/3;126], 30 out of 40 participants did not receive catch trials. In [3/3;196], 30 out of 40 participants did not receive catch trials.} instead of a sentence from the MNPQ language, we played an audio instruction (which could not be repeated by participants) to press a specific response button.  If participants learned the MN and PQ co-occurrence relationships, then we expected that they would rate novel grammatical sentences as more familiar than the co-occurrence violation sentences.
 
 \paragraph{Referent assignment}
+
 We provided participants with referents for all of the Ms and Ps and asked them to choose referents for the Ns and Qs (Figure \ref{meaning-task}). At the top of the screen, we displayed the Ms and Ps in random order and we provided referents by displaying a single image underneath each word. The M and P referents were either animals (cat, dog, hamster) or vehicles (car, bus, truck); either Ms were animals and Ps were vehicles, or vice versa. Recall that some conditions contained \emph{familiar} M and P words; in these cases, we paired the known words with the obvious referents (e.g., ``dog'' was always paired with an image of a dog). Below the M and P words and their meanings, we displayed a row containing the N and Q words. Under each word, we displayed a two-alternative referent choice between an animal (the ``correct'' choice for N words) and vehicle words (the ``correct'' choice for Q words); participants made a choice by clicking on one of the two pictures. If participants learned the MN and PQ co-occurrence relationships \emph{and} and used them as a basis for inferences about word meaning, then we expected that referent assignment scores would reflect a tendency to choose similar referents for words in the same category. In addition, we hypothesized that, under these circumstances, participants would pick animals for Ns  and vehicles for Ps. This is because Ns consistently co-occurred with Ms, which we indicated referred to animals, and Qs consistently co-occurred with Ps, which we indicated referred to vehicles.
 
 \subsection{Results and Discussion}
@@ -211,7 +223,7 @@ We excluded the 72 participants who did not correctly answer all of the catch tr
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=1.0\linewidth]{x1-descriptive-memory} 
-    \caption{Mean familiarity ratings for different sentence types in Experiment 1a and 1b.}
+    \caption{Mean familiarity ratings for different sentence types in Experiment 1a and 1b. The far right panel shows results from Experiment 1b.}
     \label{x1-descriptive-mem}
   \end{center}
 \end{figure}
@@ -253,12 +265,10 @@ To examine the differences between the different coherence levels, we used Helme
 
 \newcommand{\ww}{\color{white}{$\enspace$}} \newcommand\T{\rule{0pt}{2.1ex}}
 
-\begin{table}[ht]
-  \caption{Regression model for Experiment 1a. For readability, we divided the exposure values by 1,000.}
-  \label{expt1-regressions} 
-  \begin{center}
-  \footnotesize{
-    \begin{tabular}{l r r r r}
+% \begin{table}[h]
+  % \begin{center}
+  % \footnotesize{
+    \begin{longtable}{l r r r r}
       \hline
       Predictor & $\beta$ & Std Error & $t$ & $p$ \\
       \hline
@@ -292,10 +302,12 @@ To examine the differences between the different coherence levels, we used Helme
       E $\times$ C: 2/3 -- (0/3,1/3) & -0.1421 &  0.128 & -1.10 & 0.268\ww\\
       E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1201 &  0.094 &  1.27 & 0.202\ww \\
       \hline
-    \end{tabular}
-  }
-  \end{center}
-\end{table}
+      \caption{\label{expt1-regressions} Regression model for Experiment 1a. For readability, we divided the exposure values by 1,000.}
+
+    \end{longtable}
+  % }
+  % \end{center}
+% \end{table}
 
 \subsubsection{Task results}
 
@@ -320,10 +332,10 @@ Additionally, the effect of exposures on memory score was significantly higher i
 In Experiment 1a, we found that semantic coherence (1) increased ability to distinguish novel grammatical sentences from sentences violating co-occurrence regularities in the memory task, (2) sharpened sensitivity to category boundaries based on the co-occurrence regularities in the similarity task, and (3) increased inductive bias in associating target words with referents.
 
 However, one possible issue with our experiments is that the context words were not the only known words.
-In particular, we linked these words using the conjuctive predicate ``and''.
-Arguments to ``and'' often belong to the same syntactic and mostly semantic category.
+In particular, we linked these words using the conjuctive predicate ``and.''
+Arguments to ``and'' typically belong to the same syntactic category and may often share semantic category membership as well \cite{benor2006}.
 An English speaker could use knowledge of this regularity to infer probable semantic categories for target words.
-For instance, in the phrase ``dog and dax'', she could infer that daxes belong to a semantic category that is similar to dogs.
+For instance, in the phrase ``dog and dax,'' she could infer that daxes belong to a semantic category that is similar to dogs.
 Indeed, previous studies have shown that people use selectional restrictions of predicates to constrain inferences about semantic properties of novel arguments \citep{altmann1999, kohne2010}.\footnote{We thank an anonymous reviewer for this observation.}
 This raises the question: do our results hinge on the use of the familiar connective ``and''?
 Or would we also observe these results using a nonce connective?
@@ -331,8 +343,7 @@ In Experiment 1b, we investigate this question.
 
 \section{Experiment 1b: Semantic coherence with a nonce connective}
 
-In Experiment 1b, we investigated whether the familiar ``and'' connective drove the effects of coherence that we found in Experiment 1a.
-We modified the materials from the 3/3 coherence condition, replacing ``and'' with a nonce connective, ``tezz''.
+In Experiment 1b, we investigated whether the familiar ``and'' connective drove the effects of coherence that we found in Experiment 1a. We modified the materials from the 3/3 coherence condition, replacing ``and'' with a nonce connective, ``tezz.''
 
 \subsection{Method}
 
@@ -340,7 +351,7 @@ We modified the materials from the 3/3 coherence condition, replacing ``and'' wi
 163 MTurk workers.
 
 \subsection{Materials}
-The materials were identical to the 3/3 condition of Experiment 1a, except we replaced the familiar ``and'' connective with a nonce connective ``tezz''.
+The materials were identical to the 3/3 condition of Experiment 1a, but with ``and'' replaced with ``tezz.''
 
 \subsection{Design and Procedure}
 The design and procedure were identical to that of Experiment 1a.
@@ -349,8 +360,6 @@ The design and procedure were identical to that of Experiment 1a.
 We excluded 15 subjects who did not pass all trials.
 
 \begin{table}[t]
-  \caption{Regression models from Experiment 1b. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
-  \label{fig:expt1b-regression}
   \centering
   \begin{tabular}{l c c c r}
     \hline
@@ -369,6 +378,8 @@ We excluded 15 subjects who did not pass all trials.
     Exposures & 0.94 & 0.35 & 2.65 & <0.01* \\
     \hline
   \end{tabular}
+  \caption{Regression models from Experiment 1b. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
+  \label{fig:expt1b-regression}
 \end{table}
 
 \subsubsection{Descriptive statistics for the memory task}
@@ -396,17 +407,17 @@ It is informative to compare this nonce connective ordering with the orderings f
 
 Similar to Experiment 1a, we performed a regression analyzing score on each task as a function of exposures. Note that in Experiment 1a, we also included coherence as a predictor but we did not include it here as there was only a single coherence level -- 3/3.
 
-Regression results are shown in Table~\ref{fig:expt1b-regression}. Note that in  our model, subtracted 56 from all exposure levels so that the intercept could be interpreted as performance at the lowest exposure level. For all three tasks, the intercept was significant, indicating that participants performed above chance at the lowest exposure level. Additionally, for all three tasks, there was evidence of statistical learning, as the effect of exposure level was significant -- more exposures were associated with higher task scores.
+Regression results are shown in Table~\ref{fig:expt1b-regression}. Note that in our model, we subtracted 56 from all exposure levels so that the intercept could be interpreted as performance at the lowest exposure level. For all three tasks, the intercept was significant, indicating that participants performed above chance at the lowest exposure level. Additionally, for all three tasks, there was evidence of statistical learning, as the effect of exposure level was significant---more exposures were associated with higher task scores.
 
 \subsection{Conclusion}
 
 Our analyses indicate that the results of Experiment 1a were not entirely driven by the presence of the ``and'' connective.
-Even with the nonce connective ``tezz'', we observed the same hallmarks of learning: distinguishing between withheld grammatical sentences and co-occurrence violation sentences and sensitivity to the amount of exposure.
+Even with the nonce connective ``tezz,'' we observed the same hallmarks of learning: distinguishing between withheld grammatical sentences and co-occurrence violation sentences and sensitivity to the amount of exposure.
 It is possible that ``and'' \emph{further} facilitates learning beyond the effects of semantic coherence.
 However, our results here demonstrate that the presence of a known connective is not \emph{necessary} for distributional learning.
 Thus, taken together, Experiments 1a and 1b suggest that semantic coherence facilitates distributional learning. 
 
-Note that the context words that participants heard in Experiment 1a and 1b included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence? Or coherent words that are unfamiliar? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
+The context words that participants heard in Experiment 1a and 1b included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence? Or coherent words that are unfamiliar? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
 
 \section{Experiment 2: Phonological coherence}
 
@@ -494,12 +505,9 @@ Syllable count: & F > W $\approx$ C > P\\
   \end{center}
 \end{figure}
 
-\begin{table}[t]
-  \caption{Regression model for Experiments 2 and 3. For readability, we divided exposure values by 1,000.}
-  \label{expt23-regression}
-  \begin{center} 
-    \scriptsize{
-      \begin{tabular}{l r r r r}
+  % \begin{center} 
+    % \scriptsize{
+      \begin{longtable}{l r r r r}
         \hline
         Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
         \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.01, $F$(9, 756) = 0.89 \T}\\
@@ -538,10 +546,11 @@ Syllable count: & F > W $\approx$ C > P\\
         E $\times$ C: Syllable count -- 0/3 & -0.0351 &  0.420 & -0.08 & 0.933\ww\\
         E $\times$ C: Semantic incoherent -- 0/3 & -0.7207 &  0.409 & -1.76 & 0.078\ww \\
         \hline
-      \end{tabular}
-    }
-  \end{center}
-\end{table}
+  \caption{\label{expt23-regression} Regression model for Experiments 2 and 3. For readability, we divided exposure values by 1,000.}
+      \end{longtable}
+    % }
+  % \end{center}
+% \end{table}
 
 Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1a using a regression model (Table \ref{expt23-regression}).
 
@@ -567,11 +576,9 @@ In Experiment 1a, Ms and Ps were all familiar words obeying a taxonomic organiza
 \subsubsection{Materials}
 In the semantic baseline language, the specific M and P words were drawn randomly for each participant from the pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash}, \emph{card}, \emph{ball}\}. In the referent assignment task, these known words were paired with images of the obvious referents (e.g., \emph{card} with a picture of a card). Compared to the context words in Experiment 1a, these words are fairly well matched in frequency (see \ref{word-freqs}).
 
-\begin{table}
+\begin{table}[t]
   \begin{center}
-  \caption{Context word frequencies from Experiments 1 and 3 sorted by decreasing frequency. Frequencies were retrieved from Google N-grams data for the year 1999.}
-  \label{word-freqs}
-  \footnotesize{
+  % \footnotesize{
     \begin{tabular}{l l l}
       Word &  Frequency (\%) & Experiment\\
       \hline
@@ -588,8 +595,11 @@ In the semantic baseline language, the specific M and P words were drawn randoml
       Leash & 0.00015 & 3\\
       Hamster & 0.000099 & 1\\
       \hline
-    \end{tabular}}
+    \end{tabular}
   \end{center}
+  \caption{Context word frequencies from Experiments 1 and 3 sorted by decreasing frequency. Frequencies were retrieved from Google N-grams data for the year 1999.}
+  \label{word-freqs}
+
 \end{table}
 
 \subsubsection{Design and procedure}
@@ -621,7 +631,8 @@ Baseline scores were not significantly different from 0/3 scores and baseline ef
 Apparently, the baseline input appeared to have provided no benefit compared to the novel words of the 0/3 condition, suggesting that the presence of known words by itself does not aid MNPQ learning.
 
 \section{General Discussion}
-Can people learn about words from co-occurrence statistics? Previous work on distributional learning based on co-occurrence presented a paradox: While computational models suggest that distributional statistics \emph{per se} are a powerful source of information, experiments with humans show consistent failures without additional correlated features. Our experiments suggest a partial resolution. For people, distributional learning is facilitated by semantic coherence: Knowing that Alice associated with X and Y tells us something about Alice only if X and Y are already meaningful and meaningfully related to one another. Removing either the meanings of the individuals or the coherence of the relationship between them (cf. ``word salad'') removes the facilitation. 
+
+Can people learn about words from co-occurrence statistics? Previous work on distributional learning based on co-occurrence presented a paradox: While computational models suggest that distributional statistics \emph{per se} are a powerful source of information, experiments with humans show consistent failures without additional correlated features. Our experiments suggest a partial resolution. For people, distributional learning is facilitated by semantic coherence: Knowing that Alice associated with X and Y tells us something about Alice only if X and Y are already meaningful and meaningfully related to one another. Removing either the meanings of the individuals or the coherence of the relationship between them removes the facilitation. 
 
 What is the mechanism by which semantic coherence facilitates learning? Perhaps learners use semantic coherence to infer the topic of discourse and then tag novel words with these topics. For example, in the highest semantic coherence condition of our experiments, participants may have learned that the topic of discourse is either animal-related or vehicle-related and then tracked co-occurrence between these topics and novel words \citep{frank2013}. Such a proposal is congruent with the ``preferential acquisition'' idea of Hills and colleagues \citeyearpar{hills2009, hills2010}, in which the easiest words to learn are those that connect well with others in the learning environment. 
 
@@ -631,11 +642,12 @@ Our finding that phonological coherence does not facilitate learning may at firs
 
 The limitations of our approach may serve as inspiration for future work. First, we explored a single artificial language, MNPQ, because past research has shown that it is largely resistant to distributional learning. While less is known about other languages, \cite{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. How do variations across language structure interact with factors like semantic and phonological coherence? 
 
-Second, we investigated a single type of semantic coherence, where context words fell into two different taxonomic categories, and a single syntactico-semantic construction that biases interpretation towards concrete nouns (e.g., ``cat and wug''). These choices likely affected the magnitude of the effects we observed. While the simplicity and transparency of our semantic categories likely facilitated learning, our use of concrete noun targets might even have understated the effects of coherence. Distributional learning through semantic coherence might be especially useful for words like verbs and adjectives \citep{redington1998}, where referential grounding provides less information about meaning \citep{gleitman1990}.
+Second, we investigated a single type of semantic coherence, where context words fell into two different taxonomic categories, and a single syntactico-semantic construction that biases interpretation towards concrete nouns (e.g., ``cat and wug''). Although Experiment 1b speaks against the interpretation that the predicate ``and'' was responsible for our results, nevertheless these choices likely affected the magnitude of the effects we observed. While the simplicity and transparency of our semantic categories likely facilitated learning, our use of concrete noun targets might even have understated the effects of coherence. Distributional learning through semantic coherence might be especially useful for words like verbs and adjectives \citep{redington1998}, where referential grounding provides less information about meaning \citep{gleitman1990}.
 
-Finally, while our study addressed one shortcoming of much artificial language research---the lack of semantic grounding---it is still congruent with other artificial language research in scale (6 words in a single exposure session). Small-scale experiments do not allow strong inferences about the importance of different factors in lexical learning \citep{romberg2010, frank2013}. A mixture of computational analyses and larger-scale experiments are necessary to understand the role semantic coherence---and distributional learning more generally---plays in language learning.
+Finally, while our study addressed one shortcoming of much artificial language research---the lack of semantic grounding---it is still congruent with other artificial language research in scale (6 words in a single exposure session). Small-scale experiments do not allow strong inferences about the importance of different factors in lexical learning \citep{romberg2010, frank2013}. Moving forward, we believe that a mixture of computational analyses and larger-scale experiments are necessary to understand the roles that semantic coherence and distributional learning play in language learning.
 
-\subsection{Conclusion}
+\subsection{Conclusions}
+
 Since Firth's edict that we shall know a word ``by the company it keeps,'' two lines of research have yielded apparently conflicting results. Although computational models suggest that distributional information is a powerful information source, artificial language learning experiments have suggested a more dubious outlook. Our results here may help to close this gap between the experimental and the computational. On the basis of our findings, we suggest a small modification to Firth's maxim: You shall know a word \emph{if you know} the company it keeps.
 
 \newpage
