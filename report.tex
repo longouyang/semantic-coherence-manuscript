@@ -16,7 +16,7 @@
 
 \newcommand{\tcite}[1]{$\langle${\footnotesize \texttt{#1}}$\rangle$}
 
-\newcommand{\cas}[1]{ \textsf{\color{red} \small #1} }
+\newcommand{\cas}[1]{ {\color{blue}  #1} }
 
 \graphicspath{{images/}}
 
@@ -24,7 +24,7 @@
 % \shorttitle{}
 \title{Semantic coherence facilitates distributional learning}
 \author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
-\affiliation{Department of Psychology, Stanford University\vskip 5em Word count: 7,980}
+\affiliation{Department of Psychology, Stanford University\vskip 5em Word count: 8,298}
 
 \authornote{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. Address correspondence to:\\
 Long Ouyang~\\
@@ -54,12 +54,12 @@ How do people learn language? Learners use many information sources, including p
 
 As an example of distributional learning, one might infer that ``postman'' and ``mailman'' have similar meanings or are similar parts of speech based solely on the fact that they both tend to occur with words like ``deliver'', ``package'', and ``truck'' in comparable configurations and frequencies. To give an intuition in a different domain, we might judge whether two people are similar based on their patterns of association with other people. If we know that Alice associates with professors and college sophomores and that Bob associates with accountants and lawyers, we might judge that they are dissimilar. For words, this kind of learning is driven not by \emph{direct} co-occurrence between two words of interest but rather by the similarity in their linguistic contexts---their patterns of co-occurrence with \emph{other} words. As \citet{firth1957} noted, you can learn a lot about a word ``by the company it keeps'' (p.11). We will refer to learning from such evidence as \emph{distributional learning}.
 
-Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}. Our study addresses this mismatch by attempting to isolate conditions under which people succeed in distributional learning. 
+Distributional learning is a general mechanism thought to be important throughout language learning, including acquisition of word meaning \citep{landauer1997} and grammatical category \citep{redington1998}. Nevertheless, a number of experiments, conducted mainly on acquisition of grammatical category, suggest that human learners' capacities are limited in this regard \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, frank2011}. Our study addresses this mismatch by attempting to isolate conditions under which people succeed in distributional learning.
 
-We focus here on the effects of existing linguistic knowledge on distributional learning. Prior experiments typically exposed learners to artificial languages composed of entirely novel words. Our experiments suggest that \emph{semantic coherence}, the presence of known words adhering to some semantic organization, facilitates distributional learning. Put another way, a small semantic hook allows people to better leverage distributional information for learning. Phrased in terms of the Alice--Bob example, we stand a better chance of learning about Alice from her associates if those associates play roles that are already meaningful to us. Knowing that Alice associates with professors and college sophomores gives us a clearer picture of her than, say, knowing that she associates with taphonomists and bryologists.\footnote{Though, we can infer much more about Alice if we know that taphonomy is the study of decay and fossilization and that bryology is the study of certain plants called bryophytes, which include mosses, hornworts, and liverworts.} Learning a word from its company is easier if this company is already familiar. 
+We focus here on the effects of existing linguistic knowledge on distributional learning. Prior experiments typically exposed learners to artificial languages composed of entirely novel words. Our experiments, which we view as part of  of a recent trend to address mismatches between artificial language learning studies and natural language, suggest that \emph{semantic coherence}, the presence of known words adhering to some semantic organization, facilitates distributional learning. Put another way, a small semantic hook allows people to better leverage distributional information for learning. Phrased in terms of the Alice--Bob example, we stand a better chance of learning about Alice from her associates if those associates play roles that are already meaningful to us. Knowing that Alice associates with professors and college sophomores gives us a clearer picture of her than, say, knowing that she associates with taphonomists and bryologists.\footnote{Though, we can infer much more about Alice if we know that taphonomy is the study of decay and fossilization and that bryology is the study of certain plants called bryophytes, which include mosses, hornworts, and liverworts.} Learning a word from its company is easier if this company is already familiar.
 
 We begin by briefly reviewing some of the computational evidence for distributional learning. We then introduce the specific language structure, MNPQ, that we explore in this paper. Next, we discuss research that uses the MNPQ structure to study distributional learning of grammatical categories. In Experiments 1a and 1b, we present evidence that semantic coherence can facilitate distributional learning and that learners make use of acquired distributional information when performing an online referent assignment task. In Experiments 2 and 3, we further explore this effect by isolating two components of semantic coherence---familiarity of words and presence of an overarching semantic organization---and find that neither alone facilitates learning. We conclude by discussing the limitations of purely artificial language learning, possibilities for future empirical and computational work, and potential mechanisms for the effects we observe.
- 
+
 \subsection{Computational evidence for distributional learning}
 
 Initial proposals about distributional learning came from philosophical and linguistic research on the nature of meaning. In the philosophical literature, \citet{wittgenstein1953} objected to the idea that words have precise, formal definitions and argued that meaning derives from patterns of usage. To illustrate, he considered the word ``game''---a term used to describe activies as varied as chess, poker, basketball, the Olympics and so forth---and observed that these activities lack a shared essence that we could distill to a definition. To use a spatial metaphor, the set of things called games does not appear to be a contiguous region that we could draw a boundary for, but rather a ``complicated network of similarities overlapping and crisscrossing'' (\S 66). Wittgenstein argued that understanding meaning requires describing usage.
@@ -94,9 +94,25 @@ The success of this early computational work led to a proliferation of models th
 
 The MNPQ language contains four categories of words, M (which includes $m_1$, $m_2$, and $m_3$), N ($n_1$, $n_2$, $n_3$), P ($p_1$, $p_2$, $p_3$), and Q ($q_1$, $q_2$, $q_3$). Participants hear two types of training sentences\footnote{ We use the term ``sentence'' following its meaning in formal language theory, where it refers to a sequence of symbols derived from a formal gramar. The sentences we examine in our work are clearly impoverished relative to real sentences found in natural languages.}: MN and PQ. Thus, sentences like $m_1 n_3$ are grammatical while sentences like $m_1 q_3$ are illegal. Early investigations \citep{braine1966, smith1966} found that participants tend to endorse novel grammatical sentences as familiar. However, participants also endorse ungrammatical MQ and PN sentences, suggesting that they learn position regularities (that M/P come first and N/Q come second) but not co-occurrence regularities (that M co-occurs with N but not Q and that P occurs with Q but not N). This failure to learn categories on the basis of pure co-occurrence has been reliably observed in a number of studies \citep{braine1987, brooks1993, frigo1998, kempe2001, gerken2005, lany2010, frank2011}. However, \citet[Experiment 5]{reeder2009} report successful learning of a related language, (Q)AXB(R). In this language, there are optional Q and R categories that serve to deconfound co-occurrence regularities from positional regularities (i.e., in MNPQ, Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final). Thus, this work by \citeauthor{reeder2009} suggests that positional regularities may override co-occurrence regularities in the MNPQ language. Nevertheless, the MNPQ failures are puzzling, given that computational models suggest that distributional learning is a powerful mechanism.
 
-MNPQ learning is possible, however, when co-occurrence information is partially or completely correlated with another cue. For example, \citet{braine1987} found successful MNPQ learning when co-occurrence information is partially correlated with natural gender. In this experiment, participants acquired an artificial language by learning to name pictures of referents. In the experimental condition, all pictures of men were labeled by Ms and all pictures of women were labeled by Ps (though not all Ms referred to men and not all Ps referred to women). Learning of the co-occurrence regularities was significantly higher in the experimental condition than in a control condition where natural gender was not correlated with M/P membership. Though Braine's experiment combined co-occurrence cues with natural gender, he suggested that phonological cues might better serve real-world language learners. For instance, Spanish and Italian speakers might learn grammatical gender categories by taking advantage of the fact that feminine nouns often end with \emph{-a}, while masculine nouns often end with \emph{-o}. More generally, demonstrations that co-occurrence information can be useful in concert with other information sources have encouraged researchers to study how disparate sources might be integrated to facilitate learning (e.g., \citealp{monaghan2005, johns2012}).
+\cas{It is worth articulating the logic of these studies.
+These studies ask whether people can learn by presenting them with quite impoverished languages where only co-occurrence information is available.
+The artificial input contrasts starkly with real input.
+To name just a few differences, real linguistic input (1) is absorbed over many years, (2) comes, at least during development, from knowledgeable and helpful human beings who are physically copresent, (3) exhibits non-uniform distributions, (4) has complex syntactic structure, (5) contains useful morphological structure, (6) refers to actual referents, and (7) contains already-known words.
+The failure to find learning from artificial input lacking these (and other) features is therefore to be taken with a grain of salt.
+Modulo issues of timescale and social interaction, these studies provide evidence against the quite strong hypothesis that people can learn from \emph{purely} distributional information.
+But they do not adjudicate against weaker hypothesis classes, such as the suggestion that other information sources must be present that synergize with distributional information.
+Indeed, studies that pursue this general notion have found evidence that including multiple features of natural language in artificial language can lead to synergistic effects on learning.
+For instance, in work on segmentation, \tcite{kurumada13} found that presenting participants with Zipf-distributed input facilitated segmentation and \tcite{hay11} found that presenting participants with natural language (Italian) containing peaked transitional probabilities facilitated subsequent word learning, bolstering previous findings that had used artificial languages.
+In what follows, we outline some research on MNPQ learning that has adopted the strategy of ``naturalizing'' artificial language by introducing correlated information sources.
+We emphasize, however, that introducing some naturalistic features into artificial stimuli do not magically transform them into natural language.
+These ``semi-artificial'' languages are therefore subject to the same issues of logical interpretation that plague artificial languages, albeit to a lesser degree.}
 
-Nearly all of this empirical work has interpreted the results of human experiments with reference to learning grammatical category. To our knowledge, only one study has examined word meaning. Recently, \citet{lany2010} investigated Braine's proposal of correlating co-occurrence and phonological cues in a study of meaning acquisition. They found that 22-month old infants successfully learned an MNPQ language when co-occurrence was aligned with the number of syllables in a word (in particular, when N words were disyllabic and Q words were monosyllabic) but \emph{not} when the number of syllables was not predictive of N/Q membership. This suggests that distributional information may play a common role in acquisition of grammatical category and word meaning, at least for the MNPQ language. 
+Studies suggest that when co-occurrence information is partially or completely correlated with another cue, MNPQ learning may be psosible. For example, \citet{braine1987} found successful MNPQ learning when co-occurrence information is partially correlated with natural gender. In this experiment, participants acquired an artificial language by learning to name pictures of referents. In the experimental condition, all pictures of men were labeled by Ms and all pictures of women were labeled by Ps (though not all Ms referred to men and not all Ps referred to women). Learning of the co-occurrence regularities was significantly higher in the experimental condition than in a control condition where natural gender was not correlated with M/P membership. Though Braine's experiment combined co-occurrence cues with natural gender, he suggested that phonological cues might better serve real-world language learners. For instance, Spanish and Italian speakers might learn grammatical gender categories by taking advantage of the fact that feminine nouns often end with \emph{-a}, while masculine nouns often end with \emph{-o}. More generally, demonstrations that co-occurrence information can be useful in concert with other information sources have encouraged researchers to study how disparate sources might be integrated to facilitate learning (e.g., \citealp{monaghan2005, johns2012}).
+
+Nearly all of this empirical work has interpreted the results of human experiments with reference to learning grammatical category. To our knowledge, only one study has examined word meaning. Recently, \citet{lany2010} investigated Braine's proposal of correlating co-occurrence and phonological cues in a study of meaning acquisition. They found that 22-month old infants successfully learned an MNPQ language when co-occurrence was aligned with the number of syllables in a word (in particular, when N words were disyllabic and Q words were monosyllabic) but \emph{not} when the number of syllables was not predictive of N/Q membership. This suggests that distributional information may play a common role in acquisition of grammatical category and word meaning, at least for the MNPQ language.
+
+
+
 
 \subsection{The current study}
 
@@ -109,14 +125,14 @@ To explore this possibility, we presented participants with an MNPQ language whe
 \item dog and ziv
 \item car and wug
 \item car and pif
-\end{enumerate} 
+\end{enumerate}
 
 \noindent might allow learners to infer that daxes and zivs are similar, as both words co-occur with ``dog,'' and that wugs and pifs are similar, as both words co-occur with ``car.''
 
 In Experiments 1a and 1b, we tested whether semantic coherence facilitated distributional learning and whether learners might use distributional information to make inferences about word meaning. In Experiment 2, we compared semantic coherence to phonological coherence. In Experiment 3, we compared semantic coherence to a semantic baseline that used known words that did not adhere to any obvious semantic organization.
 
-Our coherence manipulation takes our experiments out of the realm of purely artificial languages, but it also seems unlikely that participants view our stimuli as an extension of their natural language. Rather, we expect that they reason about our materials using the same mix of implicit and explicit processes that are typically described in complex, artificial language tasks that include explicit semantic content \citep{braine1987}. Artificial (or partially artificial) languages suitable for use in experiments simply cannot parallel the richness of natural language; the processes that participants employ likely differ from those involved in natural language learning. Nevertheless, we believe there is value to investigating the relative ease or difficulty of learning from different kinds of information sources in model systems of this type.  
-% We return to the issue of the generalizability in the General Discussion. 
+Our coherence manipulation takes our experiments out of the realm of purely artificial languages, but it also seems unlikely that participants view our stimuli as an extension of their natural language. Rather, we expect that they reason about our materials using the same mix of implicit and explicit processes that are typically described in complex, artificial language tasks that include explicit semantic content \citep{braine1987}. Artificial (or partially artificial) languages suitable for use in experiments simply cannot parallel the richness of natural language; the processes that participants employ likely differ from those involved in natural language learning. Nevertheless, we believe there is value to investigating the relative ease or difficulty of learning from different kinds of information sources in model systems of this type.
+% We return to the issue of the generalizability in the General Discussion.
 
 
 \section{Experiment 1a: Semantic Coherence}
@@ -150,9 +166,9 @@ To create the audio files, we input the sentences as ``X. and. Y.'' (e.g., ``car
         \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$ $q_3$ \\
         $p_2$ $q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\
         $p_3$ $q_1$ & $p_3$ $q_2$ & $p_3$ $q_3$ \\
-      \end{tabular} 
+      \end{tabular}
 
-      & 
+      &
 
       \vspace{0pt}
       \begin{tabular}{l l}
@@ -222,7 +238,7 @@ We excluded the 72 participants who did not correctly answer all of the catch tr
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[width=1.0\linewidth]{x1-descriptive-memory} 
+    \includegraphics[width=1.0\linewidth]{x1-descriptive-memory}
     \caption{Mean familiarity ratings for different sentence types in Experiment 1a and 1b. The far right panel shows results from Experiment 1b.}
     \label{x1-descriptive-mem}
   \end{center}
@@ -401,7 +417,7 @@ It is informative to compare this nonce connective ordering with the orderings f
 
 \vskip 1em
 
-\noindent In 2/3, familiar sentences were rated as more familiar than withheld grammatical sentences, whereas the opposite was true in 3/3. Our nonce connective 3/3 condition appears to be in between these two cases; the difference in ratings between familiar and withheld sentences was not statistically significant. 
+\noindent In 2/3, familiar sentences were rated as more familiar than withheld grammatical sentences, whereas the opposite was true in 3/3. Our nonce connective 3/3 condition appears to be in between these two cases; the difference in ratings between familiar and withheld sentences was not statistically significant.
 
 \subsubsection{Task results}
 
@@ -415,7 +431,7 @@ Our analyses indicate that the results of Experiment 1a were not entirely driven
 Even with the nonce connective ``tezz,'' we observed the same hallmarks of learning: distinguishing between withheld grammatical sentences and co-occurrence violation sentences and sensitivity to the amount of exposure.
 It is possible that ``and'' \emph{further} facilitates learning beyond the effects of semantic coherence.
 However, our results here demonstrate that the presence of a known connective is not \emph{necessary} for distributional learning.
-Thus, taken together, Experiments 1a and 1b suggest that semantic coherence facilitates distributional learning. 
+Thus, taken together, Experiments 1a and 1b suggest that semantic coherence facilitates distributional learning.
 
 The context words that participants heard in Experiment 1a and 1b included words with familiar meanings that were organized into coherent categories. Would it be enough to merely have familiar words without coherence? Or coherent words that are unfamiliar? How does the effect of semantic coherence depend on each? In Experiment 2 we test for the effect of familiar meaning and in Experiment 3, we test for the effect of coherence. In Experiment 2, we remove familiar meaning by exposing learners to languages with phonological, as opposed to semantic, coherence. In Experiment 3, we remove coherence by exposing learners to languages with context words that are familiar but do not adhere to any obvious semantic organization.
 
@@ -426,7 +442,7 @@ In Experiment 2, we investigated whether learners could learn the language used 
 We tested three types of coherence: onset, rime, and syllable count. We selected these kinds of coherence because work in other areas suggests that these kinds of coherence may reliably occur in natural language or facilitate distributional learning when applied to \emph{target} words. Onset coherence might facilitate learning due to sound symbolism (e.g., words that start with \emph{gl} have similar meanings: glimmer, glow, gleam). Rime coherence can occur in languages that require gender-marking agreement between nouns and verbs. Finally, syllable count coherence has been shown to facilitate learning when applied to target words \citep{lany2010}. Thus, we investigated it to determine whether it also facilitates learning when applied to context words.
 
 \subsection{Method}
-\subsubsection{Participants} 
+\subsubsection{Participants}
 530 MTurk workers.
 
 \subsubsection{Materials}
@@ -477,8 +493,8 @@ Syllable count: & F > W $\approx$ C > P\\
 % 95 percent confidence interval:
 % -0.08280317  0.01114955
 % sample estimates:
-% mean of x  mean of y 
-% 0.03311258 0.06893939 
+% mean of x  mean of y
+% 0.03311258 0.06893939
 
 
 % Two Sample t-test
@@ -489,7 +505,7 @@ Syllable count: & F > W $\approx$ C > P\\
 % 95 percent confidence interval:
 % -0.3037356 -0.1749739
 % sample estimates:
-% mean of x  mean of y 
+% mean of x  mean of y
 % 0.03311258 0.27246732
 
 
@@ -505,7 +521,7 @@ Syllable count: & F > W $\approx$ C > P\\
   \end{center}
 \end{figure}
 
-  % \begin{center} 
+  % \begin{center}
     % \scriptsize{
       \begin{longtable}{l r r r r}
         \hline
@@ -554,7 +570,7 @@ Syllable count: & F > W $\approx$ C > P\\
 
 Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1a using a regression model (Table \ref{expt23-regression}).
 
-\paragraph{Memory} 
+\paragraph{Memory}
 There was no effect of exposure or condition---none of the phonological condition scores were significantly different from 0/3 scores. None of the exposure by condition interaction terms were significant.
 
 \paragraph{Similarity}
@@ -632,15 +648,15 @@ Apparently, the baseline input appeared to have provided no benefit compared to 
 
 \section{General Discussion}
 
-Can people learn about words from co-occurrence statistics? Previous work on distributional learning based on co-occurrence presented a paradox: While computational models suggest that distributional statistics \emph{per se} are a powerful source of information, experiments with humans show consistent failures without additional correlated features. Our experiments suggest a partial resolution. For people, distributional learning is facilitated by semantic coherence: Knowing that Alice associated with X and Y tells us something about Alice only if X and Y are already meaningful and meaningfully related to one another. Removing either the meanings of the individuals or the coherence of the relationship between them removes the facilitation. 
+Can people learn about words from co-occurrence statistics? Previous work on distributional learning based on co-occurrence presented a paradox: While computational models suggest that distributional statistics \emph{per se} are a powerful source of information, experiments with humans show consistent failures without additional correlated features. Our experiments suggest a partial resolution. For people, distributional learning is facilitated by semantic coherence: Knowing that Alice associated with X and Y tells us something about Alice only if X and Y are already meaningful and meaningfully related to one another. Removing either the meanings of the individuals or the coherence of the relationship between them removes the facilitation.
 
-What is the mechanism by which semantic coherence facilitates learning? Perhaps learners use semantic coherence to infer the topic of discourse and then tag novel words with these topics. For example, in the highest semantic coherence condition of our experiments, participants may have learned that the topic of discourse is either animal-related or vehicle-related and then tracked co-occurrence between these topics and novel words \citep{frank2013}. Such a proposal is congruent with the ``preferential acquisition'' idea of Hills and colleagues \citeyearpar{hills2009, hills2010}, in which the easiest words to learn are those that connect well with others in the learning environment. 
+What is the mechanism by which semantic coherence facilitates learning? Perhaps learners use semantic coherence to infer the topic of discourse and then tag novel words with these topics. For example, in the highest semantic coherence condition of our experiments, participants may have learned that the topic of discourse is either animal-related or vehicle-related and then tracked co-occurrence between these topics and novel words \citep{frank2013}. Such a proposal is congruent with the ``preferential acquisition'' idea of Hills and colleagues \citeyearpar{hills2009, hills2010}, in which the easiest words to learn are those that connect well with others in the learning environment.
 
 Our finding that phonological coherence does not facilitate learning may at first appear at odds with experiments that have reached the opposite conclusion \citep{frigo1998, lany2010, monaghan2005}. But previous work has applied phonological regularities to the target words (the words that experimenters measure learning for).  In contrast, in order to permit comparison with the semantic coherence conditions, we applied the regularities to the context words (the words that co-occurred with the target words). In other words, previous experiments used target coherence, while we used context coherence. In our experiment, the target categories themselves did not have phonological regularity but they reliably co-occurred with context categories that did. We speculate that this subtle but substantial difference explains the different patterns we observed.
 
 \subsection{Limitations and Future Directions}
 
-The limitations of our approach may serve as inspiration for future work. First, we explored a single artificial language, MNPQ, because past research has shown that it is largely resistant to distributional learning. While less is known about other languages, \cite{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. How do variations across language structure interact with factors like semantic and phonological coherence? 
+The limitations of our approach may serve as inspiration for future work. First, we explored a single artificial language, MNPQ, because past research has shown that it is largely resistant to distributional learning. While less is known about other languages, \cite{reeder2009} found successful distributional learning for the (Q)AXB(R) language, which fixes a positional confound in MNPQ (Ms and Ps are always sentence-initial and Ns and Qs are always sentence-final), suggesting that learning is sensitive to the language structure. How do variations across language structure interact with factors like semantic and phonological coherence?
 
 Second, we investigated a single type of semantic coherence, where context words fell into two different taxonomic categories, and a single syntactico-semantic construction that biases interpretation towards concrete nouns (e.g., ``cat and wug''). Although Experiment 1b speaks against the interpretation that the predicate ``and'' was responsible for our results, nevertheless these choices likely affected the magnitude of the effects we observed. While the simplicity and transparency of our semantic categories likely facilitated learning, our use of concrete noun targets might even have understated the effects of coherence. Distributional learning through semantic coherence might be especially useful for words like verbs and adjectives \citep{redington1998}, where referential grounding provides less information about meaning \citep{gleitman1990}.
 
@@ -675,26 +691,26 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
     \begin{tabular}{ c c}
 
       \textbf{0/3 coherence}: df = 150 & \textbf{1/3 coherence}: df = 153\\
-      
+
       {
         % -------------- none --------------
-        % df = 150 
+        % df = 150
 
-        % Pairwise comparisons using paired t tests 
+        % Pairwise comparisons using paired t tests
 
-        % data:  e$mem.score and e$type 
+        % data:  e$mem.score and e$type
 
-        % familiar withheld cross  
-        % withheld 0.01266  -        -      
-        % cross    0.06278  0.48454  -      
+        % familiar withheld cross
+        % withheld 0.01266  -        -
+        % cross    0.06278  0.48454  -
         % position 0.00029  0.21723  0.08529
 
-        % P value adjustment method: holm 
+        % P value adjustment method: holm
       \small
 
       \begin{tabular}{| l | l |  l | l |}
         \hline
-        & F              & W           & C \\ 
+        & F              & W           & C \\
         \hline
         W & $p$ = 0.01*  &             &\\
         \hline
@@ -703,25 +719,25 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
         P & $p$ < 0.001* &  $p$ = 0.21 &  $p$ = 0.08 \\
         \hline
       \end{tabular}
-      } & 
+      } &
 
           {
             % -------------- sem1 --------------
-            % df = 153 
+            % df = 153
 
-            % Pairwise comparisons using paired t tests 
+            % Pairwise comparisons using paired t tests
 
-            % data:  e$mem.score and e$type 
+            % data:  e$mem.score and e$type
 
             % familiar withheld cross
-            % withheld 7.4e-08  -        -    
-            % cross    3.8e-06  0.525    -    
+            % withheld 7.4e-08  -        -
+            % cross    3.8e-06  0.525    -
             % position 2.1e-12  0.085    0.018
 
           \small
           \begin{tabular}{| l | l |  l | l |}
             \hline
-            & F               & W           & C \\ 
+            & F               & W           & C \\
             \hline
             W &  $p$ < 0.001* &             &\\
             \hline
@@ -737,24 +753,24 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       {
 
         % -------------- sem2 --------------
-        % df = 164 
+        % df = 164
 
-        % Pairwise comparisons using paired t tests 
+        % Pairwise comparisons using paired t tests
 
-        % data:  e$mem.score and e$type 
+        % data:  e$mem.score and e$type
 
-        % familiar withheld cross  
-        % withheld 1.2e-05  -        -      
-        % cross    4.0e-14  0.00056  -      
+        % familiar withheld cross
+        % withheld 1.2e-05  -        -
+        % cross    4.0e-14  0.00056  -
         % position < 2e-16  3.5e-11  0.00056
 
-        % P value adjustment method: holm 
+        % P value adjustment method: holm
 
 
       \small
       \begin{tabular}{| l | l |  l | l |}
         \hline
-        & F                           & W                         & C \\ 
+        & F                           & W                         & C \\
         \hline
         W &  $p$ < 0.001*  &                           &\\
         \hline
@@ -763,28 +779,28 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
         P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
         \hline
       \end{tabular}
-      } & 
+      } &
 
           {
 
             % -------------- sem3 --------------
-            % df = 152 
+            % df = 152
 
-            % Pairwise comparisons using paired t tests 
+            % Pairwise comparisons using paired t tests
 
-            % data:  e$mem.score and e$type 
+            % data:  e$mem.score and e$type
 
-            % familiar withheld cross  
-            % withheld 0.00016  -        -      
-            % cross    4.4e-16  4.4e-16  -      
+            % familiar withheld cross
+            % withheld 0.00016  -        -
+            % cross    4.4e-16  4.4e-16  -
             % position < 2e-16  < 2e-16  4.4e-16
 
-            % P value adjustment method: holm 
+            % P value adjustment method: holm
 
           \small
           \begin{tabular}{| l | l |  l | l |}
             \hline
-            & F                            & W                         & C \\ 
+            & F                            & W                         & C \\
             \hline
             W &  $p$ < 0.001*  &                           &\\
             \hline
@@ -797,23 +813,23 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       \textbf{Nonce 3/3 coherence}: df = 150 & \\
       {
         % -------------- nc-sem3 --------------
-        % df = 150 
+        % df = 150
 
-        % Pairwise comparisons using paired t tests 
+        % Pairwise comparisons using paired t tests
 
-        % data:  e$mem.score and e$type 
+        % data:  e$mem.score and e$type
 
-        % familiar withheld cross  
-        % withheld 0.53     -        -      
-        % cross    < 2e-16  5.4e-14  -      
+        % familiar withheld cross
+        % withheld 0.53     -        -
+        % cross    < 2e-16  5.4e-14  -
         % position < 2e-16  < 2e-16  < 2e-16
 
-        % P value adjustment method: holm 
+        % P value adjustment method: holm
 
       \small
       \begin{tabular}{| l | l |  l | l |}
         \hline
-        & F                            & W                         & C \\ 
+        & F                            & W                         & C \\
         \hline
         W &  $p$ < 0.53  &                           &\\
         \hline
@@ -837,22 +853,22 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       \textbf{Onset}: df = 150 & \textbf{Rime}: df = 187\\
 
       % -------------- onset --------------
-      % Pairwise comparisons using paired t tests 
+      % Pairwise comparisons using paired t tests
 
-      % data:  e$mem.score and e$type 
+      % data:  e$mem.score and e$type
 
       % familiar withheld cross
-      % withheld 0.04833  -        -    
-      % cross    0.00012  0.04833  -    
+      % withheld 0.04833  -        -
+      % cross    0.00012  0.04833  -
       % position < 2e-16  < 2e-16  6e-15
 
-      % P value adjustment method: holm 
+      % P value adjustment method: holm
       {
       \small
 
       \begin{tabular}{| l | l |  l | l |}
         \hline
-        & F              & W           & C \\ 
+        & F              & W           & C \\
         \hline
         W & $p$ = 0.04*  &             &\\
         \hline
@@ -861,24 +877,24 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
         P & $p$ < 0.001* &  $p$ < 0.001* &  $p$ < 0.001* \\
         \hline
       \end{tabular}
-      } & 
+      } &
 
       % -------------- rime --------------
-      % Pairwise comparisons using paired t tests 
+      % Pairwise comparisons using paired t tests
 
-      % data:  e$mem.score and e$type 
+      % data:  e$mem.score and e$type
 
-      % familiar withheld cross 
-      % withheld 0.0969   -        -     
-      % cross    0.0021   0.1526   -     
+      % familiar withheld cross
+      % withheld 0.0969   -        -
+      % cross    0.0021   0.1526   -
       % position <2e-16   <2e-16   <2e-16
 
-      % P value adjustment method: holm 
+      % P value adjustment method: holm
           {
           \small
           \begin{tabular}{| l | l |  l | l |}
             \hline
-            & F               & W           & C \\ 
+            & F               & W           & C \\
             \hline
             W &  $p$ = 0.09 &             &\\
             \hline
@@ -892,21 +908,21 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
       \textbf{Syllable count}: df = 148 & \textbf{Semantic baseline}: df = 143 \\
 
       % -------------- syll.count --------------
-      % Pairwise comparisons using paired t tests 
+      % Pairwise comparisons using paired t tests
 
-      % data:  e$mem.score and e$type 
+      % data:  e$mem.score and e$type
 
-      % familiar withheld cross  
-      % withheld 0.00623  -        -      
-      % cross    0.00011  0.30439  -      
+      % familiar withheld cross
+      % withheld 0.00623  -        -
+      % cross    0.00011  0.30439  -
       % position 4.5e-08  0.00152  0.01645
 
-      % P value adjustment method: holm 
+      % P value adjustment method: holm
       {
       \small
       \begin{tabular}{| l | l |  l | l |}
         \hline
-        & F                           & W                         & C \\ 
+        & F                           & W                         & C \\
         \hline
         W &  $p$ < 0.006*  &                           &\\
         \hline
@@ -915,24 +931,24 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
         P &  $p$ < 0.001* &  $p$ = 0.001*  &  $p$ = 0.01*\\
         \hline
       \end{tabular}
-      } & 
+      } &
 
       % -------------- baseline --------------
-      % Pairwise comparisons using paired t tests 
+      % Pairwise comparisons using paired t tests
 
-      % data:  e$mem.score and e$type 
+      % data:  e$mem.score and e$type
 
-      % familiar withheld cross  
-      % withheld 6.8e-05  -        -      
-      % cross    6.8e-05  0.83     -      
+      % familiar withheld cross
+      % withheld 6.8e-05  -        -
+      % cross    6.8e-05  0.83     -
       % position < 2e-16  < 2e-16  < 2e-16
 
-      % P value adjustment method: holm 
+      % P value adjustment method: holm
           {
           \small
           \begin{tabular}{| l | l |  l | l |}
             \hline
-            & F                            & W                         & C \\ 
+            & F                            & W                         & C \\
             \hline
             W &  $p$ < 0.001*  &                           &\\
             \hline
@@ -941,7 +957,7 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
             P &  $p$ < 0.001* &  $p$ < 0.001*  &  $p$ < 0.001*\\
             \hline
           \end{tabular}
-      } 
+      }
 
     \end{tabular}
     \caption{$p$ values for paired-sample t-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentences in Experiments 2, and 3. $p$ values have been adjusted for multiple comparisons using the Holm procedure.}
