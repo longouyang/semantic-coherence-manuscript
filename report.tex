@@ -14,9 +14,17 @@
 \usepackage{array}
 \usepackage{verbatim}
 
-\newcommand{\tcite}[1]{$\langle${\footnotesize \texttt{#1}}$\rangle$}
+% make third level header (subsubsection) stand alone
+% HT https://github.com/mpgirro/LNCS-markdown/commit/9268f20790f87a146d3a7cf2b0788b292cc82acb
+% HT googling for "newline after subsubsection"
+% (i had tried titlesec but it didn't work -- got an error message about subparagarph on line 1277 and then copying over titlesec.sty and commenting that line out worked but had a weird style where a newline and period followed certain headers)
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                       {-18\p@ \@plus -4\p@ \@minus -4\p@}%
+                       {4\p@ \@plus 2\p@ \@minus 2\p@}%
+                       {\normalfont\normalsize\bfseries\boldmath
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 
-\newcommand{\cas}[1]{ {\color{blue}  #1} }
 
 \graphicspath{{images/}}
 
@@ -44,6 +52,12 @@ In three experiments, we show that (1) the presence of familiar semantic referen
 
 \begin{document}
 \maketitle
+
+% enumerate headings
+% HT http://tex.stackexchange.com/a/269275/41154
+\setcounter{secnumdepth}{3}
+
+\section{Introduction}
 
 \begin{quote}
 ``\emph{You shall know a word by the company it keeps.}'' Firth (1957, p.11)
@@ -669,6 +683,8 @@ Finally, while our study addressed one shortcoming of much artificial language r
 \subsection{Conclusions}
 
 Since Firth's edict that we shall know a word ``by the company it keeps,'' two lines of research have yielded apparently conflicting results. Although computational models suggest that distributional information is a powerful information source, artificial language learning experiments have suggested a more dubious outlook. Our results here may help to close this gap between the experimental and the computational. On the basis of our findings, we suggest a small modification to Firth's maxim: You shall know a word \emph{if you know} the company it keeps.
+
+\setcounter{secnumdepth}{0}
 
 \newpage
 \bibliographystyle{apacite}
