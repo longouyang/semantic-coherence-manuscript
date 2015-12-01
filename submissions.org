@@ -1,0 +1,272 @@
+* JEP:General
+** 2013/12/29: submitted through their submission portal
+
+** 2014/01/01: rejected without external review by Associate Editor Melody Wiseheart.
+
+They didn't find the paper of broad enough interest.
+
+* JEP:LMC
+** 2014/01/09: submitted by email to to editorial coordinator Andrew Cantine.
+
+** 2014/01/10: received formatting advice from coordinator
+
+Was advised by Andrew to move all tables, figures, and appendices from the PDF and upload them separately via the file uploader at the submission portal.
+
+list of suggested reviewers:
+
+Richard Aslin
+University of Rochester
+aslin@cvs.rochester.edu
+Expert in statistical learning
+
+Jill Lany
+University of Notre Dame
+jlany@nd.edu
+Expert in statistical learning and language acquisition
+
+Patricia Reeder
+University of Rochester
+preeder@bcs.rochester.edu
+Expert in statistical learning
+
+Jennifer Saffran
+University of Wisconsin-Madison
+jsaffran@facstaff.wisc.edu
+Expert in statistical learning and language acquisition
+
+To make a clean page for each figure and table, I made the running head empty (i.e., `\shorttitle{}` in the preamble), got rid of page numbers (i.e., `\pagenumbering{gobble}` in preamble; HT http://tex.stackexchange.com/questions/54333/no-page-numbering) and then extracted the individual pages using Preview.app
+
+Submitted through online portal.
+
+** 2014/02/14ish: rejected
+
+feedback:
+
+#+BEGIN_EXAMPLE
+Dear Mr Ouyang,
+
+I have now received reviews from three experts in the area; you will find their reviews at the end of this letter. The reviewers find the paper generally well-written, and that it investigates a theoretically interesting issue - how distributional statistics can be used to facilitate meaning learning. However, none of the reviewers recommended publication of the paper in its present form. All reviewers note a lack of clarity in how the data were analyzed and express concerns with framing/interpretation of the data, and that your conclusion is not warranted by the design of the experiment. (I will elaborate on these points below.) Given these criticisms, I am sorry to say that I am rejecting this paper for publication in JEP:LMC, and I am not inviting revision and resubmission.
+
+Your stated question is "Can you learn about the meaning of a word from its co-occurrence with other words?". Your answer is positive, and the novel contribution of your study is in identifying the boundary condition, namely, that there must be known words present during the learning and that these words adhere to some semantic organization (based on the comparison between Experiment 1 and 3). Reviewer 2 however questions your use of the MNPQ categorization task to investigate this issue, arguing that the task doesn't tell us anything about meaning, as there is not anything in the learning phase that says the category will be based on meaning. Reviewer 1 raises a similar concern (see under "Methods"). Reviewer 1 and 3 also question your claim that your use of familiar words with known meanings is more ecologically valid and similar to real natural language acquisition. As stated by Reviewer 3, infants do not know the meanings or categories of words, and Reviewer 1 points out that your paradigm is only applicable to competent adult learners with a fairly well developed lexicon. Reviewer 3 likens your proposal to the semantic bootstrapping account put forward by Pinker, in which distributional analysis is constrained by semantic knowledge in some way, and notes that this argument has been challenged by Gerken et al. (2005) which showed that infants are able to use distributional information from early on, and do not require the presence of known words to do so.
+
+In addition to these more fundamental objections, all reviewers point out various confounds between Experiment 1 and 3 that limit the conclusion that can be drawn from the comparison. Reviewer 3 noted that different familiar words were used in Experiments 1 and 3, with the words in Experiment 3 (e.g., glove, leash, etc) being lower in frequency than in Experiment 1 (e.g., cat, dog, car, ), which may have limited the learning in Experiment 3. Reviewer 1 asks why there were 100's fewer participants in Experiment 3 (where learning did not occur) than in Experiment 1. This reviewer also expressed concern about the MTurker's level of English proficiency, and commented on a large number of other methodological details, which I will not repeat here, but you should consider them in designing your future experiments. In addition to these points, you should describe the results in more detail aside from presenting the parameters of regression model in a table.
+
+I am sorry I could not bring you more positive news, but I hope you find the comments in the reviews useful, and I wish you the very best in your future research.
+
+Thank you for giving us the opportunity to consider your submission.
+
+Sincerely,
+
+Sachiko Kinoshita, Ph.D.
+Associate Editor
+Journal of Experimental Psychology: Learning, Memory, and Cognition
+
+Reviewer #1: Review of "Semantic coherence facilitates distributional learning of word meaning"
+Overall, this article is well-written and raises several interesting issues concerning how distributional statistics can be used to facilitate learning meaning. I feel confident that if the authors address the points below, a future draft may be acceptable for publication in this journal.
+The main issues I have with the paper, outlined below, concern a lack of clarity in how the data were analyzed, and some framing/interpretation concerns, detailed below.
+Intro (these are all fairly minor points)
+The authors begin by saying that this paper concerns how 'people' learn words. However, they very clearly have competent adult learners of an L1 in mind; the kind of distributional learning from known words they discuss is only possible with a fairly well developed lexicon. This should be noted, especially when on page 10 the authors say that 'real learners' know some if not most of the words they hear.
+I'm not sure the discussion in the intro about words-documents vs. word-word matrices is necessary; this could be shortened to make space for further discussion of the other points raised below.
+
+It feels like a cop-out not to discuss Reeder et al Exp 5; the authors need to at least discuss those results and propose how future work can get at inconsistencies across that work and present work.
+
+It'd be useful to say more clearly what the present results give us beyond what the Braine 1987 results showed, either here or in the discussion.
+
+I take issue with the description of the stimuli as 'sentences'. They are not standalone sentences or even dependent clauses, they are conjunctions. In fact, it's not even clear that the 'and' is doing any work; they're just pairs of words. It's possible that using stimuli like 'As and Bs are Cs' or 'As are Bs' would have shown different patterns of results; this would be good to investigate in future work.
+
+Methods
+The participants section should discuss whether MTurker's level of English proficiency was assessed in any way.
+Why were text-to-speech engines used at all instead of recording natural sentences by a native English speaker?
+Why were the context word images bigger?
+More generally what kind of directions did the turkers get? For instance for the similarity measures, saying 'how similar are pif and thite' might have pushed users to use phonological similarity instead of meaning similarity: did participants know this task was about learning meanings?
+
+Why not drop the Ss who did not get the catch trials at all, to keep out data that 'weakens any effect' as you say. Surely if excluding the Ss who failed the catch trials didn't matter, but you did it anyway, it would make sense to drop the Ss who didn't get catch trials? Or if the pattern is the same including those who failed the catch trial and those who didn't get them, as excluding both of these groups, say that.
+
+I'd like to see some sort of basic descriptive stats aside from the model results. That is, what percent of each of the types of memory and similarity items did Ss perform correctly on in each study; these data could be added to figure 2 for instance. I know that a summary measure for memory, similarity, and ref assignment are plotted in figure 3&4, but it's a little hard to unpack these scores which have been scaled.
+
+Indeed how the authors went from raw data to the scores plotted in figure 3&4 is at present somewhat opaque.
+-For the memory measure, subjects rated four types of sentences, familiar, withheld, cross-category and pair violation. But performance in each of these sentence-types is never reported as such, instead you report novel withheld minus novel category violations, normalized to [-1,1]. Does that mean familiar and pair violation sentences weren't used for this measure? What did the data look like before normalization?
+-For the similarity measure, you had subjects rate within and across category pairs. But then what? Were these ratings averaged and then subtracted, per subject before the [-1,1] normalization? Were they first zscored on the 5 point scale, what did the data look like before normalization, etc?
+- For the referent assignment task, the outcome measure was the "total number of correct choices", based on 12 images and 6 words, right? But being correct is just getting the category right, if I've understood correctly, so 50% accuracy, i.e. a score of 3 would be the baseline, right? How were the 2AFC results then put on the [-1,1] scale?
+
+I'm a bit unsatisfied with your memory mediation analysis. I agree that one very likely explanation of your results is that it's harder to remember more new words, or induce a class with fewer known words in it. However, it's not clear to me that your mediation analysis addresses this: it seems like using the results from the familiar sentences would be useful here.
+
+More broadly, I find the referent selection task odd: for known words, the image corresponds to the word, but for the novel M&P words, the image is still a known item, e.g. the cat called 'feeb', maybe making it even harder in the 0/3, 1/3 and 2/3 conditions to induce the categories; I'd advise doing what I believe Lany does and use novel images e.g. new or less-nameable creatures and vehicles.
+
+Exp2:
+I find the phonological coherence manipulations quite strange from a linguistic standpoint: only the rime condition is a time of phonological coherence that the languages of the world make use of, as far as I know; if that's not correct it'd be useful to provide examples. Moreover, as you point out, the target categories didn't have coherence. It seems like to give this even a fighting chance of working you'd need to both use some sort of relevant phonological coherence in the target and context words; that would actually be more analogous to Exp1 than the present manipulation. This should be tested.
+If you chose not to do a separate study to address this, I'd like more transparency about why this isn't a good test of whether phonological coherence is a useful clue for learning associations between words. This kind of cue is currently considered very likely used for learning things like linguistic gender (as you allude to), noun and verb declensions, morpho-phonology, etc. Those things have 'meaning' in a syntactic sense. Indeed, in languages of sub-Saharan Africa and in the Caucases) there are both phono- and semantic-cues to , e.g. noun classes.
+
+As with Exp1, I'd like to see the more raw or broken down versions of the Exp2 results, rather than just the comparisons to the Exp 1 0/3 condition.
+Also, if what you're saying about Exp2 differs from 'subjects in Experiment 2 did not learn anything about the N & Q words as a function of phonological coherence', you should make that clear, or say something along those lines. For instance, unless I'm missing something, you'd expect null performance in the ref assignment task in Exp 2, but could have found success in the memory or similarity tasks. This is never made clear.
+
+Exp3
+-why are there hundreds fewer subjects in this study? (678 in Exp 1, 530 in Exp2, and 162 in Exp3).
+
+Gen. Discussion/Limitations/Conclusion: I think these sections are solid, well worded, and appropriately address limitations.
+
+Figures/Tables:
+-please add some sort of overall F test and Rsquared measures for the model results
+-I'm not sure you need figure 1
+-for figure 4 & 5, please remove the numbers that indicate the conditions: it adds confusing visual clutter, the color itself lets you tell the lines apart (you could use line-type of hue if you wanted in addition to color); the symbols are more confusing than helpful.
+
+
+
+Reviewer #2: The authors have taken an interesting approach to a problem that has been around for several decades. However, the problem that they seem to have studied is not the one that they say they have studied. The first sentence in the discussion is: "Can you learn about the meaning of a word from its co-occurrence with other words?" This is their stated question. However, there is absolutely nothing in their study that addresses meaning. What they have done is to show that adults form proto-categories of unknown words based on the known words with which they co-occur. That is a really interesting finding and sheds new light on the MNPQ categorization problem. However, the task doesn't tell us anything about meaning. Say that a participant gets dog + dax, dog + ziv, car + wug, and car + pif (p. 10). You now learn that "dax" refers to an animal and are asked in a forced choice test to guess whether "ziv" refers to an animal or a vehicle. The learning phase requires you to treat "dax" and "ziv" as belonging to the same abstract category. There's not necessarily anything in this phase that says the category will be based on meaning. We already know from much earlier work that having a consistent referent for the "dog" and "car" words is enough to allow learners to form categories of co-occurring words, even if the referring words are unknown. So, when learners enter the test phase, that know that "dax" and "ziv" are associated as belonging to a proto-category. They now learn that the experimenter intends the category to be semantic by learning that "dax" refers to an animal. At this point, the participant probably says "OK, the category must be animals".
+
+Bottom line, the fact that participants could learn categories from semantic info but not phonological info isn't entirely unprecedented, but the particulars of the study are interesting - but probably interesting for a more specialized journal. And the authors' claim that participants learn the meaning of a word "by the company it keeps" just isn't supported.
+
+
+Reviewer #3: This paper reports the results of three large-scale experiments probing the extent to which distributional information is useful for learning word categories and meanings. The paper is well-written and clear, and the question is an interesting one. Many studies have reported that infants and adults fail to benefit from distributional cues alone in learning word categories. The authors conclude from their data that if the words that are providing distributional context have coherent semantic properties that are known to learners, those words are more effectively used in distributional analysis. In other words, we do not perform distributional analysis on "word salad" but only on words that have semantic coherence.
+
+The authors' proposal seems (in some ways) similar to the semantic bootstrapping account put forward some time ago by Steven Pinker, in which distributional analysis is constrained by semantic knowledge in some way. However, this argument has been challenged by Gerken et al. (2005) as infants are able to use distributional information from speech from early on when combined with phonological cues, and do not require the presence of known words to do so.
+
+Furthermore, I was unconvinced by the argument (page 10) that scenarios in which learners already know the meanings of most words are most like "real" language acquisition. The authors suggest that studies of distributional learning using artificial languages have the drawback of using unfamiliar words. They suggest that this is not how natural language acquisition works: "Real learners, by contrast, typically know the meanings of some (if not most) words they hear and such words tend to relate to a single topic of discourse." This does not strike me as an accurate characterization of infants learning their first language. To the contrary, the question is "How do infants, who do not know the meanings or categories of words, come to learn them without this kind of knowledge already present?". Thus, I am not convinced by the argument that this paradigm has higher ecological validity than one in which word meaings are not known from the start. Moreover, some of the most informative distributional cues are functors, which are not highly specific in meaning. Thus, it is unclear how relevant the design is to real-world language learning.
+
+Finally, I have a major concern about the methods, particularly the familiar words used in Experiment 1 and Experiment 3. The authors used highly frequent words like "cat", "dog", "car", and "truck" in Experiment 1, in which those words were also organized by semantic categories, thus providing semantic coherence. Different words were used in Experiment 3 (e.g., shelf, glove, rain, leash), in which the authors tested how the presence of familiar words in the absence of semantic coherence, affects distributional learning. It seems to me that the words in Experiment 3 lower frequency in English than the ones used in Experiment 1. Thus, it not clear whether participants performed better in Experiment 1 because the words are higher frequency or because of the semantic coherence. A much more compelling design be to use the same familiar words as in Experiment 1, but scrambling them so as remove any semantic coherence.
+
+In sum, there are issues of theoretical framing and experimental design that need to be addressed before these experiments can advance an understanding of the role of distributional and semantic information in language learning.
+#+END_EXAMPLE
+
+* Cognitive Science
+** 2014/05/28: submitted
+** 2014/11/24: result: revise and resubmit
+
+#+BEGIN_EXAMPLE
+Dear Long Ouyang,
+
+Thank you for submitting the manuscript entitled "Semantic coherence facilitates distributional learning" (14-1987) to the journal Cognitive Science. It is my goal when handling manuscripts to get three high quality reviews within a short time frame. In the case of your manuscript, I sent out the manuscript to three reviewers, all experts in the field of psycholinguistics and computational linguistics, and/or language acquisition. Two of the reviewers returned their reviews on time. The third reviewer had to be repeatedly reminded. When I received the answer that this reviewer was working on it, I postponed an action letter. After about five reminders, and after about three responses that the review was almost complete ("next week, for sure"), I have now decided to move ahead and conclude without the third review.
+
+The third review would have been relevant for this manuscript. As you can see from the two reviews, the responses on the manuscript are mixed. Both reviews are thorough and detailed, but reach very different conclusions. Reviewer 1 is rather negative about the manuscript, Reviewer 2 is rather positive. I carefully read the manuscript myself, and I am enthusiastic about the topic, but I also agree with the important comments made by Reviewer 1.
+
+There are three issues I would like to bring to your attention after having read the manuscript myself. On page 8 you write "However, while suggestive, this [distributional semantics] work is only indirect evidence of distributional learning.  Researchers studying acquisition of grammatical categories have employed methods that can in principle provide stronger evidence. These studies expose learners to artificial languages with certain co-occurrence regularities and measure whether learners form categories on the basis of these regularities." In general, I agree, except that the paper now assumes that the artificial language participants are tested on is similar to a regular language. Clearly, this is not the case (I assume you would agree with this). The richness of natural language can simply not be copied in an artificial language (Christiansen & Chater, 2008). So at best this is a first step towards measuring whether learners form categories on the basis of
+co-occurrence structures. Also, finding no results in an artificial language environment does not mean that learners do not form categories on the basis of co-occurrence structures. It would be useful to emphasize the relationship (or rather differences) between a natural language and an artificial language environment.
+
+A second issue concerns the experimental design. You presented participants with binomials  (e.g., "car and chuv").  We know from existing research on binomials and language statistics that various factors have an effect on the ordering of the two nouns in binomials, including perceptual features, phonological ordering aspects, as well as frequencies in ordering (e.g., markedness) (Benor & Levy, 2006). The question is to what extent these factors might have affected your results. Similarly, the meanings of some of the words (the referent assignment task) might be influenced by the salience of the picture (color and animacy might have an effect on memory), the naturalness of the non-word or the naturalness of the speech synthesis of the non-word. So question is to what extent might your findings be driven by factors that are far more trivial than the ones you find in the results?
+
+Finally, I have read your conference proceedings article this paper is based on and wondered about the different participant numbers that are mentioned in the two papers. These are small differences (654 vs. 678, 151 vs. 162) but they are different. Are the groups of participants in this study different than those in the proceedings article? If that is the case, the results - which are very similar between the two papers - are even stronger, and you want to mention this in the paper. If the participants are not the same, what explains the difference in counts. Why were a handful participants added?
+
+In conclusion, I find this an interesting paper, but there are a range of issues that would need to be addressed. I therefore place the manuscript in the Revise-and-Resubmit category. Please make sure that when submitting your revised manuscript, you accompany this submission with a cover letter explaining in detail how the reviewer issues have been addressed in the revision. Upon receiving the revised manuscript, I will then send the manuscript out to reviewers, which may or may not include the two reviewers of the original manuscript. I will thereby make every attempt to ensure a timely response.
+
+Thank you for submitting your work to Cognitive Science and I look forward to receiving the revised manuscript.
+
+Kind regards,
+
+Max Louwerse,
+Associate Editor Cognitive Science.
+
+
+
+================================================================
+Reviewer #1
+
+The main research question this manuscript raises is whether the semantic or phonological coherence of the linguistic context facilitate distributional word learning. This is a very interesting and timely question, considering the substantial body of experimental and computational work on distributional learning and the occasional incompatible findings in both domains. However, the approach used for investigating the research question seems to not to be suitable.
+
+As an instance of an MNPQ language, a "M and N" and "P and Q" grammar is used, where M's and P's are the context words, and N's and Q's the target words. The main manipulation in Experiment 1 is the degree of familiarity with M and P words, which is controlled by the ratio of familiar English words to novice words that can appear in either of these two positions. What is surprising to me is the selection of a familiar and highly restricting English construction as the linguistic context. The conjunctive predicate "and" imposes the restriction that its arguments belong to the same syntactic and mostly semantic category. This means that a speaker of English who hears a phrase "dog and dax" can immediately make an informed guess about the probable semantic properties of "dax". Since similar semantic properties will be guessed for "dog and ziv" (or even "cat and ziv"), it is not surprising that s/he judges dax and ziv to be similar in meaning, or picks the correct referent for
+them. It has been shown in previous studies that humans use the selectional restrictions of familiar predicates to narrow down the semantic characteristics/category of their novel arguments (see, for example, Altman & Kamide, 1999; Koehne & Crocker, 2010).
+
+This is not the same as the case of postman and mailman, in fact it is not at all clear whether any distributional learning is happening in Experiment 1 here, since all the observed effects can be explained in terms of the successful application of the selectional restrictions of the main predicate ("and"). It is also not surprising that a similar effect is not observed in Experiment 2 (since the predicate does not impose any phonological restrictions on its arguments), or Experiment 3 (since contradictory semantic predictions are provided by the same predicate for the same target word in different usages).
+
+Ideally, I would have expected the stimuli to consist of multi-word sentences, where all words are novel but some are paired with familiar referents in isolation prior to the participants' exposure to sentences. In such a hypothetical case, the participants would have been exposed to an unfamiliar language, and their acquired knowledge about target words could have been attributed to distributional learning. I do think that investigating semantic coherence as a facilitator of distributional learning is a promising idea, and I would be very much interested in the outcome of its proper examination.
+
+There are several points in the methodology and the presentation of the results which I found confusing:
+
+-  Mechanical Turk is not familiar to all readers, so technical terms such as "HIT approval rate" need to be defined. There is no indication of the demographics of the participants or their indicated first language.
+
+- List of words: what was the criteria for selecting the set of familiar words? They do not seem to be quite comparable in terms of their frequency ranking or phonological properties. Also, was there any pretest for potential semantic associations of the novel words?
+
+- I found it strange that the written word form was used instead of the auditory form in the similarity judgment task, considering that the participants have not seen any written forms during the training trials.
+
+- For the original scores (e.g. mean familiarity ratings), it would be informative to give the range of possible values. I could not understand why the difference scores range between [-4,4].
+
+- Some conditions (or is it some subset of data points?) contain catch trials and some don't, and it is stated that the inclusion or exclusion of failed catch trials does not affect the results. Yet, the portion of data with failed catch trials is excluded from the analysis, which in my opinion provides some inconsistency in the final dataset (since the similar subset of undetected bogus datapoint is included).
+
+- For all experiments, a ranking of familiarity is reported for each condition (e.g., F>W>C>P). Are these significant results? On all exposure levels?
+
+- In Figure 4, you should add the label "semantic coherence" for the grey headers.
+
+- In Figure 5, the caption mentions error bars, but there are no error bars on the graphs.
+
+- In Figure 6, the label for the forth graph must be "syllable count (Exp2)".
+
+- In the first two paragraphs of Experiment 2, there are several mentions of previous work but no references is provided.
+
+- Experiment 2 (page 24): "The one exception is that the participants in the onset coherence condition were able to distinguish withheld from co-occurence violation sentences, matching 2/3 participants." Shouldn't this be the position variation instead (according to Figure 6)?
+
+
+Citations:
+
+Altmann, G., & Kamide, Y. (1999). Incremental interpretation at verbs: Restricting the domain of subsequent reference. Cognition, 73(3), 247-264.
+
+Kohne, J., & Crocker, M. W. (2010). Sentence processing mechanisms influence cross-situational word learning. In Proceedings of the Annual Conference of the Cognitive Science Society.
+
+
+================================================================
+Reviewer #3
+
+This study investigates how semantic coherence ("the presence of known words adhering to some semantic organization") facilitates adults' distributional learning for co-occurring categories. The authors focus on a simple artificial language (MNPQ; also studied by others in the form aX / bY) that has been previously impervious to humans' distributional learning on the basis of co-occurrence information alone. The first experiment manipulates semantic coherence to demonstrate that, as semantic coherence increases, subjects better learn the co-occurrences and apply this knowledge to infer word meaning. Follow-up experiments aim to show that this effect depends on the presence of known context words (expt. 2) that exhibit some kind of (semantic) organization (expt. 3).
+
+The paper makes a novel contribution by introducing semantic coherence as an effective information source for distributional learning in artificial language learning experiments. It should also add nicely to the literature on statistical cues and their potential integration, and in studying the interaction between prior linguistic knowledge and types of cues. As such, the paper should be of interest to experimental language researchers and of wider relevance to the CS community. The exposition is clear and the methodology appears clean (although I'm not particularly well versed on Mechanical Turk). I have a few comments below, most of which are readily addressable; none should probably take away from an overall positive assessment:
+
+While the article is well-written, with good attention to relevant detail and related literature, there are a couple instances which might benefit from more careful wording. In the abstract, it's written: "Are people able to use distributional statistics in learning language? Results from prior artificial language learning experiments suggest that the answer may be no." This seems a bit misleading in at least two crucial respects: 1) even among the work the authors cite as negative evidence, there is evidence that humans can use distributional statistics when correlated with phonological statistical cues to learn category-based structure; and 2) learning a language encompasses more than the learning of semantics and categories (e.g., humans can use purely distributional statistics to learn patterns relevant to other aspects of language-learning, such as speech segmentation, phonetic categorization and syntactic form-classes). The quoted passage should be sharpened
+accordingly.
+Also, from pg. 25, it's written: "While computational models? experiments with humans show consistent failures." I think this statement could be similarly sharpened in light of the fact that relevant work from Lany and Saffran (2010, 2011) reach more positive conclusions of limited success, drawing upon learners' use of multiple cues in distributional learning (which may arguably be the norm, rather than the exception, for natural language input).
+
+Experiment 2 is intended to show that coherence itself is not enough - that known context words matter - by eliciting null to modest learning results under phonological coherence conditions where the phonologically-cohering context words are artificial. There is also an important distinction the authors point out between coherence in target versus context words that may explain seeming contradictions with prior findings in the literature. However, even with this recognition, I am not convinced that the semantic and phonological conditions are entirely comparable on the dimension of coherence. If the authors are correct in speculating that the mechanism for the effect is that subjects "tag" co-occurring words with the same discourse topic, effectively allowing for the co-occurring categories to also globally align or cohere *along the same dimension* as the manipulated coherence cue, then a similar kind of coherence is not possible under the phonological coherence conditions.
+Eg., in the rime condition, Ms and Ns clearly do not have the same endings, which does not promote the same kind of potential "global" grouping (in addition to the category-internal coherence) along the phonological dimension. This is not a main concern, as it doesn't undermine the important key result that semantic coherence can be a new and effective information source for humans' distributional learning. And I think it is quite plausible that semantic coherence and phonological coherence may most effectively facilitate learning when exhibiting different kinds of organization. But if the speculation is correct, then I think it leaves some small room for other kinds of coherence cues with similar (but non-semantic) organization to be effective.
+
+For the assessment-related tasks (i.e. similarity, memory, referent assignment), it was unclear whether these were completed by subjects in the same fixed order (and what that would be), or whether the presentation order of the tasks was counterbalanced among participants. In principle, for instance, early administration of the referent assignment task could amplify performance differences for the other non-exposure tasks. (Participants with some partial learning of the associated categories in high semantic coherence conditions could use this as the basis for inferring all or most category members, and this knowledge can be explicitly applied to performance in the subsequent tasks.) It would be good to confirm the ordering, and if the administration order was counterbalanced, it would be good to check / report any order effects.
+
+
+smaller points:
+
+"we will refer to learning from such learning as distributional learning" (pg.3) => probably meant to write "? refer to such learning" instead of "? refer to learning from such learning" (as I'm not sure what the latter would mean, unless a metacognitive component is implied?)
+
+pg. 3: "based on their statistical co-occurrence (Saffran et al. 1996)" => Aslin et al. 1998 extended the results from Saffran et al. to indicate that learners discriminated on the basis of more than mere co-occurrence per se
+
+word-word matrix of Figure 1:  Shouldn't the co-occurrence of b one word after a (i.e., "ab"; b and a: +1) be "2" -- instead of "1" (as currently indicated)?  And similarly, shouldn't the co-occurrence of a one word after b (i.e., "ba"; a and b: +1) be "2" - instead of "0" (as currently indicated)?
+
+pg. 13:  in the Methods write-up, it states that 14 unique sentences were used in the exposure phase - but if 6 of the 18 possible sentences were withheld, wouldn't there be 12 unique sentences (as illustrated in Fig. 2)? and if so, does this change the number of reported trials for the exposure conditions (assuming each familiar sentence was repeated an equal number of times)?
+
+Figure 6: syllable count condition is part of experiment 2 (rather than expt 3)
+
+for Figures 5 and 7, are the error bars missing?
+#+END_EXAMPLE
+** 2014/05/07: resubmitted
+** 2015/11/17: accepted pending revisions
+
+#+BEGIN_EXAMPLE
+Dear Long Ouyang,
+
+Thank you for submitting the revision of your manuscript entitled 'Semantic coherence facilitates distributional learning' (14-1987) to the journal Cognitive Science. The process of reviewing the manuscript has taken longer than we had anticipated, but as with the previous round this very much had to do with the fact that not all reviews were submitted.
+
+The original manuscript had two extensive reviews, both consisting of detailed comments (a third review was promised, but never arrived, so I went ahead without the third review). Of these two reviews, one evaluation was very positive, one consisted of a range of some serious concerns. For the revised manuscript I asked two reviewers, one being the reviewer from the first round who had some major concerns, one reviewer being new to the manuscript.
+
+A similar situation emerges as with the original manuscript. The second reviewer has not responded to our emails reminding him/her of the deadline. I will therefore go ahead with the one review. This is not ideal, but based upon my own reading of the manuscript, the quality of the original reviews, and the extensive changes you have made to the original manuscript, I feel confident that I can send out an action letter, to at least avoid any further delay while maintaining the high standards of the journal.
+
+As you can see, the reviewer who had some major concerns in the first round, is now far more positive about the manuscript, and so am I. The reviewer has two remaining concerns that he/she would like to see addressed. I agree that the manuscript would become stronger if you address both issues. The most pressing one is the first comment made by the reviewer. In your revision, you make the argument that 'real learners, by contrast, typically know the meanings of some (if not most) words they hear and such words tend to relate to a single topic of discourse' and this makes the current study novel. However, the reviewer reminds us that there is also a disadvantage to the novelty, "as participants have to learn the structure of the new language from scratch' perhaps yielding different results. This comment is an important one, as it would help position the finding of your study in the spectrum of results from traditional artificial language studies. I would appreciate you
+addressing this comment, either on p.4, p.11 or in the General Discussion.
+
+I would like you to address both comments made by the reviewer in a final revision of the manuscript. I do not need a cover letter explaining how you addressed these comments, but I would like to see where you addressed these comments. This can be done with a simple reference to a page number in a cover letter or highlighting those sections in the revision.
+
+I expect that upon receiving the final version of the manuscript, I can go ahead recommending it for publication in Cognitive Science. That is, for now I accept the manuscript pending some final changes. If you are able to submit these changes soon, I will make sure the final acceptance process will not be delayed.
+
+Kind regards,
+
+Max Louwerse,
+Associate Editor, Cognitive Science.
+
+
+
+================================================================
+Reviewer #1
+
+I would like to thank the authors for addressing my comments, in particular by including a new experiment (1b).
+I believe the results are stronger and the main claim of the paper is more convincing now.
+That said, I still think that using English words as part of the training material most probably biases the participants to assume that they are learning new words (and in the case of experiment 1b, a new construction) of English, not a new language.
+This is an important difference between the current study and the typical artificial language learning studies reviewed in this paper, where the participants have to learn the structure of the new language from scratch.
+We simply don't know enough to assume that the (parameters of the) learning mechanisms in these two cases are the same: while evidence in support of "pure" distributional learning for a new language is strong, there is a large body of research showing that advanced learners rely on their knowledge of the structural properties of a familiar language in order to make informed guesses about the meaning of unfamiliar words.
+I think this issue must be discussed in the paper and the main contributions reframed.
+
+I didn't find an answer to one of my comments in the original review, so I repeat it here: I found it strange that the written word form was used instead of the auditory form in the similarity judgment task, considering that the participants have not seen any written forms during the training trials. Is there a reason for this?
+#+END_EXAMPLE
