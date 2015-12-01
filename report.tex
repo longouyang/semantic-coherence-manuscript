@@ -1,7 +1,7 @@
 % editing notes: don't use auto-fill-mode
 
-\documentclass[man,floatsintext]{apa6}
-\usepackage{longtable}
+\documentclass[man,longtable,floatmark]{my-apa6}
+%\usepackage{longtable}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -13,6 +13,9 @@
 \usepackage{color}
 \usepackage{array}
 \usepackage{verbatim}
+
+% so doi shows up in typewriter
+\renewenvironment{APACrefDOI}{\small \tt doi:}
 
 % in captions, change Figure to Fig.
 % HT http://tex.stackexchange.com/a/17490/41154
@@ -692,7 +695,9 @@ Since Firth's edict that we shall know a word ``by the company it keeps,'' two l
 
 \newpage
 \bibliographystyle{apacite}
-\bibliography{references}
+\bibliography{with-dois}
+
+
 
 \appendix
 \section{Old versus new stimuli comparison}
@@ -705,12 +710,10 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
 \end{center}
 
-
-
 \appendix
 \section{$t$-tests for familiarity orderings in the memory task}
 
-\begin{figure}[h]
+\begin{figure}
   \begin{center}
     \begin{tabular}{c c c}
 
