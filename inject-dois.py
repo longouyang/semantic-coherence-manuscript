@@ -1,5 +1,7 @@
-
 #!/usr/bin/env python
+# NB: remember to source env/bin/activate to fire
+# up python
+
 import sys, re, bibtexparser, collections, csv
 
 bib_filename=sys.argv[1]
