@@ -1,0 +1,54 @@
+% editing notes: don't use auto-fill-mode
+
+\documentclass[man,floatsintext]{apa6}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+% \usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[natbibapa]{apacite}
+\usepackage{times}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{array}
+\usepackage{verbatim}
+
+\newcommand{\tcite}[1]{$\langle${\footnotesize \texttt{#1}}$\rangle$}
+
+\newcommand{\cas}[1]{ {\color{blue}  #1} }
+
+\graphicspath{{images/}}
+
+\shorttitle{Semantic coherence and distributional learning}
+% \shorttitle{}
+\title{Semantic coherence facilitates distributional learning}
+\author{Long Ouyang, Lera Boroditsky, Michael C. Frank}
+\affiliation{Department of Psychology, Stanford University\vskip 5em Word count: 8,298}
+
+\authornote{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society. Address correspondence to:\\
+  Long Ouyang~\\
+  Jordan Hall, Building 01-420\\
+  450 Serra Mall\\
+  Stanford, CA, 94305\\
+  Email: \texttt{longouyang@post.harvard.edu}}
+
+\abstract{
+  Computational models have shown that purely statistical knowledge about words' linguistic contexts is sufficient to learn many properties of words, including syntactic and semantic category.
+  For example, models can infer that ``postman'' and ``mailman'' are semantically similar because they have quantitatively similar patterns of association with \emph{other} words (e.g., they both tend to occur with words like ``deliver'', ``truck'', ``package'').
+  Contra these computational results, artificial language learning experiments suggest that distributional statistics \emph{alone} do not facilitate learning of linguistic categories.
+  However, experiments in this paradigm expose participants to entirely novel words, whereas real language learners encounter input that contains some known words that are semantically organized.
+  In three experiments, we show that (1) the presence of familiar semantic reference points facilitates distributional learning and (2) this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.
+}
+
+\keywords{distributional learning; word learning; semantic coherence}
+
+\begin{document}
+\maketitle
+\input{main.tex}
+\newpage
+\bibliographystyle{apacite}
+\bibliography{references}
+\input{apx-old-new.tex}
+\input{apx-familiarity-orderings.tex}
+\end{document}
