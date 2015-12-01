@@ -21,7 +21,8 @@
 *.lg
 *.xref
 *.log
-cover-letter*
+cover-letter-*/*.pdf
+!cover-letter-cogsci2/coverletter.pdf
 jep-lmc*
 report 2014*.pdf
 search-dois*
