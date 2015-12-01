@@ -1109,9 +1109,9 @@ and the derived files           apa6.ins,
   \@ifundefined{def@man}{}{\def\fig@num{\relax}}
 }
 
-% \DeclareOption{floatmark}{%
-%   \@ifundefined{def@man}{}{\def\float@mark{\relax}}
-% }
+\DeclareOption{floatmark}{%
+   \@ifundefined{def@man}{}{\def\float@mark{\relax}}
+}
 
 \DeclareOption{longtable}{%
   \def\long@table{\relax}
@@ -2286,30 +2286,30 @@ and the derived files           apa6.ins,
 \let\@noendfloattab\table% BDB
 \let\@noendfloatfig\figure% BDB
 
-% \@ifundefined{float@mark}{% Figure and table in-text markers are no longer required
-%  \RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst,nomarkers]{endfloat}[1995/10/11]}{%
-%  \RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst]{endfloat}[1995/10/11]}
+\@ifundefined{float@mark}{% Figure and table in-text markers are no longer required
+\RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst,nomarkers]{endfloat}[1995/10/11]}{%
+\RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst]{endfloat}[1995/10/11]}
 
-\RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst,nomarkers]{endfloat}[1995/10/11]
+% \RequirePackage[notablist,figlist,notabhead,nofighead,tablesfirst,nomarkers]{endfloat}[1995/10/11]
 
-%\renewcommand{\figureplace}{%
-%   \par\begin{center}
-%   \parbox{\textwidth}
-%   {\begin{center}
-%   \rule{2.1in}{0.005in}\\
-%   Insert \figurename~\thepostfig\ about here\\
-%   \rule{2.1in}{0.005in}\\
-%   \end{center}}
-%   \end{center}\par}
-%\renewcommand{\tableplace}{%
-%   \par\begin{center}
-%   \parbox{\textwidth}
-%   {\begin{center}
-%   \rule{2.1in}{0.005in}\\
-%   Insert \tablename~\theposttbl\ about here\\
-%   \rule{2.1in}{0.005in}\\
-%   \end{center}}
-%   \end{center}\par}
+\renewcommand{\figureplace}{%
+   \par\begin{center}
+   \parbox{\textwidth}
+   {\begin{center}
+   \rule{2.1in}{0.005in}\\
+   Insert \figurename~\thepostfig\ about here\\
+   \rule{2.1in}{0.005in}\\
+   \end{center}}
+   \end{center}\par}
+\renewcommand{\tableplace}{%
+   \par\begin{center}
+   \parbox{\textwidth}
+   {\begin{center}
+   \rule{2.1in}{0.005in}\\
+   Insert \tablename~\theposttbl\ about here\\
+   \rule{2.1in}{0.005in}\\
+   \end{center}}
+   \end{center}\par}
 
 \def\@gobbleuntilnext[#1]{}
 \let\eatarg\@gobbleuntilnext
@@ -2328,10 +2328,10 @@ and the derived files           apa6.ins,
       %% should be a global declaration to be "visible" at end document
            \ifnextchar[{\gobbleuntilnext[}{}
            \efloat@iwrite{fff}{\string\ifnextchar[{\string\eatarg}{}}
-%          \if@domarkers%
-%             \addtocounter{postfig}{1}% % bj
-%             \figureplace%              % bj
-%          \fi%
+           \if@domarkers%
+              \addtocounter{postfig}{1}% % bj
+              \figureplace%              % bj
+           \fi%
           \def\@currenvir{efloat@float}%
           \begingroup%
           \let\do\ef@makeinnocent \dospecials%
@@ -2352,10 +2352,10 @@ and the derived files           apa6.ins,
           \@ifundefined{hrm}{}{%
           \efloat@iwrite{ttt}{\string\sf}}%
           \efloat@iwrite{ttt}{\string\ifnextchar[{\string\eatarg}{}} % bj
-%          \if@domarkers
-%             \addtocounter{posttbl}{1} % bj
-%             \tableplace               % bj
-%          \fi
+           \if@domarkers
+              \addtocounter{posttbl}{1} % bj
+              \tableplace               % bj
+           \fi
           \def\@currenvir{efloat@float}%
           \begingroup
           \let\do\ef@makeinnocent \dospecials
@@ -4543,7 +4543,7 @@ End Sub
 \renewcommand{\rheadname}{Kolumnentitel}% Running head
 \renewcommand{\acksname}{Autorenhinweis}% Author Note
 \renewcommand{\keywordname}{Schl\"usselw\"orter}% Keywords
-\renewcommand{\notesname}{Fußnoten}% Footnotes
+\renewcommand{\notesname}{Fuï¿½noten}% Footnotes
 
 %</german>
 %    \end{macrocode}
@@ -4557,7 +4557,7 @@ End Sub
 \renewcommand{\rheadname}{Kolumnentitel}% Running head
 \renewcommand{\acksname}{Autorenhinweis}% Author Note
 \renewcommand{\keywordname}{Schl\"usselw\"orter}% Keywords
-\renewcommand{\notesname}{Fußnoten}% Footnotes
+\renewcommand{\notesname}{Fuï¿½noten}% Footnotes
 
 %</ngerman>
 %    \end{macrocode}
@@ -4582,10 +4582,10 @@ End Sub
 %<*czech>
 \ProvidesFile{APAgreek.txt}[2012/02/23 v1.25 apa6 configuration for Czech]
 
-\renewcommand{\rheadname}{Záhlaví}% Running head
-\renewcommand{\acksname}{Poznámka~autora}% Author Note
-\renewcommand{\keywordname}{Klícová~1slova}% Keywords
-\renewcommand{\notesname}{Poznámky}% Footnotes
+\renewcommand{\rheadname}{Zï¿½hlavï¿½}% Running head
+\renewcommand{\acksname}{Poznï¿½mka~autora}% Author Note
+\renewcommand{\keywordname}{Klï¿½covï¿½~1slova}% Keywords
+\renewcommand{\notesname}{Poznï¿½mky}% Footnotes
 
 %</czech>
 %    \end{macrocode}
@@ -4615,10 +4615,10 @@ End Sub
 \AtBeginFigures{\let\sidewaysfigure=\efsaved@sidewaysfigure\relax}
 \def\sidewaystable{\efloat@condopen{ttt}
     \efloat@iwrite{ttt}{\string\begin{sidewaystable}}%
-%    \if@domarkers
-%       \addtocounter{posttbl}{1}
-%       \tableplace
-%    \fi
+     \if@domarkers
+        \addtocounter{posttbl}{1}
+        \tableplace
+     \fi
     \def\@currenvir{efloat@float}%
     \begingroup
     \let\do\ef@makeinnocent \dospecials
@@ -4635,10 +4635,10 @@ End Sub
 }
 \def\sidewaysfigure{\efloat@condopen{fff}
     \efloat@iwrite{fff}{\string\begin{sidewaysfigure}}%
-%    \if@domarkers
-%       \addtocounter{postfig}{1}
-%       \figureplace
-%    \fi
+     \if@domarkers
+        \addtocounter{postfig}{1}
+        \figureplace
+     \fi
     \def\@currenvir{efloat@float}%
     \begingroup
     \let\do\ef@makeinnocent \dospecials
@@ -4655,10 +4655,10 @@ End Sub
 }
 \def\longtable{\efloat@condopen{ttt}
     \efloat@iwrite{ttt}{\string\begin{longtable}}%
-%    \if@domarkers
-%       \addtocounter{posttbl}{1}
-%       \tableplace
-%    \fi
+     \if@domarkers
+        \addtocounter{posttbl}{1}
+        \tableplace
+     \fi
     \def\@currenvir{efloat@float}%
     \begingroup
     \let\do\ef@makeinnocent \dospecials
