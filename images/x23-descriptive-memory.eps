@@ -1,0 +1,3903 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%Produced by poppler pdftops version: 0.28.1 (http://poppler.freedesktop.org)
+%%Creator: R
+%%LanguageLevel: 2
+%%DocumentSuppliedResources: (atend)
+%%BoundingBox: 0 0 846 216
+%%HiResBoundingBox: 0 0 846 216
+%%DocumentSuppliedResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset xpdf 3.00 0
+%%Copyright: Copyright 1996-2011 Glyph & Cog, LLC
+/xpdf 75 dict def xpdf begin
+% PDF special state
+/pdfDictSize 15 def
+/pdfSetup {
+  /setpagedevice where {
+    pop 2 dict begin
+      /Policies 1 dict dup begin /PageSize 6 def end def
+      { /Duplex true def } if
+    currentdict end setpagedevice
+  } {
+    pop
+  } ifelse
+} def
+/pdfSetupPaper {
+  % Change paper size, but only if different from previous paper size otherwise
+  % duplex fails. PLRM specifies a tolerance of 5 pts when matching paper size
+  % so we use the same when checking if the size changes.
+  /setpagedevice where {
+    pop currentpagedevice
+    /PageSize known {
+      2 copy
+      currentpagedevice /PageSize get aload pop
+      exch 4 1 roll
+      sub abs 5 gt
+      3 1 roll
+      sub abs 5 gt
+      or
+    } {
+      true
+    } ifelse
+    {
+      2 array astore
+      2 dict begin
+        /PageSize exch def
+        /ImagingBBox null def
+      currentdict end
+      setpagedevice
+    } {
+      pop pop
+    } ifelse
+  } {
+    pop
+  } ifelse
+} def
+/pdfStartPage {
+  pdfDictSize dict begin
+  /pdfFillCS [] def
+  /pdfFillXform {} def
+  /pdfStrokeCS [] def
+  /pdfStrokeXform {} def
+  /pdfFill [0] def
+  /pdfStroke [0] def
+  /pdfFillOP false def
+  /pdfStrokeOP false def
+  /pdfLastFill false def
+  /pdfLastStroke false def
+  /pdfTextMat [1 0 0 1 0 0] def
+  /pdfFontSize 0 def
+  /pdfCharSpacing 0 def
+  /pdfTextRender 0 def
+  /pdfPatternCS false def
+  /pdfTextRise 0 def
+  /pdfWordSpacing 0 def
+  /pdfHorizScaling 1 def
+  /pdfTextClipPath [] def
+} def
+/pdfEndPage { end } def
+% PDF color state
+/cs { /pdfFillXform exch def dup /pdfFillCS exch def
+      setcolorspace } def
+/CS { /pdfStrokeXform exch def dup /pdfStrokeCS exch def
+      setcolorspace } def
+/sc { pdfLastFill not { pdfFillCS setcolorspace } if
+      dup /pdfFill exch def aload pop pdfFillXform setcolor
+     /pdfLastFill true def /pdfLastStroke false def } def
+/SC { pdfLastStroke not { pdfStrokeCS setcolorspace } if
+      dup /pdfStroke exch def aload pop pdfStrokeXform setcolor
+     /pdfLastStroke true def /pdfLastFill false def } def
+/op { /pdfFillOP exch def
+      pdfLastFill { pdfFillOP setoverprint } if } def
+/OP { /pdfStrokeOP exch def
+      pdfLastStroke { pdfStrokeOP setoverprint } if } def
+/fCol {
+  pdfLastFill not {
+    pdfFillCS setcolorspace
+    pdfFill aload pop pdfFillXform setcolor
+    pdfFillOP setoverprint
+    /pdfLastFill true def /pdfLastStroke false def
+  } if
+} def
+/sCol {
+  pdfLastStroke not {
+    pdfStrokeCS setcolorspace
+    pdfStroke aload pop pdfStrokeXform setcolor
+    pdfStrokeOP setoverprint
+    /pdfLastStroke true def /pdfLastFill false def
+  } if
+} def
+% build a font
+/pdfMakeFont {
+  4 3 roll findfont
+  4 2 roll matrix scale makefont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /Encoding exch def
+    currentdict
+  end
+  definefont pop
+} def
+/pdfMakeFont16 {
+  exch findfont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /WMode exch def
+    currentdict
+  end
+  definefont pop
+} def
+% graphics state operators
+/q { gsave pdfDictSize dict begin } def
+/Q {
+  end grestore
+  /pdfLastFill where {
+    pop
+    pdfLastFill {
+      pdfFillOP setoverprint
+    } {
+      pdfStrokeOP setoverprint
+    } ifelse
+  } if
+} def
+/cm { concat } def
+/d { setdash } def
+/i { setflat } def
+/j { setlinejoin } def
+/J { setlinecap } def
+/M { setmiterlimit } def
+/w { setlinewidth } def
+% path segment operators
+/m { moveto } def
+/l { lineto } def
+/c { curveto } def
+/re { 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+      neg 0 rlineto closepath } def
+/h { closepath } def
+% path painting operators
+/S { sCol stroke } def
+/Sf { fCol stroke } def
+/f { fCol fill } def
+/f* { fCol eofill } def
+% clipping operators
+/W { clip newpath } def
+/W* { eoclip newpath } def
+/Ws { strokepath clip newpath } def
+% text state operators
+/Tc { /pdfCharSpacing exch def } def
+/Tf { dup /pdfFontSize exch def
+      dup pdfHorizScaling mul exch matrix scale
+      pdfTextMat matrix concatmatrix dup 4 0 put dup 5 0 put
+      exch findfont exch makefont setfont } def
+/Tr { /pdfTextRender exch def } def
+/Tp { /pdfPatternCS exch def } def
+/Ts { /pdfTextRise exch def } def
+/Tw { /pdfWordSpacing exch def } def
+/Tz { /pdfHorizScaling exch def } def
+% text positioning operators
+/Td { pdfTextMat transform moveto } def
+/Tm { /pdfTextMat exch def } def
+% text string operators
+/xyshow where {
+  pop
+  /xyshow2 {
+    dup length array
+    0 2 2 index length 1 sub {
+      2 index 1 index 2 copy get 3 1 roll 1 add get
+      pdfTextMat dtransform
+      4 2 roll 2 copy 6 5 roll put 1 add 3 1 roll dup 4 2 roll put
+    } for
+    exch pop
+    xyshow
+  } def
+}{
+  /xyshow2 {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval show moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval show moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/cshow where {
+  pop
+  /xycp {
+    0 3 2 roll
+    {
+      pop pop currentpoint 3 2 roll
+      1 string dup 0 4 3 roll put false charpath moveto
+      2 copy get 2 index 2 index 1 add get
+      pdfTextMat dtransform rmoveto
+      2 add
+    } exch cshow
+    pop pop
+  } def
+}{
+  /xycp {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval false charpath moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval false charpath moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/Tj {
+  fCol
+  0 pdfTextRise pdfTextMat dtransform rmoveto
+  currentpoint 4 2 roll
+  pdfTextRender 1 and 0 eq {
+    2 copy xyshow2
+  } if
+  pdfTextRender 3 and dup 1 eq exch 2 eq or {
+    3 index 3 index moveto
+    2 copy
+    currentfont /FontType get 3 eq { fCol } { sCol } ifelse
+    xycp currentpoint stroke moveto
+  } if
+  pdfTextRender 4 and 0 ne {
+    4 2 roll moveto xycp
+    /pdfTextClipPath [ pdfTextClipPath aload pop
+      {/moveto cvx}
+      {/lineto cvx}
+      {/curveto cvx}
+      {/closepath cvx}
+    pathforall ] def
+    currentpoint newpath moveto
+  } {
+    pop pop pop pop
+  } ifelse
+  0 pdfTextRise neg pdfTextMat dtransform rmoveto
+} def
+/TJm { 0.001 mul pdfFontSize mul pdfHorizScaling mul neg 0
+       pdfTextMat dtransform rmoveto } def
+/TJmV { 0.001 mul pdfFontSize mul neg 0 exch
+        pdfTextMat dtransform rmoveto } def
+/Tclip { pdfTextClipPath cvx exec clip newpath
+         /pdfTextClipPath [] def } def
+/Tclip* { pdfTextClipPath cvx exec eoclip newpath
+         /pdfTextClipPath [] def } def
+% Level 2/3 image operators
+/pdfImBuf 100 string def
+/pdfImStr {
+  2 copy exch length lt {
+    2 copy get exch 1 add exch
+  } {
+    ()
+  } ifelse
+} def
+/skipEOD {
+  { currentfile pdfImBuf readline
+    not { pop exit } if
+    (%-EOD-) eq { exit } if } loop
+} def
+/pdfIm { image skipEOD } def
+/pdfImM { fCol imagemask skipEOD } def
+/pr { 2 index 2 index 3 2 roll putinterval 4 add } def
+/pdfImClip {
+  gsave
+  0 2 4 index length 1 sub {
+    dup 4 index exch 2 copy
+    get 5 index div put
+    1 add 3 index exch 2 copy
+    get 3 index div put
+  } for
+  pop pop rectclip
+} def
+/pdfImClipEnd { grestore } def
+% shading operators
+/colordelta {
+  false 0 1 3 index length 1 sub {
+    dup 4 index exch get 3 index 3 2 roll get sub abs 0.004 gt {
+      pop true
+    } if
+  } for
+  exch pop exch pop
+} def
+/funcCol { func n array astore } def
+/funcSH {
+  dup 0 eq {
+    true
+  } {
+    dup 6 eq {
+      false
+    } {
+      4 index 4 index funcCol dup
+      6 index 4 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      5 index 5 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      6 index 8 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      colordelta or or or
+    } ifelse
+  } ifelse
+  {
+    1 add
+    4 index 3 index add 0.5 mul exch 4 index 3 index add 0.5 mul exch
+    6 index 6 index 4 index 4 index 4 index funcSH
+    2 index 6 index 6 index 4 index 4 index funcSH
+    6 index 2 index 4 index 6 index 4 index funcSH
+    5 3 roll 3 2 roll funcSH pop pop
+  } {
+    pop 3 index 2 index add 0.5 mul 3 index  2 index add 0.5 mul
+    funcCol sc
+    dup 4 index exch mat transform m
+    3 index 3 index mat transform l
+    1 index 3 index mat transform l
+    mat transform l pop pop h f*
+  } ifelse
+} def
+/axialCol {
+  dup 0 lt {
+    pop t0
+  } {
+    dup 1 gt {
+      pop t1
+    } {
+      dt mul t0 add
+    } ifelse
+  } ifelse
+  func n array astore
+} def
+/axialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index axialCol 2 index axialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index axialSH
+    exch 3 2 roll axialSH
+  } {
+    pop 2 copy add 0.5 mul
+    axialCol sc
+    exch dup dx mul x0 add exch dy mul y0 add
+    3 2 roll dup dx mul x0 add exch dy mul y0 add
+    dx abs dy abs ge {
+      2 copy yMin sub dy mul dx div add yMin m
+      yMax sub dy mul dx div add yMax l
+      2 copy yMax sub dy mul dx div add yMax l
+      yMin sub dy mul dx div add yMin l
+      h f*
+    } {
+      exch 2 copy xMin sub dx mul dy div add xMin exch m
+      xMax sub dx mul dy div add xMax exch l
+      exch 2 copy xMax sub dx mul dy div add xMax exch l
+      xMin sub dx mul dy div add xMin exch l
+      h f*
+    } ifelse
+  } ifelse
+} def
+/radialCol {
+  dup t0 lt {
+    pop t0
+  } {
+    dup t1 gt {
+      pop t1
+    } if
+  } ifelse
+  func n array astore
+} def
+/radialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index dt mul t0 add radialCol
+      2 index dt mul t0 add radialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index radialSH
+    exch 3 2 roll radialSH
+  } {
+    pop 2 copy add 0.5 mul dt mul t0 add
+    radialCol sc
+    encl {
+      exch dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      0 360 arc h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      360 0 arcn h f
+    } {
+      2 copy
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arcn
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arcn h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arc
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arc h f
+    } ifelse
+  } ifelse
+} def
+end
+%%EndResource
+%%EndProlog
+%%BeginSetup
+xpdf begin
+/F10_0 /ZapfDingbats 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/a1/a2/a202/a3/a4/a5/a119
+  /a118/a117/a11/a12/a13/a14/a15/a16
+  /a105/a17/a18/a19/a20/a21/a22/a23
+  /a24/a25/a26/a27/a28/a6/a7/a8
+  /a9/a10/a29/a30/a31/a32/a33/a34
+  /a35/a36/a37/a38/a39/a40/a41/a42
+  /a43/a44/a45/a46/a47/a48/a49/a50
+  /a51/a52/a53/a54/a55/a56/a57/a58
+  /a59/a60/a61/a62/a63/a64/a65/a66
+  /a67/a68/a69/a70/a71/a72/a73/a74
+  /a203/a75/a204/a76/a77/a78/a79/a81
+  /a82/a83/a84/a97/a98/a99/a100/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/a101/a102/a103/a104/a106/a107/a108
+  /a112/a111/a110/a109/a120/a121/a122/a123
+  /a124/a125/a126/a127/a128/a129/a130/a131
+  /a132/a133/a134/a135/a136/a137/a138/a139
+  /a140/a141/a142/a143/a144/a145/a146/a147
+  /a148/a149/a150/a151/a152/a153/a154/a155
+  /a156/a157/a158/a159/a160/a161/a163/a164
+  /a196/a165/a192/a166/a167/a168/a169/a170
+  /a171/a172/a173/a162/a174/a175/a176/a177
+  /a178/a179/a193/a180/a199/a181/a200/a182
+  /.notdef/a201/a183/a184/a197/a185/a194/a198
+  /a186/a195/a187/a188/a189/a190/a191/.notdef]
+pdfMakeFont
+/F11_0 /Helvetica 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/minus/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /quoteleft/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/bullet
+  /Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl
+  /circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/Zcaron/bullet
+  /dotlessi/grave/acute/circumflex/tilde/macron/breve/dotaccent
+  /dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut/ogonek/caron
+  /space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+  /dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+  /degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered
+  /cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+  /Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+  /Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+  /Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply
+  /Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+  /agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+  /egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+  /eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide
+  /oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]
+pdfMakeFont
+/F12_0 /Helvetica-Bold 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/minus/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /quoteleft/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/bullet
+  /Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl
+  /circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/Zcaron/bullet
+  /dotlessi/grave/acute/circumflex/tilde/macron/breve/dotaccent
+  /dieresis/.notdef/ring/cedilla/.notdef/hungarumlaut/ogonek/caron
+  /space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+  /dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+  /degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered
+  /cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+  /Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+  /Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+  /Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply
+  /Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+  /agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+  /egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+  /eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide
+  /oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]
+pdfMakeFont
+%%EndSetup
+pdfStartPage
+%%EndPageSetup
+[] 0 d
+1 i
+0 j
+0 J
+10 M
+1 w
+/DeviceGray {} cs
+[0] sc
+/DeviceGray {} CS
+[0] SC
+false op
+false OP
+{} settransfer
+0 0 846 216 re
+W
+q
+1 J
+1 j
+q
+Q
+q
+Q
+q
+Q
+q
+0 0 846 216 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[1 1 1] SC
+1.06 w
+[] 0 d
+1 J
+1 j
+10 M
+0 0 846 216 re
+f
+0 0 846 216 re
+S
+Q
+q
+Q
+q
+39.09 171.24 129.4 30.36 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.8 0.8 0.8] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.498 0.498 0.498] SC
+0.43 w
+[] 0 d
+1 J
+1 j
+10 M
+39.09 171.24 129.4 30.36 re
+f
+39.09 171.24 129.4 30.36 re
+S
+[1 0 0 1 0 0] Tm
+0 0 Td
+[0 0 0] sc
+[13 0 0 13 94.75 188.67] Tm
+0 0 Td
+/F11_0 1 Tf
+(3/3)
+[0.556
+0
+0.278
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[13 0 0 13 81.03 174.84] Tm
+0 0 Td
+/F11_0 1 Tf
+(\(Expt 1\))
+[0.333
+0
+0.667
+0
+0.5
+0
+0.556
+0
+0.278
+0
+0.278
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+172.09 171.24 129.4 30.36 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.8 0.8 0.8] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.498 0.498 0.498] SC
+0.43 w
+[] 0 d
+1 J
+1 j
+10 M
+172.09 171.24 129.4 30.36 re
+f
+172.09 171.24 129.4 30.36 re
+S
+[1 0 0 1 0 0] Tm
+0 0 Td
+[0 0 0] sc
+[13 0 0 13 219.44 188.67] Tm
+0 0 Td
+/F11_0 1 Tf
+(Onset)
+[0.778
+0
+0.556
+0
+0.5
+0
+0.556
+0
+0.278
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[13 0 0 13 214.03 174.84] Tm
+0 0 Td
+/F11_0 1 Tf
+(\(Expt 2\))
+[0.333
+0
+0.667
+0
+0.5
+0
+0.556
+0
+0.278
+0
+0.278
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+305.08 171.24 129.4 30.36 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.8 0.8 0.8] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.498 0.498 0.498] SC
+0.43 w
+[] 0 d
+1 J
+1 j
+10 M
+305.08 171.24 129.4 30.36 re
+f
+305.08 171.24 129.4 30.36 re
+S
+[1 0 0 1 0 0] Tm
+0 0 Td
+[0 0 0] sc
+[13 0 0 13 354.61 188.67] Tm
+0 0 Td
+/F11_0 1 Tf
+(Rime)
+[0.722
+0
+0.222
+0
+0.833
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[13 0 0 13 347.02 174.84] Tm
+0 0 Td
+/F11_0 1 Tf
+(\(Expt 2\))
+[0.333
+0
+0.667
+0
+0.5
+0
+0.556
+0
+0.278
+0
+0.278
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+438.08 171.24 129.4 30.36 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.8 0.8 0.8] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.498 0.498 0.498] SC
+0.43 w
+[] 0 d
+1 J
+1 j
+10 M
+438.08 171.24 129.4 30.36 re
+f
+438.08 171.24 129.4 30.36 re
+S
+[1 0 0 1 0 0] Tm
+0 0 Td
+[0 0 0] sc
+[13 0 0 13 462.44 188.67] Tm
+0 0 Td
+/F11_0 1 Tf
+(Syllab)
+[0.667
+0
+0.5
+0
+0.222
+0
+0.222
+0
+0.556
+0
+0.556
+0] Tj
+20 TJm
+(le count)
+[0.222
+0
+0.556
+0
+0.278
+0
+0.5
+0
+0.556
+0
+0.556
+0
+0.556
+0
+0.278
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[13 0 0 13 480.02 174.84] Tm
+0 0 Td
+/F11_0 1 Tf
+(\(Expt 2\))
+[0.333
+0
+0.667
+0
+0.5
+0
+0.556
+0
+0.278
+0
+0.278
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+571.07 171.24 129.4 30.36 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.8 0.8 0.8] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.498 0.498 0.498] SC
+0.43 w
+[] 0 d
+1 J
+1 j
+10 M
+571.07 171.24 129.4 30.36 re
+f
+571.07 171.24 129.4 30.36 re
+S
+[1 0 0 1 0 0] Tm
+0 0 Td
+[0 0 0] sc
+[13 0 0 13 582.66 188.67] Tm
+0 0 Td
+/F11_0 1 Tf
+(Semantic baseline)
+[0.667
+0
+0.556
+0
+0.833
+0
+0.556
+0
+0.556
+0
+0.278
+0
+0.222
+0
+0.5
+0
+0.278
+0
+0.556
+0
+0.556
+0
+0.5
+0
+0.556
+0
+0.222
+0
+0.222
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[13 0 0 13 613.01 174.84] Tm
+0 0 Td
+/F11_0 1 Tf
+(\(Expt 3\))
+[0.333
+0
+0.667
+0
+0.5
+0
+0.556
+0
+0.278
+0
+0.278
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+39.09 40.87 129.4 130.37 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+39.09 40.87 129.4 130.37 re
+f
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 42.66 131.81] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 42.66 130.84] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 42.66 105.6] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 42.66 60.47] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 67.16 123.07] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 67.16 129.62] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 67.16 94.44] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 67.16 65.8] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 91.66 125.71] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 91.66 151.86] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 91.66 99.81] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 91.66 73.16] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 160.25 128.3] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 160.25 145.88] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 160.25 89.1] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 160.25 55.03] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+1 M
+44.99 133.85 m
+69.49 125.11 l
+93.99 127.75 l
+162.59 130.35 l
+S
+[0.361 0.675 0.933] SC
+44.99 132.88 m
+69.49 131.67 l
+93.99 153.9 l
+162.59 147.92 l
+S
+[0.804 0.776 0.451] SC
+44.99 107.64 m
+69.49 96.48 l
+93.99 101.85 l
+162.59 91.14 l
+S
+[1 0.188 0.188] SC
+44.99 62.51 m
+69.49 67.85 l
+93.99 75.2 l
+162.59 57.07 l
+S
+[0 0 0] SC
+0.21 w
+[] 0 d
+44.97 142.1 m
+45.01 142.1 l
+S
+44.99 142.1 m
+44.99 126.08 l
+S
+44.97 126.08 m
+45.01 126.08 l
+S
+69.47 134.58 m
+69.51 134.58 l
+S
+69.49 134.58 m
+69.49 115.64 l
+S
+69.47 115.64 m
+69.51 115.64 l
+S
+93.97 136.22 m
+94.01 136.22 l
+S
+93.99 136.22 m
+93.99 119.03 l
+S
+93.97 119.03 m
+94.01 119.03 l
+S
+162.57 140.08 m
+162.6 140.08 l
+S
+162.59 140.08 m
+162.59 121.43 l
+S
+162.57 121.43 m
+162.6 121.43 l
+S
+[0.361 0.675 0.933] SC
+44.97 142.34 m
+45.01 142.34 l
+S
+44.99 142.34 m
+44.99 122.93 l
+S
+44.97 122.93 m
+45.01 122.93 l
+S
+69.47 144.28 m
+69.51 144.28 l
+S
+69.49 144.28 m
+69.49 118.8 l
+S
+69.47 118.8 m
+69.51 118.8 l
+S
+93.97 161.87 m
+94.01 161.87 l
+S
+93.99 161.87 m
+93.99 145.68 l
+S
+93.97 145.68 m
+94.01 145.68 l
+S
+162.57 160.63 m
+162.6 160.63 l
+S
+162.59 160.63 m
+162.59 134.13 l
+S
+162.57 134.13 m
+162.6 134.13 l
+S
+[0.804 0.776 0.451] SC
+44.97 120.75 m
+45.01 120.75 l
+S
+44.99 120.75 m
+44.99 93.81 l
+S
+44.97 93.81 m
+45.01 93.81 l
+S
+69.47 111.04 m
+69.51 111.04 l
+S
+69.49 111.04 m
+69.49 82.41 l
+S
+69.47 82.41 m
+69.51 82.41 l
+S
+93.97 115.05 m
+94.01 115.05 l
+S
+93.99 115.05 m
+93.99 88.4 l
+S
+93.97 88.4 m
+94.01 88.4 l
+S
+162.57 108.72 m
+162.6 108.72 l
+S
+162.59 108.72 m
+162.59 74.38 l
+S
+162.57 74.38 m
+162.6 74.38 l
+S
+[1 0.188 0.188] SC
+44.97 73.67 m
+45.01 73.67 l
+S
+44.99 73.67 m
+44.99 52.07 l
+S
+44.97 52.07 m
+45.01 52.07 l
+S
+69.47 80.95 m
+69.51 80.95 l
+S
+69.49 80.95 m
+69.49 56.2 l
+S
+69.47 56.2 m
+69.51 56.2 l
+S
+93.97 88.15 m
+94.01 88.15 l
+S
+93.99 88.15 m
+93.99 62.75 l
+S
+93.97 62.75 m
+94.01 62.75 l
+S
+162.57 68.7 m
+162.6 68.7 l
+S
+162.59 68.7 m
+162.59 46.8 l
+S
+162.57 46.8 m
+162.6 46.8 l
+S
+[0.498 0.498 0.498] SC
+1.06 w
+[] 0 d
+1 J
+10 M
+39.09 40.87 129.4 130.37 re
+S
+Q
+q
+Q
+q
+172.09 40.87 129.4 130.37 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+172.09 40.87 129.4 130.37 re
+f
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 175.65 131.79] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 175.65 125.63] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 175.65 120.35] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 175.65 106.27] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 200.15 141.82] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 200.15 129.39] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 200.15 132.9] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 200.15 91.53] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 224.65 142.73] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 224.65 142] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 224.65 128.65] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 224.65 105.36] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 293.25 143.51] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 293.25 141.74] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 293.25 138.19] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 293.25 108.32] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+1 M
+177.98 133.84 m
+202.48 143.87 l
+226.98 144.77 l
+295.58 145.56 l
+S
+[0.361 0.675 0.933] SC
+177.98 127.68 m
+202.48 131.43 l
+226.98 144.04 l
+295.58 143.78 l
+S
+[0.804 0.776 0.451] SC
+177.98 122.39 m
+202.48 134.94 l
+226.98 130.7 l
+295.58 140.23 l
+S
+[1 0.188 0.188] SC
+177.98 108.31 m
+202.48 93.58 l
+226.98 107.4 l
+295.58 110.37 l
+S
+[0 0 0] SC
+0.21 w
+[] 0 d
+177.97 141.54 m
+178 141.54 l
+S
+177.98 141.54 m
+177.98 126.58 l
+S
+177.97 126.58 m
+178 126.58 l
+S
+202.47 150.36 m
+202.5 150.36 l
+S
+202.48 150.36 m
+202.48 137.38 l
+S
+202.47 137.38 m
+202.5 137.38 l
+S
+226.97 153.02 m
+227 153.02 l
+S
+226.98 153.02 m
+226.98 136.52 l
+S
+226.97 136.52 m
+227 136.52 l
+S
+295.56 154.14 m
+295.6 154.14 l
+S
+295.58 154.14 m
+295.58 136.69 l
+S
+295.56 136.69 m
+295.6 136.69 l
+S
+[0.361 0.675 0.933] SC
+177.97 137.58 m
+178 137.58 l
+S
+177.98 137.58 m
+177.98 117.77 l
+S
+177.97 117.77 m
+178 117.77 l
+S
+202.47 141.43 m
+202.5 141.43 l
+S
+202.48 141.43 m
+202.48 121.16 l
+S
+202.47 121.16 m
+202.5 121.16 l
+S
+226.97 152.53 m
+227 152.53 l
+S
+226.98 152.53 m
+226.98 135.06 l
+S
+226.97 135.06 m
+227 135.06 l
+S
+295.56 152.06 m
+295.6 152.06 l
+S
+295.58 152.06 m
+295.58 135.8 l
+S
+295.56 135.8 m
+295.6 135.8 l
+S
+[0.804 0.776 0.451] SC
+177.97 131.2 m
+178 131.2 l
+S
+177.98 131.2 m
+177.98 113.59 l
+S
+177.97 113.59 m
+178 113.59 l
+S
+202.47 144.41 m
+202.5 144.41 l
+S
+202.48 144.41 m
+202.48 125.75 l
+S
+202.47 125.75 m
+202.5 125.75 l
+S
+226.97 142.1 m
+227 142.1 l
+S
+226.98 142.1 m
+226.98 119.05 l
+S
+226.97 119.05 m
+227 119.05 l
+S
+295.56 149.7 m
+295.6 149.7 l
+S
+295.58 149.7 m
+295.58 130.48 l
+S
+295.56 130.48 m
+295.6 130.48 l
+S
+[1 0.188 0.188] SC
+177.97 119.97 m
+178 119.97 l
+S
+177.98 119.97 m
+177.98 96.86 l
+S
+177.97 96.86 m
+178 96.86 l
+S
+202.47 104.39 m
+202.5 104.39 l
+S
+202.48 104.39 m
+202.48 82.49 l
+S
+202.47 82.49 m
+202.5 82.49 l
+S
+226.97 120.51 m
+227 120.51 l
+S
+226.98 120.51 m
+226.98 93.81 l
+S
+226.97 93.81 m
+227 93.81 l
+S
+295.56 124.86 m
+295.6 124.86 l
+S
+295.58 124.86 m
+295.58 95.58 l
+S
+295.56 95.58 m
+295.6 95.58 l
+S
+[0.498 0.498 0.498] SC
+1.06 w
+[] 0 d
+1 J
+10 M
+172.09 40.87 129.4 130.37 re
+S
+Q
+q
+Q
+q
+305.08 40.87 129.4 130.37 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+305.08 40.87 129.4 130.37 re
+f
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 308.65 142.27] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 308.65 141.06] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 308.65 140.37] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 308.65 110.78] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 333.15 142.35] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 333.15 138.5] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 333.15 131.93] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 333.15 99.52] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 357.65 145.32] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 357.65 138.36] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 357.65 135.02] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 357.65 86.59] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 426.25 145.11] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 426.25 140.25] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 426.25 141.53] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 426.25 97.54] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+1 M
+310.98 144.31 m
+335.48 144.39 l
+359.98 147.37 l
+428.58 147.16 l
+S
+[0.361 0.675 0.933] SC
+310.98 143.11 m
+335.48 140.55 l
+359.98 140.41 l
+428.58 142.3 l
+S
+[0.804 0.776 0.451] SC
+310.98 142.42 m
+335.48 133.97 l
+359.98 137.07 l
+428.58 143.58 l
+S
+[1 0.188 0.188] SC
+310.98 112.82 m
+335.48 101.57 l
+359.98 88.64 l
+428.58 99.58 l
+S
+[0 0 0] SC
+0.21 w
+[] 0 d
+310.96 150.68 m
+311 150.68 l
+S
+310.98 150.68 m
+310.98 137.6 l
+S
+310.96 137.6 m
+311 137.6 l
+S
+335.46 151.77 m
+335.5 151.77 l
+S
+335.48 151.77 m
+335.48 136.7 l
+S
+335.46 136.7 m
+335.5 136.7 l
+S
+359.96 156.55 m
+360 156.55 l
+S
+359.98 156.55 m
+359.98 137.9 l
+S
+359.96 137.9 m
+360 137.9 l
+S
+428.56 156.62 m
+428.59 156.62 l
+S
+428.58 156.62 m
+428.58 137.43 l
+S
+428.56 137.43 m
+428.59 137.43 l
+S
+[0.361 0.675 0.933] SC
+310.96 150.68 m
+311 150.68 l
+S
+310.98 150.68 m
+310.98 135.19 l
+S
+310.96 135.19 m
+311 135.19 l
+S
+335.46 149.53 m
+335.5 149.53 l
+S
+335.48 149.53 m
+335.48 130.92 l
+S
+335.46 130.92 m
+335.5 130.92 l
+S
+359.96 151.26 m
+360 151.26 l
+S
+359.98 151.26 m
+359.98 129.27 l
+S
+359.96 129.27 m
+360 129.27 l
+S
+428.56 154.83 m
+428.59 154.83 l
+S
+428.58 154.83 m
+428.58 128.48 l
+S
+428.56 128.48 m
+428.59 128.48 l
+S
+[0.804 0.776 0.451] SC
+310.96 149.47 m
+311 149.47 l
+S
+310.98 149.47 m
+310.98 135.53 l
+S
+310.96 135.53 m
+311 135.53 l
+S
+335.46 143.43 m
+335.5 143.43 l
+S
+335.48 143.43 m
+335.48 124.5 l
+S
+335.46 124.5 m
+335.5 124.5 l
+S
+359.96 149.04 m
+360 149.04 l
+S
+359.98 149.04 m
+359.98 124.54 l
+S
+359.96 124.54 m
+360 124.54 l
+S
+428.56 155.6 m
+428.59 155.6 l
+S
+428.58 155.6 m
+428.58 129.51 l
+S
+428.56 129.51 m
+428.59 129.51 l
+S
+[1 0.188 0.188] SC
+310.96 123.66 m
+311 123.66 l
+S
+310.98 123.66 m
+310.98 102.33 l
+S
+310.96 102.33 m
+311 102.33 l
+S
+335.46 114.88 m
+335.5 114.88 l
+S
+335.48 114.88 m
+335.48 88.58 l
+S
+335.46 88.58 m
+335.5 88.58 l
+S
+359.96 104.51 m
+360 104.51 l
+S
+359.98 104.51 m
+359.98 73.89 l
+S
+359.96 73.89 m
+360 73.89 l
+S
+428.56 115.18 m
+428.59 115.18 l
+S
+428.58 115.18 m
+428.58 83.72 l
+S
+428.56 83.72 m
+428.59 83.72 l
+S
+[0.498 0.498 0.498] SC
+1.06 w
+[] 0 d
+1 J
+10 M
+305.08 40.87 129.4 130.37 re
+S
+Q
+q
+Q
+q
+438.08 40.87 129.4 130.37 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+438.08 40.87 129.4 130.37 re
+f
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 441.64 133.86] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 441.64 129.51] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 441.64 125.67] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 441.64 120.81] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 466.14 134.79] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 466.14 130.2] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 466.14 127.76] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 466.14 119.11] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 490.64 142.2] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 490.64 130.11] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 490.64 135.1] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 490.64 115.65] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 559.24 154.83] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 559.24 147.41] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 559.24 140.76] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 559.24 139.23] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+1 M
+443.98 135.9 m
+468.47 136.84 l
+492.97 144.24 l
+561.57 156.88 l
+S
+[0.361 0.675 0.933] SC
+443.98 131.55 m
+468.47 132.24 l
+492.97 132.15 l
+561.57 149.46 l
+S
+[0.804 0.776 0.451] SC
+443.98 127.72 m
+468.47 129.81 l
+492.97 137.15 l
+561.57 142.81 l
+S
+[1 0.188 0.188] SC
+443.98 122.86 m
+468.47 121.16 l
+492.97 117.69 l
+561.57 141.27 l
+S
+[0 0 0] SC
+0.21 w
+[] 0 d
+443.96 143.58 m
+443.99 143.58 l
+S
+443.98 143.58 m
+443.98 128.23 l
+S
+443.96 128.23 m
+443.99 128.23 l
+S
+468.46 144.68 m
+468.49 144.68 l
+S
+468.47 144.68 m
+468.47 129.27 l
+S
+468.46 129.27 m
+468.49 129.27 l
+S
+492.96 152.14 m
+492.99 152.14 l
+S
+492.97 152.14 m
+492.97 136.09 l
+S
+492.96 136.09 m
+492.99 136.09 l
+S
+561.56 165.32 m
+561.59 165.32 l
+S
+561.57 165.32 m
+561.57 147.67 l
+S
+561.56 147.67 m
+561.59 147.67 l
+S
+[0.361 0.675 0.933] SC
+443.96 138.97 m
+443.99 138.97 l
+S
+443.98 138.97 m
+443.98 123.88 l
+S
+443.96 123.88 m
+443.99 123.88 l
+S
+468.46 140.89 m
+468.49 140.89 l
+S
+468.47 140.89 m
+468.47 124.13 l
+S
+468.46 124.13 m
+468.49 124.13 l
+S
+492.96 141.61 m
+492.99 141.61 l
+S
+492.97 141.61 m
+492.97 122.42 l
+S
+492.96 122.42 m
+492.99 122.42 l
+S
+561.56 161.99 m
+561.59 161.99 l
+S
+561.57 161.99 m
+561.57 135.65 l
+S
+561.56 135.65 m
+561.59 135.65 l
+S
+[0.804 0.776 0.451] SC
+443.96 134.62 m
+443.99 134.62 l
+S
+443.98 134.62 m
+443.98 120.56 l
+S
+443.96 120.56 m
+443.99 120.56 l
+S
+468.46 139.81 m
+468.49 139.81 l
+S
+468.47 139.81 m
+468.47 120.07 l
+S
+468.46 120.07 m
+468.49 120.07 l
+S
+492.96 148.71 m
+492.99 148.71 l
+S
+492.97 148.71 m
+492.97 124.79 l
+S
+492.96 124.79 m
+492.99 124.79 l
+S
+561.56 154.83 m
+561.59 154.83 l
+S
+561.57 154.83 m
+561.57 129.76 l
+S
+561.56 129.76 m
+561.59 129.76 l
+S
+[1 0.188 0.188] SC
+443.96 131.3 m
+443.99 131.3 l
+S
+443.98 131.3 m
+443.98 114.16 l
+S
+443.96 114.16 m
+443.99 114.16 l
+S
+468.46 133.59 m
+468.49 133.59 l
+S
+468.47 133.59 m
+468.47 108.72 l
+S
+468.46 108.72 m
+468.49 108.72 l
+S
+492.96 130.57 m
+492.99 130.57 l
+S
+492.97 130.57 m
+492.97 104.55 l
+S
+492.96 104.55 m
+492.99 104.55 l
+S
+561.56 156.36 m
+561.59 156.36 l
+S
+561.57 156.36 m
+561.57 124.39 l
+S
+561.56 124.39 m
+561.59 124.39 l
+S
+[0.498 0.498 0.498] SC
+1.06 w
+[] 0 d
+1 J
+10 M
+438.08 40.87 129.4 130.37 re
+S
+Q
+q
+Q
+q
+571.07 40.87 129.4 130.37 re
+W
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+571.07 40.87 129.4 130.37 re
+f
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 574.64 133.19] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 574.64 125.34] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 574.64 126.49] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 574.64 74.56] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 599.14 130.57] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 599.14 120.55] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 599.14 127.79] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 599.14 71.01] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 623.64 141.15] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 623.64 129.71] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 623.64 123.4] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 623.64 74.11] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 692.24 141.6] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 692.24 126.95] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 692.24 122] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 692.24 67.69] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+1 M
+576.97 135.23 m
+601.47 132.61 l
+625.97 143.19 l
+694.57 143.64 l
+S
+[0.361 0.675 0.933] SC
+576.97 127.38 m
+601.47 122.59 l
+625.97 131.76 l
+694.57 129 l
+S
+[0.804 0.776 0.451] SC
+576.97 128.53 m
+601.47 129.83 l
+625.97 125.45 l
+694.57 124.04 l
+S
+[1 0.188 0.188] SC
+576.97 76.6 m
+601.47 73.05 l
+625.97 76.16 l
+694.57 69.74 l
+S
+[0 0 0] SC
+0.21 w
+[] 0 d
+576.95 143.31 m
+576.99 143.31 l
+S
+576.97 143.31 m
+576.97 126.92 l
+S
+576.95 126.92 m
+576.99 126.92 l
+S
+601.45 143.19 m
+601.49 143.19 l
+S
+601.47 143.19 m
+601.47 121.76 l
+S
+601.45 121.76 m
+601.49 121.76 l
+S
+625.95 153.44 m
+625.99 153.44 l
+S
+625.97 153.44 m
+625.97 132.55 l
+S
+625.95 132.55 m
+625.99 132.55 l
+S
+694.55 152.66 m
+694.59 152.66 l
+S
+694.57 152.66 m
+694.57 134.18 l
+S
+694.55 134.18 m
+694.59 134.18 l
+S
+[0.361 0.675 0.933] SC
+576.95 136.15 m
+576.99 136.15 l
+S
+576.97 136.15 m
+576.97 118.84 l
+S
+576.95 118.84 m
+576.99 118.84 l
+S
+601.45 133.45 m
+601.49 133.45 l
+S
+601.47 133.45 m
+601.47 110.63 l
+S
+601.45 110.63 m
+601.49 110.63 l
+S
+625.95 143.98 m
+625.99 143.98 l
+S
+625.97 143.98 m
+625.97 117.96 l
+S
+625.95 117.96 m
+625.99 117.96 l
+S
+694.55 141.16 m
+694.59 141.16 l
+S
+694.57 141.16 m
+694.57 115.93 l
+S
+694.55 115.93 m
+694.59 115.93 l
+S
+[0.804 0.776 0.451] SC
+576.95 138.7 m
+576.99 138.7 l
+S
+576.97 138.7 m
+576.97 118.15 l
+S
+576.95 118.15 m
+576.99 118.15 l
+S
+601.45 143.19 m
+601.49 143.19 l
+S
+601.47 143.19 m
+601.47 115.91 l
+S
+601.45 115.91 m
+601.49 115.91 l
+S
+625.95 139.64 m
+625.99 139.64 l
+S
+625.97 139.64 m
+625.97 110.46 l
+S
+625.95 110.46 m
+625.99 110.46 l
+S
+694.55 135.76 m
+694.59 135.76 l
+S
+694.57 135.76 m
+694.57 111.42 l
+S
+694.55 111.42 m
+694.59 111.42 l
+S
+[1 0.188 0.188] SC
+576.95 90.22 m
+576.99 90.22 l
+S
+576.97 90.22 m
+576.97 63.67 l
+S
+576.95 63.67 m
+576.99 63.67 l
+S
+601.45 86.69 m
+601.49 86.69 l
+S
+601.47 86.69 m
+601.47 59.97 l
+S
+601.45 59.97 m
+601.49 59.97 l
+S
+625.95 94.69 m
+625.99 94.69 l
+S
+625.97 94.69 m
+625.97 59.6 l
+S
+625.95 59.6 m
+625.99 59.6 l
+S
+694.55 83.48 m
+694.59 83.48 l
+S
+694.57 83.48 m
+694.57 56.67 l
+S
+694.55 56.67 m
+694.59 56.67 l
+S
+[0.498 0.498 0.498] SC
+1.06 w
+[] 0 d
+1 J
+10 M
+571.07 40.87 129.4 130.37 re
+S
+Q
+q
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 25.89 68.27] Tm
+0 0 Td
+/F11_0 1 Tf
+(2)
+[0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 25.89 106.12] Tm
+0 0 Td
+/F11_0 1 Tf
+(3)
+[0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 25.89 143.97] Tm
+0 0 Td
+/F11_0 1 Tf
+(4)
+[0.556
+0] Tj
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+34.84 72.21 m
+39.09 72.21 l
+S
+34.84 110.07 m
+39.09 110.07 l
+S
+34.84 147.92 m
+39.09 147.92 l
+S
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+60.39 36.62 m
+60.39 40.87 l
+S
+95.39 36.62 m
+95.39 40.87 l
+S
+130.39 36.62 m
+130.39 40.87 l
+S
+165.39 36.62 m
+165.39 40.87 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 51.22 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(100)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 86.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(200)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 121.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(300)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 156.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(400)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+193.38 36.62 m
+193.38 40.87 l
+S
+228.38 36.62 m
+228.38 40.87 l
+S
+263.38 36.62 m
+263.38 40.87 l
+S
+298.38 36.62 m
+298.38 40.87 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 184.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(100)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 219.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(200)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 254.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(300)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 289.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(400)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+326.38 36.62 m
+326.38 40.87 l
+S
+361.38 36.62 m
+361.38 40.87 l
+S
+396.38 36.62 m
+396.38 40.87 l
+S
+431.38 36.62 m
+431.38 40.87 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 317.21 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(100)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 352.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(200)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 387.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(300)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 422.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(400)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+459.38 36.62 m
+459.38 40.87 l
+S
+494.37 36.62 m
+494.37 40.87 l
+S
+529.37 36.62 m
+529.37 40.87 l
+S
+564.37 36.62 m
+564.37 40.87 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 450.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(100)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 485.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(200)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 520.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(300)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 555.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(400)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+1.06 w
+[] 0 d
+0 J
+1 j
+10 M
+592.37 36.62 m
+592.37 40.87 l
+S
+627.37 36.62 m
+627.37 40.87 l
+S
+662.37 36.62 m
+662.37 40.87 l
+S
+697.37 36.62 m
+697.37 40.87 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 583.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(100)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 618.2 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(200)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 653.19 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(300)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 688.19 25.89] Tm
+0 0 Td
+/F11_0 1 Tf
+(400)
+[0.556
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[16 0 0 16 331.99 7.2] Tm
+0 0 Td
+/F11_0 1 Tf
+(Exposures)
+[0.667
+0
+0.5
+0
+0.556
+0
+0.556
+0
+0.5
+0
+0.556
+0
+0.333
+0
+0.556
+0
+0.5
+0] Tj
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[0 16 -16 0 23.73 69.9] Tm
+0 0 Td
+/F11_0 1 Tf
+(F)
+[0.611
+0] Tj
+50 TJm
+(amiliar)
+[0.556
+0
+0.833
+0
+0.222
+0
+0.222
+0
+0.222
+0
+0.556
+0
+0.333
+0] Tj
+-15 TJm
+(ity)
+[0.222
+0
+0.278
+0
+0.5
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+710.5 44.67 111.06 122.77 re
+f
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 714.75 155.29] Tm
+0 0 Td
+/F12_0 1 Tf
+(Sentence T)
+[0.667
+0
+0.556
+0
+0.611
+0
+0.333
+0
+0.556
+0
+0.611
+0
+0.556
+0
+0.556
+0
+0.278
+0
+0.611
+0] Tj
+60 TJm
+(ype)
+[0.556
+0
+0.611
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.8 0.8 0.8] SC
+1.06 w
+[] 0 d
+1 J
+1 j
+10 M
+714.75 125.46 25.51 25.51 re
+f
+714.75 125.46 25.51 25.51 re
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 725.18 136.17] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 138.22 m
+737.71 138.22 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+0.21 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 138.22 m
+737.71 138.22 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.8 0.8 0.8] SC
+1.06 w
+[] 0 d
+1 J
+1 j
+10 M
+714.75 99.95 25.51 25.51 re
+f
+714.75 99.95 25.51 25.51 re
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.361 0.675 0.933] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 725.18 110.66] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.361 0.675 0.933] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 112.7 m
+737.71 112.7 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.361 0.675 0.933] SC
+0.21 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 112.7 m
+737.71 112.7 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.8 0.8 0.8] SC
+1.06 w
+[] 0 d
+1 J
+1 j
+10 M
+714.75 74.44 25.51 25.51 re
+f
+714.75 74.44 25.51 25.51 re
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[0.804 0.776 0.451] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 725.18 85.15] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.804 0.776 0.451] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 87.19 m
+737.71 87.19 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.804 0.776 0.451] SC
+0.21 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 87.19 m
+737.71 87.19 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 1 1] sc
+/DeviceRGB {} CS
+[0 0 0] SC
+[0.8 0.8 0.8] SC
+1.06 w
+[] 0 d
+1 J
+1 j
+10 M
+714.75 48.92 25.51 25.51 re
+f
+714.75 48.92 25.51 25.51 re
+S
+Q
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[1 0.188 0.188] sc
+[1 0 0 1 0 0] Tm
+0 0 Td
+0 Tr
+[5.89 0 0 5.89 725.18 59.64] Tm
+0 0 Td
+/F10_0 1 Tf
+(l)
+[0.791
+0] Tj
+0 Tr
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[1 0.188 0.188] SC
+0.64 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 61.68 m
+737.71 61.68 l
+S
+Q
+q
+Q
+q
+/DeviceRGB {} CS
+[0 0 0] SC
+[1 0.188 0.188] SC
+0.21 w
+[] 0 d
+0 J
+1 j
+10 M
+717.3 61.68 m
+737.71 61.68 l
+S
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 742.43 134.27] Tm
+0 0 Td
+/F11_0 1 Tf
+(F)
+[0.611
+0] Tj
+50 TJm
+(amiliar)
+[0.556
+0
+0.833
+0
+0.222
+0
+0.222
+0
+0.222
+0
+0.556
+0
+0.333
+0] Tj
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 742.43 108.76] Tm
+0 0 Td
+/F11_0 1 Tf
+(Withheld)
+[0.944
+0
+0.222
+0
+0.278
+0
+0.556
+0
+0.556
+0
+0.556
+0
+0.222
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 742.43 89.29] Tm
+0 0 Td
+/F11_0 1 Tf
+(Co-occurrence)
+[0.722
+0
+0.556
+0
+0.584
+0
+0.556
+0
+0.5
+0
+0.5
+0
+0.556
+0
+0.333
+0
+0.333
+0
+0.556
+0
+0.556
+0
+0.5
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 742.43 77.2] Tm
+0 0 Td
+/F11_0 1 Tf
+(violation)
+[0.5
+0
+0.222
+0
+0.556
+0
+0.222
+0
+0.556
+0
+0.278
+0
+0.222
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+[1 0 0 1 0 0] Tm
+0 0 Td
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+[11 0 0 11 742.43 63.78] Tm
+0 0 Td
+/F11_0 1 Tf
+(P)
+[0.667
+0] Tj
+50 TJm
+(osition)
+[0.556
+0
+0.5
+0
+0.222
+0
+0.278
+0
+0.222
+0
+0.556
+0
+0.556
+0] Tj
+[1 0 0 1 0 0] Tm
+0 0 Td
+[11 0 0 11 742.43 51.68] Tm
+0 0 Td
+/F11_0 1 Tf
+(violation)
+[0.5
+0
+0.222
+0
+0.556
+0
+0.222
+0
+0.556
+0
+0.278
+0
+0.222
+0
+0.556
+0
+0.556
+0] Tj
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+q
+Q
+Q
+showpage
+%%PageTrailer
+pdfEndPage
+%%Trailer
+end
+%%DocumentSuppliedResources:
+%%EOF
