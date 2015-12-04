@@ -1,15 +1,6 @@
 #!/bin/bash
 
-# HT http://stackoverflow.com/a/192337/351392
-ME=`basename $0`
-
-LIGHTBLUE='\033[1;32m'
-NC='\033[0m' # No Color
-echo ""
-echo -e "${LIGHTBLUE}Running ./$ME${NC}"
-
-(kqwait $ME report.tex images/* | cat); \
-latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -pdf report.tex; \
-./$ME
-
-echo ""
+while kqwait *
+do
+  make all
+done
