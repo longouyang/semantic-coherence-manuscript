@@ -1,17 +1,21 @@
 % editing notes: don't use auto-fill-mode
 
 \documentclass[man,longtable,floatmark]{my-apa6}
-%\usepackage{longtable}
-\usepackage{amsmath}
-\usepackage{amssymb}
+
+\usepackage[flushleft]{threeparttablex}
+
+% % HT http://tex.stackexchange.com/a/114723/41154
+\DeclareDelayedFloatFlavour{ThreePartTable}{table}
+\DeclareDelayedFloatFlavour{threeparttable}{table}
+%\DeclareDelayedFloatFlavor*{longtable}{table}
 \usepackage{graphicx}
-% \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage[natbibapa]{apacite}
 \usepackage{times}
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{verbatim}
 
 % so doi shows up in typewriter
@@ -35,8 +39,7 @@
 
 \graphicspath{{images/}}
 
-\shorttitle{Semantic coherence and distributional learning}
-% \shorttitle{}
+\shorttitle{Semantic coherence and distributional learning }
 \title{Semantic coherence facilitates distributional learning}
 \threeauthors{Long Ouyang}{Lera Boroditsky}{Michael C. Frank}
 \threeaffiliations{Department of Psychology, Stanford University}{Department of Cognitive Science, University of California San Diego}{Department of Psychology, Stanford University}
@@ -176,50 +179,56 @@ Sentences took the form ``M and N'' or ``P and Q'' (Table \ref{mnpq-table}). Not
 
 To create the audio files, we input the sentences as ``X. and. Y.'' (e.g., ``car. and. chuv.'', including periods) into an American English text-to-speech engine using a female voice.\footnote{\label{tts} We programmatically submitted all of our sentences to the text-to-speech web service that powers Google Translate. During our investigation, the set of voices on the web service changed, which required us to synthesize our stimuli using different software. See also Footnote \ref{change-of-stimuli}.} The periods between words introduced substantial pauses ranging in length from 150 to 300 ms; piloting revealed that without pauses, it was difficult for participants to distinguish the words. Sentences using only monosyllabic words were around 2 seconds long. Sentences using the sole disyllabic word, hamster, were around 3 seconds long.  The referent assignment task involved visual referents. For the context words, we used 128x128 pixel images of a cat, dog, hamster, car, bus, and truck. For the target words, we used 100x100 pixel images of a horse, rabbit, sheep, bear, goldfish, mouse, boat, van, train, motorcycle, plane, and bicycle. Images are shown in Fig.~\ref{meaning-task}.
 
-
-
 \begin{table}[t]
+  \caption{The MNPQ language and test items for memory and similarity.}
   \begin{center}
-    \begin{tabular}{ p{0.275\linewidth} p{0.4\linewidth} p{0.325\linewidth} }
-      %% HT the comment from Herbert on http://tex.stackexchange.com/a/58314
-      \vspace{0pt}
-      \begin{tabular}{ l l l }
-        \multicolumn{3}{c}{Exposure sentences}\\
-        \underline{$m_1$ $n_1$} & $m_1$ $n_2$ & $m_1$ $n_3$  \\
-        $m_2$ $n_1$ & \underline{$m_2$ $n_2$} & $m_2$ $n_3$  \\
-        $m_3$ $n_1$ & $m_3$ $n_2$ & $m_3$ $n_3$  \\
-        \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$ $q_3$ \\
-        $p_2$ $q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\
-        $p_3$ $q_1$ & $p_3$ $q_2$ & $p_3$ $q_3$ \\
+    \begin{threeparttable}
+      \begin{tabular}{ P{0.275\linewidth} P{0.4\linewidth} P{0.325\linewidth} }
+        Exposure sentences\tnote{a} & Memory items & Similarity items\\
+        \hline
+        %% HT the comment from Herbert on http://tex.stackexchange.com/a/58314
+        \vspace{0pt}
+        \begin{tabular}{ l l l }
+          % \multicolumn{3}{c}{}\\
+          \underline{$m_1$ $n_1$} & $m_1$ $n_2$ & $m_1$ $n_3$  \\
+          $m_2$ $n_1$ & \underline{$m_2$ $n_2$} & $m_2$ $n_3$  \\
+          $m_3$ $n_1$ & $m_3$ $n_2$ & $m_3$ $n_3$  \\
+          \underline{$p_1$ $q_1$} & $p_1$ $q_2$ & $p_1$ $q_3$ \\
+          $p_2$ $q_1$ & \underline{$p_2$ $q_2$} & $p_2$ $q_3$ \\
+          $p_3$ $q_1$ & $p_3$ $q_2$ & $p_3$ $q_3$\\
+        \end{tabular}
+
+                                    &
+
+                                      \vspace{0pt}
+                                      \begin{tabular}{l l}
+                                        % \multicolumn{2}{c}{}\\
+                                        Sentence type & Example\\
+                                        \hline
+                                        Familiar & $m_1$ $n_2$\\
+                                        Withheld & $m_1$ $n_1$\\
+                                        Co-occurrence violation & $m_1$ $q_2$\\
+                                        Position violation & $m_1$ $m_2$\\
+                                        \hline
+                                      \end{tabular}
+
+                                    &
+
+                                      \vspace{0pt}
+                                      \begin{tabular}{l l}
+                                        % \multicolumn{2}{c}{jp}\\
+                                        Pair type & Example\\
+                                        \hline
+                                        Within-category & $n_1$, $n_2$\\
+                                        Cross-category & $n_1$, $q_1$\\
+                                        \hline
+                                      \end{tabular}\\
+        \hline
       \end{tabular}
-
-      &
-
-      \vspace{0pt}
-      \begin{tabular}{l l}
-        \multicolumn{2}{c}{Memory items}\\
-        Sentence type & Example\\
-        \hline
-        Familiar & $m_1$ $n_2$\\
-        Withheld & $m_1$ $n_1$\\
-        Co-occurrence violation & $m_1$ $q_2$\\
-        Position violation & $m_1$ $m_2$\\
-        \hline
-      \end{tabular}
-
-      &
-
-      \vspace{0pt}
-      \begin{tabular}{l l}
-        \multicolumn{2}{c}{Similarity items}\\
-        Pair type & Example\\
-        \hline
-        Within-category & $n_1$, $n_2$\\
-        Cross-category & $n_1$, $q_1$\\
-        \hline
-      \end{tabular}
-    \end{tabular}
-    \caption{The MNPQ language and test items for memory and similarity. Underlined sentences were withheld from exposure.}
+      \begin{tablenotes}
+      \item [a] \footnotesize{Underlined sentences were withheld from exposure.}
+      \end{tablenotes}
+    \end{threeparttable}
     \label{mnpq-table}
   \end{center}
 \end{table}
@@ -306,49 +315,50 @@ To examine the differences between the different coherence levels, we used Helme
 
 \newcommand{\ww}{\color{white}{$\enspace$}} \newcommand\T{\rule{0pt}{2.1ex}}
 
-% \begin{table}[h]
-  % \begin{center}
-  % \footnotesize{
-    \begin{longtable}{l r r r r}
-      \hline
-      Predictor & $\beta$ & Std Error & $t$ & $p$ \\
-      \hline
-      \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.18, $F$(7, 598) = 19.26 \T}\\
-      Intercept &  0.0432 &  0.019 &  2.26 & <0.05*\\
-      Condition: 1/3 -- (0/3) &  0.0043 &  0.027 &  0.15 & 0.874\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0269 &  0.015 &  1.78 & 0.074\ww\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0396 &  0.010 &  3.62 & <0.001*\\
-      Exposures &  0.2215 &  0.084 &  2.63 & <0.01*\\
-      E $\times$ C: 1/3 -- (0/3) & -0.0012 &  0.121 & -0.00 & 0.992\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) & -0.0050 &  0.067 & -0.07 & 0.939\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1294 &  0.048 &  2.65 & <0.01* \\
-      \hline
-      \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.12, $F$(7, 598) = 11.85 \T}\\
-      Intercept &  0.0536 &  0.019 &  2.76 & <0.01*\\
-      Condition: 1/3 -- (0/3) & -0.0085 &  0.028 & -0.30 & 0.763\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0237 &  0.015 &  1.54 & 0.123\ww\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0239 &  0.011 &  2.13 & <0.05*\\
-      Exposures &  0.1407 &  0.085 &  1.63 & 0.101\ww\\
-      E $\times$ C: 1/3 -- (0/3) &  0.0517 &  0.124 &  0.41 & 0.676\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) &  0.0258 &  0.068 &  0.37 & 0.705\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1320 &  0.049 &  2.65 & <0.01* \\
-      \hline
-      \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.07, $F$(7, 594) = 6.70 \T}\\
-      Intercept &  0.1136 &  0.036 &  3.10 & <0.005*\\
-      Condition: 1/3 -- (0/3) &  0.0629 &  0.053 &  1.17 & 0.240\ww\\
-      Condition: 2/3 -- (0/3,1/3) &  0.0689 &  0.028 &  2.38 & <0.05*\\
-      Condition: 3/3 -- (0/3,1/3,2/3) &  0.0397 &  0.021 &  1.88 & 0.059\ww\\
-      Exposures &  0.4434 &  0.161 &  2.74 & <0.01*\\
-      E $\times$ C: 1/3 -- (0/3) & -0.0784 &  0.233 & -0.33 & 0.736\ww\\
-      E $\times$ C: 2/3 -- (0/3,1/3) & -0.1421 &  0.128 & -1.10 & 0.268\ww\\
-      E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1201 &  0.094 &  1.27 & 0.202\ww \\
-      \hline
-      \caption{\label{expt1-regressions} Regression model for Experiment 1a. For readability, we divided the exposure values by 1,000.}
-
-    \end{longtable}
-  % }
-  % \end{center}
-% \end{table}
+\begin{ThreePartTable}
+  % see use of insertTableNotes at the end of longtable below
+  % HT threeparttablex documentation
+  \begin{TableNotes}
+    \item \footnotesize{\emph{Note}. For readability, we divided the exposure values by 1,000.}
+  \end{TableNotes}
+  \begin{longtable}{l r r r r}
+    \caption{Regression model for Experiment 1a} \label{expt1-regressions}\\
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\
+    \hline
+    \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.18, $F$(7, 598) = 19.26 \T}\\
+    Intercept &  0.0432 &  0.019 &  2.26 & <0.05*\\
+    Condition: 1/3 -- (0/3) &  0.0043 &  0.027 &  0.15 & 0.874\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.0269 &  0.015 &  1.78 & 0.074\ww\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0396 &  0.010 &  3.62 & <0.001*\\
+    Exposures &  0.2215 &  0.084 &  2.63 & <0.01*\\
+    E $\times$ C: 1/3 -- (0/3) & -0.0012 &  0.121 & -0.00 & 0.992\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.0050 &  0.067 & -0.07 & 0.939\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1294 &  0.048 &  2.65 & <0.01* \\
+    \hline
+    \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.12, $F$(7, 598) = 11.85 \T}\\
+    Intercept &  0.0536 &  0.019 &  2.76 & <0.01*\\
+    Condition: 1/3 -- (0/3) & -0.0085 &  0.028 & -0.30 & 0.763\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.0237 &  0.015 &  1.54 & 0.123\ww\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0239 &  0.011 &  2.13 & <0.05*\\
+    Exposures &  0.1407 &  0.085 &  1.63 & 0.101\ww\\
+    E $\times$ C: 1/3 -- (0/3) &  0.0517 &  0.124 &  0.41 & 0.676\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) &  0.0258 &  0.068 &  0.37 & 0.705\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1320 &  0.049 &  2.65 & <0.01* \\
+    \hline
+    \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.07, $F$(7, 594) = 6.70 \T}\\
+    Intercept &  0.1136 &  0.036 &  3.10 & <0.005*\\
+    Condition: 1/3 -- (0/3) &  0.0629 &  0.053 &  1.17 & 0.240\ww\\
+    Condition: 2/3 -- (0/3,1/3) &  0.0689 &  0.028 &  2.38 & <0.05*\\
+    Condition: 3/3 -- (0/3,1/3,2/3) &  0.0397 &  0.021 &  1.88 & 0.059\ww\\
+    Exposures &  0.4434 &  0.161 &  2.74 & <0.01*\\
+    E $\times$ C: 1/3 -- (0/3) & -0.0784 &  0.233 & -0.33 & 0.736\ww\\
+    E $\times$ C: 2/3 -- (0/3,1/3) & -0.1421 &  0.128 & -1.10 & 0.268\ww\\
+    E $\times$ C: 3/3 -- (0/3,1/3,2/3) &  0.1201 &  0.094 &  1.27 & 0.202\ww \\
+    \hline
+    \insertTableNotes
+  \end{longtable}
+\end{ThreePartTable}
 
 \subsubsection{Task results}
 
@@ -401,26 +411,30 @@ The design and procedure were identical to that of Experiment 1a.
 We excluded 15 subjects who did not pass all trials.
 
 \begin{table}[t]
-  \centering
-  \begin{tabular}{l c c c r}
-    \hline
-    Predictor & $\beta$ & Std Error & $t$ & $p$ \\
-    \hline
-    \multicolumn{5}{l}{\small{\textbf{Memory} $R^2$ = 0.03, $F$(1, 146) = 4.60}}\\
-    Intercept & 0.16 & 0.03 & 4.42 & <0.001*\\
-    Exposures & 0.44 & 0.20 & 2.14 & <0.05* \\
-    \hline
-    \multicolumn{5}{l}{\small{\textbf{Similarity} $R^2$ = 0.03, $F$(1, 146) = 5.61}}\\
-    Intercept & 0.10 & 0.03 & 2.60 & <0.05*\\
-    Exposures & 0.51 & 0.21 & 2.37 & <0.05* \\
-    \hline
-    \multicolumn{5}{l}{\small{\textbf{Referent assignment} $R^2$ = 0.04, $F$(1, 144) = 7.04}}\\
-    Intercept & 0.24 & 0.06 & 4.00 & <0.001*\\
-    Exposures & 0.94 & 0.35 & 2.65 & <0.01* \\
-    \hline
-  \end{tabular}
-  \caption{Regression models from Experiment 1b. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
+  \caption{Regression model from Experiment 1b}
   \label{fig:expt1b-regression}
+  \begin{threeparttable}
+    \begin{tabular}{l c c c r}
+      \hline
+      Predictor & $\beta$ & Std Error & $t$ & $p$ \\
+      \hline
+      \multicolumn{5}{l}{\small{\textbf{Memory} $R^2$ = 0.03, $F$(1, 146) = 4.60}}\\
+      Intercept & 0.16 & 0.03 & 4.42 & <0.001*\\
+      Exposures & 0.44 & 0.20 & 2.14 & <0.05* \\
+      \hline
+      \multicolumn{5}{l}{\small{\textbf{Similarity} $R^2$ = 0.03, $F$(1, 146) = 5.61}}\\
+      Intercept & 0.10 & 0.03 & 2.60 & <0.05*\\
+      Exposures & 0.51 & 0.21 & 2.37 & <0.05* \\
+      \hline
+      \multicolumn{5}{l}{\small{\textbf{Referent assignment} $R^2$ = 0.04, $F$(1, 144) = 7.04}}\\
+      Intercept & 0.24 & 0.06 & 4.00 & <0.001*\\
+      Exposures & 0.94 & 0.35 & 2.65 & <0.01* \\
+      \hline
+    \end{tabular}
+    \begin{tablenotes}
+    \item \footnotesize{\emph{Note}. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
+    \end{tablenotes}
+  \end{threeparttable}
 \end{table}
 
 \subsubsection{Descriptive statistics for the memory task}
@@ -434,11 +448,11 @@ It is informative to compare this nonce connective ordering with the orderings f
 
 \vskip 1em
 
- \begin{tabular}{ l l}
-   2/3:       & F > W > C > P\\
-   Nonce:     & (F $\approx$ W) > C > P\\
-   3/3:       & W > F > C > P\\
- \end{tabular}\\
+\begin{tabular}{ l l}
+  2/3:       & F > W > C > P\\
+  Nonce:     & (F $\approx$ W) > C > P\\
+  3/3:       & W > F > C > P\\
+\end{tabular}\\
 
 \vskip 1em
 
@@ -546,52 +560,54 @@ Syllable count: & F > W $\approx$ C > P\\
   \end{center}
 \end{figure}
 
-  % \begin{center}
-    % \scriptsize{
-      \begin{longtable}{l r r r r}
-        \hline
-        Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
-        \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.01, $F$(9, 756) = 0.89 \T}\\
-        Intercept & -0.0277 &  0.028 & -0.98 & 0.322\ww\\
-        Condition: Onset -- 0/3 &  0.0550 &  0.038 &  1.42 & 0.153\ww\\
-        Condition: Rime -- 0/3 &  0.0578 &  0.036 &  1.59 & 0.111\ww\\
-        Condition: Syllable count -- 0/3 &  0.0283 &  0.039 &  0.72 & 0.469\ww\\
-        Condition: Semantic incoherent -- 0/3 & -0.0016 &  0.038 & -0.04 & 0.966\ww\\
-        Exposures &  0.0984 &  0.121 &  0.80 & 0.419\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.0686 &  0.171 & -0.39 & 0.689\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.1713 &  0.164 & -1.04 & 0.297\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.0324 &  0.169 & -0.19 & 0.848\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.0667 &  0.165 &  0.40 & 0.687\ww \\
-        \hline
-        \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.02, $F$(9, 756) = 2.10 \T}\\
-        Intercept &  0.0146 &  0.026 &  0.56 & 0.573\ww\\
-        Condition: Onset -- 0/3 & -0.0054 &  0.035 & -0.15 & 0.878\ww\\
-        Condition: Rime -- 0/3 & -0.0111 &  0.033 & -0.33 & 0.740\ww\\
-        Condition: Syllable count -- 0/3 & -0.0487 &  0.036 & -1.33 & 0.180\ww\\
-        Condition: Semantic incoherent -- 0/3 & -0.0060 &  0.035 & -0.16 & 0.866\ww\\
-        Exposures & -0.0688 &  0.113 & -0.60 & 0.542\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.0847 &  0.159 & -0.53 & 0.595\ww\\
-        E $\times$ C: Rime -- 0/3 &  0.2168 &  0.152 &  1.42 & 0.155\ww\\
-        E $\times$ C: Syllable count -- 0/3 &  0.3152 &  0.157 &  1.99 & <0.05*\\
-        E $\times$ C: Semantic incoherent -- 0/3 &  0.1662 &  0.153 &  1.08 & 0.279\ww \\
-        \hline
-        \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.01, $F$(9, 752) = 1.42 \T}\\
-        Intercept & -0.0580 &  0.069 & -0.83 & 0.404\ww\\
-        Condition: Onset -- 0/3 &  0.1804 &  0.095 &  1.88 & 0.059\ww\\
-        Condition: Rime -- 0/3 &  0.1010 &  0.089 &  1.12 & 0.261\ww\\
-        Condition: Syllable count -- 0/3 &  0.0218 &  0.097 &  0.22 & 0.821\ww\\
-        Condition: Semantic incoherent -- 0/3 &  0.0880 &  0.096 &  0.91 & 0.360\ww\\
-        Exposures &  0.5439 &  0.301 &  1.80 & 0.071\ww\\
-        E $\times$ C: Onset -- 0/3 & -0.6143 &  0.425 & -1.44 & 0.148\ww\\
-        E $\times$ C: Rime -- 0/3 & -0.3114 &  0.406 & -0.76 & 0.443\ww\\
-        E $\times$ C: Syllable count -- 0/3 & -0.0351 &  0.420 & -0.08 & 0.933\ww\\
-        E $\times$ C: Semantic incoherent -- 0/3 & -0.7207 &  0.409 & -1.76 & 0.078\ww \\
-        \hline
-  \caption{\label{expt23-regression} Regression model for Experiments 2 and 3. For readability, we divided exposure values by 1,000.}
-      \end{longtable}
-    % }
-  % \end{center}
-% \end{table}
+\begin{ThreePartTable}
+  \begin{TableNotes}
+  \item{\footnotesize{\emph{Note}. For readability, we divided exposure values by~1000.}}
+  \end{TableNotes}
+  \begin{longtable}{l r r r r}
+    \caption{Regression model for Experiments 2 and 3} \label{expt23-regression}\\
+    \hline
+    Predictor & $\beta$ & Std Error & $t$ & $p$ \\ \hline
+    \multicolumn{5}{l}{\T \textbf{Memory}: $R^2$ = 0.01, $F$(9, 756) = 0.89 \T}\\
+    Intercept & -0.0277 &  0.028 & -0.98 & 0.322\ww\\
+    Condition: Onset -- 0/3 &  0.0550 &  0.038 &  1.42 & 0.153\ww\\
+    Condition: Rime -- 0/3 &  0.0578 &  0.036 &  1.59 & 0.111\ww\\
+    Condition: Syllable count -- 0/3 &  0.0283 &  0.039 &  0.72 & 0.469\ww\\
+    Condition: Semantic incoherent -- 0/3 & -0.0016 &  0.038 & -0.04 & 0.966\ww\\
+    Exposures &  0.0984 &  0.121 &  0.80 & 0.419\ww\\
+    E $\times$ C: Onset -- 0/3 & -0.0686 &  0.171 & -0.39 & 0.689\ww\\
+    E $\times$ C: Rime -- 0/3 & -0.1713 &  0.164 & -1.04 & 0.297\ww\\
+    E $\times$ C: Syllable count -- 0/3 & -0.0324 &  0.169 & -0.19 & 0.848\ww\\
+    E $\times$ C: Semantic incoherent -- 0/3 &  0.0667 &  0.165 &  0.40 & 0.687\ww \\
+    \hline
+    \multicolumn{5}{l}{\T \textbf{Similarity}: $R^2$ = 0.02, $F$(9, 756) = 2.10 \T}\\
+    Intercept &  0.0146 &  0.026 &  0.56 & 0.573\ww\\
+    Condition: Onset -- 0/3 & -0.0054 &  0.035 & -0.15 & 0.878\ww\\
+    Condition: Rime -- 0/3 & -0.0111 &  0.033 & -0.33 & 0.740\ww\\
+    Condition: Syllable count -- 0/3 & -0.0487 &  0.036 & -1.33 & 0.180\ww\\
+    Condition: Semantic incoherent -- 0/3 & -0.0060 &  0.035 & -0.16 & 0.866\ww\\
+    Exposures & -0.0688 &  0.113 & -0.60 & 0.542\ww\\
+    E $\times$ C: Onset -- 0/3 & -0.0847 &  0.159 & -0.53 & 0.595\ww\\
+    E $\times$ C: Rime -- 0/3 &  0.2168 &  0.152 &  1.42 & 0.155\ww\\
+    E $\times$ C: Syllable count -- 0/3 &  0.3152 &  0.157 &  1.99 & <0.05*\\
+    E $\times$ C: Semantic incoherent -- 0/3 &  0.1662 &  0.153 &  1.08 & 0.279\ww \\
+    \hline
+    \multicolumn{5}{l}{\T \textbf{Referent assignment}: $R^2$ = 0.01, $F$(9, 752) = 1.42 \T}\\
+    Intercept & -0.0580 &  0.069 & -0.83 & 0.404\ww\\
+    Condition: Onset -- 0/3 &  0.1804 &  0.095 &  1.88 & 0.059\ww\\
+    Condition: Rime -- 0/3 &  0.1010 &  0.089 &  1.12 & 0.261\ww\\
+    Condition: Syllable count -- 0/3 &  0.0218 &  0.097 &  0.22 & 0.821\ww\\
+    Condition: Semantic incoherent -- 0/3 &  0.0880 &  0.096 &  0.91 & 0.360\ww\\
+    Exposures &  0.5439 &  0.301 &  1.80 & 0.071\ww\\
+    E $\times$ C: Onset -- 0/3 & -0.6143 &  0.425 & -1.44 & 0.148\ww\\
+    E $\times$ C: Rime -- 0/3 & -0.3114 &  0.406 & -0.76 & 0.443\ww\\
+    E $\times$ C: Syllable count -- 0/3 & -0.0351 &  0.420 & -0.08 & 0.933\ww\\
+    E $\times$ C: Semantic incoherent -- 0/3 & -0.7207 &  0.409 & -1.76 & 0.078\ww \\
+    \hline
+    \insertTableNotes
+  \end{longtable}
+\end{ThreePartTable}
+
 
 Using a regression model with main effects of exposure and condition and an exposure $\times$ condition interaction, we compared each phonological condition with the 0/3 condition of Experiment 1a using a regression model (Table \ref{expt23-regression}).
 
@@ -615,12 +631,14 @@ In Experiment 1a, Ms and Ps were all familiar words obeying a taxonomic organiza
 162 MTurk workers. Note that there were many fewer participants in Experiment 3 because there was only one condition, compared to four conditions in Experiment 1a and three conditions in Experiment 2.
 
 \subsubsection{Materials}
-In the semantic baseline language, the specific M and P words were drawn randomly for each participant from the pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash}, \emph{card}, \emph{ball}\}. In the referent assignment task, these known words were paired with images of the obvious referents (e.g., \emph{card} with a picture of a card). Compared to the context words in Experiment 1a, these words are fairly well matched in frequency (see \ref{word-freqs}).
+In the semantic baseline language, the specific M and P words were drawn randomly for each participant from the pool \{\emph{shelf}, \emph{glove}, \emph{rain}, \emph{leash}, \emph{card}, \emph{ball}\}. In the referent assignment task, these known words were paired with images of the obvious referents (e.g., \emph{card} with a picture of a card). Compared to the context words in Experiment 1a, these words are fairly well matched in frequency (see Table~\ref{word-freqs}).
 
 \begin{table}[t]
-  \begin{center}
-  % \footnotesize{
+  \caption{Context word frequencies from Experiments 1 and 3}
+  \label{word-freqs}
+  \begin{threeparttable}
     \begin{tabular}{l l l}
+      \hline
       Word &  Frequency (\%) & Experiment\\
       \hline
       Car & 0.0091 & 1\\
@@ -637,10 +655,10 @@ In the semantic baseline language, the specific M and P words were drawn randoml
       Hamster & 0.000099 & 1\\
       \hline
     \end{tabular}
-  \end{center}
-  \caption{Context word frequencies from Experiments 1 and 3 sorted by decreasing frequency. Frequencies were retrieved from Google N-grams data for the year 1999.}
-  \label{word-freqs}
-
+    \begin{tablenotes}
+    \item \footnotesize{\emph{Note}. Frequencies were retrieved from Google N-grams data for the year 1999.}
+    \end{tablenotes}
+  \end{threeparttable}
 \end{table}
 
 \subsubsection{Design and procedure}
@@ -718,6 +736,7 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
 \begin{table}
   \caption{$p$ values (adjusted using the Holm procedure) for paired-sample $t$-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentence types in Experiments 1a, 1b, 2, and 3.}
+  \label{familiarity-ordering-t-tests}
   \begin{center}
     \begin{tabular}{c c c}
 
@@ -974,7 +993,6 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
           \end{tabular}
       }\\
     \end{tabular}
-    \label{familiarity-ordering-t-tests}
   \end{center}
 \end{table}
 
