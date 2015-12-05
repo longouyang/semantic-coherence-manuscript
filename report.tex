@@ -1,13 +1,14 @@
-% editing notes: don't use auto-fill-mode
+% % generating author copy (floatsintext):
+% \documentclass[man,longtable,floatsintext]{my-apa6}
+% \usepackage[flushleft]{threeparttablex}
 
-\documentclass[man,longtable,floatmark]{my-apa6}
-
+% generating journal manuscript (floatmark):
+\documentclass[man,longtable, floatmark]{my-apa6}
 \usepackage[flushleft]{threeparttablex}
-
-% % HT http://tex.stackexchange.com/a/114723/41154
+% HT http://tex.stackexchange.com/a/114723/41154
 \DeclareDelayedFloatFlavour{ThreePartTable}{table}
 \DeclareDelayedFloatFlavour{threeparttable}{table}
-%\DeclareDelayedFloatFlavor*{longtable}{table}
+
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[natbibapa]{apacite}
