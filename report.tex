@@ -1,13 +1,13 @@
-% % generating author copy (floatsintext):
-% \documentclass[man,longtable,floatsintext]{my-apa6}
-% \usepackage[flushleft]{threeparttablex}
-
-% generating journal manuscript (floatmark):
-\documentclass[man,longtable, floatmark]{my-apa6}
+% generating author copy (floatsintext):
+\documentclass[man,longtable,floatsintext]{my-apa6}
 \usepackage[flushleft]{threeparttablex}
-% HT http://tex.stackexchange.com/a/114723/41154
-\DeclareDelayedFloatFlavour{ThreePartTable}{table}
-\DeclareDelayedFloatFlavour{threeparttable}{table}
+
+% % generating journal manuscript (floatmark):
+% \documentclass[man,longtable, floatmark]{my-apa6}
+% \usepackage[flushleft]{threeparttablex}
+% % HT http://tex.stackexchange.com/a/114723/41154
+% \DeclareDelayedFloatFlavour{ThreePartTable}{table}
+% \DeclareDelayedFloatFlavour{threeparttable}{table}
 
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -735,267 +735,129 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 \appendix
 \section{$t$-tests for familiarity orderings in the memory task}
 
-\begin{table}
-  \caption{$p$ values (adjusted using the Holm procedure) for paired-sample $t$-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentence types in Experiments 1a, 1b, 2, and 3.}
-  \label{familiarity-ordering-t-tests}
-  \begin{center}
-    \begin{tabular}{c c c}
 
-      \textbf{0/3 coherence}: df = 150 & \textbf{1/3 coherence}: df = 153 & \textbf{2/3 coherence}: df = 164\\
+\begin{ThreePartTable}
+  % see use of insertTableNotes at the end of longtable below
+  % HT threeparttablex documentation
+  \begin{TableNotes}
+  \item \footnotesize{*: $p$ < 0.05}
+  \item \footnotesize{**: $p$ < 0.01}
+  \item \footnotesize{***: $p$ < 0.001}
+  \end{TableNotes}
 
-      {
-        % -------------- none --------------
-        % df = 150
+  \begin{table}
+    \caption{$p$ values (adjusted using the Holm procedure) for paired-sample $t$-tests of familiarity ratings for (F)amiliar, (W)ithheld, (C)o-occurrence violation, and (P)osition violation sentence types in Experiments 1a, 1b, 2, and 3.}
+    \label{familiarity-ordering-t-tests}
+    \begin{center}
+      \begin{tabular}{c c c}
 
-        % Pairwise comparisons using paired t tests
+        \textbf{0/3 coherence}: df = 145 & \textbf{1/3 coherence}: df = 148 & \textbf{2/3 coherence}: df = 159\\
 
-        % data:  e$mem.score and e$type
+        { % 0/3
+        \footnotesize
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F   & W    & C    \\  \hline
+          W     & *   &      &      \\              \hline
+          C     & *   & 0.58 &      \\                   \hline
+          P     & *** & 0.25 & 0.14 \\           \hline
+        \end{tabular}
+        }       &
+                  { % 1/3
+                  \footnotesize
+                  \begin{tabular}{| l | l |  l | l |}
+                    \hline
+                    & F   & W    & C    \\ \hline
+                    W & *** &      &      \\ \hline
+                    C & *** & 0.98 &      \\ \hline
+                    P & *** & 0.07 & 0.07 \\ \hline
+                  \end{tabular}
+        }       &
+                  { % 2/3
 
-        % familiar withheld cross
-        % withheld 0.01266  -        -
-        % cross    0.06278  0.48454  -
-        % position 0.00029  0.21723  0.08529
+                  \footnotesize
+                  \begin{tabular}{| l | l |  l | l |}
+                    \hline
+                    & F                           & W                         & C \\ \hline
+                    W &   ***  &                           &\\ \hline
+                    C &   ***  &   ***  &\\ \hline
+                    P &   *** &   ***  &  ***\\ \hline
+                  \end{tabular}
+        }\\
 
-        % P value adjustment method: holm
-      \scriptsize
+        \textbf{3/3 coherence}: df = 150 & \textbf{Nonce connective}: df = 147 & \textbf{Onset}: df = 148 \\
 
-      \begin{tabular}{| l | l |  l | l |}
-        \hline
-        & F              & W           & C \\
-        \hline
-        W &  0.01*  &             &\\
-        \hline
-        C &  0.06 &   0.48 & \\
-        \hline
-        P & < 0.001* &   0.21 &   0.08 \\
-        \hline
+        { % 3/3
+
+        \footnotesize
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F                            & W                         & C \\ \hline
+          W &  ***  &                           &\\ \hline
+          C &  ***  &  ***   &\\ \hline
+          P &  *** &  ***  &  ***\\ \hline
+        \end{tabular}
+        } &
+            { % nonce connective
+            \footnotesize
+            \begin{tabular}{| l | l |  l | l |}
+              \hline
+              & F                            & W                         & C \\ \hline
+              W &  0.56  &                           &\\ \hline
+              C &  ***  &  ***   &\\ \hline
+              P &  *** &  ***  &  ***\\ \hline
+            \end{tabular}
+        } &
+            { % onset
+            \footnotesize
+            \begin{tabular}{| l | l |  l | l |}
+              \hline
+              & F     & W     & C   \\ \hline
+              W & 0.055 &       &     \\ \hline
+              C & ***   & 0.055 &     \\ \hline
+              P & ***   & ***   & *** \\ \hline
+            \end{tabular}
+        }                             \\
+
+        \textbf{Rime}: df = 184 & \textbf{Syllable count}: df = 140 & \textbf{Semantic baseline}: df = 144 \\
+
+        { % rime
+        \footnotesize
+        \begin{tabular}{| l | l |  l | l |}
+          \hline
+          & F    & W    & C   \\ \hline
+          W & 0.16 &      &     \\ \hline
+          C & **   & 0.17 &     \\ \hline
+          P & ***  & ***  & *** \\ \hline
+        \end{tabular}
+        } &
+
+            { % syllable count
+            \footnotesize
+            \begin{tabular}{| l | l |  l | l |}
+              \hline
+              & F                           & W                         & C \\ \hline
+              W &  **  &                           &\\ \hline
+              C &  ***  &   0.4  &\\ \hline
+              P &  *** &   **  &   **\\ \hline
+            \end{tabular}
+        } &
+
+            { % semantic baseline
+            \footnotesize
+            \begin{tabular}{| l | l |  l | l |}
+              \hline
+              & F   & W    & C   \\ \hline
+              W & *** &      &     \\ \hline
+              C & *** & 0.83 &     \\ \hline
+              P & *** & ***  & *** \\ \hline
+            \end{tabular}
+        } \\
       \end{tabular}
-      } &
-          {
-            % -------------- sem1 --------------
-            % df = 153
-
-            % Pairwise comparisons using paired t tests
-
-            % data:  e$mem.score and e$type
-
-            % familiar withheld cross
-            % withheld 7.4e-08  -        -
-            % cross    3.8e-06  0.525    -
-            % position 2.1e-12  0.085    0.018
-
-          \scriptsize
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F               & W           & C \\
-            \hline
-            W &  < 0.001* &             &\\
-            \hline
-            C &  < 0.001* &   0.52 &\\
-            \hline
-            P &  < 0.001* &   0.08 &   0.01*\\
-            \hline
-          \end{tabular}
-      } &
-          {
-
-            % -------------- sem2 --------------
-            % df = 164
-
-            % Pairwise comparisons using paired t tests
-
-            % data:  e$mem.score and e$type
-
-            % familiar withheld cross
-            % withheld 1.2e-05  -        -
-            % cross    4.0e-14  0.00056  -
-            % position < 2e-16  3.5e-11  0.00056
-
-            % P value adjustment method: holm
-
-
-          \scriptsize
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F                           & W                         & C \\
-            \hline
-            W &  < 0.001*  &                           &\\
-            \hline
-            C &  < 0.001*  &  < 0.001*  &\\
-            \hline
-            P &  < 0.001* &  < 0.001*  &  < 0.001*\\
-            \hline
-          \end{tabular}
-      }\\
-
-      \textbf{3/3 coherence}: df = 152 & \textbf{Nonce coherence}: df = 150 & \textbf{Onset}: df = 150 \\
-
-          {
-
-            % -------------- sem3 --------------
-            % df = 152
-
-            % Pairwise comparisons using paired t tests
-
-            % data:  e$mem.score and e$type
-
-            % familiar withheld cross
-            % withheld 0.00016  -        -
-            % cross    4.4e-16  4.4e-16  -
-            % position < 2e-16  < 2e-16  4.4e-16
-
-            % P value adjustment method: holm
-
-          \scriptsize
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F                            & W                         & C \\
-            \hline
-            W &  < 0.001*  &                           &\\
-            \hline
-            C &  < 0.001*  &  < 0.001*   &\\
-            \hline
-            P &  < 0.001* &  < 0.001*  &  < 0.001*\\
-            \hline
-          \end{tabular}
-      } &
-      {
-        % -------------- nc-sem3 --------------
-        % df = 150
-
-        % Pairwise comparisons using paired t tests
-
-        % data:  e$mem.score and e$type
-
-        % familiar withheld cross
-        % withheld 0.53     -        -
-        % cross    < 2e-16  5.4e-14  -
-        % position < 2e-16  < 2e-16  < 2e-16
-
-        % P value adjustment method: holm
-
-      \scriptsize
-      \begin{tabular}{| l | l |  l | l |}
-        \hline
-        & F                            & W                         & C \\
-        \hline
-        W &  < 0.53  &                           &\\
-        \hline
-        C &  < 0.001*  &  < 0.001*   &\\
-        \hline
-        P &  < 0.001* &  < 0.001*  &  < 0.001*\\
-        \hline
-      \end{tabular}
-      } &
-      % -------------- onset --------------
-      % Pairwise comparisons using paired t tests
-
-      % data:  e$mem.score and e$type
-
-      % familiar withheld cross
-      % withheld 0.04833  -        -
-      % cross    0.00012  0.04833  -
-      % position < 2e-16  < 2e-16  6e-15
-
-      % P value adjustment method: holm
-          {
-          \scriptsize
-
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F              & W           & C \\
-            \hline
-            W &  0.04*  &             &\\
-            \hline
-            C & < 0.001* &   0.04* & \\
-            \hline
-            P & < 0.001* &  < 0.001* &  < 0.001* \\
-            \hline
-          \end{tabular}
-      }\\
-
-      \textbf{Rime}: df = 187 & \textbf{Syllable count}: df = 148 & \textbf{Semantic baseline}: df = 143 \\
-
-      % -------------- rime --------------
-      % Pairwise comparisons using paired t tests
-
-      % data:  e$mem.score and e$type
-
-      % familiar withheld cross
-      % withheld 0.0969   -        -
-      % cross    0.0021   0.1526   -
-      % position <2e-16   <2e-16   <2e-16
-
-      % P value adjustment method: holm
-      {
-      \scriptsize
-      \begin{tabular}{| l | l |  l | l |}
-        \hline
-        & F               & W           & C \\
-        \hline
-        W &   0.09 &             &\\
-        \hline
-        C &   0.002* &   0.15 &\\
-        \hline
-        P &  < 0.001* &  < 0.001* &  < 0.001*\\
-        \hline
-      \end{tabular}
-      } &
-
-      % -------------- syll.count --------------
-      % Pairwise comparisons using paired t tests
-
-      % data:  e$mem.score and e$type
-
-      % familiar withheld cross
-      % withheld 0.00623  -        -
-      % cross    0.00011  0.30439  -
-      % position 4.5e-08  0.00152  0.01645
-
-      % P value adjustment method: holm
-          {
-          \scriptsize
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F                           & W                         & C \\
-            \hline
-            W &  < 0.006*  &                           &\\
-            \hline
-            C &  < 0.001*  &   0.30  &\\
-            \hline
-            P &  < 0.001* &   0.001*  &   0.01*\\
-            \hline
-          \end{tabular}
-      } &
-
-      % -------------- baseline --------------
-      % Pairwise comparisons using paired t tests
-
-      % data:  e$mem.score and e$type
-
-      % familiar withheld cross
-      % withheld 6.8e-05  -        -
-      % cross    6.8e-05  0.83     -
-      % position < 2e-16  < 2e-16  < 2e-16
-
-      % P value adjustment method: holm
-          {
-          \scriptsize
-          \begin{tabular}{| l | l |  l | l |}
-            \hline
-            & F                            & W                         & C \\
-            \hline
-            W &  < 0.001*  &                           &\\
-            \hline
-            C &  < 0.001*  &   0.83   &\\
-            \hline
-            P &  < 0.001* &  < 0.001*  &  < 0.001*\\
-            \hline
-          \end{tabular}
-      }\\
-    \end{tabular}
-  \end{center}
-\end{table}
+    \end{center}
+    \insertTableNotes
+  \end{table}
+\end{ThreePartTable}
 
 
 \end{document}
