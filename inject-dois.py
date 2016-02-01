@@ -18,7 +18,7 @@ def convert_csv(filename):
   return rows
 
 # convert list of dict into a dictionary
-# with latex ids as keys and dois as values
+# with bibtex ids as keys and dois as values
 dois = {}
 for row in convert_csv(csv_filename):
   dois[ row["id"] ] = row["doi"]
@@ -26,8 +26,14 @@ for row in convert_csv(csv_filename):
 bib_database = bibtexparser.loads(bibtex_str)
 
 for entry in bib_database.entries:
-  doi = dois[entry["ID"]].strip()
-  if len(doi) > 0:
-    entry["DOI"] = doi
+  # handle capitalized (bibdesk) and noncapitalized (papers) keys
+  if ("ID" in entry):
+    _id = entry["ID"]
+  else:
+    _id = entry["id"]
 
-print(bibtexparser.dumps(bib_database))
+  doi = dois[_id].strip()
+  if len(doi) > 0:
+     entry["DOI"] = doi
+
+print(bibtexparser.dumps(bib_database).encode('utf-8'))
