@@ -46,7 +46,7 @@
 \threeauthors{Long Ouyang}{Lera Boroditsky}{Michael C. Frank}
 \threeaffiliations{Department of Psychology, Stanford University}{Department of Cognitive Science, University of California San Diego}{Department of Psychology, Stanford University}
 
-\note{Word count: 8,365}
+\note{Word count: 8,369}
 
 \authornote{An earlier version of this paper appeared in the Proceedings of the 34th Annual Meeting of the Cognitive Science Society.\\
 This research was supported by the McDonnell Foundation, NSF grant \#BCS-1058119, and the John Merck Scholars program.\\
@@ -55,7 +55,7 @@ Address correspondence to Long Ouyang, Jordan Hall, Building 01-420, 450 Serra M
 \abstract{
 Computational models have shown that purely statistical knowledge about words' linguistic contexts is sufficient to learn many properties of words, including syntactic and semantic category.
 For example, models can infer that ``postman'' and ``mailman'' are semantically similar because they have quantitatively similar patterns of association with \emph{other} words (e.g., they both tend to occur with words like ``deliver'', ``truck'', ``package'').
-Contra these computational results, artificial language learning experiments suggest that distributional statistics \emph{alone} do not facilitate learning of linguistic categories.
+In contrast to these computational results, artificial language learning experiments suggest that distributional statistics \emph{alone} do not facilitate learning of linguistic categories.
 However, experiments in this paradigm expose participants to entirely novel words, whereas real language learners encounter input that contains some known words that are semantically organized.
 In three experiments, we show that (1) the presence of familiar semantic reference points facilitates distributional learning and (2) this effect crucially depends both on the presence of known words and the adherence of these known words to some semantic organization.
 }
@@ -282,7 +282,7 @@ We excluded the 72 participants who did not correctly answer all of the catch tr
 
 \subsubsection{Descriptive statistics for the memory task}
 
-Fig.~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level (collapsing across exposure levels), we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Table~\ref{familiarity-ordering-t-tests}). This yielded the following familiarity orderings:
+Fig.~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. Within each coherence level, we looked for evidence of a familiarity ordering on sentence types. For each participant, we computed their mean familiarity rating for each sentence type. Then, at each coherence level (collapsing across exposure levels), we ran 6 paired-sample t-tests comparing mean familiarity ratings across sentence types and corrected for multiple comparisons using the Holm procedure (Appendix~\ref{apx-t-tests}). This yielded the following familiarity orderings:
 \begin{center}
   \begin{tabular}{l l }
     0/3: F > W, C, P & \\
@@ -321,7 +321,7 @@ To examine the differences between the different coherence levels, we used Helme
   % see use of insertTableNotes at the end of longtable below
   % HT threeparttablex documentation
   \begin{TableNotes}
-    \item \footnotesize{\emph{Note}. For readability, we divided the exposure values by 1,000.}
+    \item \footnotesize{\emph{Note}. For readability, we divided the exposure values by 1,000. * indicates significant predictors ($p <$ 0.05).}
   \end{TableNotes}
   \begin{longtable}{l r r r r}
     \caption{Regression model for Experiment 1a} \label{expt1-regressions}\\
@@ -434,13 +434,13 @@ We excluded 15 subjects who did not pass all trials.
       \hline
     \end{tabular}
     \begin{tablenotes}
-    \item \footnotesize{\emph{Note}. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000.}
+    \item \footnotesize{\emph{Note}. For interpretability of the intercept, we subtracted the lowest level of exposure from all exposure values. For readability, we divided exposure levels by 1,000. * indicates significant predictors ($p <$ 0.05).}
     \end{tablenotes}
   \end{threeparttable}
 \end{table}
 
 \subsubsection{Descriptive statistics for the memory task}
-Fig.~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in Experiment 1a, we used Holm-corrected pairwise t-tests to compute a familiarity ordering on sentence types (Table~\ref{familiarity-ordering-t-tests}). The ordering for the nonce connective 3/3 condition was:
+Fig.~\ref{x1-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in Experiment 1a, we used Holm-corrected pairwise t-tests to compute a familiarity ordering on sentence types (Appendix~\ref{apx-t-tests}). The ordering for the nonce connective 3/3 condition was:
 \begin{center}
   (F $\approx$ W) > C > P
 \end{center}
@@ -487,7 +487,7 @@ We tested three types of coherence: onset, rime, and syllable count. We selected
 530 MTurk workers.
 
 \subsubsection{Materials}
-The three types of phonological coherence\footnote{\label{change-of-stimuli} The stimuli for the rime and syllable count conditions differ from those in the rest of our conditions. For the rest of the conditions, we used a text-to-speech web service provided by Google to generate the audio stimuli (see Footnote \ref{tts}) for the bulk of the conditions. However, the available voices on this service changed during our experiment. Thus, we generated new stimuli for the rime and syllable count conditions using commercially available software, NaturalReader 10. To ensure that the old and new stimuli were comparable, we performed a partial replication of Experiment 1a using the new synthesis engine; the difference old and new stimuli did not appear to make a substantial difference. See Appendix \ref{old-vs-new} for comparisons.} were:
+The three types of phonological coherence\footnote{\label{change-of-stimuli} The stimuli for the rime and syllable count conditions differ from those in the rest of our conditions. For the rest of the conditions, we used a text-to-speech web service provided by Google to generate the audio stimuli (see Footnote \ref{tts}) for the bulk of the conditions. However, the available voices on this service changed during our experiment. Thus, we generated new stimuli for the rime and syllable count conditions using commercially available software, NaturalReader 10 (NaturalSoft Ltd, Richmond BC, Canada). To ensure that the old and new stimuli were comparable, we performed a partial replication of Experiment 1a using the new synthesis engine; the difference old and new stimuli did not appear to make a substantial difference. See Appendix \ref{old-vs-new} for comparisons.} were:
 
 \begin{itemize}
 \item \emph{Onset}. Ms all started with one consonant cluster (pladge, plaaf, plab) and Ps all started with another (zof, zawd, zawsh).
@@ -512,7 +512,7 @@ We discarded the 51 participants who did not pass all the catch trials. Results 
   \end{center}
 \end{figure}
 
-Fig.~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in previous analyses, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Table~\ref{familiarity-ordering-t-tests}):
+Fig.~\ref{x23-descriptive-mem} shows mean familiarity ratings broken down by sentence type, coherence, and exposures. As in previous analyses, we computed a familiarity ordering on sentence types within each phonological coherence condition using paired sample t-tests (Appendix~\ref{apx-t-tests}):
 
 \begin{tabular}{l l}
 Onset: & F $\approx$ W \, \, \, F > C, P \, \, \, (W $\approx$ C) > P\\
@@ -735,6 +735,7 @@ We performed a partial replication of Experiment 1a with the new stimuli. We col
 
 \appendix
 \section{$t$-tests for familiarity orderings in the memory task}
+\label{apx-t-tests}
 
 \begin{ThreePartTableHere}
   % see use of insertTableNotes at the end of longtable below
